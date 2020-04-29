@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import '../css/styles/App.css'
 import { Button } from 'eunoia'
 function App() {
   return (
