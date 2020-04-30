@@ -21,8 +21,7 @@ const CoverContainer = styled.div`
   z-index: 2;
 `
 const ChildrenWrapper = styled.div`
-  z-index: 10;
-  color: ${UIStyle.UIColors.white};
+padding-block-start: 6vh;
 `
 const Cover = ({ children }) => {
   return (

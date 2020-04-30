@@ -28,11 +28,9 @@ const options = [
   { title: 'Development', link: '/#', newTab: false },
   { title: 'Experience', link: '/#', newTab: false },
 ]
-const AppMenu = <Menu options={options} config={config} />
+const AppMenu = <Menu config={config} options={options}  />
 class Main extends React.PureComponent {
-  constructor(props) {
-    super(props)
-  }
+
   render() {
     return (
       <div>
