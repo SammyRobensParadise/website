@@ -31,18 +31,42 @@ const SubtitleWrapper = styled.h2`
   width: auto;
   margin-block-start: 0rem;
 `
+const ChildrenWrapper = styled.div`
+  text-align: left;
+  font: Regular 52px/59px Georgia;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.white};
+  opacity: 1 !important;
+  font-weight: 200;
+  padding-block-start: 0px;
+  padding-left: 10%;
+  width: auto;
+  margin-block-start: 0rem;
+  
+`
 const MainTitle = ({ title, subtitle, children }) => {
   return (
-    <Container>
-      <Grid spacing={12}>
-        <TitleStyle>{title}</TitleStyle>
-        <SubtitleWrapper>
-          {subtitle.map((item) => (
-            <div>{item}</div>
+    <div>
+      <Container>
+        <Grid spacing={12}>
+          <TitleStyle>{title}</TitleStyle>
+          <SubtitleWrapper>
+            {subtitle.map((item) => (
+              <div className="-subtitle-header">{item}</div>
+            ))}
+          </SubtitleWrapper>
+        </Grid>
+      </Container>
+      <Container>
+        <Grid spacing={12}>
+          {children.map((item) => (
+            <ChildrenWrapper>
+              <div className="-cover-children">{item}</div>
+            </ChildrenWrapper>
           ))}
-        </SubtitleWrapper>
-      </Grid>
-    </Container>
+        </Grid>
+      </Container>
+    </div>
   )
 }
 export { MainTitle }
