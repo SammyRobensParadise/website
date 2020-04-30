@@ -2,6 +2,7 @@ import React from 'react'
 import '../css/styles/App.css'
 import { Cover } from '../components/Cover'
 import { MainTitle } from '../components/MainTitle'
+import { MainExplainationGrid } from '../components/MainExplainationGrid'
 import { Menu } from 'eunoia'
 import { MenuConfig } from '../constants/config'
 import { Grid } from '@material-ui/core'
@@ -54,6 +55,9 @@ const ActionExperienceAndProjectsText = styled.h4`
   font-size: 26px;
 `
 // components
+/**
+ * Cover
+ */
 const CoverActionButtons = (
   <Grid spacing={3}>
     <Grid item>
@@ -75,12 +79,17 @@ const CoverChildren = (
     <MainTitle title={name} subtitle={[uxDesigner, Developer]} children={[CoverActionButtons]} />
   </div>
 )
+/**
+ * Explaination
+ */
+
 // class
 class Main extends React.PureComponent {
   render() {
     return (
-      <div>
+      <div className="main-wrapper">
         <Cover children={CoverChildren} />
+        <MainExplainationGrid />
       </div>
     )
   }
