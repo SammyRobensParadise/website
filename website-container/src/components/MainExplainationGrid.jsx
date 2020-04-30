@@ -13,13 +13,13 @@ const MainExplainationGrid = ({ leftChildren, rightChildren }) => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <Grid container >
-        <Grid item xs={12} sm={6}>
+      <Grid container>
+        <Grid item sm={12} md={6}>
           {leftChildren
             ? leftChildren.map((children) => <div className="-left-children">{children}</div>)
             : null}
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item sm={12} md={6}>
           {rightChildren
             ? rightChildren.map((children) => <div className="-right-children">{children}</div>)
             : null}

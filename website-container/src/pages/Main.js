@@ -65,6 +65,10 @@ const SammyBikingImageStyle = styled.img`
   -ms-user-select: none;
   width: 100%;
   padding: 0px;
+  @media screen and (max-width: 960px) {
+    margin-block-start: 10vh;
+
+  }
 `
 const SkipTheFluffStyle = styled.h2`
   margin-block-start: 20vh;
@@ -75,6 +79,13 @@ const SkipTheFluffStyle = styled.h2`
   font-weight: 200;
   color: ${UIStyle.UIColors.black};
   padding-left: 20%;
+  @media screen and (max-width: 960px) {
+    padding-left: 10%;
+    margin-block-start: 15vh;
+  }
+  @media screen and (max-width: 460px){
+    font-size: 40px;
+  }
 `
 const IntroTextStyle = styled.p`
   font-family: Helvetica Neue;
@@ -86,6 +97,17 @@ const IntroTextStyle = styled.p`
   width: 60%;
   line-height: 55px;
   padding-left: 20%;
+  @media screen and (max-width: 1260px) {
+    line-height: 40px;
+    width: 70%;
+  }
+  @media screen and (max-width: 960px) {
+    padding-left: 10%;
+    width: 80%;
+  }
+  @media screen and (max-width: 460px){
+    font-size: 18px;
+  }
 `
 // components
 /**
