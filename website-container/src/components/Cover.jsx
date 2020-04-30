@@ -8,6 +8,7 @@ const ConverContainerImage = styled.div`
   background: url('https://i.ibb.co/xDFprr2/Background-Image.png');
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 1;
 `
 const CoverContainer = styled.div`
   width: auto;
@@ -17,13 +18,19 @@ const CoverContainer = styled.div`
   background-repeat: no-repeat;
   display: flex;
   opacity: 0.84;
-  top: 0;
+  z-index: 2;
+`
+const ChildrenWrapper = styled.div`
+  z-index: 10;
+  color: ${UIStyle.UIColors.white};
 `
 const Cover = ({ children }) => {
   return (
     <ConverContainerImage className="cover-image">
       <CoverContainer>
-        <Container disableGutters>{children}</Container>
+        <Container disableGutters>
+          <ChildrenWrapper>{children}</ChildrenWrapper>
+        </Container>
       </CoverContainer>
     </ConverContainerImage>
   )
