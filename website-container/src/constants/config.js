@@ -34,6 +34,7 @@ export const MenuConfig = {
     boldText: false,
     spacing: 0,
     row: true,
+    fontSize: '18px',
     mobileBreakpoint: 850,
     breakpoints: { xs: true },
   },

@@ -15,27 +15,27 @@ body {
 @font-face {
   font-family: 'Georgia Regular';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 200 !important;
   src: local('Georgia Regular'), url('../fonts/georgia.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Georgia Italic';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 200 !important;
   src: local('Georgia Italic'), url('../fonts/georgiai.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Georgia Bold';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 200 !important;
   src: local('Georgia Bold'), url('../fonts/georgiab.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Georgia Bold Italic';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 200 !important;
   src: local('Georgia Bold Italic'), url('../fonts/georgiaz.woff') format('woff');
 }
