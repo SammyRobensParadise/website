@@ -12,7 +12,7 @@ const ConverContainerImage = styled.div`
 `
 const CoverContainer = styled.div`
   width: auto;
-  height: 900px;
+  height: 800px;
   background: ${UIStyle.UIColors.black};
   background-size: cover;
   background-repeat: no-repeat;

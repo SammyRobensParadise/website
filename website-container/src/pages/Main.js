@@ -16,6 +16,7 @@ const name = `Sammy Robens-Paradise`
 const uxDesigner = `UX DESIGNER`
 const Developer = `DEVELOPER`
 const Resume = `Resume`
+const ExperienceAndProjects = `Experience & Projects`
 // components
 const ActionButton = styled(Button)`
   margin: 0;
@@ -39,8 +40,16 @@ const ActionRightArrow = styled(RightArrow)`
 const ActionWrapper = styled.div`
   padding-left: 4rem;
   display: inline-block;
-
 `
+const ActionExperienceAndProjectsText = styled.h4`
+  display: inline-block;
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.white};
+  font-weight: 400;
+  font-size: 26px;
+`
+// components
 const CoverActionButtons = (
   <Grid spacing={3}>
     <Grid item>
@@ -49,6 +58,9 @@ const CoverActionButtons = (
         <ActionCircleButton transparent height={'66px'}>
           <ActionRightArrow color={UIStyle.UIColors.white} scalingFactor={2.5} offset={'10px'} />
         </ActionCircleButton>
+      </ActionWrapper>
+      <ActionWrapper>
+        <ActionExperienceAndProjectsText>{ExperienceAndProjects}</ActionExperienceAndProjectsText>
       </ActionWrapper>
     </Grid>
   </Grid>
