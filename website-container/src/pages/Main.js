@@ -40,6 +40,10 @@ const ActionRightArrow = styled(RightArrow)`
 const ActionWrapper = styled.div`
   padding-left: 4rem;
   display: inline-block;
+  @media screen and (max-width: 770px) {
+    padding-left: 0rem;
+    display: block;
+  }
 `
 const ActionExperienceAndProjectsText = styled.h4`
   display: inline-block;

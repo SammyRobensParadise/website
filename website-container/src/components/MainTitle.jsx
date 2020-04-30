@@ -20,7 +20,7 @@ const TitleStyle = styled.h1`
 `
 const SubtitleWrapper = styled.h2`
   text-align: left;
-  font: Regular 52px/59px Georgia;
+  font-family: Georgia;
   letter-spacing: 0px;
   color: ${UIStyle.UIColors.white};
   opacity: 1 !important;
@@ -30,6 +30,12 @@ const SubtitleWrapper = styled.h2`
   font-size: 64px;
   width: auto;
   margin-block-start: 0rem;
+  @media screen and (max-width:600px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width:380px){
+      font-size: 30px;
+  }
 `
 const ChildrenWrapper = styled.div`
   text-align: left;
@@ -42,7 +48,11 @@ const ChildrenWrapper = styled.div`
   padding-left: 10%;
   width: auto;
   margin-block-start: 0rem;
-  
+  & {
+    @media screen and(max-width:500px) {
+      font-size: 50px;
+    }
+  }
 `
 const MainTitle = ({ title, subtitle, children }) => {
   return (
