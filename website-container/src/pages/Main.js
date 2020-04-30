@@ -54,6 +54,15 @@ const ActionExperienceAndProjectsText = styled.h4`
   font-weight: 400;
   font-size: 26px;
 `
+const SammyBikingImageStyle = styled.img`
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  width: 100%;
+  padding: 0px;
+`
 // components
 /**
  * Cover
@@ -82,14 +91,20 @@ const CoverChildren = (
 /**
  * Explaination
  */
-
+const SammyBikingImage = (
+  <SammyBikingImageStyle
+    src="https://i.ibb.co/XYv6cLy/Sammy-Biking-Grey.png"
+    alt="Sammy-Biking-Grey"
+    border="0"
+  />
+)
 // class
 class Main extends React.PureComponent {
   render() {
     return (
       <div className="main-wrapper">
         <Cover children={CoverChildren} />
-        <MainExplainationGrid />
+        <MainExplainationGrid rightChildren={[SammyBikingImage]} />
       </div>
     )
   }
