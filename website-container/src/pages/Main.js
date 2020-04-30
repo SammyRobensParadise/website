@@ -4,6 +4,9 @@ import { Cover } from '../components/Cover'
 import { Menu } from 'eunoia'
 import { MenuConfig } from '../constants/config'
 
+// css
+import '../css/styles/styles.css'
+
 const AppMenu = <Menu config={MenuConfig.config} options={MenuConfig.options} />
 class Main extends React.PureComponent {
   render() {
