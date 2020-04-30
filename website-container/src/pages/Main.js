@@ -18,6 +18,8 @@ const uxDesigner = `UX DESIGNER`
 const Developer = `DEVELOPER`
 const Resume = `Resume`
 const ExperienceAndProjects = `Experience & Projects`
+const skipFluff = `Skip the fluff.`
+const skipFlufftext = `I am Sammy Robens-Paradise from the University of Waterloo and I study the ways humans interface with technology. I have worked with companies like LEGO, Hootsuite, Kroger, and Lululemon to create beautiful products and experiences.`
 // components
 const ActionButton = styled(Button)`
   margin: 0;
@@ -55,6 +57,7 @@ const ActionExperienceAndProjectsText = styled.h4`
   font-size: 26px;
 `
 const SammyBikingImageStyle = styled.img`
+  margin-block-start: 20vh;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -62,6 +65,27 @@ const SammyBikingImageStyle = styled.img`
   -ms-user-select: none;
   width: 100%;
   padding: 0px;
+`
+const SkipTheFluffStyle = styled.h2`
+  margin-block-start: 20vh;
+  font-family: Georgia Regular;
+  text-align: left;
+  font-size: 64px;
+  letter-spacing: 0px;
+  font-weight: 200;
+  color: ${UIStyle.UIColors.black};
+  padding-left: 20%;
+`
+const IntroTextStyle = styled.p`
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.black};
+  font-weight: 400;
+  font-size: 26px;
+  text-align: left;
+  width: 60%;
+  line-height: 55px;
+  padding-left: 20%;
 `
 // components
 /**
@@ -98,13 +122,18 @@ const SammyBikingImage = (
     border="0"
   />
 )
+const IntroTextTitle = <SkipTheFluffStyle>{skipFluff}</SkipTheFluffStyle>
+const IntroText = <IntroTextStyle>{skipFlufftext}</IntroTextStyle>
 // class
 class Main extends React.PureComponent {
   render() {
     return (
       <div className="main-wrapper">
         <Cover children={CoverChildren} />
-        <MainExplainationGrid rightChildren={[SammyBikingImage]} />
+        <MainExplainationGrid
+          rightChildren={[SammyBikingImage]}
+          leftChildren={[IntroTextTitle, IntroText]}
+        />
       </div>
     )
   }
