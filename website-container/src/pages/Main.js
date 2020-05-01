@@ -129,10 +129,11 @@ const HeaderContent = styled.div`
   margin: 0 auto;
   height: inherit;
   font-weight: 100;
-  padding-top: 3vh;
+  padding-top: 6vh;
   & {
     @media screen and (max-width: 800px) {
       padding-top: 3vh;
+      font-size: 24px;
     }
     @media screen and (max-width: 400px) {
       padding-top: 2vh;
