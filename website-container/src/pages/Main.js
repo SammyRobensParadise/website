@@ -7,22 +7,30 @@ import { TriSectionHeader } from '../components/TriSectionHeader'
 import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
 import { Grid } from '@material-ui/core'
-import { Button, CircleButton, RightArrow } from 'eunoia'
+import { Button, CircleButton, RightArrow, DownArrow } from 'eunoia'
 import styled from 'styled-components'
 import { UIStyle } from '../constants/config'
 // css
 import '../css/styles/styles.css'
 
-// strings
+// strings ****
+// Cover ****
 const name = `Sammy Robens-Paradise`
 const uxDesigner = `UX DESIGNER`
 const Developer = `DEVELOPER`
 const Resume = `Resume`
 const ExperienceAndProjects = `Experience & Projects`
+
+// Section 1 ***
 const skipFluff = `Skip the fluff.`
 const skipFlufftext = `I am Sammy Robens-Paradise from the University of Waterloo and I study the ways humans interface with technology. I have worked with companies like LEGO, Hootsuite, Kroger, and Lululemon to create beautiful products and experiences.`
 
-// styled-components
+// Header 2 ***
+const designContentText = `Explore my design portfolio & case studies`
+const codeContentText = `Breakdown the code behind my work & projects`
+const experienceContentText = `Internships in UX/UI design & development`
+
+// styled-components ****
 // Cover
 const ActionButton = styled(Button)`
   margin: 0;
@@ -41,6 +49,9 @@ const ActionCircleButton = styled(CircleButton)`
   transform: translateY(20px);
 `
 const ActionRightArrow = styled(RightArrow)`
+  margin-bottom: 1rem;
+`
+const ActionDownArrow = styled(DownArrow)`
   margin-bottom: 1rem;
 `
 const ActionWrapper = styled.div`
@@ -118,15 +129,26 @@ const HeaderContent = styled.div`
   margin: 0 auto;
   height: inherit;
   font-weight: 100;
-  padding-top: 5vh;
+  padding-top: 3vh;
   & {
     @media screen and (max-width: 800px) {
-      padding-top: 10vh;
+      padding-top: 3vh;
     }
     @media screen and (max-width: 400px) {
-      padding-top: 8vh;
+      padding-top: 2vh;
     }
   }
+`
+const HeaderContentText = styled.p`
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.white};
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  padding-block-start: 2vh;
 `
 
 // components
@@ -139,7 +161,7 @@ const CoverActionButtons = (
       <ActionButton transparent>{Resume}</ActionButton>
       <ActionWrapper>
         <ActionCircleButton transparent height={'66px'}>
-          <ActionRightArrow color={UIStyle.UIColors.white} scalingFactor={2.5} offset={'10px'} />
+          <ActionRightArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'11px'} />
         </ActionCircleButton>
       </ActionWrapper>
       <ActionWrapper>
@@ -176,7 +198,7 @@ const defaultHeaderConfig = {
   fontOverride: `Georgia Regular`,
   fontColor: UIStyle.UIColors.gold,
   fontSize: 30,
-  height: 220,
+  height: 250,
   backgroundColor: UIStyle.UIColors.darkGrey,
 }
 
@@ -196,17 +218,35 @@ const experienceHeaderConfig = {
 
 const DesignHeader = (
   <SectionHeader config={designHeaderConfig}>
-    <HeaderContent>{designHeaderConfig.text}</HeaderContent>
+    <div className="-design-header">
+      <HeaderContent>{designHeaderConfig.text}</HeaderContent>
+      <HeaderContentText>{designContentText}</HeaderContentText>
+      <ActionCircleButton transparent height={'66px'}>
+        <ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
+      </ActionCircleButton>
+    </div>
   </SectionHeader>
 )
 const CodeHeader = (
   <SectionHeader config={codeHeaderConfig}>
-    <HeaderContent>{codeHeaderConfig.text}</HeaderContent>
+    <div className="-code-header">
+      <HeaderContent>{codeHeaderConfig.text}</HeaderContent>
+      <HeaderContentText>{codeContentText}</HeaderContentText>
+      <ActionCircleButton transparent height={'66px'}>
+        <ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
+      </ActionCircleButton>
+    </div>
   </SectionHeader>
 )
 const ExperienceHeader = (
   <SectionHeader config={experienceHeaderConfig}>
-    <HeaderContent>{experienceHeaderConfig.text}</HeaderContent>
+    <div className="-experience-header">
+      <HeaderContent>{experienceHeaderConfig.text}</HeaderContent>
+      <HeaderContentText>{experienceContentText}</HeaderContentText>
+      <ActionCircleButton transparent height={'66px'}>
+        <ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
+      </ActionCircleButton>
+    </div>
   </SectionHeader>
 )
 
@@ -222,8 +262,8 @@ class Main extends React.PureComponent {
         />
         <TriSectionHeader
           leftChildren={[DesignHeader]}
-          rightChildren={[CodeHeader]}
-          middleChildren={[ExperienceHeader]}
+          middleChildren={[CodeHeader]}
+          rightChildren={[ExperienceHeader]}
         />
       </div>
     )
