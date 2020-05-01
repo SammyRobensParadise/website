@@ -149,6 +149,10 @@ const HeaderContentText = styled.p`
   width: 60%;
   margin: 0 auto;
   padding-block-start: 2vh;
+  @media screen  and (max-width:1350px){
+    width: 80%;
+    font-size: 18px;
+  }
 `
 
 // components
@@ -198,7 +202,7 @@ const defaultHeaderConfig = {
   fontOverride: `Georgia Regular`,
   fontColor: UIStyle.UIColors.gold,
   fontSize: 30,
-  height: 250,
+  height: 300,
   backgroundColor: UIStyle.UIColors.darkGrey,
 }
 
