@@ -11,24 +11,28 @@ const useStyles = makeStyles(() => ({
 
 const Wrapper = styled.div`
   padding-block-start: 10vh;
+  @media screen and (max-width: 600px){
+      display: block;
+  }
 `
+
 const TriSectionHeader = ({ leftChildren, middleChildren, rightChildren }) => {
   const classes = useStyles()
   return (
     <Wrapper>
       <div className={classes.root}>
         <Grid container>
-          <Grid item sm={12} md={4}>
+          <Grid item  xs={12} sm={12} md={4}>
             {leftChildren
               ? leftChildren.map((children) => <div className="-left-children">{children}</div>)
               : null}
           </Grid>
-          <Grid item sm={12} md={4}>
+          <Grid item xs={12} sm={12} md={4}>
             {middleChildren
               ? middleChildren.map((children) => <div className="-left-children">{children}</div>)
               : null}
           </Grid>
-          <Grid item sm={12} md={4}>
+          <Grid item xs={12} sm={12} md={4}>
             {rightChildren
               ? rightChildren.map((children) => <div className="-right-children">{children}</div>)
               : null}

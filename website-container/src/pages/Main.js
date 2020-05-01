@@ -114,6 +114,20 @@ const IntroTextStyle = styled.p`
   }
 `
 // header 2
+const HeaderContent = styled.div`
+  margin: 0 auto;
+  height: inherit;
+  font-weight: 100;
+  padding-top: 5vh;
+  & {
+    @media screen and (max-width: 800px) {
+      padding-top: 10vh;
+    }
+    @media screen and (max-width: 400px) {
+      padding-top: 8vh;
+    }
+  }
+`
 
 // components
 /**
@@ -161,7 +175,7 @@ const defaultHeaderConfig = {
   centerText: true,
   fontOverride: `Georgia Regular`,
   fontColor: UIStyle.UIColors.gold,
-  fontSize: 50,
+  fontSize: 30,
   height: 220,
   backgroundColor: UIStyle.UIColors.darkGrey,
 }
@@ -170,7 +184,7 @@ const designHeaderConfig = {
   text: 'Design',
   ...defaultHeaderConfig,
 }
-const CodeHeaderConfig = {
+const codeHeaderConfig = {
   text: 'Code',
   ...defaultHeaderConfig,
 }
@@ -179,6 +193,22 @@ const experienceHeaderConfig = {
   text: 'Experience',
   ...defaultHeaderConfig,
 }
+
+const DesignHeader = (
+  <SectionHeader config={designHeaderConfig}>
+    <HeaderContent>{designHeaderConfig.text}</HeaderContent>
+  </SectionHeader>
+)
+const CodeHeader = (
+  <SectionHeader config={codeHeaderConfig}>
+    <HeaderContent>{codeHeaderConfig.text}</HeaderContent>
+  </SectionHeader>
+)
+const ExperienceHeader = (
+  <SectionHeader config={experienceHeaderConfig}>
+    <HeaderContent>{experienceHeaderConfig.text}</HeaderContent>
+  </SectionHeader>
+)
 
 // class
 class Main extends React.PureComponent {
@@ -191,9 +221,9 @@ class Main extends React.PureComponent {
           leftChildren={[IntroTextTitle, IntroText]}
         />
         <TriSectionHeader
-          leftChildren={[<SectionHeader config={designHeaderConfig} />]}
-          rightChildren={[<SectionHeader config={CodeHeaderConfig} />]}
-          middleChildren={[<SectionHeader config={experienceHeaderConfig} />]}
+          leftChildren={[DesignHeader]}
+          rightChildren={[CodeHeader]}
+          middleChildren={[ExperienceHeader]}
         />
       </div>
     )
