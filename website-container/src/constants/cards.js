@@ -25,3 +25,18 @@ export const IntensifEyeArticleCard = (
     }}
   />
 )
+
+export const AccessibleReactAppCard = (
+  <Card
+    config={{
+      title: `Building Accessibility into your React App`,
+      content: `How to setup react accessibility auditing with react-axe and best practices with a11y`,
+      link: '/#',
+      ...defaultCardConfig,
+    }}
+  />
+)
+
+/**
+ * Design Cards
+ */

@@ -7,9 +7,9 @@ import { TriSectionHeader } from '../components/TriSectionHeader'
 import { MainDoubleGrid } from '../components/MainDoubleSection'
 import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
-import { IntensifEyeArticleCard } from '../constants/cards'
+import { IntensifEyeArticleCard, AccessibleReactAppCard } from '../constants/cards'
 import { Grid } from '@material-ui/core'
-import { Button, CircleButton, RightArrow, DownArrow, Card } from 'eunoia'
+import { Button, CircleButton, RightArrow, DownArrow } from 'eunoia'
 import styled from 'styled-components'
 import { UIStyle } from '../constants/config'
 // css
@@ -373,7 +373,7 @@ const Experience3Header = (
  * Section 3
  */
 
-const articleCards = [IntensifEyeArticleCard]
+const articleCards = [IntensifEyeArticleCard, AccessibleReactAppCard]
 const designCards = []
 const codeCards = []
 
