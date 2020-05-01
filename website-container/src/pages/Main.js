@@ -24,13 +24,16 @@ const ExperienceAndProjects = `Experience & Projects`
 
 // Section 1 ***
 const skipFluff = `Skip the fluff.`
-const skipFlufftext = `I am Sammy Robens-Paradise from the University of Waterloo and I study the ways humans interface with technology. I have worked with companies like LEGO, Hootsuite, Kroger, and Lululemon to create beautiful products and experiences.`
+const skipFlufftext = `I am Sammy Robens-Paradise from the University of Waterloo and I study the ways humans interact with technology. I have worked with companies like LEGO, Hootsuite, Kroger, and Lululemon to create beautiful products and experiences.`
 
 // Header 2 ***
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
 
+// Section 2 ***
+const myPassion = `My Passion`
+const myPassionText = `We have a responsability to use it to improve the lives of all people, and the environment. As someone who advocates optimized engineering solutions, I continue on my journey to find the most eloquent and beautiful solutions to the worlds most challenging problems. I have always taken an interest in the way humans interact with technology, and more specifically, the way it shapes our experiences.`
 // styled-components ****
 // Cover
 const ActionButton = styled(Button)`
@@ -158,6 +161,52 @@ const HeaderContentText = styled.p`
 `
 // section 2
 
+const SammySkatingImageStyle = styled.img`
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  width: 100%;
+  padding: 0px;
+`
+const MyPassion = styled.h2`
+  margin-block-start: 20vh;
+  font-family: Georgia Regular;
+  text-align: left;
+  font-size: 64px;
+  letter-spacing: 0px;
+  font-weight: 200;
+  color: ${UIStyle.UIColors.black};
+  padding-left: 10%;
+  @media screen and (max-width: 960px) {
+    padding-left: 5%;
+    margin-block-start: 15vh;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 40px;
+  }
+`
+const MyPassionText = styled.p`
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.black};
+  font-weight: 400;
+  font-size: 26px;
+  text-align: left;
+  width: 82%;
+  line-height: 55px;
+  padding-left: 10%;
+  @media screen and (max-width: 1260px) {
+    line-height: 40px;
+  }
+  @media screen and (max-width: 960px) {
+    padding-left: 5%;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 18px;
+  }
+`
 // components
 /**
  * Cover
@@ -260,6 +309,15 @@ const ExperienceHeader = (
 /**
  * Section 2
  */
+const SammySkatingImage = (
+  <SammySkatingImageStyle
+    src="https://i.ibb.co/dBhMb8K/sammyskatingbw.png"
+    alt="sammyskatingbw"
+    border="0"
+  />
+)
+const MyPassionTextTitle = <MyPassion>{myPassion}</MyPassion>
+const MyPassionTextBody = <MyPassionText>{myPassionText}</MyPassionText>
 
 // class
 class Main extends React.PureComponent {
@@ -277,8 +335,8 @@ class Main extends React.PureComponent {
           rightChildren={[ExperienceHeader]}
         />
         <MainDoubleGrid
-          rightChildren={[SammyBikingImage]}
-          leftChildren={[IntroTextTitle, IntroText]}
+          rightChildren={[SammySkatingImage]}
+          leftChildren={[MyPassionTextTitle, MyPassionTextBody]}
         />
       </div>
     )
