@@ -7,7 +7,14 @@ import { TriSectionHeader } from '../components/TriSectionHeader'
 import { MainDoubleGrid } from '../components/MainDoubleSection'
 import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
-import { IntensifEyeArticleCard, AccessibleReactAppCard } from '../constants/cards'
+import {
+  IntensifEyeArticleCard,
+  AccessibleReactAppCard,
+  IntensifEyeDesignCard,
+  GrapeDesignCard,
+  EunoiaCodeCard,
+  GlobalWineryCodeCard
+} from '../constants/cards'
 import { Grid } from '@material-ui/core'
 import { Button, CircleButton, RightArrow, DownArrow } from 'eunoia'
 import styled from 'styled-components'
@@ -373,9 +380,9 @@ const Experience3Header = (
  * Section 3
  */
 
-const articleCards = [IntensifEyeArticleCard, AccessibleReactAppCard]
-const designCards = []
-const codeCards = []
+const articleCards = [IntensifEyeArticleCard,AccessibleReactAppCard]
+const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
+const codeCards = [EunoiaCodeCard,GlobalWineryCodeCard]
 
 // class Definition
 class Main extends React.PureComponent {
@@ -398,8 +405,8 @@ class Main extends React.PureComponent {
         />
         <TriSectionHeader
           leftChildren={[Design3Header, ...articleCards]}
-          middleChildren={[Code3Header]}
-          rightChildren={[Experience3Header]}
+          middleChildren={[Code3Header, ...designCards]}
+          rightChildren={[Experience3Header, ...codeCards]}
         />
       </div>
     )
