@@ -133,7 +133,7 @@ const HeaderContent = styled.div`
   margin: 0 auto;
   height: inherit;
   font-weight: 100;
-  padding-top: 6vh;
+  padding-top: ${(p) => (p.isThree ? '10vh' : '6vh')};
   & {
     @media screen and (max-width: 800px) {
       padding-top: 3vh;
@@ -319,6 +319,54 @@ const SammySkatingImage = (
 const MyPassionTextTitle = <MyPassion>{myPassion}</MyPassion>
 const MyPassionTextBody = <MyPassionText>{myPassionText}</MyPassionText>
 
+/**
+ * section 3 header
+ */
+
+const section3DefaultHeaderConfig = {
+  shouldRender: true,
+  centerText: true,
+  fontOverride: `Georgia Regular`,
+  fontColor: UIStyle.UIColors.gold,
+  fontSize: 30,
+  height: 150,
+  backgroundColor: UIStyle.UIColors.darkGrey,
+}
+const section3DesignHeaderConfig = {
+  text: 'Design',
+  ...section3DefaultHeaderConfig,
+}
+const section3CodeHeaderConfig = {
+  text: 'Code',
+  ...section3DefaultHeaderConfig,
+}
+
+const section3ExperienceHeaderConfig = {
+  text: 'Experience',
+  ...section3DefaultHeaderConfig,
+}
+
+const Design3Header = (
+  <SectionHeader config={section3DesignHeaderConfig}>
+    <div className="-3-design-header">
+      <HeaderContent isThree>{section3DesignHeaderConfig.text}</HeaderContent>
+    </div>
+  </SectionHeader>
+)
+const Code3Header = (
+  <SectionHeader config={section3CodeHeaderConfig}>
+    <div className="-3-code-header">
+      <HeaderContent isThree>{section3CodeHeaderConfig.text}</HeaderContent>
+    </div>
+  </SectionHeader>
+)
+const Experience3Header = (
+  <SectionHeader config={section3ExperienceHeaderConfig}>
+    <div className="-3-experience-header">
+      <HeaderContent isThree>{section3ExperienceHeaderConfig.text}</HeaderContent>
+    </div>
+  </SectionHeader>
+)
 // class
 class Main extends React.PureComponent {
   render() {
@@ -337,6 +385,11 @@ class Main extends React.PureComponent {
         <MainDoubleGrid
           rightChildren={[SammySkatingImage]}
           leftChildren={[MyPassionTextTitle, MyPassionTextBody]}
+        />
+        <TriSectionHeader
+          leftChildren={[Design3Header]}
+          middleChildren={[Code3Header]}
+          rightChildren={[Experience3Header]}
         />
       </div>
     )
