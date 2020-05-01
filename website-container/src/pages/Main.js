@@ -3,7 +3,8 @@ import '../css/styles/App.css'
 import { Cover } from '../components/Cover'
 import { MainTitle } from '../components/MainTitle'
 import { MainExplainationGrid } from '../components/MainExplainationGrid'
-import { Menu } from 'eunoia'
+import { TriSectionHeader } from '../components/TriSectionHeader'
+import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
 import { Grid } from '@material-ui/core'
 import { Button, CircleButton, RightArrow } from 'eunoia'
@@ -20,7 +21,9 @@ const Resume = `Resume`
 const ExperienceAndProjects = `Experience & Projects`
 const skipFluff = `Skip the fluff.`
 const skipFlufftext = `I am Sammy Robens-Paradise from the University of Waterloo and I study the ways humans interface with technology. I have worked with companies like LEGO, Hootsuite, Kroger, and Lululemon to create beautiful products and experiences.`
-// components
+
+// styled-components
+// Cover
 const ActionButton = styled(Button)`
   margin: 0;
   text-align: left;
@@ -56,6 +59,8 @@ const ActionExperienceAndProjectsText = styled.h4`
   font-weight: 400;
   font-size: 26px;
 `
+// section 1
+
 const SammyBikingImageStyle = styled.img`
   margin-block-start: 20vh;
   user-select: none;
@@ -67,7 +72,6 @@ const SammyBikingImageStyle = styled.img`
   padding: 0px;
   @media screen and (max-width: 960px) {
     margin-block-start: 10vh;
-
   }
 `
 const SkipTheFluffStyle = styled.h2`
@@ -83,7 +87,7 @@ const SkipTheFluffStyle = styled.h2`
     padding-left: 10%;
     margin-block-start: 15vh;
   }
-  @media screen and (max-width: 460px){
+  @media screen and (max-width: 460px) {
     font-size: 40px;
   }
 `
@@ -105,10 +109,12 @@ const IntroTextStyle = styled.p`
     padding-left: 10%;
     width: 80%;
   }
-  @media screen and (max-width: 460px){
+  @media screen and (max-width: 460px) {
     font-size: 18px;
   }
 `
+// header 2
+
 // components
 /**
  * Cover
@@ -146,6 +152,34 @@ const SammyBikingImage = (
 )
 const IntroTextTitle = <SkipTheFluffStyle>{skipFluff}</SkipTheFluffStyle>
 const IntroText = <IntroTextStyle>{skipFlufftext}</IntroTextStyle>
+
+/**
+ * Section 2 Header
+ */
+const defaultHeaderConfig = {
+  shouldRender: true,
+  centerText: true,
+  fontOverride: `Georgia Regular`,
+  fontColor: UIStyle.UIColors.gold,
+  fontSize: 50,
+  height: 220,
+  backgroundColor: UIStyle.UIColors.darkGrey,
+}
+
+const designHeaderConfig = {
+  text: 'Design',
+  ...defaultHeaderConfig,
+}
+const CodeHeaderConfig = {
+  text: 'Code',
+  ...defaultHeaderConfig,
+}
+
+const experienceHeaderConfig = {
+  text: 'Experience',
+  ...defaultHeaderConfig,
+}
+
 // class
 class Main extends React.PureComponent {
   render() {
@@ -155,6 +189,11 @@ class Main extends React.PureComponent {
         <MainExplainationGrid
           rightChildren={[SammyBikingImage]}
           leftChildren={[IntroTextTitle, IntroText]}
+        />
+        <TriSectionHeader
+          leftChildren={[<SectionHeader config={designHeaderConfig} />]}
+          rightChildren={[<SectionHeader config={CodeHeaderConfig} />]}
+          middleChildren={[<SectionHeader config={experienceHeaderConfig} />]}
         />
       </div>
     )
