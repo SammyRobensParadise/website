@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
-    backgroundColor: UIStyle.UIColors.darkGrey,
+    backgroundColor: UIStyle.UIColors.white,
   },
 }))
 

@@ -7,8 +7,9 @@ import { TriSectionHeader } from '../components/TriSectionHeader'
 import { MainDoubleGrid } from '../components/MainDoubleSection'
 import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
+import { IntensifEyeArticleCard } from '../constants/cards'
 import { Grid } from '@material-ui/core'
-import { Button, CircleButton, RightArrow, DownArrow } from 'eunoia'
+import { Button, CircleButton, RightArrow, DownArrow, Card } from 'eunoia'
 import styled from 'styled-components'
 import { UIStyle } from '../constants/config'
 // css
@@ -22,7 +23,7 @@ const Developer = `DEVELOPER`
 const Resume = `Resume`
 const ExperienceAndProjects = `Experience & Projects`
 
-// Section 1 ***
+// Section 1 ***Î
 const skipFluff = `Skip the fluff.`
 const skipFlufftext = `I am Sammy Robens-Paradise from the University of Waterloo and I study the ways humans interact with technology. I have worked with companies like LEGO, Hootsuite, Kroger, and Lululemon to create beautiful products and experiences.`
 
@@ -133,7 +134,7 @@ const HeaderContent = styled.div`
   margin: 0 auto;
   height: inherit;
   font-weight: 100;
-  padding-top: ${(p) => (p.isThree ? '10vh' : '6vh')};
+  padding-top: ${(p) => (p.isThree ? '8vh' : '6vh')};
   & {
     @media screen and (max-width: 800px) {
       padding-top: 3vh;
@@ -332,42 +333,51 @@ const section3DefaultHeaderConfig = {
   height: 150,
   backgroundColor: UIStyle.UIColors.darkGrey,
 }
+const section3ArticleHeaderConfig = {
+  text: 'Articles',
+  ...section3DefaultHeaderConfig,
+}
 const section3DesignHeaderConfig = {
   text: 'Design',
   ...section3DefaultHeaderConfig,
 }
+
 const section3CodeHeaderConfig = {
   text: 'Code',
   ...section3DefaultHeaderConfig,
 }
 
-const section3ExperienceHeaderConfig = {
-  text: 'Experience',
-  ...section3DefaultHeaderConfig,
-}
-
 const Design3Header = (
+  <SectionHeader config={section3ArticleHeaderConfig}>
+    <div className="-3-articles-header">
+      <HeaderContent isThree>{section3ArticleHeaderConfig.text}</HeaderContent>
+    </div>
+  </SectionHeader>
+)
+const Code3Header = (
   <SectionHeader config={section3DesignHeaderConfig}>
     <div className="-3-design-header">
       <HeaderContent isThree>{section3DesignHeaderConfig.text}</HeaderContent>
     </div>
   </SectionHeader>
 )
-const Code3Header = (
+const Experience3Header = (
   <SectionHeader config={section3CodeHeaderConfig}>
     <div className="-3-code-header">
       <HeaderContent isThree>{section3CodeHeaderConfig.text}</HeaderContent>
     </div>
   </SectionHeader>
 )
-const Experience3Header = (
-  <SectionHeader config={section3ExperienceHeaderConfig}>
-    <div className="-3-experience-header">
-      <HeaderContent isThree>{section3ExperienceHeaderConfig.text}</HeaderContent>
-    </div>
-  </SectionHeader>
-)
-// class
+
+/**
+ * Section 3
+ */
+
+const articleCards = [IntensifEyeArticleCard]
+const designCards = []
+const codeCards = []
+
+// class Definition
 class Main extends React.PureComponent {
   render() {
     return (
@@ -387,7 +397,7 @@ class Main extends React.PureComponent {
           leftChildren={[MyPassionTextTitle, MyPassionTextBody]}
         />
         <TriSectionHeader
-          leftChildren={[Design3Header]}
+          leftChildren={[Design3Header, ...articleCards]}
           middleChildren={[Code3Header]}
           rightChildren={[Experience3Header]}
         />
