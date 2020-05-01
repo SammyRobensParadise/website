@@ -4,6 +4,7 @@ import { Cover } from '../components/Cover'
 import { MainTitle } from '../components/MainTitle'
 import { MainExplainationGrid } from '../components/MainExplainationGrid'
 import { TriSectionHeader } from '../components/TriSectionHeader'
+import { MainDoubleGrid } from '../components/MainDoubleSection'
 import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
 import { Grid } from '@material-ui/core'
@@ -150,11 +151,12 @@ const HeaderContentText = styled.p`
   width: 60%;
   margin: 0 auto;
   padding-block-start: 2vh;
-  @media screen  and (max-width:1350px){
+  @media screen and (max-width: 1350px) {
     width: 80%;
     font-size: 18px;
   }
 `
+// section 2
 
 // components
 /**
@@ -255,6 +257,10 @@ const ExperienceHeader = (
   </SectionHeader>
 )
 
+/**
+ * Section 2
+ */
+
 // class
 class Main extends React.PureComponent {
   render() {
@@ -269,6 +275,10 @@ class Main extends React.PureComponent {
           leftChildren={[DesignHeader]}
           middleChildren={[CodeHeader]}
           rightChildren={[ExperienceHeader]}
+        />
+        <MainDoubleGrid
+          rightChildren={[SammyBikingImage]}
+          leftChildren={[IntroTextTitle, IntroText]}
         />
       </div>
     )

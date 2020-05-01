@@ -2,9 +2,9 @@
  * `constants`
  */
 
- /**
-  * UI Style config
-  */
+/**
+ * UI Style config
+ */
 export const UIStyle = {
   UIColors: {
     white: '#FFFFFF',
