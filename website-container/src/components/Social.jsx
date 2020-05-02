@@ -15,12 +15,12 @@ const SocialMediaButtons = styled.a`
   padding-block-start: 6vh;
   display: flex;
   svg {
-    filter: ${`drop-shadow(2px 2px 5px ${UIStyle.UIColors.darkGrey})`};
+    filter: ${`drop-shadow(2px 2px 5px ${UIStyle.UIColors.mediumGrey})`};
     transition: all 0.2s ease;
   }
   &:hover {
     svg {
-      filter: ${`drop-shadow(2px 2px 5px ${UIStyle.UIColors.gold})`};
+      filter: ${`drop-shadow(2px 2px 5px ${UIStyle.UIColors.black})`};
     }
   }
 `
