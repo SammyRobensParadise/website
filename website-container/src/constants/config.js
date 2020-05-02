@@ -1,3 +1,6 @@
+// imports
+import { mediumURL } from './links'
+
 /**
  * `constants`
  */
@@ -46,7 +49,7 @@ export const MenuConfig = {
       main: true,
     },
     { title: 'About', link: '/#', newTab: false },
-    { title: 'Articles', link: '/#', newTab: false },
+    { title: 'Articles', link: '/#', newTab: false, exRef: 'https://medium.com/@srobensparadise' },
     { title: 'Design', link: '/#', newTab: false },
     { title: 'Development', link: '/#', newTab: false },
     { title: 'Experience', link: '/#', newTab: false },
