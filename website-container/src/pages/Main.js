@@ -5,7 +5,8 @@ import { MainTitle } from '../components/MainTitle'
 import { MainExplainationGrid } from '../components/MainExplainationGrid'
 import { TriSectionHeader } from '../components/TriSectionHeader'
 import { MainDoubleGrid } from '../components/MainDoubleSection'
-import {Footer } from '../components/Footer'
+import { Footer } from '../components/Footer'
+import { SocialButtons } from '../components/Social'
 import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
 import {
@@ -387,7 +388,7 @@ const codeCards = [EunoiaCodeCard, GlobalWineryCodeCard]
 const ScrollArea = styled.div`
   height: 700px;
   overflow: auto;
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     display: none;
   }
   padding-block-end: 6vh;
@@ -398,6 +399,7 @@ class Main extends React.PureComponent {
   render() {
     return (
       <div className="main-wrapper">
+        <SocialButtons />
         <Cover children={CoverChildren} />
         <MainExplainationGrid
           rightChildren={[SammyBikingImage]}
@@ -413,11 +415,32 @@ class Main extends React.PureComponent {
           leftChildren={[MyPassionTextTitle, MyPassionTextBody]}
         />
         <TriSectionHeader
-          leftChildren={[Design3Header, <ScrollArea>{articleCards.map(node => (<div>{node}</div>))}</ScrollArea>]}
-          middleChildren={[Code3Header, <ScrollArea>{designCards.map(node => (<div>{node}</div>))}</ScrollArea>]}
-          rightChildren={[Experience3Header, <ScrollArea>{codeCards.map(node => (<div>{node}</div>))}</ScrollArea>]}
+          leftChildren={[
+            Design3Header,
+            <ScrollArea>
+              {articleCards.map((node) => (
+                <div>{node}</div>
+              ))}
+            </ScrollArea>,
+          ]}
+          middleChildren={[
+            Code3Header,
+            <ScrollArea>
+              {designCards.map((node) => (
+                <div>{node}</div>
+              ))}
+            </ScrollArea>,
+          ]}
+          rightChildren={[
+            Experience3Header,
+            <ScrollArea>
+              {codeCards.map((node) => (
+                <div>{node}</div>
+              ))}
+            </ScrollArea>,
+          ]}
         />
-        <Footer/>
+        <Footer />
       </div>
     )
   }
