@@ -5,7 +5,7 @@ import { UIStyle } from '../constants/config'
 import styled from 'styled-components'
 import { Menu } from 'eunoia'
 import { MenuConfig } from '../constants/config'
-
+import { websiteRepoURL } from '../constants/links'
 import '../css/styles/styles.css'
 
 const useStyles = makeStyles(() => ({
@@ -60,7 +60,7 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
             <div className="-footer-left-children">
-              <FooterOptions>{FirstNameLastName}</FooterOptions>
+              <FooterOptions href={websiteRepoURL}>{FirstNameLastName}</FooterOptions>
             </div>
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
