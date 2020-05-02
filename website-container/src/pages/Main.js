@@ -13,7 +13,7 @@ import {
   IntensifEyeDesignCard,
   GrapeDesignCard,
   EunoiaCodeCard,
-  GlobalWineryCodeCard
+  GlobalWineryCodeCard,
 } from '../constants/cards'
 import { Grid } from '@material-ui/core'
 import { Button, CircleButton, RightArrow, DownArrow } from 'eunoia'
@@ -380,9 +380,16 @@ const Experience3Header = (
  * Section 3
  */
 
-const articleCards = [IntensifEyeArticleCard,AccessibleReactAppCard]
+const articleCards = [IntensifEyeArticleCard, AccessibleReactAppCard]
 const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
-const codeCards = [EunoiaCodeCard,GlobalWineryCodeCard]
+const codeCards = [EunoiaCodeCard, GlobalWineryCodeCard]
+const ScrollArea = styled.div`
+  height: 700px;
+  overflow: auto;
+  ::-webkit-scrollbar{
+    display: none;
+  }
+`
 
 // class Definition
 class Main extends React.PureComponent {
@@ -404,9 +411,9 @@ class Main extends React.PureComponent {
           leftChildren={[MyPassionTextTitle, MyPassionTextBody]}
         />
         <TriSectionHeader
-          leftChildren={[Design3Header, ...articleCards]}
-          middleChildren={[Code3Header, ...designCards]}
-          rightChildren={[Experience3Header, ...codeCards]}
+          leftChildren={[Design3Header, <ScrollArea>{articleCards.map(node => (<div>{node}</div>))}</ScrollArea>]}
+          middleChildren={[Code3Header, <ScrollArea>{designCards.map(node => (<div>{node}</div>))}</ScrollArea>]}
+          rightChildren={[Experience3Header, <ScrollArea>{codeCards.map(node => (<div>{node}</div>))}</ScrollArea>]}
         />
       </div>
     )
