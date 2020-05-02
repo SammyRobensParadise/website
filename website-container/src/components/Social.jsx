@@ -6,7 +6,7 @@ import { dribbbleURL, githubURL, linkedinURL, mediumURL } from '../constants/lin
 const SocialButtonsWrapper = styled.div`
   z-index: 1000;
   position: fixed;
-  right: 6vh;
+  right: 2vh;
   top: 30vh;
   width: 70px;
 `
