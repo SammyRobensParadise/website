@@ -42,7 +42,7 @@ const FooterOptions = styled.a`
   }
 `
 
-const FirstNameLastName = `Coded with ❤️ by Sammy Robens-Paradise`
+const FirstNameLastName = `Coded with 💛by Sammy Robens-Paradise`
 const Resume = `Resume`
 const Connect = `Connect`
 const Policy = `Policy`
