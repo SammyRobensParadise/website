@@ -5,6 +5,7 @@ import { MainTitle } from '../components/MainTitle'
 import { MainExplainationGrid } from '../components/MainExplainationGrid'
 import { TriSectionHeader } from '../components/TriSectionHeader'
 import { MainDoubleGrid } from '../components/MainDoubleSection'
+import {Footer } from '../components/Footer'
 import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
 import {
@@ -389,6 +390,7 @@ const ScrollArea = styled.div`
   ::-webkit-scrollbar{
     display: none;
   }
+  padding-block-end: 6vh;
 `
 
 // class Definition
@@ -415,6 +417,7 @@ class Main extends React.PureComponent {
           middleChildren={[Code3Header, <ScrollArea>{designCards.map(node => (<div>{node}</div>))}</ScrollArea>]}
           rightChildren={[Experience3Header, <ScrollArea>{codeCards.map(node => (<div>{node}</div>))}</ScrollArea>]}
         />
+        <Footer/>
       </div>
     )
   }
