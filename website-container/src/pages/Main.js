@@ -3,7 +3,7 @@ import '../css/styles/App.css'
 import { Cover } from '../components/Cover'
 import { MainTitle } from '../components/MainTitle'
 import { MainExplainationGrid } from '../components/MainExplainationGrid'
-import { TriSectionHeader } from '../components/TriSectionHeader'
+import { TriSection } from '../components/TriSection'
 import { MainDoubleGrid } from '../components/MainDoubleSection'
 import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
@@ -383,7 +383,7 @@ class Main extends React.PureComponent {
           rightChildren={[SammyBikingImage]}
           leftChildren={[IntroTextTitle, IntroText]}
         />
-        <TriSectionHeader
+        <TriSection
           leftChildren={[DesignHeader]}
           middleChildren={[CodeHeader]}
           rightChildren={[ExperienceHeader]}
@@ -392,7 +392,7 @@ class Main extends React.PureComponent {
           rightChildren={[SammySkatingImage]}
           leftChildren={[MyPassionTextTitle, MyPassionTextBody]}
         />
-        <TriSectionHeader
+        <TriSection
           leftChildren={[
             Design3Header,
             <ScrollArea>

@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   }
 `
 
-const TriSectionHeader = ({ leftChildren, middleChildren, rightChildren }) => {
+const TriSection = ({ leftChildren, middleChildren, rightChildren }) => {
   const classes = useStyles()
   return (
     <Wrapper>
@@ -45,4 +45,4 @@ const TriSectionHeader = ({ leftChildren, middleChildren, rightChildren }) => {
   )
 }
 
-export { TriSectionHeader }
+export { TriSection }
