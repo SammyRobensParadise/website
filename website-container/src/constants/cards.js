@@ -59,7 +59,7 @@ export const IntensifEyeDesignCard = (
       config={{
         title: `Intensif-Eye; Google Vision AI, Design`,
         content: `A more accessible world throught AI`,
-        imageURL: 'https://i.ibb.co/r2NBmKn/intensif-eye-render-shadow-4.png',
+        imageURL: 'https://i.ibb.co/Kb6F9kF/intensif-eye-render-logo.png',
         link: '/#',
         imageAltText: `A more accessible world throught AI`,
         ...defaultCardConfig,
@@ -72,7 +72,7 @@ export const GrapeDesignCard = (
     <Card
       config={{
         title: `Grape; Changing the way we learn code`,
-        content: `The deisgn of a tool to open source learning code`,
+        content: `The deisgn of a tool to open source learning`,
         imageURL: 'https://i.ibb.co/syVpZhf/grape-promo.png',
         imageAltText: `The deisgn of a tool to open source learning code`,
         link: '/#',
@@ -140,6 +140,20 @@ export const IllustrationsCard = (
   </Wrapper>
 )
 
+export const RectCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Rec'd; collaborate on music sharing`,
+        content: `A ongoing music app grown from friends and a love for music.`,
+        imageURL: 'https://i.ibb.co/L9CkY6w/rect-logo.png',
+        imageAltText: `A ongoing music app grown from friends and a love for music.`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
 /**
  * Code Cards
  */

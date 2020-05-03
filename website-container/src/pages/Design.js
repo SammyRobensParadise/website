@@ -15,10 +15,9 @@ import {
   Portfolio2019Card,
   BlanksDesignProblemCard,
   IllustrationsCard,
+  RectCard,
 } from '../constants/cards'
-import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
-import { UIStyle } from '../constants/config'
 import { MenuConfig } from '../constants/config'
 // css
 import '../css/styles/styles.css'
@@ -43,7 +42,7 @@ const CoverChildren = (
 // cards
 const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, BlanksDesignProblemCard]
 const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard]
-const designCardsRight = []
+const designCardsRight = [RectCard]
 const ScrollArea = styled.div`
   height: 1000px;
   overflow: auto;
