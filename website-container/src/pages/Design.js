@@ -16,6 +16,8 @@ import {
   BlanksDesignProblemCard,
   IllustrationsCard,
   RectCard,
+  GlobalWineryDesignCard,
+  PostersDesignCard,
 } from '../constants/cards'
 import styled from 'styled-components'
 import { MenuConfig } from '../constants/config'
@@ -42,7 +44,7 @@ const CoverChildren = (
 // cards
 const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, BlanksDesignProblemCard]
 const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard]
-const designCardsRight = [RectCard]
+const designCardsRight = [RectCard, GlobalWineryDesignCard, PostersDesignCard]
 const ScrollArea = styled.div`
   height: 1000px;
   overflow: auto;

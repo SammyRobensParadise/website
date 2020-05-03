@@ -154,6 +154,35 @@ export const RectCard = (
     />
   </Wrapper>
 )
+export const GlobalWineryDesignCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Global-Winery; The Design System`,
+        content: `The proposed design system beind Grape`,
+        imageURL: 'https://i.ibb.co/ynJR4TM/global-winery-logo.png',
+        imageAltText: `The proposed design system beind Grape`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const PostersDesignCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Posters… their process and quirks`,
+        content: `A gallery of experiments`,
+        imageURL: 'https://i.ibb.co/M86hP7B/posters-logo.png',
+        imageAltText: `A gallery of experiments`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
 /**
  * Code Cards
  */
