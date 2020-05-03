@@ -9,6 +9,14 @@ import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
 import { Menu, SectionHeader } from 'eunoia'
 import { MenuConfig } from '../constants/config'
+
+import {
+  ActionButton,
+  ActionCircleButton,
+  ActionRightArrow,
+  ActionDownArrow,
+  ScrollArea,
+} from '../constants/styles'
 import {
   IntensifEyeArticleCard,
   AccessibleReactAppCard,
@@ -18,7 +26,6 @@ import {
   GlobalWineryCodeCard,
 } from '../constants/cards'
 import { Grid } from '@material-ui/core'
-import { Button, CircleButton, RightArrow, DownArrow } from 'eunoia'
 import styled from 'styled-components'
 import { UIStyle } from '../constants/config'
 // css
@@ -46,28 +53,7 @@ const myPassion = `My Passion`
 const myPassionText = `We have a responsability to use it to improve the lives of all people, and the environment. As someone who advocates optimized engineering solutions, I continue on my journey to find the most eloquent and beautiful solutions to the worlds most challenging problems. I have always taken an interest in the way humans interact with technology, and more specifically, the way it shapes our experiences.`
 // styled-components ****
 // Cover
-const ActionButton = styled(Button)`
-  margin: 0;
-  text-align: left;
-  font: Regular 52px/59px Georgia;
-  letter-spacing: 0px;
-  color: ${UIStyle.UIColors.white};
-  opacity: 1 !important;
-  font-weight: 100;
-  width: 200px;
-  text-align: center;
-`
-const ActionCircleButton = styled(CircleButton)`
-  padding-top: 18px;
-  display: inline-block;
-  transform: translateY(20px);
-`
-const ActionRightArrow = styled(RightArrow)`
-  margin-bottom: 1rem;
-`
-const ActionDownArrow = styled(DownArrow)`
-  margin-bottom: 1rem;
-`
+
 const ActionWrapper = styled.div`
   padding-left: 4rem;
   display: inline-block;
@@ -385,14 +371,6 @@ const Experience3Header = (
 const articleCards = [IntensifEyeArticleCard, AccessibleReactAppCard]
 const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
 const codeCards = [EunoiaCodeCard, GlobalWineryCodeCard]
-const ScrollArea = styled.div`
-  height: 700px;
-  overflow: auto;
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  padding-block-end: 6vh;
-`
 
 // class Definition
 class Main extends React.PureComponent {

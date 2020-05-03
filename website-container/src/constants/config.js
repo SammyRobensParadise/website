@@ -47,6 +47,7 @@ export const MenuConfig = {
       link: '/#',
       newTab: false,
       main: true,
+      exRef: `${window.location.origin}`
     },
     { title: 'About', link: '/#', newTab: false },
     { title: 'Articles', link: '/#', newTab: false, exRef: mediumURL },

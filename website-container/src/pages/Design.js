@@ -1,7 +1,5 @@
 import React from 'react'
 import { Cover } from '../components/Cover'
-import { TriSectionHeader } from '../components/TriSectionHeader'
-import { MainTitle } from '../components/MainTitle'
 
 import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
@@ -25,11 +23,14 @@ import '../css/styles/styles.css'
 import '../css/styles/App.css'
 
 // components
+const CoverChildren = (
+  <div>
+    <Menu config={MenuConfig.config} options={MenuConfig.options} />
+  </div>
+)
 // strings ****
 
-const articleCards = [IntensifEyeArticleCard, AccessibleReactAppCard]
 const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
-const codeCards = [EunoiaCodeCard, GlobalWineryCodeCard]
 const ScrollArea = styled.div`
   height: 700px;
   overflow: auto;
@@ -45,9 +46,7 @@ class Design extends React.PureComponent {
     return (
       <div className="Design-wrapper">
         <SocialButtons />
-    {//    <Cover children={CoverChildren} />
-    }
-
+        <Cover children={CoverChildren} />
         <Footer />
       </div>
     )
