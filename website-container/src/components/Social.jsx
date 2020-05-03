@@ -9,6 +9,12 @@ const SocialButtonsWrapper = styled.div`
   right: 2vh;
   top: 30vh;
   width: 70px;
+  @media screen and (max-width: 500px) {
+    transform: scale(0.8);
+    right: 0vh;
+    top: 0vh;
+    width: 60px;
+  }
 `
 const SocialMediaButtons = styled.a`
   cursor: pointer;

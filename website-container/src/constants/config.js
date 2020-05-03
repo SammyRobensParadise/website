@@ -49,7 +49,7 @@ export const MenuConfig = {
       main: true,
     },
     { title: 'About', link: '/#', newTab: false },
-    { title: 'Articles', link: '/#', newTab: false, exRef: 'https://medium.com/@srobensparadise' },
+    { title: 'Articles', link: '/#', newTab: false, exRef: mediumURL },
     { title: 'Design', link: '/#', newTab: false },
     { title: 'Development', link: '/#', newTab: false },
     { title: 'Experience', link: '/#', newTab: false },
