@@ -4,48 +4,45 @@ import { UIStyle } from '../constants/config'
 import styled from 'styled-components'
 
 const TitleStyle = styled.h1`
-  text-align: left;
+  text-align: center;
   font: Regular 52px/59px Georgia;
   letter-spacing: 0px;
   color: ${UIStyle.UIColors.white};
   opacity: 1 !important;
   font-weight: 200;
   padding-block-start: 180px;
-  margin-left: 10%;
-  font-size: 42px;
+  font-size: 64px;
   width: auto;
   height: auto;
   line-height: 42px;
   margin-block-end: 0rem;
 `
 const SubtitleWrapper = styled.h2`
-  text-align: left;
+  text-align: center;
   font-family: Georgia;
   letter-spacing: 0px;
   color: ${UIStyle.UIColors.white};
   opacity: 1 !important;
   font-weight: 200;
-  padding-block-start: 0px;
-  padding-left: 10%;
-  font-size: 64px;
+  padding-block-start: 18px;
+  font-size: 42px;
   width: auto;
   margin-block-start: 0rem;
   @media screen and (max-width: 600px) {
-    font-size: 50px;
+    font-size: 30px;
   }
   @media screen and (max-width: 380px) {
-    font-size: 30px;
+    font-size: 26px;
   }
 `
 const ChildrenWrapper = styled.div`
-  text-align: left;
+  text-align: center;
   font: Regular 52px/59px Georgia;
   letter-spacing: 0px;
   color: ${UIStyle.UIColors.white};
   opacity: 1 !important;
   font-weight: 200;
-  padding-block-start: 0px;
-  padding-left: 10%;
+  padding-block-start: 30px;
   width: auto;
   margin-block-start: 0rem;
   & {
