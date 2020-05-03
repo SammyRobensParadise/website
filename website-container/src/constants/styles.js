@@ -24,11 +24,41 @@ export const ActionRightArrow = styled(RightArrow)`
 export const ActionDownArrow = styled(DownArrow)`
   margin-bottom: 1rem;
 `
+export const HeaderContent = styled.div`
+  margin: 0 auto;
+  height: inherit;
+  font-weight: 100;
+  padding-top: ${(p) => (p.isThree ? '8vh' : '6vh')};
+  & {
+    @media screen and (max-width: 800px) {
+      padding-top: 3vh;
+      font-size: 24px;
+    }
+    @media screen and (max-width: 400px) {
+      padding-top: 2vh;
+    }
+  }
+`
+export const HeaderContentText = styled.p`
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.white};
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  padding-block-start: 2vh;
+  @media screen and (max-width: 1350px) {
+    width: 80%;
+    font-size: 18px;
+  }
+`
 export const ScrollArea = styled.div`
-height: 700px;
-overflow: auto;
-::-webkit-scrollbar {
-  display: none;
-}
-padding-block-end: 6vh;
+  height: ${(p) => (p.height ? p.height : '700px')};
+  overflow: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  padding-block-end: 6vh;
 `

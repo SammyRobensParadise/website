@@ -16,6 +16,8 @@ import {
   ActionRightArrow,
   ActionDownArrow,
   ScrollArea,
+  HeaderContentText,
+  HeaderContent,
 } from '../constants/styles'
 import {
   IntensifEyeArticleCard,
@@ -125,36 +127,7 @@ const IntroTextStyle = styled.p`
   }
 `
 // header 2
-const HeaderContent = styled.div`
-  margin: 0 auto;
-  height: inherit;
-  font-weight: 100;
-  padding-top: ${(p) => (p.isThree ? '8vh' : '6vh')};
-  & {
-    @media screen and (max-width: 800px) {
-      padding-top: 3vh;
-      font-size: 24px;
-    }
-    @media screen and (max-width: 400px) {
-      padding-top: 2vh;
-    }
-  }
-`
-const HeaderContentText = styled.p`
-  font-family: Helvetica Neue;
-  letter-spacing: 0px;
-  color: ${UIStyle.UIColors.white};
-  font-weight: 300;
-  font-size: 24px;
-  text-align: center;
-  width: 60%;
-  margin: 0 auto;
-  padding-block-start: 2vh;
-  @media screen and (max-width: 1350px) {
-    width: 80%;
-    font-size: 18px;
-  }
-`
+
 // section 2
 
 const SammySkatingImageStyle = styled.img`
