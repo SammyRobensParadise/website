@@ -81,6 +81,65 @@ export const GrapeDesignCard = (
     />
   </Wrapper>
 )
+export const Portfolio2020Card = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Website: Winter & Spring 2020; Design`,
+        content: `The motivation behind bold block colors and custom animations`,
+        imageURL: 'https://i.ibb.co/6HhtjHZ/portfolio-winter-20-logo.png',
+        imageAltText: `The motivation behind bold block colors and custom animations`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+export const Portfolio2019Card = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Website: Summer & Fall 2019; Design`,
+        content: `The design thinking behind my first seasonal portfolio`,
+        imageURL: 'https://i.ibb.co/mDP4djv/portfolio-spring-19-logo.png',
+        imageAltText: `The design thinking behind my first seasonal portfolio`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const BlanksDesignProblemCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Solving ____’s UX design problem`,
+        content: `How I created a system for ___ to quantify the fun of their mobile app, and be the first of its kind to hit the market.`,
+        imageURL: 'https://i.ibb.co/bLr6QtJ/blank-project-logo.png',
+        imageAltText: `How I created a system for ___ to quantify the fun of their mobile app, and be the first of its kind to hit the market.`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const IllustrationsCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Illustrations… and their stories`,
+        content: `Why I draw things, how I draw them and inspirations!`,
+        imageURL: 'https://i.ibb.co/WkN8RtC/sammy-illustraions-logo.png',
+        imageAltText: `Why I draw things, how I draw them and inspirations!`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
 /**
  * Code Cards
  */

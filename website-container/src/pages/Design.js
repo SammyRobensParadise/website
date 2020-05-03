@@ -1,16 +1,25 @@
 import React from 'react'
+// components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
 import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
 import { Menu } from 'eunoia'
-import { MenuConfig } from '../constants/config'
 import { Button } from 'eunoia'
-import { IntensifEyeDesignCard, GrapeDesignCard } from '../constants/cards'
+import { TriSection } from '../components/TriSection'
+// constants
+import {
+  IntensifEyeDesignCard,
+  GrapeDesignCard,
+  Portfolio2020Card,
+  Portfolio2019Card,
+  BlanksDesignProblemCard,
+  IllustrationsCard,
+} from '../constants/cards'
 import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
 import { UIStyle } from '../constants/config'
-
+import { MenuConfig } from '../constants/config'
 // css
 import '../css/styles/styles.css'
 import '../css/styles/App.css'
@@ -26,14 +35,17 @@ const CoverChildren = (
     <SectionTitle
       title={design}
       subtitle={[designSubtitle]}
-      children={[<Button transparent >{exploreMyWork}</Button>]}
+      children={[<Button transparent>{exploreMyWork}</Button>]}
     />
   </div>
 )
 
-const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
+// cards
+const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, BlanksDesignProblemCard]
+const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard]
+const designCardsRight = []
 const ScrollArea = styled.div`
-  height: 700px;
+  height: 1000px;
   overflow: auto;
   ::-webkit-scrollbar {
     display: none;
@@ -48,6 +60,29 @@ class Design extends React.PureComponent {
       <div className="Design-wrapper">
         <SocialButtons />
         <Cover children={CoverChildren} />
+        <TriSection
+          leftChildren={[
+            <ScrollArea>
+              {designCardsLeft.map((e) => (
+                <div>{e}</div>
+              ))}
+            </ScrollArea>,
+          ]}
+          middleChildren={[
+            <ScrollArea>
+              {designCardsMiddle.map((e) => (
+                <div>{e}</div>
+              ))}
+            </ScrollArea>,
+          ]}
+          rightChildren={[
+            <ScrollArea>
+              {designCardsRight.map((e) => (
+                <div>{e}</div>
+              ))}
+            </ScrollArea>,
+          ]}
+        />
         <Footer />
       </div>
     )
