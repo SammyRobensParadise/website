@@ -50,7 +50,7 @@ export const MenuConfig = {
     },
     { title: 'About', link: '/#', newTab: false },
     { title: 'Articles', link: '/#', newTab: false, exRef: mediumURL },
-    { title: 'Design', link: '/#', newTab: false },
+    { title: 'Design', link: '/design', newTab: false, exRef: `${window.location.origin}/design` },
     { title: 'Development', link: '/#', newTab: false },
     { title: 'Experience', link: '/#', newTab: false },
   ],
