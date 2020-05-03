@@ -16,4 +16,11 @@ export const mediumURL = 'https://medium.com/@srobensparadise'
 // dribbble
 export const dribbbleURL = 'https://dribbble.com/sammyrp'
 
+// website repository
 export const websiteRepoURL = 'https://github.com/SammyRobensParadise/website'
+
+// email 
+export const emailLink = `mailto:srobensparadise@gmail.com`
+
+// resume
+export const resumeLink = `https://www.yumpu.com/en/document/read/63320828/resume`
