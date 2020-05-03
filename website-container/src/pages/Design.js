@@ -1,20 +1,13 @@
 import React from 'react'
 import { Cover } from '../components/Cover'
-
+import { SectionTitle } from '../components/SectionsTitle'
 import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
-import { Menu, SectionHeader } from 'eunoia'
+import { Menu } from 'eunoia'
 import { MenuConfig } from '../constants/config'
-import {
-  IntensifEyeArticleCard,
-  AccessibleReactAppCard,
-  IntensifEyeDesignCard,
-  GrapeDesignCard,
-  EunoiaCodeCard,
-  GlobalWineryCodeCard,
-} from '../constants/cards'
+import { Button } from 'eunoia'
+import { IntensifEyeDesignCard, GrapeDesignCard } from '../constants/cards'
 import { Grid } from '@material-ui/core'
-import { Button, CircleButton, RightArrow, DownArrow } from 'eunoia'
 import styled from 'styled-components'
 import { UIStyle } from '../constants/config'
 
@@ -22,13 +15,21 @@ import { UIStyle } from '../constants/config'
 import '../css/styles/styles.css'
 import '../css/styles/App.css'
 
+// strings ****
+const design = `Design`
+const designSubtitle = `Bold and creative solutions`
+const exploreMyWork = `Explore my work`
 // components
 const CoverChildren = (
   <div>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
+    <SectionTitle
+      title={design}
+      subtitle={[designSubtitle]}
+      children={[<Button transparent >{exploreMyWork}</Button>]}
+    />
   </div>
 )
-// strings ****
 
 const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
 const ScrollArea = styled.div`
