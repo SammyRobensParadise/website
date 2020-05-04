@@ -44,15 +44,20 @@ export const MenuConfig = {
   options: [
     {
       title: 'Home',
-      link: '/#',
+      link: '/',
       newTab: false,
       main: true,
-      exRef: `${window.location.origin}`
+      exRef: `${window.location.origin}`,
     },
     { title: 'About', link: '/#', newTab: false },
     { title: 'Articles', link: '/#', newTab: false, exRef: mediumURL },
     { title: 'Design', link: '/design', newTab: false, exRef: `${window.location.origin}/design` },
-    { title: 'Code', link: '/code', newTab: false ,exRef: `${window.location.origin}/code`},
-    { title: 'Experience', link: '/#', newTab: false },
+    { title: 'Code', link: '/code', newTab: false, exRef: `${window.location.origin}/code` },
+    {
+      title: 'Experience',
+      link: '/experience',
+      newTab: false,
+      exRef: `${window.location.origin}/experience`,
+    },
   ],
 }
