@@ -2,6 +2,10 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+body > * :focus {
+  outline-color: #E1A87A;
+  outline-width: 2px;
+}
 @font-face {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
     'Lucida Grande', sans-serif;
