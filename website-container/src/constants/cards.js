@@ -95,6 +95,7 @@ export const Portfolio2020Card = (
     />
   </Wrapper>
 )
+
 export const Portfolio2019Card = (
   <Wrapper>
     <Card
@@ -215,4 +216,34 @@ export const GlobalWineryCodeCard = (
       }}
     />
   </Wrapper>
+)
+
+export const Portfolio2020CodeCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Website: Winter & Spring 2020: React.js`,
+        content: `A story about an experiment with svg animations redux and modern javascript framworks`,
+        imageURL: 'https://i.ibb.co/6HhtjHZ/portfolio-winter-20-logo.png',
+        imageAltText: `A story about an experiment with svg animations redux and modern javascript framworks`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const GithubContributionsCounterCodeCard= (
+  <Wrapper>
+  <Card
+    config={{
+      title: `Github Contributions Counter`,
+      content: `A simple javascript API allowing users to get their contribution history based on their github username!`,
+      imageURL: 'https://i.ibb.co/tq8VpG9/github-contributions-counter-logo.png',
+      imageAltText: `A simple javascript API allowing users to get their contribution history based on their github username!`,
+      link: '/#',
+      ...defaultCardConfig,
+    }}
+  />
+</Wrapper>
 )

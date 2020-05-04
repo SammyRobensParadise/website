@@ -40,15 +40,10 @@ import { Header } from '../components/Headers'
 import { UIStyle, MenuConfig } from '../constants/config'
 import { HeaderContent, ScrollArea, ActionDownArrow, ActionUpArrow } from '../constants/styles'
 import {
-  IntensifEyeDesignCard,
-  GrapeDesignCard,
-  Portfolio2020Card,
-  Portfolio2019Card,
-  BlanksDesignProblemCard,
-  IllustrationsCard,
-  RectCard,
-  GlobalWineryDesignCard,
-  PostersDesignCard,
+  EunoiaCodeCard,
+  GlobalWineryCodeCard,
+  Portfolio2020CodeCard,
+  GithubContributionsCounterCodeCard,
 } from '../constants/cards'
 // css
 import '../css/styles/styles.css'
@@ -164,9 +159,9 @@ const ExperienceHeader = (
 )
 
 // cards
-const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, BlanksDesignProblemCard]
-const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard]
-const designCardsRight = [RectCard, GlobalWineryDesignCard, PostersDesignCard]
+const codeCardsLeft = [EunoiaCodeCard, GlobalWineryCodeCard, Portfolio2020CodeCard]
+const codeCardsMiddle = [GithubContributionsCounterCodeCard]
+const codeCardsRight = []
 
 // class Definition
 class Code extends React.PureComponent {
@@ -188,21 +183,21 @@ class Code extends React.PureComponent {
           <TriSection
             leftChildren={[
               <ScrollArea height={'1000px'}>
-                {designCardsLeft.map((e) => (
+                {codeCardsLeft.map((e) => (
                   <div>{e}</div>
                 ))}
               </ScrollArea>,
             ]}
             middleChildren={[
               <ScrollArea height={'1000px'}>
-                {designCardsMiddle.map((e) => (
+                {codeCardsMiddle.map((e) => (
                   <div>{e}</div>
                 ))}
               </ScrollArea>,
             ]}
             rightChildren={[
               <ScrollArea height={'1000px'}>
-                {designCardsRight.map((e) => (
+                {codeCardsRight.map((e) => (
                   <div>{e}</div>
                 ))}
               </ScrollArea>,
