@@ -9,8 +9,12 @@ import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
 import { Menu, SectionHeader } from 'eunoia'
 import { Header } from '../components/Headers'
+import { Grid } from '@material-ui/core'
+import styled from 'styled-components'
 
+// constants
 import { MenuConfig } from '../constants/config'
+import { resumeLink } from '../constants/links'
 import {
   ActionButton,
   ActionCircleButton,
@@ -27,8 +31,7 @@ import {
   EunoiaCodeCard,
   GlobalWineryCodeCard,
 } from '../constants/cards'
-import { Grid } from '@material-ui/core'
-import styled from 'styled-components'
+
 import { UIStyle } from '../constants/config'
 // css
 import '../css/styles/styles.css'
@@ -183,7 +186,17 @@ const MyPassionText = styled.p`
 const CoverActionButtons = (
   <Grid spacing={3}>
     <Grid item>
-      <ActionButton transparent>{Resume}</ActionButton>
+      <ActionButton
+        onClick={() => window.open(resumeLink, '_self')}
+        onKeyPress={(e) => {
+          if (e.key === 'Enter') {
+            window.open(resumeLink, '_self')
+          }
+        }}
+        transparent
+      >
+        {Resume}
+      </ActionButton>
       <ActionWrapper>
         <ActionCircleButton transparent height={'66px'}>
           <ActionRightArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'11px'} />
