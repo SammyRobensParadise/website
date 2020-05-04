@@ -42,10 +42,9 @@ import {
 // css
 import '../css/styles/styles.css'
 import '../css/styles/App.css'
-
+import '../css/styles/spinners.css'
 // strings ****
 const code = `Code`
-const codeSubtitle = `...`
 const exploreMyWork = `Explore my work`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
@@ -60,19 +59,19 @@ const defaultHeaderConfig = {
   height: 150,
   backgroundColor: UIStyle.UIColors.darkGrey,
 }
-const DesignSectionHeaderConfig = {
-  text: `My Design Tools`,
+const CodeSectionHeaderConfig = {
+  text: `My Development Tools`,
   ...defaultHeaderConfig,
 }
 // components
 // cover
 const CoverChildren = () => {
-  const [contributionsString, getContributions] = useState(codeSubtitle);
+  const [contributionsString, getContributions] = useState(<div className="spinner"></div>);
   getGitHubContributionsHistory('SammyRobensParadise').then((response) => {
     if(response[0].error){
       getContributions(`Thousands contributions this year`)
     }else{
-      getContributions(`${response[0].annualContributions} contributions this year`)
+      getContributions(`${response[0].annualContributions.replace(/\B(?=(\d{3})+(?!\d))/g, ",")} contributions this year`)
 
     }
   })
@@ -195,8 +194,8 @@ class Code extends React.PureComponent {
             ]}
           />
         </Element>
-        <SectionHeader config={DesignSectionHeaderConfig}>
-          <HeaderContent>{DesignSectionHeaderConfig.text}</HeaderContent>
+        <SectionHeader config={CodeSectionHeaderConfig}>
+          <HeaderContent>{CodeSectionHeaderConfig.text}</HeaderContent>
         </SectionHeader>
         <Tools
           tools={[
