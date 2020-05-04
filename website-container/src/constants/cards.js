@@ -223,7 +223,7 @@ export const Portfolio2020CodeCard = (
   <Wrapper>
     <Card
       config={{
-        title: `Website: Winter & Spring 2020: React.js`,
+        title: `Website: Winter & Spring 2020; React.js`,
         content: `A story about an experiment with svg animations redux and modern javascript framworks`,
         imageURL: 'https://i.ibb.co/6HhtjHZ/portfolio-winter-20-logo.png',
         imageAltText: `A story about an experiment with svg animations redux and modern javascript framworks`,
@@ -238,7 +238,7 @@ export const GithubContributionsCounterCodeCard = (
   <Wrapper>
     <Card
       config={{
-        title: `Github Contributions Counter`,
+        title: `Github Contributions Counter; node.js`,
         content: `A simple javascript API allowing users to get their contribution history based on their github username!`,
         imageURL: 'https://i.ibb.co/tq8VpG9/github-contributions-counter-logo.png',
         imageAltText: `A simple javascript API allowing users to get their contribution history based on their github username!`,
@@ -253,7 +253,7 @@ export const ThonkJSCodeCard = (
   <Wrapper>
     <Card
       config={{
-        title: `Thonk.js`,
+        title: `Thonk.js; node.js`,
         content: `Explore this gross misuse of AI and natural language processing to cause havoc on strings`,
         imageURL: 'https://i.ibb.co/BC6bxb5/thonk-js-logo.png',
         imageAltText: `Explore this gross misuse of AI and natural language processing to cause havoc on strings`,
@@ -285,9 +285,39 @@ export const ArduinoScreamingCodeCard = (
       config={{
         title: `Arduino-Screaming; C/C++`,
         content: `Have you ever wanted a safe that will only open if you scream correctly at it? well look no further!`,
-        imageURL: 'https://i.ibb.co/DChmq4z/arduino-screaming-safe-logo.png"',
+        imageURL: 'https://i.ibb.co/DChmq4z/arduino-screaming-safe-logo.png',
         link: '/#',
         imageAltText: `Have you ever wanted a safe that will only open if you scream correctly at it? well look no further!`,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const ThisWebsiteCodeCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `This Website, the making, react.js`,
+        content: `How I build react website using routers, styled-components, firebase and functional components`,
+        imageURL: 'https://i.ibb.co/ZNRjyHq/this-website-making-logo.png',
+        link: '/#',
+        imageAltText: `How I build react website using routers, styled-components, firebase and functional components`,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const Portfolio2019CodeCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Website: Summer & Fall 2019: React.js`,
+        content: `The code behind my first seasonal portfolio`,
+        imageURL: 'https://i.ibb.co/mDP4djv/portfolio-spring-19-logo.png',
+        imageAltText: `The code behind my first seasonal portfolio`,
+        link: '/#',
         ...defaultCardConfig,
       }}
     />

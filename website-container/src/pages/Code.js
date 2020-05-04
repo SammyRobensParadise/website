@@ -47,6 +47,8 @@ import {
   ThonkJSCodeCard,
   IntensifEyeCodeCard,
   ArduinoScreamingCodeCard,
+  ThisWebsiteCodeCard,
+  Portfolio2019CodeCard,
 } from '../constants/cards'
 // css
 import '../css/styles/styles.css'
@@ -164,7 +166,7 @@ const ExperienceHeader = (
 // cards
 const codeCardsLeft = [EunoiaCodeCard, GlobalWineryCodeCard, Portfolio2020CodeCard]
 const codeCardsMiddle = [GithubContributionsCounterCodeCard, ThonkJSCodeCard, IntensifEyeCodeCard]
-const codeCardsRight = [ArduinoScreamingCodeCard]
+const codeCardsRight = [ArduinoScreamingCodeCard, ThisWebsiteCodeCard, Portfolio2019CodeCard]
 
 // class Definition
 class Code extends React.PureComponent {
