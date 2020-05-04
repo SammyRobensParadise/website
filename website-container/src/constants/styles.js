@@ -1,4 +1,4 @@
-import { Button, CircleButton, RightArrow, DownArrow } from 'eunoia'
+import { Button, CircleButton, RightArrow, DownArrow, UpArrow } from 'eunoia'
 import styled from 'styled-components'
 import { UIStyle } from './config'
 
@@ -22,6 +22,9 @@ export const ActionRightArrow = styled(RightArrow)`
   margin-bottom: 1rem;
 `
 export const ActionDownArrow = styled(DownArrow)`
+  margin-bottom: 1rem;
+`
+export const ActionUpArrow = styled(UpArrow)`
   margin-bottom: 1rem;
 `
 export const HeaderContent = styled.div`
