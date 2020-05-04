@@ -1,3 +1,4 @@
+// react
 import React from 'react'
 // components
 import { Cover } from '../components/Cover'
@@ -19,17 +20,13 @@ import {
   MaterialDesignIcon,
   CreativecloudIcon,
 } from 'eunoia'
+import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../components/TriSection'
 import { Tools } from '../components/Tools'
 import { Header } from '../components/Headers'
 // constants
 import { UIStyle, MenuConfig } from '../constants/config'
-import {
-  HeaderContent,
-  ScrollArea,
-  ActionDownArrow,
-  ActionUpArrow,
-} from '../constants/styles'
+import { HeaderContent, ScrollArea, ActionDownArrow, ActionUpArrow } from '../constants/styles'
 import {
   IntensifEyeDesignCard,
   GrapeDesignCard,
@@ -46,7 +43,7 @@ import '../css/styles/styles.css'
 import '../css/styles/App.css'
 
 // strings ****
-const development = `Development`
+const design = `Design`
 const designSubtitle = `Bold and creative solutions`
 const exploreMyWork = `Explore my work`
 const designContentText = `Explore my design portfolio & case studies`
@@ -72,9 +69,20 @@ const CoverChildren = (
   <div>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
     <SectionTitle
-      title={development}
+      title={design}
       subtitle={[designSubtitle]}
-      children={[<Button transparent>{exploreMyWork}</Button>]}
+      children={[
+        <ScrollLink
+          activeClass="active"
+          className="design-work"
+          to="design-work"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
+          <Button transparent>{exploreMyWork}</Button>
+        </ScrollLink>,
+      ]}
     />
   </div>
 )
@@ -136,34 +144,45 @@ const designCardsRight = [RectCard, GlobalWineryDesignCard, PostersDesignCard]
 
 // class Definition
 class Development extends React.PureComponent {
+  componentDidMount() {
+    Events.scrollEvent.register('begin')
+
+    Events.scrollEvent.register('end')
+  }
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin')
+    Events.scrollEvent.remove('end')
+  }
   render() {
     return (
       <div className="Design-wrapper">
         <SocialButtons />
         <Cover children={CoverChildren} />
-        <TriSection
-          leftChildren={[
-            <ScrollArea height={'1000px'}>
-              {designCardsLeft.map((e) => (
-                <div>{e}</div>
-              ))}
-            </ScrollArea>,
-          ]}
-          middleChildren={[
-            <ScrollArea height={'1000px'}>
-              {designCardsMiddle.map((e) => (
-                <div>{e}</div>
-              ))}
-            </ScrollArea>,
-          ]}
-          rightChildren={[
-            <ScrollArea height={'1000px'}>
-              {designCardsRight.map((e) => (
-                <div>{e}</div>
-              ))}
-            </ScrollArea>,
-          ]}
-        />
+        <Element name="design-work" className="element">
+          <TriSection
+            leftChildren={[
+              <ScrollArea height={'1000px'}>
+                {designCardsLeft.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </ScrollArea>,
+            ]}
+            middleChildren={[
+              <ScrollArea height={'1000px'}>
+                {designCardsMiddle.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </ScrollArea>,
+            ]}
+            rightChildren={[
+              <ScrollArea height={'1000px'}>
+                {designCardsRight.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </ScrollArea>,
+            ]}
+          />
+        </Element>
         <SectionHeader config={DesignSectionHeaderConfig}>
           <HeaderContent>{DesignSectionHeaderConfig.text}</HeaderContent>
         </SectionHeader>
