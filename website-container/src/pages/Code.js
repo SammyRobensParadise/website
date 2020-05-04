@@ -9,19 +9,30 @@ import {
   Menu,
   Button,
   SectionHeader,
-  PhotoshopIcon,
-  IllustratorIcon,
-  ExperienceDesignerIcon,
-  FigmaIcon,
-  SketchIcon,
-  InvisionIcon,
-  AftereffectsIcon,
-  IndesignIcon,
-  MaterialDesignIcon,
-  CreativecloudIcon,
+  ReactIcon,
+  PythonIcon,
+  WebpackIcon,
+  NodeIcon,
+  PHPIcon,
+  JSIcon,
+  GitLargeIcon,
+  JenkinsIcon,
+  K8sIcon,
+  DockerIcon,
+  SassIcon,
+  CssIcon,
+  HtmlIcon,
+  YarnIcon,
+  NpmIcon,
+  UbuntuIcon,
+  MySQLIcon,
+  FirebaseIcon,
+  JQueryIcon,
+  CppIcon,
+  TsIcon,
 } from 'eunoia'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
-import {getGitHubContributionsHistory} from 'github-contributions-counter'
+import { getGitHubContributionsHistory } from 'github-contributions-counter'
 import { TriSection } from '../components/TriSection'
 import { Tools } from '../components/Tools'
 import { Header } from '../components/Headers'
@@ -66,13 +77,17 @@ const CodeSectionHeaderConfig = {
 // components
 // cover
 const CoverChildren = () => {
-  const [contributionsString, getContributions] = useState(<div className="spinner"></div>);
+  const [contributionsString, getContributions] = useState(<div className="spinner"></div>)
   getGitHubContributionsHistory('SammyRobensParadise').then((response) => {
-    if(response[0].error){
+    if (response[0].error) {
       getContributions(`Thousands contributions this year`)
-    }else{
-      getContributions(`${response[0].annualContributions.replace(/\B(?=(\d{3})+(?!\d))/g, ",")} contributions this year`)
-
+    } else {
+      getContributions(
+        `${response[0].annualContributions.replace(
+          /\B(?=(\d{3})+(?!\d))/g,
+          ',',
+        )} contributions this year`,
+      )
     }
   })
   return (
@@ -130,14 +145,14 @@ const DesignHeader = (
   <Header
     config={designHeaderConfigBottom}
     contentText={designContentText}
-    children={<ActionUpArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
   />
 )
 const CodeHeader = (
   <Header
     config={codeHeaderConfigBottom}
     contentText={codeContentText}
-    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+    children={<ActionUpArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
   />
 )
 const ExperienceHeader = (
@@ -199,16 +214,27 @@ class Code extends React.PureComponent {
         </SectionHeader>
         <Tools
           tools={[
-            <PhotoshopIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <IllustratorIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <ExperienceDesignerIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <FigmaIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <SketchIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <InvisionIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <AftereffectsIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <IndesignIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <MaterialDesignIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <CreativecloudIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <ReactIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <PythonIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <WebpackIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <NodeIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <PHPIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <JSIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <TsIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <GitLargeIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <JenkinsIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <K8sIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <DockerIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <SassIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <CssIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <HtmlIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <YarnIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <NpmIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <UbuntuIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <MySQLIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <FirebaseIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <JQueryIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <CppIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
           ]}
         />
         <TriSection
