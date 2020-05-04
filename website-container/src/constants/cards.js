@@ -67,6 +67,7 @@ export const IntensifEyeDesignCard = (
     />
   </Wrapper>
 )
+
 export const GrapeDesignCard = (
   <Wrapper>
     <Card
@@ -233,17 +234,62 @@ export const Portfolio2020CodeCard = (
   </Wrapper>
 )
 
-export const GithubContributionsCounterCodeCard= (
+export const GithubContributionsCounterCodeCard = (
   <Wrapper>
-  <Card
-    config={{
-      title: `Github Contributions Counter`,
-      content: `A simple javascript API allowing users to get their contribution history based on their github username!`,
-      imageURL: 'https://i.ibb.co/tq8VpG9/github-contributions-counter-logo.png',
-      imageAltText: `A simple javascript API allowing users to get their contribution history based on their github username!`,
-      link: '/#',
-      ...defaultCardConfig,
-    }}
-  />
-</Wrapper>
+    <Card
+      config={{
+        title: `Github Contributions Counter`,
+        content: `A simple javascript API allowing users to get their contribution history based on their github username!`,
+        imageURL: 'https://i.ibb.co/tq8VpG9/github-contributions-counter-logo.png',
+        imageAltText: `A simple javascript API allowing users to get their contribution history based on their github username!`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const ThonkJSCodeCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Thonk.js`,
+        content: `Explore this gross misuse of AI and natural language processing to cause havoc on strings`,
+        imageURL: 'https://i.ibb.co/BC6bxb5/thonk-js-logo.png',
+        imageAltText: `Explore this gross misuse of AI and natural language processing to cause havoc on strings`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const IntensifEyeCodeCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Intensif-Eye; Google Vision AI, Design; React-Native`,
+        content: `The code behind Intensif-Eye, a project to help those with visual impairments`,
+        imageURL: 'https://i.ibb.co/6m2hkqy/intensifeye-logo.png',
+        link: '/#',
+        imageAltText: `The code behind Intensif-Eye, a project to help those with visual impairments`,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const ArduinoScreamingCodeCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Arduino-Screaming; C/C++`,
+        content: `Have you ever wanted a safe that will only open if you scream correctly at it? well look no further!`,
+        imageURL: 'https://i.ibb.co/DChmq4z/arduino-screaming-safe-logo.png"',
+        link: '/#',
+        imageAltText: `Have you ever wanted a safe that will only open if you scream correctly at it? well look no further!`,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
 )

@@ -44,6 +44,9 @@ import {
   GlobalWineryCodeCard,
   Portfolio2020CodeCard,
   GithubContributionsCounterCodeCard,
+  ThonkJSCodeCard,
+  IntensifEyeCodeCard,
+  ArduinoScreamingCodeCard,
 } from '../constants/cards'
 // css
 import '../css/styles/styles.css'
@@ -94,8 +97,8 @@ const CoverChildren = () => {
         children={[
           <ScrollLink
             activeClass="active"
-            className="design-work"
-            to="design-work"
+            className="code-work"
+            to="code-work"
             spy={true}
             smooth={true}
             duration={1000}
@@ -160,8 +163,8 @@ const ExperienceHeader = (
 
 // cards
 const codeCardsLeft = [EunoiaCodeCard, GlobalWineryCodeCard, Portfolio2020CodeCard]
-const codeCardsMiddle = [GithubContributionsCounterCodeCard]
-const codeCardsRight = []
+const codeCardsMiddle = [GithubContributionsCounterCodeCard, ThonkJSCodeCard, IntensifEyeCodeCard]
+const codeCardsRight = [ArduinoScreamingCodeCard]
 
 // class Definition
 class Code extends React.PureComponent {
@@ -176,10 +179,10 @@ class Code extends React.PureComponent {
   }
   render() {
     return (
-      <div className="Design-wrapper">
+      <div className="code-wrapper">
         <SocialButtons />
         <Cover children={<CoverChildren />} />
-        <Element name="design-work" className="element">
+        <Element name="code-work" className="element">
           <TriSection
             leftChildren={[
               <ScrollArea height={'1000px'}>
