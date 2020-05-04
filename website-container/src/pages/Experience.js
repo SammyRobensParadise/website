@@ -5,7 +5,21 @@ import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
 import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
-import { Menu, Button, SectionHeader } from 'eunoia'
+import {
+  Menu,
+  Button,
+  SectionHeader,
+  JiraIcon,
+  GithubIndustryIcon,
+  BitbucketIcon,
+  ConfluenceIcon,
+  GoogleAnalyticsIcon,
+  GoogleCloudIcon,
+  AWSIcon,
+  InvisionIndustryIcon,
+  SlackIcon,
+  MicrosoftIcon,
+} from 'eunoia'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../components/TriSection'
 import { Tools } from '../components/Tools'
@@ -102,14 +116,14 @@ const CodeHeader = (
   <Header
     config={codeHeaderConfigBottom}
     contentText={codeContentText}
-    children={<ActionUpArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
   />
 )
 const ExperienceHeader = (
   <Header
     config={experienceHeaderConfigBottom}
     contentText={experienceContentText}
-    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+    children={<ActionUpArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
   />
 )
 
@@ -162,7 +176,20 @@ class Experience extends React.PureComponent {
         <SectionHeader config={CodeSectionHeaderConfig}>
           <HeaderContent>{CodeSectionHeaderConfig.text}</HeaderContent>
         </SectionHeader>
-        <Tools tools={[]} />
+        <Tools
+          tools={[
+            <JiraIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <GithubIndustryIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <BitbucketIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <ConfluenceIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <GoogleAnalyticsIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <GoogleCloudIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <AWSIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <InvisionIndustryIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <SlackIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <MicrosoftIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+          ]}
+        />
         <TriSection
           leftChildren={[DesignHeader]}
           middleChildren={[CodeHeader]}
