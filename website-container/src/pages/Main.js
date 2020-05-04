@@ -229,15 +229,18 @@ const defaultHeaderConfig = {
 
 const designHeaderConfig = {
   text: 'Design',
+  link: '/design',
   ...defaultHeaderConfig,
 }
 const codeHeaderConfig = {
   text: 'Code',
+  link: '/code',
   ...defaultHeaderConfig,
 }
 
 const experienceHeaderConfig = {
   text: 'Experience',
+  link: '/experience',
   ...defaultHeaderConfig,
 }
 
