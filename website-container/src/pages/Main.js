@@ -8,15 +8,15 @@ import { MainDoubleGrid } from '../components/MainDoubleSection'
 import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
 import { Menu, SectionHeader } from 'eunoia'
-import { MenuConfig } from '../constants/config'
+import { Header } from '../components/Headers'
 
+import { MenuConfig } from '../constants/config'
 import {
   ActionButton,
   ActionCircleButton,
   ActionRightArrow,
   ActionDownArrow,
   ScrollArea,
-  HeaderContentText,
   HeaderContent,
 } from '../constants/styles'
 import {
@@ -242,37 +242,25 @@ const experienceHeaderConfig = {
 }
 
 const DesignHeader = (
-  <SectionHeader config={designHeaderConfig}>
-    <div className="-design-header">
-      <HeaderContent>{designHeaderConfig.text}</HeaderContent>
-      <HeaderContentText>{designContentText}</HeaderContentText>
-      <ActionCircleButton transparent height={'66px'}>
-        <ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
-      </ActionCircleButton>
-    </div>
-  </SectionHeader>
+  <Header
+    config={designHeaderConfig}
+    contentText={designContentText}
+    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+  />
 )
 const CodeHeader = (
-  <SectionHeader config={codeHeaderConfig}>
-    <div className="-code-header">
-      <HeaderContent>{codeHeaderConfig.text}</HeaderContent>
-      <HeaderContentText>{codeContentText}</HeaderContentText>
-      <ActionCircleButton transparent height={'66px'}>
-        <ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
-      </ActionCircleButton>
-    </div>
-  </SectionHeader>
+  <Header
+    config={codeHeaderConfig}
+    contentText={codeContentText}
+    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+  />
 )
 const ExperienceHeader = (
-  <SectionHeader config={experienceHeaderConfig}>
-    <div className="-experience-header">
-      <HeaderContent>{experienceHeaderConfig.text}</HeaderContent>
-      <HeaderContentText>{experienceContentText}</HeaderContentText>
-      <ActionCircleButton transparent height={'66px'}>
-        <ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
-      </ActionCircleButton>
-    </div>
-  </SectionHeader>
+  <Header
+    config={experienceHeaderConfig}
+    contentText={experienceContentText}
+    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+  />
 )
 
 /**

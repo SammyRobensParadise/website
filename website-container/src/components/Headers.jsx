@@ -7,7 +7,7 @@ import {
 } from '../constants/styles'
 
  export const Header = ({ config, contentText, children }) => (
-  <SectionHeader config={designHeaderConfigBottom}>
+  <SectionHeader config={config}>
     <div className={`-${config.text}-header`}>
       <HeaderContent>{config.text}</HeaderContent>
       {contentText ? <HeaderContentText>{contentText}</HeaderContentText> : null}

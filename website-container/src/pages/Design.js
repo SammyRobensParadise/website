@@ -21,9 +21,15 @@ import {
 } from 'eunoia'
 import { TriSection } from '../components/TriSection'
 import { Tools } from '../components/Tools'
+import { Header } from '../components/Headers'
 // constants
 import { UIStyle, MenuConfig } from '../constants/config'
-import { HeaderContent, HeaderContentText, ScrollArea, ActionDownArrow, ActionCircleButton,ActionUpArrow } from '../constants/styles'
+import {
+  HeaderContent,
+  ScrollArea,
+  ActionDownArrow,
+  ActionUpArrow,
+} from '../constants/styles'
 import {
   IntensifEyeDesignCard,
   GrapeDesignCard,
@@ -98,38 +104,26 @@ const experienceHeaderConfigBottom = {
   ...defaultHeaderConfigBottom,
 }
 
-const DesignHeader= (
-  <SectionHeader config={designHeaderConfigBottom}>
-    <div className="-design-header">
-      <HeaderContent>{designHeaderConfigBottom.text}</HeaderContent>
-      <HeaderContentText>{designContentText}</HeaderContentText>
-      <ActionCircleButton transparent height={'66px'}>
-        <ActionUpArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
-      </ActionCircleButton>
-    </div>
-  </SectionHeader>
+const DesignHeader = (
+  <Header
+    config={designHeaderConfigBottom}
+    contentText={designContentText}
+    children={<ActionUpArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+  />
 )
 const CodeHeader = (
-  <SectionHeader config={codeHeaderConfigBottom}>
-    <div className="-code-header">
-      <HeaderContent>{codeHeaderConfigBottom.text}</HeaderContent>
-      <HeaderContentText>{codeContentText}</HeaderContentText>
-      <ActionCircleButton transparent height={'66px'}>
-        <ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
-      </ActionCircleButton>
-    </div>
-  </SectionHeader>
+  <Header
+    config={codeHeaderConfigBottom}
+    contentText={codeContentText}
+    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+  />
 )
 const ExperienceHeader = (
-  <SectionHeader config={experienceHeaderConfigBottom}>
-    <div className="-experience-header">
-      <HeaderContent>{experienceHeaderConfigBottom.text}</HeaderContent>
-      <HeaderContentText>{experienceContentText}</HeaderContentText>
-      <ActionCircleButton transparent height={'66px'}>
-        <ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />
-      </ActionCircleButton>
-    </div>
-  </SectionHeader>
+  <Header
+    config={experienceHeaderConfigBottom}
+    contentText={experienceContentText}
+    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+  />
 )
 
 // cards
@@ -184,7 +178,11 @@ class Design extends React.PureComponent {
             <CreativecloudIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
           ]}
         />
-        <TriSection leftChildren={[DesignHeader]} middleChildren={[CodeHeader]} rightChildren={[ExperienceHeader]} />
+        <TriSection
+          leftChildren={[DesignHeader]}
+          middleChildren={[CodeHeader]}
+          rightChildren={[ExperienceHeader]}
+        />
         <Footer />
       </div>
     )
