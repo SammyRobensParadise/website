@@ -11,6 +11,7 @@ import { Menu, SectionHeader } from 'eunoia'
 import { Header } from '../components/Headers'
 import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
+import { Link as ScrollLink, Element, Events } from 'react-scroll'
 
 // constants
 import { MenuConfig } from '../constants/config'
@@ -198,9 +199,18 @@ const CoverActionButtons = (
         {Resume}
       </ActionButton>
       <ActionWrapper>
-        <ActionCircleButton transparent height={'66px'}>
-          <ActionRightArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'11px'} />
-        </ActionCircleButton>
+        <ScrollLink
+          activeClass="active"
+          className="explore-sections"
+          to="explore-sections"
+          spy={true}
+          smooth={true}
+          duration={1000}
+        >
+          <ActionCircleButton transparent height={'66px'}>
+            <ActionRightArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'11px'} />
+          </ActionCircleButton>
+        </ScrollLink>
       </ActionWrapper>
       <ActionWrapper>
         <ActionExperienceAndProjectsText>{ExperienceAndProjects}</ActionExperienceAndProjectsText>
@@ -351,6 +361,15 @@ const codeCards = [EunoiaCodeCard, GlobalWineryCodeCard]
 
 // class Definition
 class Main extends React.PureComponent {
+  componentDidMount() {
+    Events.scrollEvent.register('begin')
+
+    Events.scrollEvent.register('end')
+  }
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin')
+    Events.scrollEvent.remove('end')
+  }
   render() {
     return (
       <div className="main-wrapper">
@@ -369,32 +388,34 @@ class Main extends React.PureComponent {
           rightChildren={[SammySkatingImage]}
           leftChildren={[MyPassionTextTitle, MyPassionTextBody]}
         />
-        <TriSection
-          leftChildren={[
-            Design3Header,
-            <ScrollArea>
-              {articleCards.map((node) => (
-                <div>{node}</div>
-              ))}
-            </ScrollArea>,
-          ]}
-          middleChildren={[
-            Code3Header,
-            <ScrollArea>
-              {designCards.map((node) => (
-                <div>{node}</div>
-              ))}
-            </ScrollArea>,
-          ]}
-          rightChildren={[
-            Experience3Header,
-            <ScrollArea>
-              {codeCards.map((node) => (
-                <div>{node}</div>
-              ))}
-            </ScrollArea>,
-          ]}
-        />
+        <Element name="explore-sections" className="element">
+          <TriSection
+            leftChildren={[
+              Design3Header,
+              <ScrollArea>
+                {articleCards.map((node) => (
+                  <div>{node}</div>
+                ))}
+              </ScrollArea>,
+            ]}
+            middleChildren={[
+              Code3Header,
+              <ScrollArea>
+                {designCards.map((node) => (
+                  <div>{node}</div>
+                ))}
+              </ScrollArea>,
+            ]}
+            rightChildren={[
+              Experience3Header,
+              <ScrollArea>
+                {codeCards.map((node) => (
+                  <div>{node}</div>
+                ))}
+              </ScrollArea>,
+            ]}
+          />
+        </Element>
         <Footer />
       </div>
     )
