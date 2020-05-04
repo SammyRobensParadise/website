@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './css/styles/styles.css'
 import Main from './pages/Main'
 import Design from './pages/Design'
-import Development from './pages/Development'
+import Code from './pages/Code'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -18,7 +18,7 @@ ReactDOM.render(
           <Design />
         </Route>
         <Route path="/code">
-          <Development />
+          <Code />
         </Route>
       </Switch>
     </Router>

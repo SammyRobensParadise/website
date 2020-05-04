@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, { useState } from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -21,6 +21,7 @@ import {
   CreativecloudIcon,
 } from 'eunoia'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
+import {getGitHubContributionsHistory} from 'github-contributions-counter'
 import { TriSection } from '../components/TriSection'
 import { Tools } from '../components/Tools'
 import { Header } from '../components/Headers'
@@ -43,8 +44,8 @@ import '../css/styles/styles.css'
 import '../css/styles/App.css'
 
 // strings ****
-const design = `Design`
-const designSubtitle = `Bold and creative solutions`
+const code = `Code`
+const codeSubtitle = `...`
 const exploreMyWork = `Explore my work`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
@@ -65,27 +66,33 @@ const DesignSectionHeaderConfig = {
 }
 // components
 // cover
-const CoverChildren = (
-  <div>
-    <Menu config={MenuConfig.config} options={MenuConfig.options} />
-    <SectionTitle
-      title={design}
-      subtitle={[designSubtitle]}
-      children={[
-        <ScrollLink
-          activeClass="active"
-          className="design-work"
-          to="design-work"
-          spy={true}
-          smooth={true}
-          duration={1000}
-        >
-          <Button transparent>{exploreMyWork}</Button>
-        </ScrollLink>,
-      ]}
-    />
-  </div>
-)
+const CoverChildren = () => {
+  const [contributionsString, getContributions] = useState(codeSubtitle);
+  getGitHubContributionsHistory('SammyRobensParadise').then((response) => {
+    console.log(response)
+  })
+  return (
+    <div>
+      <Menu config={MenuConfig.config} options={MenuConfig.options} />
+      <SectionTitle
+        title={code}
+        subtitle={[contributionsString]}
+        children={[
+          <ScrollLink
+            activeClass="active"
+            className="design-work"
+            to="design-work"
+            spy={true}
+            smooth={true}
+            duration={1000}
+          >
+            <Button transparent>{exploreMyWork}</Button>
+          </ScrollLink>,
+        ]}
+      />
+    </div>
+  )
+}
 
 // design botton header section
 const defaultHeaderConfigBottom = {
@@ -143,7 +150,7 @@ const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, Illustrations
 const designCardsRight = [RectCard, GlobalWineryDesignCard, PostersDesignCard]
 
 // class Definition
-class Development extends React.PureComponent {
+class Code extends React.PureComponent {
   componentDidMount() {
     Events.scrollEvent.register('begin')
 
@@ -157,7 +164,7 @@ class Development extends React.PureComponent {
     return (
       <div className="Design-wrapper">
         <SocialButtons />
-        <Cover children={CoverChildren} />
+        <Cover children={<CoverChildren />} />
         <Element name="design-work" className="element">
           <TriSection
             leftChildren={[
@@ -211,4 +218,4 @@ class Development extends React.PureComponent {
   }
 }
 
-export default Development
+export default Code
