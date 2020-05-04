@@ -69,7 +69,12 @@ const DesignSectionHeaderConfig = {
 const CoverChildren = () => {
   const [contributionsString, getContributions] = useState(codeSubtitle);
   getGitHubContributionsHistory('SammyRobensParadise').then((response) => {
-    getContributions(`${response[0].annualContributions} contributions this year`)
+    if(response[0].error){
+      getContributions(`Thousands contributions this year`)
+    }else{
+      getContributions(`${response[0].annualContributions} contributions this year`)
+
+    }
   })
   return (
     <div>
