@@ -46,7 +46,7 @@ import '../css/styles/styles.css'
 import '../css/styles/App.css'
 
 // strings ****
-const design = `Design`
+const development = `Development`
 const designSubtitle = `Bold and creative solutions`
 const exploreMyWork = `Explore my work`
 const designContentText = `Explore my design portfolio & case studies`
@@ -72,7 +72,7 @@ const CoverChildren = (
   <div>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
     <SectionTitle
-      title={design}
+      title={development}
       subtitle={[designSubtitle]}
       children={[<Button transparent>{exploreMyWork}</Button>]}
     />
