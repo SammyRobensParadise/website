@@ -338,7 +338,87 @@ export const HootsuiteExperienceCard = (
         imageURL: 'https://i.ibb.co/C9rfP1T/hootsuite-logo.png',
         imageAltText: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
         link: '/#',
-        imageWidth: 200,
+        imageWidth: 300,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const HootsuiteExperienceCardMobile = (
+  <Wrapper>
+    <Card
+      activeSection={null}
+      config={{
+        title: `Full Stack Software Developer, Hootsuite`,
+        content: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
+        imageURL: 'https://i.ibb.co/C9rfP1T/hootsuite-logo.png',
+        imageAltText: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const FingerFoodExperienceCard = (
+  <Wrapper>
+    <BannerCard
+      activeSection={null}
+      config={{
+        title: `UX Developer & QA Lead, Finger Food ATG`,
+        content: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
+        imageURL: 'https://i.ibb.co/ypgHtCr/finger-food-experience-logo.png',
+        imageAltText: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
+        link: '/#',
+        imageWidth: 300,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+export const FingerFoodExperienceCardMobile = (
+  <Wrapper>
+    <Card
+      activeSection={null}
+      config={{
+        title: `UX Developer & QA Lead, Finger Food ATG`,
+        content: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
+        imageURL: 'https://i.ibb.co/ypgHtCr/finger-food-experience-logo.png',
+        imageAltText: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const EnvironmentCannadaExperienceCard = (
+  <Wrapper>
+    <BannerCard
+      activeSection={null}
+      config={{
+        title: `Software Engineer, Environment Canada`,
+        content: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
+        imageURL: 'https://i.ibb.co/dtchLwB/env-logo.png',
+        imageAltText: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
+        link: '/#',
+        imageWidth: 300,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+export const EnvironmentCannadaExperienceCardMobile = (
+  <Wrapper>
+    <Card
+      activeSection={null}
+      config={{
+        title: `Software Engineer, Environment Canada`,
+        content: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
+        imageURL: 'https://i.ibb.co/dtchLwB/env-logo.png',
+        imageAltText: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
+        link: '/#',
         ...defaultCardConfig,
       }}
     />

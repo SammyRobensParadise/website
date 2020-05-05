@@ -20,7 +20,14 @@ import {
   SlackIcon,
   MicrosoftIcon,
 } from 'eunoia'
-import { HootsuiteExperienceCard } from '../constants/cards'
+import {
+  HootsuiteExperienceCard,
+  HootsuiteExperienceCardMobile,
+  FingerFoodExperienceCard,
+  FingerFoodExperienceCardMobile,
+  EnvironmentCannadaExperienceCard,
+  EnvironmentCannadaExperienceCardMobile,
+} from '../constants/cards'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../components/TriSection'
 import { Tools } from '../components/Tools'
@@ -130,7 +137,16 @@ const ExperienceHeader = (
 )
 
 // cards
-const experienceCardsMiddle = [HootsuiteExperienceCard]
+// if the window is less than 700, then render a traditionl card
+const mobileBreakpoint = window.innerWidth < 700
+
+const experienceCardsMiddle = mobileBreakpoint
+  ? [
+      HootsuiteExperienceCardMobile,
+      FingerFoodExperienceCardMobile,
+      EnvironmentCannadaExperienceCardMobile,
+    ]
+  : [HootsuiteExperienceCard, FingerFoodExperienceCard, EnvironmentCannadaExperienceCard]
 
 // class Definition
 class Experience extends React.PureComponent {
@@ -151,7 +167,7 @@ class Experience extends React.PureComponent {
         <Element name="experience-work" className="element">
           <UniSection
             middleChildren={[
-              <ScrollArea height={'500px'}>
+              <ScrollArea height={'900px'}>
                 {experienceCardsMiddle.map((e) => (
                   <div>{e}</div>
                 ))}
