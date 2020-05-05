@@ -12,7 +12,7 @@ import { DoubleOffsetSection } from '../components/DoubleSection'
 import { Header } from '../components/Headers'
 // constants
 import { UIStyle, MenuConfig } from '../constants/config'
-import { ScrollArea, ActionDownArrow, ActionUpArrow } from '../constants/styles'
+import { ActionDownArrow } from '../constants/styles'
 import styled from 'styled-components'
 // css
 import '../css/styles/styles.css'
@@ -27,6 +27,7 @@ const whoIamSubtite = (
 )
 const theBackstory = `The Backstory`
 const eduAndPassion = `Education & Passion`
+const aLittelMore = `A Little More...`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
@@ -85,6 +86,19 @@ const EducationImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
+const HeadShotImageStyle = styled.img`
+  margin-block-start: 30vh;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  width: 80%;
+  padding: 0px;
+  @media screen and (max-width: 960px) {
+    margin-block-start: 10vh;
+  }
+`
 // components
 // cover
 const CoverChildren = (
@@ -109,7 +123,7 @@ const CoverChildren = (
   </div>
 )
 
-// design botton header section
+// design bottom header section
 const defaultHeaderConfigBottom = {
   shouldRender: true,
   centerText: true,
@@ -160,6 +174,9 @@ const ExperienceHeader = (
 )
 
 // component render lists
+/**
+ * Section 1
+ */
 const EducationAndPassionTitle = <EducationAndPassion>{eduAndPassion}</EducationAndPassion>
 const EducationAndPassionBody = (
   <EducationAndPassionText>
@@ -189,9 +206,46 @@ const EducationImage = (
     />
   </EducationImageWrapper>
 )
+
+/**
+ * Section 2
+ */
+const ALittleMore = <EducationAndPassion>{aLittelMore}</EducationAndPassion>
+const ALittleMoreText = (
+  <EducationAndPassionText>
+    {
+      <div>
+        <p>
+          {
+            'Growing up in East Vancouver, BC I developed a love and appreciation for nature and our environment . As a result, I am very passionate about sustainable engineering solutions to some of the worlds most challenging problems. I believe that designing a solution extends far beyond the immediate result.'
+          }
+        </p>
+        <p>
+          {
+            'What about the non-engineering stuff… I love music, playing guitar, soccer, snowboarding and travelling, drawing painting, backpacking and exploring! I will never say no to a concert, or a good hike with my dog!'
+          }
+        </p>
+      </div>
+    }
+  </EducationAndPassionText>
+)
+
+const HeadShotImage = (
+  <EducationImageWrapper>
+    <HeadShotImageStyle
+      src="https://i.ibb.co/8gtRtBJ/headshot-copy.png"
+      alt="headshot-copy"
+      border="0"
+    />
+  </EducationImageWrapper>
+)
+
+const mobileBreakpoint = window.innerWidth < 960
 const SideLeft = [EducationAndPassionTitle, EducationAndPassionBody]
 const SideRight = [EducationImage]
 
+const SideLeftSec2 = mobileBreakpoint ? [ALittleMore, ALittleMoreText] : [HeadShotImage]
+const SideRightSec2 = mobileBreakpoint ? [HeadShotImage] : [ALittleMore, ALittleMoreText]
 // class Definition
 class About extends React.PureComponent {
   componentDidMount() {
@@ -218,12 +272,29 @@ class About extends React.PureComponent {
               </div>,
             ]}
             rightChildren={[
-              <div height={'1000px'}>
+              <div>
                 {SideRight.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,
             ]}
+          />
+          <DoubleOffsetSection
+            leftChildren={[
+              <div>
+                {SideLeftSec2.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+            rightChildren={[
+              <div>
+                {SideRightSec2.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+            reverse
           />
         </Element>
         <TriSection
