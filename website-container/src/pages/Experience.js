@@ -20,10 +20,12 @@ import {
   SlackIcon,
   MicrosoftIcon,
 } from 'eunoia'
+import { HootsuiteExperienceCard } from '../constants/cards'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../components/TriSection'
 import { Tools } from '../components/Tools'
 import { Header } from '../components/Headers'
+import { UniSection } from '../components/UniSection'
 // constants
 import { UIStyle, MenuConfig } from '../constants/config'
 import { HeaderContent, ScrollArea, ActionDownArrow, ActionUpArrow } from '../constants/styles'
@@ -128,9 +130,7 @@ const ExperienceHeader = (
 )
 
 // cards
-const codeCardsLeft = []
-const codeCardsMiddle = []
-const codeCardsRight = []
+const experienceCardsMiddle = [HootsuiteExperienceCard]
 
 // class Definition
 class Experience extends React.PureComponent {
@@ -149,24 +149,10 @@ class Experience extends React.PureComponent {
         <SocialButtons />
         <Cover children={CoverChildren} />
         <Element name="experience-work" className="element">
-          <TriSection
-            leftChildren={[
-              <ScrollArea height={'1000px'}>
-                {codeCardsLeft.map((e) => (
-                  <div>{e}</div>
-                ))}
-              </ScrollArea>,
-            ]}
+          <UniSection
             middleChildren={[
-              <ScrollArea height={'1000px'}>
-                {codeCardsMiddle.map((e) => (
-                  <div>{e}</div>
-                ))}
-              </ScrollArea>,
-            ]}
-            rightChildren={[
-              <ScrollArea height={'1000px'}>
-                {codeCardsRight.map((e) => (
+              <ScrollArea height={'500px'}>
+                {experienceCardsMiddle.map((e) => (
                   <div>{e}</div>
                 ))}
               </ScrollArea>,

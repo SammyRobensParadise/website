@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'eunoia'
+import { Card, BannerCard } from 'eunoia'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -318,6 +318,27 @@ export const Portfolio2019CodeCard = (
         imageURL: 'https://i.ibb.co/mDP4djv/portfolio-spring-19-logo.png',
         imageAltText: `The code behind my first seasonal portfolio`,
         link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+/**
+ * ExperienceCards
+ */
+
+export const HootsuiteExperienceCard = (
+  <Wrapper>
+    <BannerCard
+      activeSection={null}
+      config={{
+        title: `Full Stack Software Developer, Hootsuite`,
+        content: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
+        imageURL: 'https://i.ibb.co/C9rfP1T/hootsuite-logo.png',
+        imageAltText: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
+        link: '/#',
+        imageWidth: 200,
         ...defaultCardConfig,
       }}
     />
