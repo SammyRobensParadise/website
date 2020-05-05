@@ -334,7 +334,16 @@ export const HootsuiteExperienceCard = (
       activeSection={null}
       config={{
         title: `Full Stack Software Developer, Hootsuite`,
-        content: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`Sept 19 - Dec 19`}</h3>
+              </i>
+            </p>
+            <p>{`Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`}</p>
+          </div>
+        ),
         imageURL: 'https://i.ibb.co/C9rfP1T/hootsuite-logo.png',
         imageAltText: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
         link: '/#',
@@ -351,7 +360,16 @@ export const HootsuiteExperienceCardMobile = (
       activeSection={null}
       config={{
         title: `Full Stack Software Developer, Hootsuite`,
-        content: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`Sept 19 - Dec 19`}</h3>
+              </i>
+            </p>
+            <p>{`Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`}</p>
+          </div>
+        ),
         imageURL: 'https://i.ibb.co/C9rfP1T/hootsuite-logo.png',
         imageAltText: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
         link: '/#',
@@ -367,7 +385,16 @@ export const FingerFoodExperienceCard = (
       activeSection={null}
       config={{
         title: `UX Developer & QA Lead, Finger Food ATG`,
-        content: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`Sept 18 - May 19`}</h3>
+              </i>
+            </p>
+            <p>{`I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`}</p>
+          </div>
+        ),
         imageURL: 'https://i.ibb.co/ypgHtCr/finger-food-experience-logo.png',
         imageAltText: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
         link: '/#',
@@ -383,7 +410,16 @@ export const FingerFoodExperienceCardMobile = (
       activeSection={null}
       config={{
         title: `UX Developer & QA Lead, Finger Food ATG`,
-        content: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`Sept 18 - May 19`}</h3>
+              </i>
+            </p>
+            <p>{`I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`}</p>
+          </div>
+        ),
         imageURL: 'https://i.ibb.co/ypgHtCr/finger-food-experience-logo.png',
         imageAltText: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
         link: '/#',
@@ -399,7 +435,16 @@ export const EnvironmentCannadaExperienceCard = (
       activeSection={null}
       config={{
         title: `Software Engineer, Environment Canada`,
-        content: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`Jan 18 - May 18`}</h3>
+              </i>
+            </p>
+            <p>{`Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`}</p>
+          </div>
+        ),
         imageURL: 'https://i.ibb.co/dtchLwB/env-logo.png',
         imageAltText: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
         link: '/#',
@@ -415,10 +460,20 @@ export const EnvironmentCannadaExperienceCardMobile = (
       activeSection={null}
       config={{
         title: `Software Engineer, Environment Canada`,
-        content: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`Jan 18 - May 18`}</h3>
+              </i>
+            </p>
+            <p>{`Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`}</p>
+          </div>
+        ),
         imageURL: 'https://i.ibb.co/dtchLwB/env-logo.png',
         imageAltText: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
         link: '/#',
+        imageWidth: 300,
         ...defaultCardConfig,
       }}
     />
