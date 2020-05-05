@@ -30,16 +30,7 @@ const theBackstory = `The Backstory`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
-// configs
-const defaultHeaderConfig = {
-  shouldRender: true,
-  centerText: true,
-  fontOverride: `Georgia Regular`,
-  fontColor: UIStyle.UIColors.gold,
-  fontSize: 30,
-  height: 150,
-  backgroundColor: UIStyle.UIColors.darkGrey,
-}
+
 // components
 // cover
 const CoverChildren = (
