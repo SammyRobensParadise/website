@@ -41,13 +41,24 @@ const FooterOptions = styled.a`
     letter-spacing: 1px;
   }
 `
-
+const Copyright = styled.p`
+  text-align: center;
+  margin: 0 auto;
+  display: table;
+  padding-block-end: ${(p) => (p.isLast ? '8vh' : '2vh')};
+  cursor: pointer;
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.white};
+  padding-block-end: ${(p) => (p.isLast ? '8vh' : '2vh')};
+`
 const FirstNameLastName = `Coded with 💛by Sammy Robens-Paradise`
 const Resume = `Resume`
 const Connect = `Connect`
 const Policy = `Policy`
 const Footer = () => {
   const classes = useStyles()
+  const d = new Date()
   return (
     <Wrapper>
       <Menu config={MenuConfig.config} options={MenuConfig.options} />
@@ -73,6 +84,7 @@ const Footer = () => {
           <Grid item xs={12} sm={12} md={12}>
             <div className="-footer-bottom-policy">
               <FooterOptions isLast>{Policy}</FooterOptions>
+              <Copyright>{`© ${d.getUTCFullYear()} Sammy Robens-Paradise`}</Copyright>
             </div>
           </Grid>
         </Grid>
