@@ -5,16 +5,15 @@ import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
 import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
-import {
-  Menu,
-  Button,
-} from 'eunoia'
+import { Menu, Button } from 'eunoia'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../components/TriSection'
+import { DoubleOffsetSection } from '../components/DoubleSection'
 import { Header } from '../components/Headers'
 // constants
 import { UIStyle, MenuConfig } from '../constants/config'
 import { ScrollArea, ActionDownArrow, ActionUpArrow } from '../constants/styles'
+import styled from 'styled-components'
 // css
 import '../css/styles/styles.css'
 import '../css/styles/App.css'
@@ -27,10 +26,65 @@ const whoIamSubtite = (
   </div>
 )
 const theBackstory = `The Backstory`
+const eduAndPassion = `Education & Passion`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
 
+// styled-components
+const EducationAndPassion = styled.h2`
+  margin-block-start: 20vh;
+  font-family: Georgia Regular;
+  text-align: left;
+  font-size: 64px;
+  letter-spacing: 0px;
+  font-weight: 200;
+  color: ${UIStyle.UIColors.black};
+  padding-left: 10%;
+  @media screen and (max-width: 960px) {
+    padding-left: 5%;
+    margin-block-start: 15vh;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 40px;
+  }
+`
+const EducationAndPassionText = styled.p`
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.black};
+  font-weight: 400;
+  font-size: 26px;
+  text-align: left;
+  width: 82%;
+  line-height: 55px;
+  padding-left: 10%;
+  @media screen and (max-width: 1260px) {
+    line-height: 40px;
+  }
+  @media screen and (max-width: 960px) {
+    padding-left: 5%;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 18px;
+  }
+`
+const EducationImageWrapper = styled.div`
+  text-align: center;
+`
+const EducationImageStyle = styled.img`
+  margin-block-start: 50vh;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  width: 60%;
+  padding: 0px;
+  @media screen and (max-width: 960px) {
+    margin-block-start: 10vh;
+  }
+`
 // components
 // cover
 const CoverChildren = (
@@ -87,7 +141,7 @@ const DesignHeader = (
   <Header
     config={designHeaderConfigBottom}
     contentText={designContentText}
-    children={<ActionUpArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
   />
 )
 const CodeHeader = (
@@ -105,10 +159,38 @@ const ExperienceHeader = (
   />
 )
 
-// cards
-const designCardsLeft = []
-const designCardsMiddle = []
-const designCardsRight = []
+// component render lists
+const EducationAndPassionTitle = <EducationAndPassion>{eduAndPassion}</EducationAndPassion>
+const EducationAndPassionBody = (
+  <EducationAndPassionText>
+    {
+      <div>
+        <p>
+          I study Systems Design Engineering at the University of Waterloo (Grad. 2023). If you are
+          thinking “what <i>even</i> is Systems Design Engineering” You are not alone. Systems
+          Design Engineering is that we must create problem-based solutions to complex systems level
+          problems using principles of UX/UI and ergonomic design, engineering and creativity.
+        </p>
+        <p>
+          {
+            'I chose to study Systems Design at Canada’s top engineering school because I have a long standing passion for the way humans interact with technology, especially those who suffer from a disability or mental illness (over 20% of Americans), As part of my degree I hope to pursue a specialization in accessible design.'
+          }
+        </p>
+      </div>
+    }
+  </EducationAndPassionText>
+)
+const EducationImage = (
+  <EducationImageWrapper>
+    <EducationImageStyle
+      src="https://i.ibb.co/8gKFvJx/education-logo.png"
+      alt="education-logo"
+      border="0"
+    />
+  </EducationImageWrapper>
+)
+const SideLeft = [EducationAndPassionTitle, EducationAndPassionBody]
+const SideRight = [EducationImage]
 
 // class Definition
 class About extends React.PureComponent {
@@ -127,27 +209,20 @@ class About extends React.PureComponent {
         <SocialButtons />
         <Cover children={CoverChildren} />
         <Element name="about-scroller" className="element">
-          <TriSection
+          <DoubleOffsetSection
             leftChildren={[
-              <ScrollArea height={'1000px'}>
-                {designCardsLeft.map((e) => (
+              <div>
+                {SideLeft.map((e) => (
                   <div>{e}</div>
                 ))}
-              </ScrollArea>,
-            ]}
-            middleChildren={[
-              <ScrollArea height={'1000px'}>
-                {designCardsMiddle.map((e) => (
-                  <div>{e}</div>
-                ))}
-              </ScrollArea>,
+              </div>,
             ]}
             rightChildren={[
-              <ScrollArea height={'1000px'}>
-                {designCardsRight.map((e) => (
+              <div height={'1000px'}>
+                {SideRight.map((e) => (
                   <div>{e}</div>
                 ))}
-              </ScrollArea>,
+              </div>,
             ]}
           />
         </Element>
