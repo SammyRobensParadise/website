@@ -7,7 +7,9 @@ import { Menu } from 'eunoia'
 import { MenuConfig } from '../constants/config'
 import { websiteRepoURL, emailLink, resumeLink } from '../constants/links'
 import '../css/styles/styles.css'
-
+import {
+  Link
+} from "react-router-dom";
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
@@ -83,7 +85,7 @@ const Footer = () => {
         <Grid container>
           <Grid item xs={12} sm={12} md={12}>
             <div className="-footer-bottom-policy">
-              <FooterOptions isLast>{Policy}</FooterOptions>
+              <Link to='/policy'><FooterOptions isLast>{Policy}</FooterOptions></Link>
               <Copyright>{`© ${d.getUTCFullYear()} Sammy Robens-Paradise`}</Copyright>
             </div>
           </Grid>

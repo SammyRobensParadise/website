@@ -161,7 +161,7 @@ class Experience extends React.PureComponent {
   }
   render() {
     return (
-      <div className="code-wrapper">
+      <div className="experience-wrapper">
         <SocialButtons />
         <Cover children={CoverChildren} />
         <Element name="experience-work" className="element">

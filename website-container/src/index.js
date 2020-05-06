@@ -6,6 +6,7 @@ import Design from './pages/Design'
 import Code from './pages/Code'
 import About from './pages/About'
 import Experience from './pages/Experience'
+import Policy from './pages/Policy'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -27,6 +28,9 @@ ReactDOM.render(
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/policy">
+          <Policy />
         </Route>
       </Switch>
     </Router>
