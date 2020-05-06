@@ -75,7 +75,7 @@ const PolicyWriteup = (
     <p>
       It is Sammy Robens-Paradise's policy to respect your privacy regarding any information we may
       collect while operatingmywebsite. This Privacy Policy applies to
-      <a href="https://sammy.world"> https://sammy.world</a> (hereinafter, "us", "we", or
+      <a href={window.origin}> {window.origin}</a> (hereinafter, "us", "we", or
       "https://sammy.world"). We respect your privacy and are committed to protecting personally
       identifiable information you may provide us through the Website. We have adopted this privacy
       policy ("Privacy Policy") to explain what information may be collected onmyWebsite, how we
