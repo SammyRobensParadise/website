@@ -32,7 +32,7 @@ import {
   TsIcon,
 } from 'eunoia'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
-import { getGitHubContributionsHistory } from 'github-contributions-counter'
+// import { getGitHubContributionsHistory } from 'github-contributions-counter'
 import { TriSection } from '../components/TriSection'
 import { Tools } from '../components/Tools'
 import { Header } from '../components/Headers'
@@ -54,6 +54,7 @@ import {
 import '../css/styles/styles.css'
 import '../css/styles/App.css'
 import '../css/styles/spinners.css'
+
 // strings ****
 const code = `Code`
 const exploreMyWork = `Explore my work`
@@ -76,26 +77,35 @@ const CodeSectionHeaderConfig = {
 }
 // components
 // cover
+
 const CoverChildren = () => {
-  const [contributionsString, getContributions] = useState(<div className="spinner"></div>)
-  getGitHubContributionsHistory('SammyRobensParadise').then((response) => {
-    if (response[0].error) {
-      getContributions(`Thousands contributions this year`)
-    } else {
-      getContributions(
-        `${response[0].annualContributions.replace(
-          /\B(?=(\d{3})+(?!\d))/g,
-          ',',
-        )} contributions this year`,
-      )
-    }
-  })
+ // const [contributionsString, getContributions] = useState(<div className="spinner"></div>)
+ /* if (!window.mobileCheck() && window.isChrome) {
+    import('github-contributions-counter').then((getGitHubContributionsHistory) => {
+      getGitHubContributionsHistory.default
+        .getGitHubContributionsHistory('SammyRobensParadise')
+        .then((response) => {
+          if (response[0].error) {
+            getContributions(`Thousands contributions this year`)
+          } else {
+            getContributions(
+              `${response[0].annualContributions.replace(
+                /\B(?=(\d{3})+(?!\d))/g,
+                ',',
+              )} contributions this year`,
+            )
+          }
+        })
+    })
+  } else { */
+  //  getContributions(`Thousands contributions this year`)
+//  }
   return (
     <div>
       <Menu config={MenuConfig.config} options={MenuConfig.options} />
       <SectionTitle
         title={code}
-        subtitle={[contributionsString]}
+        subtitle={['Thousands contributions this year']}
         children={[
           <ScrollLink
             activeClass="active"
