@@ -232,7 +232,10 @@ class Code extends React.PureComponent {
             <CssIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
             <HtmlIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
             <YarnIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <NpmIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <NpmIcon
+              color={UIStyle.UIColors.black}
+              scalingFactor={window.innerWidth < 780 ? 0.6 : 1}
+            />,
             <UbuntuIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
             <MySQLIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
             <FirebaseIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
