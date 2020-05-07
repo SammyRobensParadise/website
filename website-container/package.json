@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "animejs": "^3.1.0",
     "eunoia": "^0.1.80",
-    "github-contributions-counter": "^1.0.7",
+    "github-contributions-counter": "^1.1.2",
     "paper": "^0.12.4",
     "react": "^16.13.1",
     "react-cookie": "^4.0.3",

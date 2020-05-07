@@ -31,6 +31,7 @@ import {
   CppIcon,
   TsIcon,
 } from 'eunoia'
+import { getGitHubContributionsHistory } from 'github-contributions-counter'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 // import { getGitHubContributionsHistory } from 'github-contributions-counter'
 import { TriSection } from '../components/TriSection'
@@ -79,33 +80,25 @@ const CodeSectionHeaderConfig = {
 // cover
 
 const CoverChildren = () => {
- // const [contributionsString, getContributions] = useState(<div className="spinner"></div>)
- /* if (!window.mobileCheck() && window.isChrome) {
-    import('github-contributions-counter').then((getGitHubContributionsHistory) => {
-      getGitHubContributionsHistory.default
-        .getGitHubContributionsHistory('SammyRobensParadise')
-        .then((response) => {
-          if (response[0].error) {
-            getContributions(`Thousands contributions this year`)
-          } else {
-            getContributions(
-              `${response[0].annualContributions.replace(
-                /\B(?=(\d{3})+(?!\d))/g,
-                ',',
-              )} contributions this year`,
-            )
-          }
-        })
-    })
-  } else { */
-  //  getContributions(`Thousands contributions this year`)
-//  }
+  const [contributionsString, getContributions] = useState(<div className="spinner"></div>)
+  getGitHubContributionsHistory('SammyRobensParadise', { proxy: true }).then((response) => {
+    if (response[0].error) {
+      getContributions(`Thousands contributions this year`)
+    } else {
+      getContributions(
+        `${response[0].annualContributions.replace(
+          /\B(?=(\d{3})+(?!\d))/g,
+          ',',
+        )} contributions this year`,
+      )
+    }
+  })
   return (
     <div>
       <Menu config={MenuConfig.config} options={MenuConfig.options} />
       <SectionTitle
         title={code}
-        subtitle={['Thousands contributions this year']}
+        subtitle={[contributionsString]}
         children={[
           <ScrollLink
             activeClass="active"
