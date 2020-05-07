@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, BannerCard } from 'eunoia'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Wrapper = styled.div`
   padding-block-start: 6vh;
@@ -60,7 +61,7 @@ export const IntensifEyeDesignCard = (
         title: `Intensif-Eye; Google Vision AI, Design`,
         content: `A more accessible world throught AI`,
         imageURL: 'https://i.ibb.co/Kb6F9kF/intensif-eye-render-logo.png',
-        link: '/#',
+        link: '/portfolio-winter-2020',
         imageAltText: `A more accessible world throught AI`,
         ...defaultCardConfig,
       }}
