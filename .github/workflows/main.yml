@@ -14,12 +14,12 @@ jobs:
       - name: Install Dependencies
         run: cd website-container && npm install
       - name: Build
-        run: cd website-container && npm run build-prod
+        run: cd website-container && npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
           name: build
-          path: build
+          path: website-container/build
   deploy:
     name: Deploy
     needs: build
