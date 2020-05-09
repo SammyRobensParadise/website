@@ -14,8 +14,8 @@ import About from './pages/About'
 import Experience from './pages/Experience'
 import Policy from './pages/Policy'
 
-// design-pages-import
-import WebsiteWinter2020 from './pages/design-pages/website-winter-2020'
+// story-pages-import
+import WebsiteWinter2020 from './pages/story-pages/website-winter-2020'
 
 ReactDOM.render(
   <React.StrictMode>
