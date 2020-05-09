@@ -2,14 +2,15 @@
 import React from 'react'
 // components
 import { Grid } from '@material-ui/core'
+import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
 import { StorySocialButtons } from '../../components/Social'
-import { Menu, Button } from 'eunoia'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../../components/TriSection'
+import { UniSection } from '../../components/UniSection'
 import { DoubleSection } from '../../components/DoubleSection'
 import { Header } from '../../components/Headers'
 // constants
@@ -42,11 +43,11 @@ const experienceContentText = `Internships in UX/UI design & development`
 
 // styled-components
 
-const StoryImageWrapper = styled.div`
+const StoryCenterWrapper = styled.div`
   text-align: center;
 `
 const StoryImageStyle = styled.img`
-  margin-block-start: 30vh;
+  margin-block-start: ${(p) => (p.isLongParagraph ? '10vh' : '30vh')};
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -154,38 +155,42 @@ const ExperienceHeader = (
 const Header1 = <HeaderT>{PortfolioWinter2020Strings.section1.title}</HeaderT>
 const Paragraph1 = <Text>{PortfolioWinter2020Strings.section1.text}</Text>
 const Image1 = (
-  <StoryImageWrapper>
+  <StoryCenterWrapper>
     <StoryImageStyle
       src="https://i.ibb.co/4jj7bTm/portfolio-2020-webpage.png"
       alt="portfolio-2020-webpage"
       border="0"
     />
-  </StoryImageWrapper>
+  </StoryCenterWrapper>
 )
 // section 2
 const Header2 = <HeaderT>{PortfolioWinter2020Strings.section2.title}</HeaderT>
 const Paragraph2 = <Text>{PortfolioWinter2020Strings.section2.text[0]}</Text>
 const Image2 = (
-  <StoryImageWrapper>
+  <StoryCenterWrapper>
     <StoryImageStyle
       src="https://i.ibb.co/7p4wwN0/portfolio-2020-code.png"
       alt="portfolio-2020-code"
       border="0"
     />
-  </StoryImageWrapper>
+  </StoryCenterWrapper>
 )
 // section 3
 
 const Paragraph3 = <Text>{PortfolioWinter2020Strings.section2.text[1]}</Text>
 const Image3 = (
-  <StoryImageWrapper>
+  <StoryCenterWrapper>
     <StoryImageStyle
       src="https://i.ibb.co/FxYD2zk/portfolio-2020-code-2.png"
       alt="portfolio-2020-code-2"
       border="0"
+      isLongParagraph
     />
-  </StoryImageWrapper>
+  </StoryCenterWrapper>
 )
+
+// arrays mapped
+
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
 const SideLeftSec2 = [Header2, Paragraph2]
@@ -258,6 +263,20 @@ class WebsiteWinter2020 extends React.PureComponent {
             ]}
           />
         </Element>
+        <UniSection
+          middleChildren={[
+            <StoryCenterWrapper>
+              <Button
+                onClick={() => window.open(portfolioWinter2020URL, '_self')}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') {
+                    window.open(portfolioWinter2020URL, '_self')
+                  }
+                }}
+              >{viewProject}</Button>
+            </StoryCenterWrapper>,
+          ]}
+        />
         <TriSection
           leftChildren={[DesignHeader]}
           middleChildren={[CodeHeader]}
