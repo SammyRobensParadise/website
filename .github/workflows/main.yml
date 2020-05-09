@@ -34,7 +34,7 @@ jobs:
       - name: cd to Repo
         run: cd website-container
       - name: Deploy to Firebase
-      - run: cd website-container
+        working-directory: ./website-container
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
