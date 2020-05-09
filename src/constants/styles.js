@@ -108,7 +108,7 @@ export const Text = styled.p`
   font-size: 26px;
   text-align: left;
   width: 82%;
-  line-height: 55px;
+  line-height: 50px;
   padding-left: 10%;
   @media screen and (max-width: 1260px) {
     line-height: 40px;
