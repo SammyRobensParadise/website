@@ -34,9 +34,9 @@ jobs:
       - name: cd to Repo
         run: cd website-container
       - name: Deploy to Firebase
-        working-directory: ./website-container
         uses: w9jds/firebase-action@master
         with:
+          entrypoint: /website-container
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
