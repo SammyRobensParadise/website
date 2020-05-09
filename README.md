@@ -17,7 +17,7 @@
 ## About
 
 This website is designed to showcase my work and is an outlet for my design and development work as well as a place to share my work experience. \
-The entire website is built by me using `react.js` and uses `eunoia`, an open source react component library designed by me and available via `npm` at [npmjs.com/eunoia](https://www.npmjs.com/package/eunoia). It also uses `github-contributions-counter` a tool built by me allowing uses to get their Github contributions history. This is also available via `npm` at [npmjs.com/github-contributions-counter](https://www.npmjs.com/package/github-contributions-counter). The website follows material-design trends and rules and uses `react-router` to manage webpage state.
+The entire website is built by me using `react.js` and uses `eunoia`, an open source react component library designed by me and available via `npm` at [npmjs.com/eunoia](https://www.npmjs.com/package/eunoia). It also uses `github-contributions-counter` a tool built by me allowing uses to get their Github contributions history. This is also available via `npm` at [npmjs.com/github-contributions-counter](https://www.npmjs.com/package/github-contributions-counter). The website follows material-design trends and rules and uses `react-router` to manage webpage state. The website is hosted on `firebase` and the deployment pipeline is setup using `github-actions`. Any merge or push to `master` will trigger a remote build and deploy to firebase-hosting. This webpage is client-side rendered using traditional `react-render-dom` methods.
 
 ## Getting started
 
