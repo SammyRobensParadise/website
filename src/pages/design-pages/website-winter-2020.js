@@ -150,7 +150,7 @@ const ExperienceHeader = (
     children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
   />
 )
-
+// section 1
 const Header1 = <HeaderT>{PortfolioWinter2020Strings.section1.title}</HeaderT>
 const Paragraph1 = <Text>{PortfolioWinter2020Strings.section1.text}</Text>
 const Image1 = (
@@ -162,20 +162,36 @@ const Image1 = (
     />
   </StoryImageWrapper>
 )
+// section 2
 const Header2 = <HeaderT>{PortfolioWinter2020Strings.section2.title}</HeaderT>
-const Paragraph2 = (
-  <div>
-    {PortfolioWinter2020Strings.section2.text.map((p) => (
-      <Text>{p}</Text>
-    ))}
-  </div>
+const Paragraph2 = <Text>{PortfolioWinter2020Strings.section2.text[0]}</Text>
+const Image2 = (
+  <StoryImageWrapper>
+    <StoryImageStyle
+      src="https://i.ibb.co/7p4wwN0/portfolio-2020-code.png"
+      alt="portfolio-2020-code"
+      border="0"
+    />
+  </StoryImageWrapper>
 )
+// section 3
 
+const Paragraph3 = <Text>{PortfolioWinter2020Strings.section2.text[1]}</Text>
+const Image3 = (
+  <StoryImageWrapper>
+    <StoryImageStyle
+      src="https://i.ibb.co/FxYD2zk/portfolio-2020-code-2.png"
+      alt="portfolio-2020-code-2"
+      border="0"
+    />
+  </StoryImageWrapper>
+)
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
-
-const SideLeftSec2 = [Header2,Paragraph2]
-const SideRightSec2 = []
+const SideLeftSec2 = [Header2, Paragraph2]
+const SideRightSec2 = [Image2]
+const SideLeftSec3 = [Paragraph3]
+const SideRightSec3 = [Image3]
 // class Definition
 class WebsiteWinter2020 extends React.PureComponent {
   componentDidMount() {
@@ -220,6 +236,22 @@ class WebsiteWinter2020 extends React.PureComponent {
             rightChildren={[
               <div>
                 {SideRightSec2.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+          />
+          <DoubleSection
+            leftChildren={[
+              <div>
+                {SideLeftSec3.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+            rightChildren={[
+              <div>
+                {SideRightSec3.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,

@@ -70,7 +70,7 @@ const SectionTitle = ({ title, subtitle, children, story, coverImageURL, coverIm
   return (
     <div>
       <Container>
-        <Grid spacing={12}>
+        <Grid spacing={10}>
           {coverImageURL ? (
             <CoverImageContainer>
               <CoverImage
