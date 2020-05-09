@@ -84,7 +84,7 @@ export const ScrollArea = styled.div`
   padding-block-end: 6vh;
 `
 export const HeaderT = styled.h2`
-  margin-block-start: 20vh;
+  margin-block-start: 10vh;
   font-family: Georgia Regular;
   text-align: left;
   font-size: 64px;

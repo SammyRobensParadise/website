@@ -1,4 +1,4 @@
-export const PorfolioWinter2020Strings = {
+export const PortfolioWinter2020Strings = {
   section1: {
     title: `The Design`,
     text: [

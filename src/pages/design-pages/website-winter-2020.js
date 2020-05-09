@@ -24,7 +24,7 @@ import {
   Text,
 } from '../../constants/styles'
 import { portfolioWinter2020URL } from '../../constants/links'
-import { PorfolioWinter2020Strings } from './strings'
+import { PortfolioWinter2020Strings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
@@ -46,7 +46,7 @@ const StoryImageWrapper = styled.div`
   text-align: center;
 `
 const StoryImageStyle = styled.img`
-  margin-block-start: 40vh;
+  margin-block-start: 30vh;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -151,8 +151,8 @@ const ExperienceHeader = (
   />
 )
 
-const Header1 = <HeaderT>{PorfolioWinter2020Strings.section1.title}</HeaderT>
-const Paragraph1 = <Text>{PorfolioWinter2020Strings.section1.text}</Text>
+const Header1 = <HeaderT>{PortfolioWinter2020Strings.section1.title}</HeaderT>
+const Paragraph1 = <Text>{PortfolioWinter2020Strings.section1.text}</Text>
 const Image1 = (
   <StoryImageWrapper>
     <StoryImageStyle
@@ -162,12 +162,20 @@ const Image1 = (
     />
   </StoryImageWrapper>
 )
-const mobileBreakpoint = window.innerWidth < 960
+const Header2 = <HeaderT>{PortfolioWinter2020Strings.section2.title}</HeaderT>
+const Paragraph2 = (
+  <div>
+    {PortfolioWinter2020Strings.section2.text.map((p) => (
+      <Text>{p}</Text>
+    ))}
+  </div>
+)
+
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
 
-const SideLeftSec2 = mobileBreakpoint ? [] : []
-const SideRightSec2 = mobileBreakpoint ? [] : []
+const SideLeftSec2 = [Header2,Paragraph2]
+const SideRightSec2 = []
 // class Definition
 class WebsiteWinter2020 extends React.PureComponent {
   componentDidMount() {
