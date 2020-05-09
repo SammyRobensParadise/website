@@ -83,3 +83,40 @@ export const ScrollArea = styled.div`
   }
   padding-block-end: 6vh;
 `
+export const HeaderT = styled.h2`
+  margin-block-start: 20vh;
+  font-family: Georgia Regular;
+  text-align: left;
+  font-size: 64px;
+  letter-spacing: 0px;
+  font-weight: 200;
+  color: ${UIStyle.UIColors.black};
+  padding-left: 10%;
+  @media screen and (max-width: 960px) {
+    padding-left: 5%;
+    margin-block-start: 15vh;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 40px;
+  }
+`
+export const Text = styled.p`
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.black};
+  font-weight: 400;
+  font-size: 26px;
+  text-align: left;
+  width: 82%;
+  line-height: 55px;
+  padding-left: 10%;
+  @media screen and (max-width: 1260px) {
+    line-height: 40px;
+  }
+  @media screen and (max-width: 960px) {
+    padding-left: 5%;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 18px;
+  }
+`

@@ -39,5 +39,26 @@ const DoubleOffsetSection = ({ leftChildren, rightChildren, reverse }) => {
     </Wrapper>
   )
 }
+const DoubleSection = ({ leftChildren, rightChildren }) => {
+  const classes = useStyles()
+  return (
+    <Wrapper>
+      <div className={classes.root}>
+        <Grid container>
+          <Grid item xs={12} sm={12} md={6}>
+            {leftChildren
+              ? leftChildren.map((children) => <div className="-left-children">{children}</div>)
+              : null}
+          </Grid>
+          <Grid item xs={12} sm={12} md={6}>
+            {rightChildren
+              ? rightChildren.map((children) => <div className="-right-children">{children}</div>)
+              : null}
+          </Grid>
+        </Grid>
+      </div>
+    </Wrapper>
+  )
+}
 
-export { DoubleOffsetSection }
+export { DoubleOffsetSection,DoubleSection }

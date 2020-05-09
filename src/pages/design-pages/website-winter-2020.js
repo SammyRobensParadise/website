@@ -2,6 +2,7 @@
 import React from 'react'
 // components
 import { Grid } from '@material-ui/core'
+import styled from 'styled-components'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -9,7 +10,7 @@ import { StorySocialButtons } from '../../components/Social'
 import { Menu, Button } from 'eunoia'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../../components/TriSection'
-import { DoubleOffsetSection } from '../../components/DoubleSection'
+import { DoubleSection } from '../../components/DoubleSection'
 import { Header } from '../../components/Headers'
 // constants
 import { UIStyle, StoryMenuConfig } from '../../constants/config'
@@ -18,10 +19,12 @@ import {
   ActionWrapper,
   ActionCircleButton,
   ActionRightArrow,
-  ActionText
+  ActionText,
+  HeaderT,
+  Text,
 } from '../../constants/styles'
-import {portfolioWinter2020URL} from '../../constants/links'
-
+import { portfolioWinter2020URL } from '../../constants/links'
+import { PorfolioWinter2020Strings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
@@ -36,76 +39,25 @@ const learnMore = `Learn More`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
-/* 
+
 // styled-components
-const EducationAndPassion = styled.h2`
-  margin-block-start: 20vh;
-  font-family: Georgia Regular;
-  text-align: left;
-  font-size: 64px;
-  letter-spacing: 0px;
-  font-weight: 200;
-  color: ${UIStyle.UIColors.black};
-  padding-left: 10%;
-  @media screen and (max-width: 960px) {
-    padding-left: 5%;
-    margin-block-start: 15vh;
-  }
-  @media screen and (max-width: 460px) {
-    font-size: 40px;
-  }
-`
-const EducationAndPassionText = styled.p`
-  font-family: Helvetica Neue;
-  letter-spacing: 0px;
-  color: ${UIStyle.UIColors.black};
-  font-weight: 400;
-  font-size: 26px;
-  text-align: left;
-  width: 82%;
-  line-height: 55px;
-  padding-left: 10%;
-  @media screen and (max-width: 1260px) {
-    line-height: 40px;
-  }
-  @media screen and (max-width: 960px) {
-    padding-left: 5%;
-  }
-  @media screen and (max-width: 460px) {
-    font-size: 18px;
-  }
-`
-const EducationImageWrapper = styled.div`
+
+const StoryImageWrapper = styled.div`
   text-align: center;
 `
-const EducationImageStyle = styled.img`
-  margin-block-start: 50vh;
+const StoryImageStyle = styled.img`
+  margin-block-start: 40vh;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  width: 60%;
+  width: 90%;
   padding: 0px;
   @media screen and (max-width: 960px) {
     margin-block-start: 10vh;
   }
 `
-const HeadShotImageStyle = styled.img`
-  margin-block-start: 30vh;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  width: 80%;
-  padding: 0px;
-  @media screen and (max-width: 960px) {
-    margin-block-start: 10vh;
-  }
-`
-
-*/
 
 // components
 // cover
@@ -120,17 +72,17 @@ const CoverActionButtons = (
         smooth={true}
         duration={1000}
       >
-        <Button >{learnMore}</Button>
+        <Button>{learnMore}</Button>
       </ScrollLink>
       <a href={portfolioWinter2020URL}>
-      <ActionWrapper>
-        <ActionCircleButton transparent height={'66px'}>
-          <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
-        </ActionCircleButton>
-      </ActionWrapper>
-      <ActionWrapper>
-        <ActionText>{viewProject}</ActionText>
-      </ActionWrapper>
+        <ActionWrapper>
+          <ActionCircleButton transparent height={'66px'}>
+            <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
+          </ActionCircleButton>
+        </ActionWrapper>
+        <ActionWrapper>
+          <ActionText>{viewProject}</ActionText>
+        </ActionWrapper>
       </a>
     </Grid>
   </Grid>
@@ -199,9 +151,20 @@ const ExperienceHeader = (
   />
 )
 
+const Header1 = <HeaderT>{PorfolioWinter2020Strings.section1.title}</HeaderT>
+const Paragraph1 = <Text>{PorfolioWinter2020Strings.section1.text}</Text>
+const Image1 = (
+  <StoryImageWrapper>
+    <StoryImageStyle
+      src="https://i.ibb.co/4jj7bTm/portfolio-2020-webpage.png"
+      alt="portfolio-2020-webpage"
+      border="0"
+    />
+  </StoryImageWrapper>
+)
 const mobileBreakpoint = window.innerWidth < 960
-const SideLeft = []
-const SideRight = []
+const SideLeft = [Header1, Paragraph1]
+const SideRight = [Image1]
 
 const SideLeftSec2 = mobileBreakpoint ? [] : []
 const SideRightSec2 = mobileBreakpoint ? [] : []
@@ -222,7 +185,7 @@ class WebsiteWinter2020 extends React.PureComponent {
         <StorySocialButtons />
         <StoryCover children={CoverChildren} />
         <Element name="about-scroller" className="element">
-          <DoubleOffsetSection
+          <DoubleSection
             leftChildren={[
               <div>
                 {SideLeft.map((e) => (
@@ -238,7 +201,7 @@ class WebsiteWinter2020 extends React.PureComponent {
               </div>,
             ]}
           />
-          <DoubleOffsetSection
+          <DoubleSection
             leftChildren={[
               <div>
                 {SideLeftSec2.map((e) => (
@@ -253,7 +216,6 @@ class WebsiteWinter2020 extends React.PureComponent {
                 ))}
               </div>,
             ]}
-            reverse
           />
         </Element>
         <TriSection
