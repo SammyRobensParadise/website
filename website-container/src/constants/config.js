@@ -61,3 +61,20 @@ export const MenuConfig = {
     },
   ],
 }
+
+export const StoryMenuConfig = {
+  config: {
+    fontColor: UIStyle.UIColors.black,
+    activeSection: 'Home',
+    hideOnMobile: true,
+    DisableMobile: false,
+    fontOverride: 'Helvetica Neue',
+    boldText: false,
+    spacing: 0,
+    row: true,
+    fontSize: '18px',
+    mobileBreakpoint: 850,
+    breakpoints: { xs: true },
+  },
+  options: MenuConfig.options,
+}

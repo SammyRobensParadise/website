@@ -48,4 +48,25 @@ const SocialButtons = () => {
     </SocialButtonsWrapper>
   )
 }
-export { SocialButtons }
+
+const StorySocialButtons = () => {
+  return(
+    <SocialButtonsWrapper>
+    <SocialMediaButtons href={dribbbleURL}>
+      <DribbbleIcon color={UIStyle.UIColors.black} scalingFactor={1} />
+    </SocialMediaButtons>
+    <SocialMediaButtons href={githubURL}>
+      <GithubIcon color={UIStyle.UIColors.black} scalingFactor={1} />
+    </SocialMediaButtons>
+    <SocialMediaButtons href={mediumURL}>
+      <MediumIcon color={UIStyle.UIColors.black} scalingFactor={1} />
+    </SocialMediaButtons>
+    <SocialMediaButtons href={linkedinURL}>
+      <LinkedinIcon color={UIStyle.UIColors.black} scalingFactor={1} />
+    </SocialMediaButtons>
+  </SocialButtonsWrapper>
+  )
+
+}
+
+export { SocialButtons,StorySocialButtons }

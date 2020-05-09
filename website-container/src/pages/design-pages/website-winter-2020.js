@@ -1,17 +1,17 @@
 // react
 import React from 'react'
 // components
-import { Cover } from '../../components/Cover'
+import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
-import { SocialButtons } from '../../components/Social'
+import { StorySocialButtons } from '../../components/Social'
 import { Menu, Button } from 'eunoia'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../../components/TriSection'
 import { DoubleOffsetSection } from '../../components/DoubleSection'
 import { Header } from '../../components/Headers'
 // constants
-import { UIStyle, MenuConfig } from '../../constants/config'
+import { UIStyle, StoryMenuConfig } from '../../constants/config'
 import { ActionDownArrow } from '../../constants/styles'
 import styled from 'styled-components'
 // css
@@ -103,7 +103,7 @@ const HeadShotImageStyle = styled.img`
 // cover
 const CoverChildren = (
   <div>
-    <Menu config={MenuConfig.config} options={MenuConfig.options} />
+    <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={whoIam}
       subtitle={[whoIamSubtite]}
@@ -116,9 +116,10 @@ const CoverChildren = (
           smooth={true}
           duration={1000}
         >
-          <Button transparent>{theBackstory}</Button>
+          <Button >{theBackstory}</Button>
         </ScrollLink>,
       ]}
+      story
     />
   </div>
 )
@@ -173,79 +174,13 @@ const ExperienceHeader = (
   />
 )
 
-// component render lists
-/**
- * Section 1
- */
-const EducationAndPassionTitle = <EducationAndPassion>{eduAndPassion}</EducationAndPassion>
-const EducationAndPassionBody = (
-  <EducationAndPassionText>
-    {
-      <div>
-        <p>
-          I study Systems Design Engineering at the University of Waterloo (Grad. 2023). If you are
-          thinking “what <i>even</i> is Systems Design Engineering” You are not alone. Systems
-          Design Engineering is that we must create problem-based solutions to complex systems level
-          problems using principles of UX/UI and ergonomic design, engineering and creativity.
-        </p>
-        <p>
-          {
-            'I chose to study Systems Design at Canada’s top engineering school because I have a long standing passion for the way humans interact with technology, especially those who suffer from a disability or mental illness (over 20% of Americans), As part of my degree I hope to pursue a specialization in accessible design.'
-          }
-        </p>
-      </div>
-    }
-  </EducationAndPassionText>
-)
-const EducationImage = (
-  <EducationImageWrapper>
-    <EducationImageStyle
-      src="https://i.ibb.co/8gKFvJx/education-logo.png"
-      alt="education-logo"
-      border="0"
-    />
-  </EducationImageWrapper>
-)
-
-/**
- * Section 2
- */
-const ALittleMore = <EducationAndPassion>{aLittelMore}</EducationAndPassion>
-const ALittleMoreText = (
-  <EducationAndPassionText>
-    {
-      <div>
-        <p>
-          {
-            'Growing up in East Vancouver, BC I developed a love and appreciation for nature and our environment . As a result, I am very passionate about sustainable engineering solutions to some of the worlds most challenging problems. I believe that designing a solution extends far beyond the immediate result.'
-          }
-        </p>
-        <p>
-          {
-            'What about the non-engineering stuff… I love music, playing guitar, soccer, snowboarding and travelling, drawing painting, backpacking and exploring! I will never say no to a concert, or a good hike with my dog!'
-          }
-        </p>
-      </div>
-    }
-  </EducationAndPassionText>
-)
-
-const HeadShotImage = (
-  <EducationImageWrapper>
-    <HeadShotImageStyle
-      src="https://i.ibb.co/8gtRtBJ/headshot-copy.png"
-      alt="headshot-copy"
-      border="0"
-    />
-  </EducationImageWrapper>
-)
 
 const mobileBreakpoint = window.innerWidth < 960
-const SideLeft = [EducationAndPassionTitle, EducationAndPassionBody]
-const SideRight = [EducationImage]
+const SideLeft = []
+const SideRight = []
 
-const SideLeftSec2 = mobileBreakpoint ? [ALittleMore, ALittleMoreText] : [HeadShotImage]
-const SideRightSec2 = mobileBreakpoint ? [HeadShotImage] : [ALittleMore, ALittleMoreText]
+const SideLeftSec2 = mobileBreakpoint ? [] : []
+const SideRightSec2 = mobileBreakpoint ? [] : []
 // class Definition
 class WebsiteWinter2020 extends React.PureComponent {
   componentDidMount() {
@@ -260,8 +195,8 @@ class WebsiteWinter2020 extends React.PureComponent {
   render() {
     return (
       <div className="Design-wrapper">
-        <SocialButtons />
-        <Cover children={CoverChildren} />
+        <StorySocialButtons />
+        <StoryCover children={CoverChildren} />
         <Element name="about-scroller" className="element">
           <DoubleOffsetSection
             leftChildren={[
