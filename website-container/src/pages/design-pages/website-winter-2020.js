@@ -26,8 +26,6 @@ const whoIamSubtite = (
   </div>
 )
 const theBackstory = `The Backstory`
-const eduAndPassion = `Education & Passion`
-const aLittelMore = `A Little More...`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
@@ -116,10 +114,11 @@ const CoverChildren = (
           smooth={true}
           duration={1000}
         >
-          <Button >{theBackstory}</Button>
+          <Button>{theBackstory}</Button>
         </ScrollLink>,
       ]}
       story
+      coverImageURL={'https://i.ibb.co/9rLQtt3/portfolio-2020-webpage-render.png'}
     />
   </div>
 )
@@ -173,7 +172,6 @@ const ExperienceHeader = (
     children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
   />
 )
-
 
 const mobileBreakpoint = window.innerWidth < 960
 const SideLeft = []

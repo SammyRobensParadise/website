@@ -10,7 +10,7 @@ const TitleStyle = styled.h1`
   color: ${(p) => (p.story ? UIStyle.UIColors.black : UIStyle.UIColors.white)};
   opacity: 1 !important;
   font-weight: 200;
-  padding-block-start: 180px;
+  padding-block-start: ${p =>p.story? '10px' :'180px'};
   font-size: 64px;
   width: auto;
   height: auto;
@@ -51,7 +51,20 @@ const ChildrenWrapper = styled.div`
     }
   }
 `
-const CoverImage = styled.img``
+const CoverImageContainer = styled.div`
+padding-block-start: 2vh;
+  text-align: center;
+`
+const CoverImage = styled.img`
+  text-align: center;
+  height: 40vh;
+  width: auto;
+  object-fit: contain;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;`
 
 const SectionTitle = ({ title, subtitle, children, story, coverImageURL, coverImageAltText }) => {
   return (
@@ -59,10 +72,12 @@ const SectionTitle = ({ title, subtitle, children, story, coverImageURL, coverIm
       <Container>
         <Grid spacing={12}>
           {coverImageURL ? (
-            <CoverImage
-              src={coverImageURL}
-              alt={coverImageAltText ? coverImageAltText : 'cover-image'}
-            />
+            <CoverImageContainer>
+              <CoverImage
+                src={coverImageURL}
+                alt={coverImageAltText ? coverImageAltText : 'cover-image'}
+              />
+            </CoverImageContainer>
           ) : null}
           <TitleStyle story={story}>{title}</TitleStyle>
           <SubtitleWrapper story={story}>
