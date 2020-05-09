@@ -32,7 +32,7 @@ git clone https://github.com/SammyRobensParadise/website.git
 2. install
 
 ```bash
-cd website-container && npm install
+cd website && npm install
 ```
 
 3. run
