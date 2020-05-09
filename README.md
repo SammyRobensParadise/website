@@ -4,6 +4,16 @@
 
 ![Sammy Biking](https://i.ibb.co/WkN8RtC/sammy-illustraions-logo.png)
 
+## Status
+
+![Website](https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_message=online&url=https%3A%2F%2Fwebsite-2020-host.web.app%2F)
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/SammyRobensParadise/website/Build%20and%20Deploy?style=for-the-badge)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/SammyRobensParadise/website?style=for-the-badge)
+
+![GitHub issues](https://img.shields.io/github/issues/SammyRobensParadise/website?style=for-the-badge)
+
 ## About
 
 This website is designed to showcase my work and is an outlet for my design and development work as well as a place to share my work experience. \
