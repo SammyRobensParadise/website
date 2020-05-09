@@ -14,7 +14,7 @@ const TitleStyle = styled.h1`
   font-size: 64px;
   width: auto;
   height: auto;
-  line-height: 42px;
+  line-height: 48px;
   margin-block-end: 0rem;
 `
 const SubtitleWrapper = styled.h2`

@@ -93,7 +93,7 @@ export const HeaderT = styled.h2`
   color: ${UIStyle.UIColors.black};
   padding-left: 10%;
   @media screen and (max-width: 960px) {
-    padding-left: 5%;
+    padding-left: 10%;
     margin-block-start: 15vh;
   }
   @media screen and (max-width: 460px) {
@@ -114,7 +114,7 @@ export const Text = styled.p`
     line-height: 40px;
   }
   @media screen and (max-width: 960px) {
-    padding-left: 5%;
+    padding-left: 10%;
   }
   @media screen and (max-width: 460px) {
     font-size: 18px;

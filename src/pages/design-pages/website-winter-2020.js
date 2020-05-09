@@ -52,7 +52,7 @@ const StoryImageStyle = styled.img`
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  width: 90%;
+  width: 85%;
   padding: 0px;
   @media screen and (max-width: 960px) {
     margin-block-start: 10vh;
