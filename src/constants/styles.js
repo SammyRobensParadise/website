@@ -42,6 +42,15 @@ export const HeaderContent = styled.div`
     }
   }
 `
+export const ActionWrapper = styled.div`
+padding-left: 4rem;
+display: inline-block;
+@media screen and (max-width: 770px) {
+  padding-left: 0rem;
+  display: block;
+}
+`
+
 export const HeaderContentText = styled.p`
   font-family: Helvetica Neue;
   letter-spacing: 0px;
@@ -57,6 +66,15 @@ export const HeaderContentText = styled.p`
     font-size: 18px;
   }
 `
+export const ActionText = styled.h4`
+display: inline-block;
+font-family: Helvetica Neue;
+letter-spacing: 0px;
+color: ${UIStyle.UIColors.black};
+font-weight: 400;
+font-size: 26px;
+`
+
 export const ScrollArea = styled.div`
   height: ${(p) => (p.height ? p.height : '700px')};
   overflow: auto;

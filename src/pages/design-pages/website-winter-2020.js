@@ -1,6 +1,7 @@
 // react
 import React from 'react'
 // components
+import { Grid } from '@material-ui/core'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -12,20 +13,26 @@ import { DoubleOffsetSection } from '../../components/DoubleSection'
 import { Header } from '../../components/Headers'
 // constants
 import { UIStyle, StoryMenuConfig } from '../../constants/config'
-import { ActionDownArrow } from '../../constants/styles'
-// import styled from 'styled-components'
+import {
+  ActionDownArrow,
+  ActionWrapper,
+  ActionCircleButton,
+  ActionRightArrow,
+  ActionText
+} from '../../constants/styles'
+import {portfolioWinter2020URL} from '../../constants/links'
+
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
 
 // strings ****
-const whoIam = `Who I am.`
-const whoIamSubtite = (
-  <div>
-    I am Sammy - But you want a little <i>more</i> than that
-  </div>
-)
-const theBackstory = `The Backstory`
+const WebsiteWinter2020title = `Website Winter & Spring 2020`
+const WebsiteWinter2020subtitle = `The Process, Design and Code`
+const viewProject = `View Project`
+const learnMore = `Learn More`
+
+// tri section strings
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
@@ -97,27 +104,45 @@ const HeadShotImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
+
 */
+
 // components
 // cover
+const CoverActionButtons = (
+  <Grid spacing={3}>
+    <Grid item>
+      <ScrollLink
+        activeClass="active"
+        className="about-scroller"
+        to="about-scroller"
+        spy={true}
+        smooth={true}
+        duration={1000}
+      >
+        <Button >{learnMore}</Button>
+      </ScrollLink>
+      <a href={portfolioWinter2020URL}>
+      <ActionWrapper>
+        <ActionCircleButton transparent height={'66px'}>
+          <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
+        </ActionCircleButton>
+      </ActionWrapper>
+      <ActionWrapper>
+        <ActionText>{viewProject}</ActionText>
+      </ActionWrapper>
+      </a>
+    </Grid>
+  </Grid>
+)
+
 const CoverChildren = (
   <div>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
-      title={whoIam}
-      subtitle={[whoIamSubtite]}
-      children={[
-        <ScrollLink
-          activeClass="active"
-          className="about-scroller"
-          to="about-scroller"
-          spy={true}
-          smooth={true}
-          duration={1000}
-        >
-          <Button>{theBackstory}</Button>
-        </ScrollLink>,
-      ]}
+      title={WebsiteWinter2020title}
+      subtitle={[WebsiteWinter2020subtitle]}
+      children={[CoverActionButtons]}
       story
       coverImageURL={'https://i.ibb.co/9rLQtt3/portfolio-2020-webpage-render.png'}
     />

@@ -23,6 +23,7 @@ import {
   ActionDownArrow,
   ScrollArea,
   HeaderContent,
+  ActionWrapper
 } from '../constants/styles'
 import {
   IntensifEyeArticleCard,
@@ -60,14 +61,7 @@ const myPassionText = `We have a responsability to use it to improve the lives o
 // styled-components ****
 // Cover
 
-const ActionWrapper = styled.div`
-  padding-left: 4rem;
-  display: inline-block;
-  @media screen and (max-width: 770px) {
-    padding-left: 0rem;
-    display: block;
-  }
-`
+
 const ActionExperienceAndProjectsText = styled.h4`
   display: inline-block;
   font-family: Helvetica Neue;
