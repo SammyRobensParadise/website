@@ -13,7 +13,7 @@ import { Header } from '../../components/Headers'
 // constants
 import { UIStyle, StoryMenuConfig } from '../../constants/config'
 import { ActionDownArrow } from '../../constants/styles'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
@@ -29,7 +29,7 @@ const theBackstory = `The Backstory`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
-
+/* 
 // styled-components
 const EducationAndPassion = styled.h2`
   margin-block-start: 20vh;
@@ -97,6 +97,7 @@ const HeadShotImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
+*/
 // components
 // cover
 const CoverChildren = (
