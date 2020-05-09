@@ -24,15 +24,15 @@ import {
   HeaderT,
   Text,
 } from '../../constants/styles'
-import { portfolioWinter2020URL } from '../../constants/links'
-import { PortfolioWinter2020Strings } from './strings'
+import { portfolioSummerFall2019URL } from '../../constants/links'
+import { PortfolioSummerFall2019Strings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
 
 // strings ****
-const WebsiteWinter2020title = `Website Summer & Fall 2019`
-const WebsiteWinter2020subtitle = `The Process, Design and Code`
+const WebsiteSummerFalltitle = `Website Summer & Fall 2019`
+const WebsiteSummerFall2019Subtitle = `Design, Code and UX`
 const viewProject = `View Project`
 const learnMore = `Learn More`
 
@@ -75,7 +75,7 @@ const CoverActionButtons = (
       >
         <Button>{learnMore}</Button>
       </ScrollLink>
-      <a href={portfolioWinter2020URL}>
+      <a href={portfolioSummerFall2019URL}>
         <ActionWrapper>
           <ActionCircleButton transparent height={'66px'}>
             <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
@@ -93,11 +93,11 @@ const CoverChildren = (
   <div>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
-      title={WebsiteWinter2020title}
-      subtitle={[WebsiteWinter2020subtitle]}
+      title={WebsiteSummerFalltitle}
+      subtitle={[WebsiteSummerFall2019Subtitle]}
       children={[CoverActionButtons]}
       story
-      coverImageURL={'https://i.ibb.co/9rLQtt3/portfolio-2020-webpage-render.png'}
+      coverImageURL={'https://i.ibb.co/mDP4djv/portfolio-spring-19-logo.png'}
     />
   </div>
 )
@@ -152,37 +152,24 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{PortfolioWinter2020Strings.section1.title}</HeaderT>
-const Paragraph1 = <Text>{PortfolioWinter2020Strings.section1.text}</Text>
+const Header1 = <HeaderT>{PortfolioSummerFall2019Strings.section1.title}</HeaderT>
+const Paragraph1 = <Text>{PortfolioSummerFall2019Strings.section1.text[0]}</Text>
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/4jj7bTm/portfolio-2020-webpage.png"
-      alt="portfolio-2020-webpage"
+      src="https://i.ibb.co/5Rg0VNM/portfolio-2019-landing-page.png"
+      alt="portfolio-2019-landing-page"
       border="0"
     />
   </StoryCenterWrapper>
 )
 // section 2
-const Header2 = <HeaderT>{PortfolioWinter2020Strings.section2.title}</HeaderT>
-const Paragraph2 = <Text>{PortfolioWinter2020Strings.section2.text[0]}</Text>
+const Paragraph2 = <Text>{PortfolioSummerFall2019Strings.section1.text[1]}</Text>
 const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/7p4wwN0/portfolio-2020-code.png"
-      alt="portfolio-2020-code"
-      border="0"
-    />
-  </StoryCenterWrapper>
-)
-// section 3
-
-const Paragraph3 = <Text>{PortfolioWinter2020Strings.section2.text[1]}</Text>
-const Image3 = (
-  <StoryCenterWrapper>
-    <StoryImageStyle
-      src="https://i.ibb.co/FxYD2zk/portfolio-2020-code-2.png"
-      alt="portfolio-2020-code-2"
+      src="https://i.ibb.co/VBG61Bp/portfolio-2019-work-page.png"
+      alt="portfolio-2019-work-page"
       border="0"
       isLongParagraph
     />
@@ -193,10 +180,8 @@ const Image3 = (
 
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
-const SideLeftSec2 = [Header2, Paragraph2]
+const SideLeftSec2 = [Paragraph2]
 const SideRightSec2 = [Image2]
-const SideLeftSec3 = [Paragraph3]
-const SideRightSec3 = [Image3]
 // class Definition
 class WebsiteSummerAndFall2019 extends React.PureComponent {
   componentDidMount() {
@@ -246,34 +231,20 @@ class WebsiteSummerAndFall2019 extends React.PureComponent {
               </div>,
             ]}
           />
-          <DoubleSection
-            leftChildren={[
-              <div>
-                {SideLeftSec3.map((e) => (
-                  <div>{e}</div>
-                ))}
-              </div>,
-            ]}
-            rightChildren={[
-              <div>
-                {SideRightSec3.map((e) => (
-                  <div>{e}</div>
-                ))}
-              </div>,
-            ]}
-          />
         </Element>
         <UniSection
           middleChildren={[
             <StoryCenterWrapper>
               <Button
-                onClick={() => window.open(portfolioWinter2020URL, '_self')}
+                onClick={() => window.open(portfolioSummerFall2019URL, '_self')}
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
-                    window.open(portfolioWinter2020URL, '_self')
+                    window.open(portfolioSummerFall2019URL, '_self')
                   }
                 }}
-              >{viewProject}</Button>
+              >
+                {viewProject}
+              </Button>
             </StoryCenterWrapper>,
           ]}
         />

@@ -26,3 +26,5 @@ export const emailLink = `mailto:srobensparadise@gmail.com`
 export const resumeLink = `https://www.yumpu.com/en/document/read/63320828/resume`
 
 export const portfolioWinter2020URL= `https://portfolio-winter-2020.web.app/`
+
+export const portfolioSummerFall2019URL = `https://portfolio-app-1091c.web.app/`
