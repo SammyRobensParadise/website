@@ -16,6 +16,7 @@ import Policy from './pages/Policy'
 
 // story-pages-import
 import WebsiteWinter2020 from './pages/story-pages/website-winter-2020'
+import WebsiteSummerAndFall2019 from './pages/story-pages/website-summer-fall-2019'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -39,8 +40,11 @@ ReactDOM.render(
         <Route path="/policy">
           <Policy />
         </Route>
-        <Route path="/portfolio-winter-2020">
+        <Route path="/website-winter-2020">
           <WebsiteWinter2020 />
+        </Route>
+        <Route path="/website-summer-fall-2019">
+          <WebsiteSummerAndFall2019 />
         </Route>
       </Switch>
     </Router>

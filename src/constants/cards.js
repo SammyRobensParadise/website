@@ -90,7 +90,7 @@ export const Portfolio2020Card = (
         content: `The motivation behind bold block colors and custom animations`,
         imageURL: 'https://i.ibb.co/6HhtjHZ/portfolio-winter-20-logo.png',
         imageAltText: `The motivation behind bold block colors and custom animations`,
-        link: '/portfolio-winter-2020',
+        link: '/website-winter-2020',
         ...defaultCardConfig,
       }}
     />
@@ -105,7 +105,7 @@ export const Portfolio2019Card = (
         content: `The design thinking behind my first seasonal portfolio`,
         imageURL: 'https://i.ibb.co/mDP4djv/portfolio-spring-19-logo.png',
         imageAltText: `The design thinking behind my first seasonal portfolio`,
-        link: '/#',
+        link: '/website-summer-fall-2019',
         ...defaultCardConfig,
       }}
     />
