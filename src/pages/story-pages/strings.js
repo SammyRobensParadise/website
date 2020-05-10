@@ -23,3 +23,36 @@ export const PortfolioSummerFall2019Strings = {
     ],
   },
 }
+
+export const IntensifEyeStrings = {
+  section1: {
+    title: `What it is…`,
+    text: [
+      `Intensif-eye is a fully functioning mobile application that I, any 3 other engineers developed and designed as part of Dubhacks, a Hackathon at the University of Washington in October 2019. We placed second for use of Google Cloud AI, and 3rd place overall out of hundreds of teams. The accompanied designs were envisioned (by me) to product-ionize the application.`,
+    ],
+  },
+  section2: {
+    title: `The Solution`,
+    text: [
+      `Intensif-eye at allows users to take images of text or hand writing and using Google’s vision AI API, extracts the text from the image that can be rendered to a screen. My team and I saw this incredible potential to use this powerful technology to allow people who may be visually impared in some way to access information quickly without the use of glasses or other technology. We did this by extracting text from images and presenting it to users in a high contrast, and accessible fashion.`,
+    ],
+  },
+  section3: {
+    title: `The Problem Space`,
+    text: [
+      `The American Foundation for the Blind estimates that over 26.9 million American adults experience some sort of vision loss, and about 41% of those people either don’t have vision correction tools or don’t have the correct prescription. The good news? over 81% of those people have smartphones! This means that a digital solution to address fixed point vision issues is statistically very accessible for many individuals, and presents a very high ROI. To ensure an adequate solution, we measured the average time it took to retrieve reading glasses, and decided to constrain ourselves to 30 seconds from the point of unreadable text is identified to the point where the user can read the rendered text (we exceeded our targets).`,
+    ],
+  },
+  section4: {
+    title: `The Design Process`,
+    text: [
+      `One of our team members was legally blind, and was not only our source of immense inspiration for the project, but also an amazing test user, we were able to iterate and change our preliminary designs on the fly to ensure we were factoring in issues like color blindness and contrast. For this particular project I took on the role of a developer and UX designer. Where I became responsible for optimizing the user flow of the application from launch to text identification, as well as developing the app in React Native. My featured extended design is intended to expand the feature set of the application, ready for a dev team to tackle, while retaining the original optimized flow. The app features easily accessible font-size and contrast settings, and retaining a simple color scheme of 5.94:1 contrast, exceeding W3C’s AAA standard of 4.5:1.`,
+    ],
+  },
+  section5: {
+    title: `Reflecting…`,
+    text: [
+      `Intensif-eye (and my teammate) raised my awareness about the importance of accessible design. It is something that we learn about in school, and design courses all the time, but it changed my perspective to see the joy and freedom that my teammate showed when using the app, even in its POC state. My raised awareness and — now passion, for accessible design prompted me to take a leading role at Hootsuite leading an effort to bring better accessible design and development practices to the product and technology team, in addition to my traditional development work.`,
+    ],
+  },
+}

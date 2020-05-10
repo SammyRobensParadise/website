@@ -97,7 +97,7 @@ const CoverChildren = (
       subtitle={[IntensifEyeSubtitle]}
       children={[CoverActionButtons]}
       story
-      coverImageURL={'https://i.ibb.co/mDP4djv/portfolio-spring-19-logo.png'}
+      coverImageURL={'https://i.ibb.co/r2NBmKn/intensif-eye-render-shadow-4.png'}
     />
   </div>
 )
