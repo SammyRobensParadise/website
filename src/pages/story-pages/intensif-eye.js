@@ -25,7 +25,7 @@ import {
   Text,
 } from '../../constants/styles'
 import { IntensifEyeURL } from '../../constants/links'
-import { PortfolioSummerFall2019Strings } from './strings'
+import { IntensifEyeStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
@@ -47,7 +47,7 @@ const StoryCenterWrapper = styled.div`
   text-align: center;
 `
 const StoryImageStyle = styled.img`
-  margin-block-start: ${(p) => (p.isLongParagraph ? '10vh' : '30vh')};
+  margin-block-start: ${(p) => (p.isLongParagraph ? '10vh' : '20vh')};
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -152,19 +152,19 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{PortfolioSummerFall2019Strings.section1.title}</HeaderT>
-const Paragraph1 = <Text>{PortfolioSummerFall2019Strings.section1.text[0]}</Text>
+const Header1 = <HeaderT>{IntensifEyeStrings.section1.title}</HeaderT>
+const Paragraph1 = <Text>{IntensifEyeStrings.section1.text[0]}</Text>
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/5Rg0VNM/portfolio-2019-landing-page.png"
-      alt="portfolio-2019-landing-page"
+      src="https://i.ibb.co/3SdZv0N/intensif-eye-render-4x.png"
+      alt="intensif-eye-render-4x"
       border="0"
     />
   </StoryCenterWrapper>
 )
 // section 2
-const Paragraph2 = <Text>{PortfolioSummerFall2019Strings.section1.text[1]}</Text>
+const Paragraph2 = <Text>{IntensifEyeStrings.section1.text[0]}</Text>
 const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle
