@@ -47,7 +47,7 @@ const StoryCenterWrapper = styled.div`
   text-align: center;
 `
 const StoryImageStyle = styled.img`
-  margin-block-start: ${(p) => (p.isLongParagraph ? '10vh' : '20vh')};
+  margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -179,12 +179,37 @@ const Paragraph3 = (
   </Text>
 )
 
+// section 4
+const Header4 = <HeaderT>{IntensifEyeStrings.section4.title}</HeaderT>
+const Paragraph4 = <Text>{IntensifEyeStrings.section4.text[0]}</Text>
+const Image4 = (
+  <StoryCenterWrapper>
+    <StoryImageStyle
+      src="https://i.ibb.co/t2XYmnd/intensif-eye-render-single-4x.png"
+      alt="intensif-eye-render-single-4x"
+      border="0"
+      offsetTop={'40vh'}
+    />
+  </StoryCenterWrapper>
+)
+
+// section 5
+
+const Header5 = <HeaderT padding={5}>{IntensifEyeStrings.section5.title}</HeaderT>
+const Paragraph5 = (
+  <Text padding={5} wide>
+    {IntensifEyeStrings.section5.text[0]}
+  </Text>
+)
 // arrays mapped
 
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
 const Sec2 = [Header2, Paragraph2]
 const Sec3 = [Header3, Paragraph3]
+const Sec4Left = [Header4, Paragraph4]
+const Sec4Right = [Image4]
+const Sec5 = [Header5, Paragraph5]
 // class Definition
 class IntensifEye extends React.PureComponent {
   componentDidMount() {
@@ -231,6 +256,31 @@ class IntensifEye extends React.PureComponent {
             middleChildren={[
               <div>
                 {Sec3.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+          />
+          <DoubleSection
+            leftChildren={[
+              <div>
+                {Sec4Left.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+            rightChildren={[
+              <div>
+                {Sec4Right.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+          />
+          <UniSection
+            middleChildren={[
+              <div>
+                {Sec5.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,

@@ -105,7 +105,7 @@ export const Text = styled.p`
   letter-spacing: 0px;
   color: ${UIStyle.UIColors.black};
   font-weight: 400;
-  font-size: 26px;
+  font-size: 22px;
   text-align: left;
   width: ${(p) => (p.wide ? '88%' : '82%')};
   line-height: 50px;
