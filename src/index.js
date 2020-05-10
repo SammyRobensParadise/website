@@ -17,6 +17,7 @@ import Policy from './pages/Policy'
 // story-pages-import
 import WebsiteWinter2020 from './pages/story-pages/website-winter-2020'
 import WebsiteSummerAndFall2019 from './pages/story-pages/website-summer-fall-2019'
+import IntensifEye from './pages/story-pages/intensif-eye'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -45,6 +46,9 @@ ReactDOM.render(
         </Route>
         <Route path="/website-summer-fall-2019">
           <WebsiteSummerAndFall2019 />
+        </Route>
+        <Route path="/intensif-eye">
+          <IntensifEye />
         </Route>
       </Switch>
     </Router>

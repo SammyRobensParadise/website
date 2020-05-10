@@ -60,7 +60,7 @@ export const IntensifEyeDesignCard = (
         title: `Intensif-Eye; Google Vision AI, Design`,
         content: `A more accessible world throught AI`,
         imageURL: 'https://i.ibb.co/Kb6F9kF/intensif-eye-render-logo.png',
-        link: '/#',
+        link: '/intensif-eye',
         imageAltText: `A more accessible world throught AI`,
         ...defaultCardConfig,
       }}
@@ -227,7 +227,7 @@ export const Portfolio2020CodeCard = (
         content: `A story about an experiment with svg animations redux and modern javascript framworks`,
         imageURL: 'https://i.ibb.co/6HhtjHZ/portfolio-winter-20-logo.png',
         imageAltText: `A story about an experiment with svg animations redux and modern javascript framworks`,
-        link: '/#',
+        link: '/website-winter-2020',
         ...defaultCardConfig,
       }}
     />
@@ -271,7 +271,7 @@ export const IntensifEyeCodeCard = (
         title: `Intensif-Eye; Google Vision AI, Design; React-Native`,
         content: `The code behind Intensif-Eye, a project to help those with visual impairments`,
         imageURL: 'https://i.ibb.co/6m2hkqy/intensifeye-logo.png',
-        link: '/#',
+        link: '/intensif-eye',
         imageAltText: `The code behind Intensif-Eye, a project to help those with visual impairments`,
         ...defaultCardConfig,
       }}
@@ -317,7 +317,7 @@ export const Portfolio2019CodeCard = (
         content: `The code behind my first seasonal portfolio`,
         imageURL: 'https://i.ibb.co/mDP4djv/portfolio-spring-19-logo.png',
         imageAltText: `The code behind my first seasonal portfolio`,
-        link: '/#',
+        link: '/website-summer-fall-2019',
         ...defaultCardConfig,
       }}
     />
