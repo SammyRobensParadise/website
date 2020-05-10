@@ -12,16 +12,16 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Wrapper = styled.div`
-  padding-block-start: 10vh;
+  padding-block-start: ${(p) => (p.noPadding ? '0vh' : '10vh')};
   @media screen and (max-width: 600px) {
     display: block;
   }
 `
 
-const TriSection = ({ leftChildren, middleChildren, rightChildren }) => {
+const TriSection = ({ leftChildren, middleChildren, rightChildren, noPadding }) => {
   const classes = useStyles()
   return (
-    <Wrapper>
+    <Wrapper noPadding={noPadding}>
       <div className={classes.root}>
         <Grid container>
           <Grid item xs={12} sm={12} md={4}>

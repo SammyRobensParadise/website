@@ -46,6 +46,10 @@ const experienceContentText = `Internships in UX/UI design & development`
 const StoryCenterWrapper = styled.div`
   text-align: center;
 `
+const StoryCenterWrapperColor = styled.div`
+  text-align: center;
+  background-color: ${UIStyle.UIColors.darkGrey};
+`
 const StoryImageStyle = styled.img`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
@@ -59,7 +63,20 @@ const StoryImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
-
+const LargeBannerImageStyle = styled.img`
+  margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  width: 100%;
+  object-fit: contain;
+  padding: 0px;
+  @media screen and (max-width: 960px) {
+    margin-block-start: 10vh;
+  }
+`
 // components
 // cover
 const CoverActionButtons = (
@@ -194,12 +211,22 @@ const Image4 = (
 )
 
 // section 5
-
 const Header5 = <HeaderT padding={5}>{IntensifEyeStrings.section5.title}</HeaderT>
 const Paragraph5 = (
   <Text padding={5} wide>
     {IntensifEyeStrings.section5.text[0]}
   </Text>
+)
+
+// section 6
+const Image6 = (
+  <StoryCenterWrapperColor>
+    <LargeBannerImageStyle
+      src="https://i.ibb.co/CKxn8GP/intensif-eye-Board.png"
+      alt="intensif-eye-Board"
+      border="0"
+    />
+  </StoryCenterWrapperColor>
 )
 // arrays mapped
 
@@ -210,6 +237,7 @@ const Sec3 = [Header3, Paragraph3]
 const Sec4Left = [Header4, Paragraph4]
 const Sec4Right = [Image4]
 const Sec5 = [Header5, Paragraph5]
+const Sec6 = [Image6]
 // class Definition
 class IntensifEye extends React.PureComponent {
   componentDidMount() {
@@ -286,27 +314,37 @@ class IntensifEye extends React.PureComponent {
               </div>,
             ]}
           />
+          <UniSection
+            middleChildren={[
+              <StoryCenterWrapper>
+                <Button
+                  onClick={() => window.open(IntensifEyeURL, '_self')}
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') {
+                      window.open(IntensifEyeURL, '_self')
+                    }
+                  }}
+                >
+                  {viewProject}
+                </Button>
+              </StoryCenterWrapper>,
+            ]}
+          />
+          <UniSection
+            middleChildren={[
+              <div>
+                {Sec6.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+          />
         </Element>
-        <UniSection
-          middleChildren={[
-            <StoryCenterWrapper>
-              <Button
-                onClick={() => window.open(IntensifEyeURL, '_self')}
-                onKeyPress={(e) => {
-                  if (e.key === 'Enter') {
-                    window.open(IntensifEyeURL, '_self')
-                  }
-                }}
-              >
-                {viewProject}
-              </Button>
-            </StoryCenterWrapper>,
-          ]}
-        />
         <TriSection
           leftChildren={[DesignHeader]}
           middleChildren={[CodeHeader]}
           rightChildren={[ExperienceHeader]}
+          noPadding
         />
         <Footer />
       </div>
