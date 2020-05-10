@@ -164,24 +164,27 @@ const Image1 = (
   </StoryCenterWrapper>
 )
 // section 2
-const Paragraph2 = <Text>{IntensifEyeStrings.section1.text[0]}</Text>
-const Image2 = (
-  <StoryCenterWrapper>
-    <StoryImageStyle
-      src="https://i.ibb.co/VBG61Bp/portfolio-2019-work-page.png"
-      alt="portfolio-2019-work-page"
-      border="0"
-      isLongParagraph
-    />
-  </StoryCenterWrapper>
+const Header2 = <HeaderT padding={5}>{IntensifEyeStrings.section2.title}</HeaderT>
+const Paragraph2 = (
+  <Text padding={5} wide>
+    {IntensifEyeStrings.section2.text[0]}
+  </Text>
+)
+
+// section 3
+const Header3 = <HeaderT padding={5}>{IntensifEyeStrings.section3.title}</HeaderT>
+const Paragraph3 = (
+  <Text padding={5} wide>
+    {IntensifEyeStrings.section3.text[0]}
+  </Text>
 )
 
 // arrays mapped
 
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
-const SideLeftSec2 = [Paragraph2]
-const SideRightSec2 = [Image2]
+const Sec2 = [Header2, Paragraph2]
+const Sec3 = [Header3, Paragraph3]
 // class Definition
 class IntensifEye extends React.PureComponent {
   componentDidMount() {
@@ -215,17 +218,19 @@ class IntensifEye extends React.PureComponent {
               </div>,
             ]}
           />
-          <DoubleSection
-            leftChildren={[
+          <UniSection
+            middleChildren={[
               <div>
-                {SideLeftSec2.map((e) => (
+                {Sec2.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,
             ]}
-            rightChildren={[
+          />
+          <UniSection
+            middleChildren={[
               <div>
-                {SideRightSec2.map((e) => (
+                {Sec3.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,

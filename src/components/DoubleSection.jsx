@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 const Wrapper = styled.div`
-  padding-block-start: 10vh;
+  padding-block-start: 2vh;
   @media screen and (max-width: 600px) {
     display: block;
   }
