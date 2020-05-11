@@ -86,7 +86,7 @@ export const GrapeStrings = {
     ],
   },
   section3: {
-    title: `Why Grape is Different`,
+    title: `Why Grape's Different`,
     text: [
       `The proof of concept for Grape was designed to show that if users were given the ability to create their own “modules” where they can use a variety of tools such as virtual IDEs and terminals as well videos, text and images to teach a range of software tools to users. Essentially a blogging platform, both private and public where people can share “modules” similar to articles that walk users through software tools. No other current product delivers a user-centered approach to learning where individuals can create immersive learning experiences for software. Our initial research shows that tools such as Grape have the potential to revolutionize the onboarding process for software developers who cited learning custom practices and systems as one of the most challenging aspects of starting a new job.`,
     ],

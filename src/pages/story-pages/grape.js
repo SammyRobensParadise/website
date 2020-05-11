@@ -25,7 +25,7 @@ import {
   Text,
 } from '../../constants/styles'
 import { GrapePromoURL } from '../../constants/links'
-import { IntensifEyeStrings } from './strings'
+import { GrapeStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
@@ -169,75 +169,52 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{IntensifEyeStrings.section1.title}</HeaderT>
-const Paragraph1 = <Text>{IntensifEyeStrings.section1.text[0]}</Text>
+const Header1 = <HeaderT>{GrapeStrings.section1.title}</HeaderT>
+const Paragraph1 = <Text>{GrapeStrings.section1.text[0]}</Text>
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/3SdZv0N/intensif-eye-render-4x.png"
-      alt="intensif-eye-render-4x"
+      src="https://i.ibb.co/jZRsy4g/grape-landing-2x.png"
+      alt="grape-landing-2x"
       border="0"
+      offsetTop={'30vh'}
     />
   </StoryCenterWrapper>
 )
 // section 2
-const Header2 = <HeaderT padding={5}>{IntensifEyeStrings.section2.title}</HeaderT>
-const Paragraph2 = (
-  <Text padding={5} wide>
-    {IntensifEyeStrings.section2.text[0]}
-  </Text>
-)
-
-// section 3
-const Header3 = <HeaderT padding={5}>{IntensifEyeStrings.section3.title}</HeaderT>
-const Paragraph3 = (
-  <Text padding={5} wide>
-    {IntensifEyeStrings.section3.text[0]}
-  </Text>
-)
-
-// section 4
-const Header4 = <HeaderT>{IntensifEyeStrings.section4.title}</HeaderT>
-const Paragraph4 = <Text>{IntensifEyeStrings.section4.text[0]}</Text>
-const Image4 = (
+const Header2 = <HeaderT>{GrapeStrings.section2.title}</HeaderT>
+const Paragraph2 = GrapeStrings.section2.text[0]
+const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/t2XYmnd/intensif-eye-render-single-4x.png"
-      alt="intensif-eye-render-single-4x"
+      src="https://i.ibb.co/hHHZDMG/grape-promo-2x.png"
+      alt="grape-promo-2x"
       border="0"
-      offsetTop={'40vh'}
+      offsetTop={'30vh'}
     />
   </StoryCenterWrapper>
 )
-
-// section 5
-const Header5 = <HeaderT padding={5}>{IntensifEyeStrings.section5.title}</HeaderT>
-const Paragraph5 = (
-  <Text padding={5} wide>
-    {IntensifEyeStrings.section5.text[0]}
-  </Text>
-)
-
-// section 6
-const Image6 = (
-  <StoryCenterWrapperColor>
-    <LargeBannerImageStyle
-      src="https://i.ibb.co/CKxn8GP/intensif-eye-Board.png"
-      alt="intensif-eye-Board"
+// section 3
+const Header3 = <HeaderT>{GrapeStrings.section3.title}</HeaderT>
+const Paragraph3 = <Text>{GrapeStrings.section3.text[0]}</Text>
+const Image3 = (
+  <StoryCenterWrapper>
+    <StoryImageStyle
+      src="https://i.ibb.co/3MtynPr/grape-editor-2x.png"
+      alt="grape-editor-2x"
       border="0"
+      offsetTop={'30vh'}
     />
-  </StoryCenterWrapperColor>
+  </StoryCenterWrapper>
 )
 // arrays mapped
 
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
-const Sec2 = [Header2, Paragraph2]
-const Sec3 = [Header3, Paragraph3]
-const Sec4Left = [Header4, Paragraph4]
-const Sec4Right = [Image4]
-const Sec5 = [Header5, Paragraph5]
-const Sec6 = [Image6]
+const Side2Left = [Header2, Paragraph2]
+const Side2Right = [Image2]
+const Side3Left = [Header3, Paragraph3]
+const Side3Right = [Image3]
 // class Definition
 class Grape extends React.PureComponent {
   componentDidMount() {
@@ -271,19 +248,17 @@ class Grape extends React.PureComponent {
               </div>,
             ]}
           />
-          <UniSection
-            middleChildren={[
+          <DoubleSection
+            leftChildren={[
               <div>
-                {Sec2.map((e) => (
+                {Side2Left.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,
             ]}
-          />
-          <UniSection
-            middleChildren={[
+            rightChildren={[
               <div>
-                {Sec3.map((e) => (
+                {Side2Right.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,
@@ -292,23 +267,14 @@ class Grape extends React.PureComponent {
           <DoubleSection
             leftChildren={[
               <div>
-                {Sec4Left.map((e) => (
+                {Side3Left.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,
             ]}
             rightChildren={[
               <div>
-                {Sec4Right.map((e) => (
-                  <div>{e}</div>
-                ))}
-              </div>,
-            ]}
-          />
-          <UniSection
-            middleChildren={[
-              <div>
-                {Sec5.map((e) => (
+                {Side3Right.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,
@@ -328,15 +294,6 @@ class Grape extends React.PureComponent {
                   {viewProject}
                 </Button>
               </StoryCenterWrapper>,
-            ]}
-          />
-          <UniSection
-            middleChildren={[
-              <div>
-                {Sec6.map((e) => (
-                  <div>{e}</div>
-                ))}
-              </div>,
             ]}
           />
         </Element>
