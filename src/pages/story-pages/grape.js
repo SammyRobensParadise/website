@@ -32,7 +32,7 @@ import '../../css/styles/App.css'
 
 // strings ****
 const GrapeTitle = `Grape; Changing they way we code`
-const GrapeSubtitle = `The motivation behind the promo page`
+const GrapeSubtitle = `The motivation behind Grape`
 const viewProject = `View Project`
 const learnMore = `Learn More`
 
