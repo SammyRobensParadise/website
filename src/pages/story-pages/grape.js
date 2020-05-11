@@ -48,7 +48,7 @@ const StoryCenterWrapper = styled.div`
 `
 const StoryCenterWrapperColor = styled.div`
   text-align: center;
-  background-color: ${UIStyle.UIColors.darkGrey};
+  background-color: ${UIStyle.UIColors.white};
 `
 const StoryImageStyle = styled.img`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
@@ -207,6 +207,17 @@ const Image3 = (
     />
   </StoryCenterWrapper>
 )
+
+const Image4 = (
+  <StoryCenterWrapperColor>
+    <LargeBannerImageStyle
+      src="https://i.ibb.co/s2pb72n/grape-demo-4x.png"
+      alt="grape-demo-4x"
+      border="0"
+      offsetTop={'0vh'}
+    />
+  </StoryCenterWrapperColor>
+)
 // arrays mapped
 
 const SideLeft = [Header1, Paragraph1]
@@ -215,6 +226,7 @@ const Side2Left = [Header2, Paragraph2]
 const Side2Right = [Image2]
 const Side3Left = [Header3, Paragraph3]
 const Side3Right = [Image3]
+const Sec4 = [Image4]
 // class Definition
 class Grape extends React.PureComponent {
   componentDidMount() {
@@ -294,6 +306,15 @@ class Grape extends React.PureComponent {
                   {viewProject}
                 </Button>
               </StoryCenterWrapper>,
+            ]}
+          />
+          <UniSection
+            middleChildren={[
+              <div>
+                {Sec4.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
             ]}
           />
         </Element>
