@@ -33,3 +33,5 @@ export const portfolioSummerFall2019URL = `https://portfolio-app-1091c.web.app/`
 
 // intensif-eye github link
 export const IntensifEyeURL = `https://github.com/SammyRobensParadise/dubhacks-19`
+
+export const GrapePromoURL = `https://grape-promo.web.app/`

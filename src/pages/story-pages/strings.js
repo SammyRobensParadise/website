@@ -1,3 +1,9 @@
+import React from 'react'
+import styled from 'styled-components'
+
+import { Link } from 'react-router-dom'
+import { Text } from '../../constants/styles'
+
 export const PortfolioWinter2020Strings = {
   section1: {
     title: `The Design`,
@@ -53,6 +59,37 @@ export const IntensifEyeStrings = {
     title: `Reflecting…`,
     text: [
       `Intensif-eye (and my teammate) raised my awareness about the importance of accessible design. It is something that we learn about in school, and design courses all the time, but it changed my perspective to see the joy and freedom that my teammate showed when using the app, even in its POC state. My raised awareness and — now passion, for accessible design prompted me to take a leading role at Hootsuite leading an effort to bring better accessible design and development practices to the product and technology team, in addition to my traditional development work.`,
+    ],
+  },
+}
+
+export const GrapeStrings = {
+  section1: {
+    title: `What is Grape?`,
+    text: [
+      `I had the opportunity to work with two fellow engineers to conceptualize the proof of concept for a web service that would open-source code documentation and the learning of code. This is Grape. We were frustrated with the way software documentation was traditionally created and were equally frustrated with the lack of adequate and affordable solutions to help people learn to code, or learn about code. Whether it was an experienced developer learning the in’s and out’s of a new API, or a beginner attempting to master java for the first time, we found a field with fairly limited engagement-based education solutions.`,
+    ],
+  },
+  section2: {
+    title: `My Role`,
+    text: [
+      <Text>
+        I was brought onto the project to take control of the initial visual design, product design
+        and UX design of Grape, as well as the design and software development of Grape’s
+        promotional website in react.js. As part of the website design, I created a number of
+        illustrations conveying the sense of empowerment associated with user-directed learning. I
+        used Procreate as well as Adobe illustrator and designed the web page layout in Adobe XD.
+        Using Adobe XD’s cloud features, I was able to quickly share designs with my teammates and
+        iterate on designs. As part of the Proof of concept for Grape, I also developed and designed
+        the Grape design system called Global-Winery.
+        <Link to="/global-winery">You can read about Global-Winery Here.</Link>
+      </Text>,
+    ],
+  },
+  section3: {
+    title: `Why Grape is Different`,
+    text: [
+      `The proof of concept for Grape was designed to show that if users were given the ability to create their own “modules” where they can use a variety of tools such as virtual IDEs and terminals as well videos, text and images to teach a range of software tools to users. Essentially a blogging platform, both private and public where people can share “modules” similar to articles that walk users through software tools. No other current product delivers a user-centered approach to learning where individuals can create immersive learning experiences for software. Our initial research shows that tools such as Grape have the potential to revolutionize the onboarding process for software developers who cited learning custom practices and systems as one of the most challenging aspects of starting a new job.`,
     ],
   },
 }

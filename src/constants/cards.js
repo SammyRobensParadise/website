@@ -384,7 +384,7 @@ export const FingerFoodExperienceCard = (
     <BannerCard
       activeSection={null}
       config={{
-        title: `UX Developer & QA Lead, Finger Food ATG`,
+        title: `UX Developer & QA Lead, F.F.S, (Unity Technologies)`,
         content: (
           <div>
             <p>
@@ -409,7 +409,7 @@ export const FingerFoodExperienceCardMobile = (
     <Card
       activeSection={null}
       config={{
-        title: `UX Developer & QA Lead, Finger Food ATG`,
+        title: `UX Developer & QA Lead, F.F.S, (Unity Technologies)`,
         content: (
           <div>
             <p>
