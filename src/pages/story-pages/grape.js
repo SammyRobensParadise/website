@@ -114,7 +114,7 @@ const CoverChildren = (
       subtitle={[GrapeSubtitle]}
       children={[CoverActionButtons]}
       story
-      coverImageURL={'https://i.ibb.co/r2NBmKn/intensif-eye-render-shadow-4.png'}
+      coverImageURL={'https://i.ibb.co/BnxryXj/grape-cover-2x.png'}
     />
   </div>
 )

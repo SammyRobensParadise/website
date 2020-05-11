@@ -76,7 +76,7 @@ export const GrapeDesignCard = (
         content: `The deisgn of a tool to open source learning`,
         imageURL: 'https://i.ibb.co/syVpZhf/grape-promo.png',
         imageAltText: `The deisgn of a tool to open source learning code`,
-        link: '/#',
+        link: '/grape',
         ...defaultCardConfig,
       }}
     />
@@ -164,7 +164,7 @@ export const GlobalWineryDesignCard = (
         content: `The proposed design system beind Grape`,
         imageURL: 'https://i.ibb.co/ynJR4TM/global-winery-logo.png',
         imageAltText: `The proposed design system beind Grape`,
-        link: '/#',
+        link: '/grape',
         ...defaultCardConfig,
       }}
     />
