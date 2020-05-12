@@ -95,7 +95,7 @@ const CoverChildren = (
       subtitle={[GlobalWinerySubtitle]}
       children={[CoverActionButtons]}
       story
-      coverImageURL={'https://i.ibb.co/BnxryXj/grape-cover-2x.png'}
+      coverImageURL={'https://i.ibb.co/YtrDKHT/grape-wine-render.png'}
     />
   </div>
 )
@@ -155,8 +155,8 @@ const Paragraph1 = GlobalWineryStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/jZRsy4g/grape-landing-2x.png"
-      alt="grape-landing-2x"
+      src="https://i.ibb.co/WFhk1cv/global-winery-display-4x.png"
+      alt="global-winery-display-4x"
       border="0"
       offsetTop={'30vh'}
     />
@@ -168,8 +168,8 @@ const Paragraph2 = GlobalWineryStrings.section2.text[0]
 const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/hHHZDMG/grape-promo-2x.png"
-      alt="grape-promo-2x"
+      src="https://i.ibb.co/Byzjr7h/global-winery-style-4x.png"
+      alt="global-winery-style-4x"
       border="0"
       offsetTop={'30vh'}
     />
