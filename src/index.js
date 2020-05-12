@@ -21,6 +21,8 @@ import IntensifEye from './pages/story-pages/intensif-eye'
 import Grape from './pages/story-pages/grape'
 import GlobalWinery from './pages/story-pages/global-winery'
 
+// main application entiry point
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
