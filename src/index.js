@@ -19,6 +19,7 @@ import WebsiteWinter2020 from './pages/story-pages/website-winter-2020'
 import WebsiteSummerAndFall2019 from './pages/story-pages/website-summer-fall-2019'
 import IntensifEye from './pages/story-pages/intensif-eye'
 import Grape from './pages/story-pages/grape'
+import GlobalWinery from './pages/story-pages/global-winery'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -53,6 +54,9 @@ ReactDOM.render(
         </Route>
         <Route path="/grape">
           <Grape />
+        </Route>
+        <Route path="/global-winery">
+          <GlobalWinery />
         </Route>
       </Switch>
     </Router>

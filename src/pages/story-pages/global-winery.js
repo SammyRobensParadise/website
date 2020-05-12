@@ -22,10 +22,9 @@ import {
   ActionRightArrow,
   ActionText,
   HeaderT,
-  Text,
 } from '../../constants/styles'
 import { GrapePromoURL } from '../../constants/links'
-import { GrapeStrings } from './strings'
+import { GlobalWineryStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
@@ -151,8 +150,8 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{GrapeStrings.section1.title}</HeaderT>
-const Paragraph1 = <Text>{GrapeStrings.section1.text[0]}</Text>
+const Header1 = <HeaderT>{GlobalWineryStrings.section1.title}</HeaderT>
+const Paragraph1 = GlobalWineryStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
@@ -164,8 +163,8 @@ const Image1 = (
   </StoryCenterWrapper>
 )
 // section 2
-const Header2 = <HeaderT>{GrapeStrings.section2.title}</HeaderT>
-const Paragraph2 = GrapeStrings.section2.text[0]
+const Header2 = <HeaderT>{GlobalWineryStrings.section2.title}</HeaderT>
+const Paragraph2 = GlobalWineryStrings.section2.text[0]
 const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle

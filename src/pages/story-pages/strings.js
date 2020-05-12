@@ -113,6 +113,18 @@ export const GlobalWineryStrings = {
     ],
   },
   section2: {
-    title: `The Design & Motivation`
-  }
+    title: `Design & Motivation`,
+    text: [
+      <Text>
+        My vision for Global winery was to create a simple component library that would allow other
+        members of the development team to quickly prototype functional web components and show that
+        the idea behind Grape was achievable, and that the technical skill and know-how was
+        available on the team. It features both raised and flat components and uses a simple
+        web-accessible font <i>Montserrat</i> as well as a light green and deep purple color tone, as well
+        as accented blue gradients. The colors were chosen for two reasons. The first would be their
+        high contrasting ratio with white, black and one another. The second being that the colors
+        represent a grape vine, a key symbol of the original product vision for Grape.
+      </Text>,
+    ],
+  },
 }
