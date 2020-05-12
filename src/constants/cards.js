@@ -164,7 +164,7 @@ export const GlobalWineryDesignCard = (
         content: `The proposed design system beind Grape`,
         imageURL: 'https://i.ibb.co/ynJR4TM/global-winery-logo.png',
         imageAltText: `The proposed design system beind Grape`,
-        link: '//global-winery',
+        link: '/global-winery',
         ...defaultCardConfig,
       }}
     />
