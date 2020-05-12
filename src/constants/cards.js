@@ -164,7 +164,7 @@ export const GlobalWineryDesignCard = (
         content: `The proposed design system beind Grape`,
         imageURL: 'https://i.ibb.co/ynJR4TM/global-winery-logo.png',
         imageAltText: `The proposed design system beind Grape`,
-        link: '/grape',
+        link: '//global-winery',
         ...defaultCardConfig,
       }}
     />
@@ -212,7 +212,7 @@ export const GlobalWineryCodeCard = (
         content: `A front end react library designed by me used by grape 🍇and open sourced with ❤️ `,
         imageURL: 'https://i.ibb.co/ynJR4TM/global-winery-logo.png',
         imageAltText: `A front end react library designed by me used by grape 🍇and open sourced with ❤️`,
-        link: '/#',
+        link: '/global-winery',
         ...defaultCardConfig,
       }}
     />
