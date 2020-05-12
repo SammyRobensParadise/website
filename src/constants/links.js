@@ -35,3 +35,7 @@ export const portfolioSummerFall2019URL = `https://portfolio-app-1091c.web.app/`
 export const IntensifEyeURL = `https://github.com/SammyRobensParadise/dubhacks-19`
 
 export const GrapePromoURL = `https://grape-promo.web.app/`
+
+export const GlobalWinerySandboxURL = `https://sammyrp.com/global-winery/`
+
+export const GlobalWineryNpmURL = `https://www.npmjs.com/package/global-winery`

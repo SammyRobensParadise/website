@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 import { Text } from '../../constants/styles'
-
+import { GlobalWineryNpmURL, GlobalWinerySandboxURL } from '../../constants/links'
 export const PortfolioWinter2020Strings = {
   section1: {
     title: `The Design`,
@@ -91,4 +91,28 @@ export const GrapeStrings = {
       `The proof of concept for Grape was designed to show that if users were given the ability to create their own “modules” where they can use a variety of tools such as virtual IDEs and terminals as well videos, text and images to teach a range of software tools to users. Essentially a blogging platform, both private and public where people can share “modules” similar to articles that walk users through software tools. No other current product delivers a user-centered approach to learning where individuals can create immersive learning experiences for software. Our initial research shows that tools such as Grape have the potential to revolutionize the onboarding process for software developers who cited learning custom practices and systems as one of the most challenging aspects of starting a new job.`,
     ],
   },
+}
+
+export const GlobalWineryStrings = {
+  section1: {
+    title: `A React Library`,
+    text: [
+      <Text>
+        Global Winery is a front-end reach library built in react.js designed for{' '}
+        <Link to="/grape">Grape</Link>. The package is bundled using rollup.js and is configured for
+        use alongside styled-components. It can be installed{' '}
+        <a href={GlobalWineryNpmURL}>here via npm</a>. The library features a number of different
+        dependency-free icons, buttons, text areas, color themes and dropdowns. Each one of these
+        components are stateless functional components with a props-based interface. The components
+        were designed with accessibility and keyboard functionality in mind. Another Interesting
+        fact about global-winery is that it is dependency free with the one exception of{' '}
+        <code>styled-components</code>.You can check out the{' '}
+        <a href={GlobalWinerySandboxURL}>component sandbox here</a>, where the interface for some
+        components are described.
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `The Design & Motivation`
+  }
 }
