@@ -30,8 +30,8 @@ import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
 
 // strings ****
-const GrapeTitle = `Grape; Changing they way we code`
-const GrapeSubtitle = `The motivation behind Grape`
+const GlobalWineryTitle = `Global-Winery; React Library`
+const GlobalWinerySubtitle = `The design system behind the Grape proof of concept`
 const viewProject = `View Project`
 const learnMore = `Learn More`
 
@@ -91,8 +91,8 @@ const CoverChildren = (
   <div>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
-      title={GrapeTitle}
-      subtitle={[GrapeSubtitle]}
+      title={GlobalWineryTitle}
+      subtitle={[GlobalWinerySubtitle]}
       children={[CoverActionButtons]}
       story
       coverImageURL={'https://i.ibb.co/BnxryXj/grape-cover-2x.png'}
@@ -252,7 +252,6 @@ class GlobalWinery extends React.PureComponent {
           leftChildren={[DesignHeader]}
           middleChildren={[CodeHeader]}
           rightChildren={[ExperienceHeader]}
-          noPadding
         />
         <Footer />
       </div>
