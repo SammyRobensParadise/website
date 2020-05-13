@@ -34,8 +34,14 @@ export const portfolioSummerFall2019URL = `https://portfolio-app-1091c.web.app/`
 // intensif-eye github link
 export const IntensifEyeURL = `https://github.com/SammyRobensParadise/dubhacks-19`
 
+// grape link
 export const GrapePromoURL = `https://grape-promo.web.app/`
 
+// global winery sandbox link
 export const GlobalWinerySandboxURL = `https://sammyrp.com/global-winery/`
 
+// Global winery npm link
 export const GlobalWineryNpmURL = `https://www.npmjs.com/package/global-winery`
+
+// Recd repo link
+export const RecdFERepoLink = `https://github.com/SammyRobensParadise/recd-fe`

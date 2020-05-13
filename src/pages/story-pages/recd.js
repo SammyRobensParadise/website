@@ -23,7 +23,7 @@ import {
   ActionText,
   HeaderT,
 } from '../../constants/styles'
-import { GrapePromoURL } from '../../constants/links'
+import { RecdFERepoLink } from '../../constants/links'
 import { RectStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
@@ -87,7 +87,7 @@ const CoverActionButtons = (
       >
         <Button>{learnMore}</Button>
       </ScrollLink>
-      <a href={GrapePromoURL}>
+      <a href={RecdFERepoLink}>
         <ActionWrapper>
           <ActionCircleButton transparent height={'66px'}>
             <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
@@ -240,10 +240,10 @@ class Recd extends React.PureComponent {
             middleChildren={[
               <StoryCenterWrapper>
                 <Button
-                  onClick={() => window.open(GrapePromoURL, '_self')}
+                  onClick={() => window.open(RecdFERepoLink, '_self')}
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {
-                      window.open(GrapePromoURL, '_self')
+                      window.open(RecdFERepoLink, '_self')
                     }
                   }}
                 >
