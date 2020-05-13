@@ -120,11 +120,32 @@ export const GlobalWineryStrings = {
         members of the development team to quickly prototype functional web components and show that
         the idea behind Grape was achievable, and that the technical skill and know-how was
         available on the team. It features both raised and flat components and uses a simple
-        web-accessible font <i>Montserrat</i> as well as a light green and deep purple color tone, as well
-        as accented blue gradients. The colors were chosen for two reasons. The first would be their
-        high contrasting ratio with white, black and one another. The second being that the colors
-        represent a grape vine, a key symbol of the original product vision for Grape.
+        web-accessible font <i>Montserrat</i> as well as a light green and deep purple color tone,
+        as well as accented blue gradients. The colors were chosen for two reasons. The first would
+        be their high contrasting ratio with white, black and one another. The second being that the
+        colors represent a grape vine, a key symbol of the original product vision for Grape.
       </Text>,
     ],
+  },
+}
+export const RectStrings = {
+  section1: {
+    title: `Rec'd`,
+    text: [
+      <Text>
+        Rect is currently in progress. I am building Rec’t with
+        <a href="https://www.linkedin.com/in/kira-w/">Kira Wadden</a>, a peer of mine from the
+        University of Waterloo. As music lovers, we found that there was no way to easily share the
+        music that we love to listen to with our friends, or compile a selection of that music into
+        a playlist for everyone to enjoy! Rec’t will address this problem. It will serve as a social
+        platform connected to a user’s Spotify and Facebook account, allowing users to share the
+        music they love, with the people they love! It will be a mobile application built in react
+        native and served with a golang microservice-based backend and a mongoDB database.
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `More to come…`,
+    text: [],
   },
 }
