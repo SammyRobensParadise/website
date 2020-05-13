@@ -133,7 +133,7 @@ export const RectStrings = {
     title: `Rec'd`,
     text: [
       <Text>
-        Rect is currently in progress. I am building Rec’t with
+        Rect is currently in progress. I am building Rec’t with 
         <a href="https://www.linkedin.com/in/kira-w/">Kira Wadden</a>, a peer of mine from the
         University of Waterloo. As music lovers, we found that there was no way to easily share the
         music that we love to listen to with our friends, or compile a selection of that music into
