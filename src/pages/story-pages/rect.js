@@ -24,7 +24,7 @@ import {
   HeaderT,
 } from '../../constants/styles'
 import { GrapePromoURL } from '../../constants/links'
-import { GlobalWineryStrings } from './strings'
+import { RectStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
@@ -150,26 +150,36 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{GlobalWineryStrings.section1.title}</HeaderT>
-const Paragraph1 = GlobalWineryStrings.section1.text[0]
+const Header1 = <HeaderT>{RectStrings.section1.title}</HeaderT>
+const Paragraph1 = RectStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/WFhk1cv/global-winery-display-4x.png"
-      alt="global-winery-display-4x"
+      src="https://i.ibb.co/bgwN7Lg/rect-logo-1-4x.png"
+      alt="rect-logo-1-4x"
       border="0"
       offsetTop={'30vh'}
     />
   </StoryCenterWrapper>
 )
 // section 2
-//const Header2 = <HeaderT>{GlobalWineryStrings.section2.title}</HeaderT>
-// const Paragraph2 = GlobalWineryStrings.section2.text[0]
+const Header2 = <HeaderT>{RectStrings.section2.title}</HeaderT>
+const Image2 = (
+  <StoryCenterWrapper>
+    <StoryImageStyle
+      src="https://i.ibb.co/tms2K4v/under-construction-4x.png"
+      alt="under-construction-4x"
+      border="0"
+      offsetTop={'30vh'}
+    />
+  </StoryCenterWrapper>
+)
 // section 3
 // arrays mapped
 
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
+const Sec2 = [Header2, Image2]
 // class Definition
 class Rect extends React.PureComponent {
   componentDidMount() {
@@ -198,6 +208,15 @@ class Rect extends React.PureComponent {
             rightChildren={[
               <div>
                 {SideRight.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+          />
+          <UniSection
+            middleChildren={[
+              <div>
+                {Sec2.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,
