@@ -142,7 +142,7 @@ export const IllustrationsCard = (
   </Wrapper>
 )
 
-export const RectCard = (
+export const RecdCard = (
   <Wrapper>
     <Card
       config={{
@@ -150,7 +150,7 @@ export const RectCard = (
         content: `A ongoing music app grown from friends and a love for music.`,
         imageURL: 'https://i.ibb.co/L9CkY6w/rect-logo.png',
         imageAltText: `A ongoing music app grown from friends and a love for music.`,
-        link: '/#',
+        link: '/recd',
         ...defaultCardConfig,
       }}
     />

@@ -20,7 +20,7 @@ import WebsiteSummerAndFall2019 from './pages/story-pages/website-summer-fall-20
 import IntensifEye from './pages/story-pages/intensif-eye'
 import Grape from './pages/story-pages/grape'
 import GlobalWinery from './pages/story-pages/global-winery'
-
+import Recd from './pages/story-pages/recd'
 // main application entiry point
 
 ReactDOM.render(
@@ -59,6 +59,9 @@ ReactDOM.render(
         </Route>
         <Route path="/global-winery">
           <GlobalWinery />
+        </Route>
+        <Route path="/recd">
+          <Recd />
         </Route>
       </Switch>
     </Router>

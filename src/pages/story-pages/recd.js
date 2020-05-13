@@ -181,7 +181,7 @@ const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
 const Sec2 = [Header2, Image2]
 // class Definition
-class Rect extends React.PureComponent {
+class Recd extends React.PureComponent {
   componentDidMount() {
     Events.scrollEvent.register('begin')
 
@@ -250,4 +250,4 @@ class Rect extends React.PureComponent {
   }
 }
 
-export default Rect
+export default Recd

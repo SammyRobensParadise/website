@@ -34,7 +34,7 @@ import {
   Portfolio2019Card,
   BlanksDesignProblemCard,
   IllustrationsCard,
-  RectCard,
+  RecdCard,
   GlobalWineryDesignCard,
   PostersDesignCard,
 } from '../constants/cards'
@@ -140,7 +140,7 @@ const ExperienceHeader = (
 // cards
 const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, BlanksDesignProblemCard]
 const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard]
-const designCardsRight = [RectCard, GlobalWineryDesignCard, PostersDesignCard]
+const designCardsRight = [RecdCard, GlobalWineryDesignCard, PostersDesignCard]
 
 // class Definition
 class Design extends React.PureComponent {
