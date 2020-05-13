@@ -58,6 +58,20 @@ const StoryImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
+const LargeBannerImageStyle = styled.img`
+  margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  width: 60%;
+  object-fit: contain;
+  padding: 0px;
+  @media screen and (max-width: 960px) {
+    margin-block-start: 10vh;
+  }
+`
 // components
 // cover
 const CoverActionButtons = (
@@ -163,14 +177,14 @@ const Image1 = (
   </StoryCenterWrapper>
 )
 // section 2
-const Header2 = <HeaderT>{RectStrings.section2.title}</HeaderT>
+const Header2 = <HeaderT padding={5}>{RectStrings.section2.title}</HeaderT>
 const Image2 = (
   <StoryCenterWrapper>
-    <StoryImageStyle
+    <LargeBannerImageStyle
       src="https://i.ibb.co/tms2K4v/under-construction-4x.png"
       alt="under-construction-4x"
       border="0"
-      offsetTop={'30vh'}
+      offsetTop={'0vh'}
     />
   </StoryCenterWrapper>
 )
