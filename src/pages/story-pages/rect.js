@@ -30,8 +30,8 @@ import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
 
 // strings ****
-const RectTitle = `Global-Winery; React Library`
-const RectSubtitle = `The design system behind the Grape proof of concept`
+const RectTitle = `Rec’d; Mobile App in-progress`
+const RectSubtitle = `An app to share the music you love, with the people you love!`
 const viewProject = `View Progress`
 const learnMore = `Learn More`
 
@@ -95,7 +95,7 @@ const CoverChildren = (
       subtitle={[RectSubtitle]}
       children={[CoverActionButtons]}
       story
-      coverImageURL={'https://i.ibb.co/YtrDKHT/grape-wine-render.png'}
+      coverImageURL={'https://i.ibb.co/2dtcWqt/rect-logo-4x.png'}
     />
   </div>
 )
