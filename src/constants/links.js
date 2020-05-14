@@ -47,3 +47,5 @@ export const GlobalWineryNpmURL = `https://www.npmjs.com/package/global-winery`
 export const RecdFERepoLink = `https://github.com/SammyRobensParadise/recd-fe`
 
 export const IllustrationsBucketURL =  `https://sammyrobens-paradise.pixieset.com/illustrations/`
+
+export const PostersBucketURL = `https://sammyrobens-paradise.pixieset.com/posters/`

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, BannerCard } from 'eunoia'
 import styled from 'styled-components'
-import { IllustrationsBucketURL } from './links'
+import { IllustrationsBucketURL, PostersBucketURL } from './links'
 
 const A = styled.a`
   text-decoration: none;
@@ -140,7 +140,6 @@ export const IllustrationsCard = (
           content: `I draw things, check them out!`,
           imageURL: 'https://i.ibb.co/WkN8RtC/sammy-illustraions-logo.png',
           imageAltText: `Why I draw things, how I draw them and inspirations!`,
-          // link: '/design',
           ...defaultCardConfig,
         }}
       />
@@ -179,16 +178,17 @@ export const GlobalWineryDesignCard = (
 
 export const PostersDesignCard = (
   <Wrapper>
-    <Card
-      config={{
-        title: `Posters… their process and quirks`,
-        content: `A gallery of experiments`,
-        imageURL: 'https://i.ibb.co/M86hP7B/posters-logo.png',
-        imageAltText: `A gallery of experiments`,
-        link: '/#',
-        ...defaultCardConfig,
-      }}
-    />
+    <A href={PostersBucketURL}>
+      <Card
+        config={{
+          title: `Posters… their process and quirks`,
+          content: `A gallery of experiments`,
+          imageURL: 'https://i.ibb.co/M86hP7B/posters-logo.png',
+          imageAltText: `A gallery of experiments`,
+          ...defaultCardConfig,
+        }}
+      />
+    </A>
   </Wrapper>
 )
 /**
