@@ -96,7 +96,11 @@ export const HeaderT = styled.h2`
     padding-left: ${(p) => (p.padding ? `${p.padding}%` : `10%`)};
     margin-block-start: 15vh;
   }
+  @media screen and (max-width: 780px){
+    margin-block-start: 30vh;
+  }
   @media screen and (max-width: 460px) {
+    margin-block-start: 50vh;
     font-size: 40px;
   }
 `
