@@ -17,10 +17,6 @@ import { Header } from '../../components/Headers'
 import { UIStyle, StoryMenuConfig } from '../../constants/config'
 import {
   ActionDownArrow,
-  ActionWrapper,
-  ActionCircleButton,
-  ActionRightArrow,
-  ActionText,
   HeaderT,
 } from '../../constants/styles'
 import { RecdFERepoLink } from '../../constants/links'
