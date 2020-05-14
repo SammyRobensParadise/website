@@ -87,16 +87,6 @@ const CoverActionButtons = (
       >
         <Button>{learnMore}</Button>
       </ScrollLink>
-      <a href={RecdFERepoLink}>
-        <ActionWrapper>
-          <ActionCircleButton transparent height={'66px'}>
-            <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
-          </ActionCircleButton>
-        </ActionWrapper>
-        <ActionWrapper>
-          <ActionText>{viewProject}</ActionText>
-        </ActionWrapper>
-      </a>
     </Grid>
   </Grid>
 )
