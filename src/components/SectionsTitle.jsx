@@ -16,6 +16,9 @@ const TitleStyle = styled.h1`
   height: auto;
   line-height: 48px;
   margin-block-end: 0rem;
+  @media screen and (max-width: 900px) {
+    line-height: 60px;
+  }
 `
 const SubtitleWrapper = styled.h2`
   text-align: center;
