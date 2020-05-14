@@ -1,10 +1,10 @@
 import React from 'react'
 import { Card, BannerCard } from 'eunoia'
 import styled from 'styled-components'
-import {IllustrationsBucketURL} from './links'
+import { IllustrationsBucketURL } from './links'
 
 const A = styled.a`
-text-decoration: none;
+  text-decoration: none;
 `
 const Wrapper = styled.div`
   padding-block-start: 6vh;
@@ -132,22 +132,20 @@ export const BlanksDesignProblemCard = (
 )
 
 export const IllustrationsCard = (
-  
   <Wrapper>
     <A href={IllustrationsBucketURL}>
-    <Card
-      config={{
-        title: `Illustrations…`,
-        content: `I draw things, check them out!`,
-        imageURL: 'https://i.ibb.co/WkN8RtC/sammy-illustraions-logo.png',
-        imageAltText: `Why I draw things, how I draw them and inspirations!`,
-        // link: '/design',
-        ...defaultCardConfig,
-      }}
-    />
+      <Card
+        config={{
+          title: `Illustrations…`,
+          content: `I draw things, check them out!`,
+          imageURL: 'https://i.ibb.co/WkN8RtC/sammy-illustraions-logo.png',
+          imageAltText: `Why I draw things, how I draw them and inspirations!`,
+          // link: '/design',
+          ...defaultCardConfig,
+        }}
+      />
     </A>
   </Wrapper>
-  
 )
 
 export const RecdCard = (
