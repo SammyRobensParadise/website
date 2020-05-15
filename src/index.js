@@ -21,6 +21,7 @@ import IntensifEye from './pages/story-pages/intensif-eye'
 import Grape from './pages/story-pages/grape'
 import GlobalWinery from './pages/story-pages/global-winery'
 import Recd from './pages/story-pages/recd'
+import Eunoia from './pages/story-pages/eunoia'
 // main application entiry point
 
 ReactDOM.render(
@@ -62,6 +63,9 @@ ReactDOM.render(
         </Route>
         <Route path="/recd">
           <Recd />
+        </Route>
+        <Route path="/eunoia">
+          <Eunoia />
         </Route>
       </Switch>
     </Router>

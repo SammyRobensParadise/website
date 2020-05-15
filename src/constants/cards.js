@@ -204,7 +204,7 @@ export const EunoiaCodeCard = (
         content: `Discover my design system behind this website with thousands of downloads`,
         imageURL: 'https://i.ibb.co/sW4T3Bz/eunoia-logo.png',
         imageAltText: `Discover my design system behind this website with thousands of downloads`,
-        link: '/#',
+        link: '/eunoia',
         ...defaultCardConfig,
       }}
     />

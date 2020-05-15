@@ -46,6 +46,15 @@ export const GlobalWineryNpmURL = `https://www.npmjs.com/package/global-winery`
 // Recd repo link
 export const RecdFERepoLink = `https://github.com/SammyRobensParadise/recd-fe`
 
+// illustrations link
 export const IllustrationsBucketURL =  `https://sammyrobens-paradise.pixieset.com/illustrations/`
 
+// posters link
 export const PostersBucketURL = `https://sammyrobens-paradise.pixieset.com/posters/`
+
+// eunoia npm link
+export const eunoiaNpmURL = `https://www.npmjs.com/package/eunoia`
+
+export const eunoiaStorybookURL = `https://eunoia.netlify.app`
+
+export const materialDesignURL = `https://material.io/design`

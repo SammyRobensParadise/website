@@ -2,7 +2,13 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 import { Text } from '../../constants/styles'
-import { GlobalWineryNpmURL, GlobalWinerySandboxURL } from '../../constants/links'
+import {
+  GlobalWineryNpmURL,
+  GlobalWinerySandboxURL,
+  eunoiaNpmURL,
+  eunoiaStorybookURL,
+  materialDesignURL,
+} from '../../constants/links'
 export const PortfolioWinter2020Strings = {
   section1: {
     title: `The Design`,
@@ -133,7 +139,7 @@ export const RectStrings = {
     title: `Rec'd`,
     text: [
       <Text>
-        Rect is currently in progress. I am building Rec’t with 
+        Rect is currently in progress. I am building Rec’t with
         <a href="https://www.linkedin.com/in/kira-w/">Kira Wadden</a>, a peer of mine from the
         University of Waterloo. As music lovers, we found that there was no way to easily share the
         music that we love to listen to with our friends, or compile a selection of that music into
@@ -147,5 +153,44 @@ export const RectStrings = {
   section2: {
     title: `More to come…`,
     text: [],
+  },
+}
+
+export const EunoiaStrings = {
+  section1: {
+    title: `Eunoia's Design`,
+    text: [
+      <Text>
+        Eunoia is defined as the goodwill a speaker cultivates between themself and their audience,
+        or a condition of receptivity. Eunoia, the design system, was created and is used to convey
+        a sense of appreciation for traditional web design, while still maintaining and exploring
+        innovating design methods and leveraging new technology. The system is designed, and
+        developed by me, and is open sourced under an MIT licence, meaning anyone is welcome to use
+        my design components. The design system is built with accessibility in mind and features
+        high-contrast components. It is built on{' '}
+        <a href={materialDesignURL}>Google’s material design</a> system. I chose to do this for a
+        number of reasons. Based on the design principle of Jakob’s Law, which states that since
+        users will on average spend most of their time (90%) on other sites, thus users would expect
+        my site to work in a similar fashion. Leveraging best practices of material design ensures a
+        higher sense of comfort amongst users using the site. You can explore the components in a{' '}
+        <a href={eunoiaStorybookURL}>live sandbox via storybook</a>, or{' '}
+        <a href={eunoiaNpmURL}>download it via npm</a>.
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `Eunoia's Code`,
+    text: [
+      <Text padding={5} wide>
+        Eunoia is written in typescript and uses strict type checking to ensure that component
+        interfaces are used correctly. Components are built to react and are purely functional in
+        nature meaning that you don’t need to worry about managing the internal state of a component
+        since it is determined simply by its props. The components are in part built using
+        <code>styled-components</code> and thus are extensible and can have their styles overridden.
+        The library is <a href={eunoiaNpmURL}>downloadable via npm</a>, and components can be
+        previewed via <a href={eunoiaStorybookURL}>storybook</a>. As I continue to grow my site, I
+        will continue to maintain and update eunoia adding new components!
+      </Text>,
+    ],
   },
 }
