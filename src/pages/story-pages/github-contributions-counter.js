@@ -23,7 +23,7 @@ import {
   ActionText,
   HeaderT,
 } from '../../constants/styles'
-import { eunoiaStorybookURL } from '../../constants/links'
+import { githubContributionsCounterNpmURL } from '../../constants/links'
 import { GithubContributionsCounterStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
@@ -74,7 +74,7 @@ const CoverActionButtons = (
       >
         <Button>{learnMore}</Button>
       </ScrollLink>
-      <a href={eunoiaStorybookURL}>
+      <a href={githubContributionsCounterNpmURL}>
         <ActionWrapper>
           <ActionCircleButton transparent height={'66px'}>
             <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
@@ -220,10 +220,10 @@ class GithubContributionsCounter extends React.PureComponent {
             middleChildren={[
               <StoryCenterWrapper>
                 <Button
-                  onClick={() => window.open(eunoiaStorybookURL, '_self')}
+                  onClick={() => window.open(githubContributionsCounterNpmURL, '_self')}
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {
-                      window.open(eunoiaStorybookURL, '_self')
+                      window.open(githubContributionsCounterNpmURL, '_self')
                     }
                   }}
                 >
