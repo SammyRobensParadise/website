@@ -3,7 +3,6 @@
  * links
  */
 
-
 // linkedin
 export const linkedinURL = 'https://www.linkedin.com/in/sammy-robens-paradise/'
 
@@ -19,14 +18,14 @@ export const dribbbleURL = 'https://dribbble.com/sammyrp'
 // website repository
 export const websiteRepoURL = 'https://github.com/SammyRobensParadise/website'
 
-// email 
+// email
 export const emailLink = `mailto:srobensparadise@gmail.com`
 
 // resume
 export const resumeLink = `https://www.yumpu.com/en/document/read/63320828/resume`
 
 // portfolio winter 2020
-export const portfolioWinter2020URL= `https://portfolio-winter-2020.web.app/`
+export const portfolioWinter2020URL = `https://portfolio-winter-2020.web.app/`
 
 // portfolio fall summer 2019
 export const portfolioSummerFall2019URL = `https://portfolio-app-1091c.web.app/`
@@ -47,7 +46,7 @@ export const GlobalWineryNpmURL = `https://www.npmjs.com/package/global-winery`
 export const RecdFERepoLink = `https://github.com/SammyRobensParadise/recd-fe`
 
 // illustrations link
-export const IllustrationsBucketURL =  `https://sammyrobens-paradise.pixieset.com/illustrations/`
+export const IllustrationsBucketURL = `https://sammyrobens-paradise.pixieset.com/illustrations/`
 
 // posters link
 export const PostersBucketURL = `https://sammyrobens-paradise.pixieset.com/posters/`
@@ -62,13 +61,16 @@ export const eunoiaStorybookURL = `https://eunoia.netlify.app`
 export const materialDesignURL = `https://material.io/design`
 
 // github-contributions-counter npm link
-export const githubContributionsCounterNpmURL  = `https://www.npmjs.com/package/github-contributions-counter`
+export const githubContributionsCounterNpmURL = `https://www.npmjs.com/package/github-contributions-counter`
 
 // github-contributions-counter codebox link
-export const githubContributionsCounterCodeboxURL  = `https://codesandbox.io/s/github-contributions-counter-2x0ev?file=/index.html`
+export const githubContributionsCounterCodeboxURL = `https://codesandbox.io/s/github-contributions-counter-2x0ev?file=/index.html`
 
 // thonk.js npm link
-
 export const thonkJsNpmURL = `https://www.npmjs.com/package/thonk`
 
-export const thonkJGithubURL  = `https://github.com/SammyRobensParadise/thonk#readme`
+// thonk.js github link
+export const thonkJGithubURL = `https://github.com/SammyRobensParadise/thonk#readme`
+
+// arduino-screaming github link
+export const arduinoScreamingGithubURL = `https://github.com/SammyRobensParadise/arduino-screaming`

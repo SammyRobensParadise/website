@@ -24,6 +24,7 @@ import Recd from './pages/story-pages/recd'
 import Eunoia from './pages/story-pages/eunoia'
 import GithubContributionsCounter from './pages/story-pages/github-contributions-counter'
 import ThonkJs from './pages/story-pages/thonk-js'
+import ArduinoScreaming from './pages/story-pages/arduino-screaming'
 // main application entiry point
 
 ReactDOM.render(
@@ -74,6 +75,9 @@ ReactDOM.render(
         </Route>
         <Route path="/thonk-js">
           <ThonkJs />
+        </Route>
+        <Route path="/arduino-screaming">
+          <ArduinoScreaming />
         </Route>
       </Switch>
     </Router>

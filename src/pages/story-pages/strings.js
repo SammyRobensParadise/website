@@ -12,6 +12,7 @@ import {
   githubContributionsCounterNpmURL,
   thonkJGithubURL,
   thonkJsNpmURL,
+  arduinoScreamingGithubURL,
 } from '../../constants/links'
 export const PortfolioWinter2020Strings = {
   section1: {
@@ -280,6 +281,39 @@ export const ThonkJsStrings = {
           </quote>
         </Text>
       </div>,
+    ],
+  },
+}
+
+export const ArduinoScreamingStrings = {
+  section1: {
+    title: `Opening a Safe With Your Voice!`,
+    text: [
+      <Text>
+        The arduino screaming safe is, yes, safe that will only open if you scream the correct
+        combination. Arduino Screaming is a final project for SYDE 192. To open the safe you must
+        “scream” at the safe at the correct times (in seconds) corresponding to the combination that
+        you set. if the screaming times are correct, the safe will open! The safe uses an arduino
+        uno, a liquid-crystal display, a sound sensor, a number of different buttons,
+        potentiometers, and a step-motor to control the safe’s open and closed states. The original
+        prototype was constructed to fit inside a press-fit custom laser cut box.
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `How Arduino Screaming Works`,
+    text: [
+      <Text padding={5} wide>
+        The safe contains an arduino board that is programmed to detect a signal sent from the sound
+        sensor whenever a sound above a specific threshold is detected by the speaker. when a sound
+        is detected a software interrupt <code>void sound()</code> is triggered. In the interrupt
+        the code checks if the current time corresponds to the internal timer scaled to 30 seconds
+        using the
+        <code> ISR(TIMER2_OVF_vect)</code> interrupt. If the time matches, it will update the
+        unlocked state. if all states are true then the safe will unlock by activating a servo
+        motor. For more details about how the code works,{' '}
+        <a href={arduinoScreamingGithubURL}>check out the github</a>!
+      </Text>,
     ],
   },
 }

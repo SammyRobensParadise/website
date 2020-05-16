@@ -293,7 +293,7 @@ export const ArduinoScreamingCodeCard = (
         title: `Arduino-Screaming; C/C++`,
         content: `Have you ever wanted a safe that will only open if you scream correctly at it? well look no further!`,
         imageURL: 'https://i.ibb.co/DChmq4z/arduino-screaming-safe-logo.png',
-        link: '/#',
+        link: '/arduino-screaming',
         imageAltText: `Have you ever wanted a safe that will only open if you scream correctly at it? well look no further!`,
         ...defaultCardConfig,
       }}
