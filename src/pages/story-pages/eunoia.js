@@ -165,7 +165,6 @@ const Paragraph2 = EunoiaStrings.section2.text[0]
 // section 4
 
 // arrays mapped
-
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1]
 const Sec2 = [Header2, Paragraph2]
