@@ -264,7 +264,7 @@ export const ThonkJSCodeCard = (
         content: `Explore this gross misuse of AI and natural language processing to cause havoc on strings`,
         imageURL: 'https://i.ibb.co/BC6bxb5/thonk-js-logo.png',
         imageAltText: `Explore this gross misuse of AI and natural language processing to cause havoc on strings`,
-        link: '/#',
+        link: '/thonk-js',
         ...defaultCardConfig,
       }}
     />

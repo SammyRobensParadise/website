@@ -65,5 +65,10 @@ export const materialDesignURL = `https://material.io/design`
 export const githubContributionsCounterNpmURL  = `https://www.npmjs.com/package/github-contributions-counter`
 
 // github-contributions-counter codebox link
-
 export const githubContributionsCounterCodeboxURL  = `https://codesandbox.io/s/github-contributions-counter-2x0ev?file=/index.html`
+
+// thonk.js npm link
+
+export const thonkJsNpmURL = `https://www.npmjs.com/package/thonk`
+
+export const thonkJGithubURL  = `https://github.com/SammyRobensParadise/thonk#readme`

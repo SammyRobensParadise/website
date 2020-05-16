@@ -10,6 +10,8 @@ import {
   materialDesignURL,
   githubContributionsCounterCodeboxURL,
   githubContributionsCounterNpmURL,
+  thonkJGithubURL,
+  thonkJsNpmURL,
 } from '../../constants/links'
 export const PortfolioWinter2020Strings = {
   section1: {
@@ -230,6 +232,54 @@ export const GithubContributionsCounterStrings = {
         user! You can <a href={githubContributionsCounterNpmURL}>download the package via NPM</a>,
         or <a href={githubContributionsCounterCodeboxURL}>try it out via codebox</a>
       </Text>,
+    ],
+  },
+}
+
+export const ThonkJsStrings = {
+  section1: {
+    title: `What it is… a Thonk`,
+    text: [
+      <Text>
+        Thonk can be described as the sound a sad, but cute thing makes when it plops. It can also
+        be described as the emotion felt when something goes hilariously awry or the action of
+        thinking strangely. Thonk.js is an open-source node.js package written by me (in materials
+        chemistry class instead of actually doing chemistry) that uses natural language processing
+        to replace all the appropriate words in a given string with either, thonk, thonked, or
+        thonking. This is known as “thonkifying the strings”. You can also use the Chonk method
+        provided in thonk.js to “chonkify a string”. A chonk refers to a large but cute animal, most
+        commonly a cat. More surprisingly, after I open-sourced the package, it now has hundreds of
+        downloads via npm. Want to join me on this absurd journey of natural language processing?
+        <a href={thonkJsNpmURL}>Download the package via npm</a>, or{' '}
+        <a href={thonkJGithubURL}>contribute to the project on github!</a>
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `User Testimonials`,
+    text: [
+      <div>
+        <Text padding={5} wide>
+          <quote>
+            “What even…” <i>—Kira Wadden</i>
+          </quote>
+        </Text>
+        <Text padding={5} wide>
+          <quote>
+            {' '}
+            “
+            <span role="img" aria-label="emoji-face-palm">
+              🤦‍♀️
+            </span>
+            ” <i>— Vanessa Seto</i>{' '}
+          </quote>
+        </Text>
+        <Text padding={5} wide>
+          <quote>
+            “What the actual f#$%, this is hilarious” <i>— A lot of people</i>
+          </quote>
+        </Text>
+      </div>,
     ],
   },
 }
