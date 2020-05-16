@@ -30,8 +30,8 @@ import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
 
 // strings ****
-const ghContribsTitle = `Github Contributions Counter`
-const ghContribsSubtitle = `Track GitHub contributions history for any user, anytime`
+const thonkJsTtile = `Thonk.js`
+const thonkJsSubtitle = `A gross misuse of natural language processing`
 const viewProject = `View Project`
 const learnMore = `Learn More`
 
@@ -92,8 +92,8 @@ const CoverChildren = (
   <div>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
-      title={ghContribsTitle}
-      subtitle={[ghContribsSubtitle]}
+      title={thonkJsTtile}
+      subtitle={[thonkJsSubtitle]}
       children={[CoverActionButtons]}
       story
       coverImageURL={'https://i.ibb.co/BC6bxb5/thonk-js-logo.png'}
