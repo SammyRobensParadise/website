@@ -249,7 +249,7 @@ export const GithubContributionsCounterCodeCard = (
         content: `A simple javascript API allowing users to get their contribution history based on their github username!`,
         imageURL: 'https://i.ibb.co/tq8VpG9/github-contributions-counter-logo.png',
         imageAltText: `A simple javascript API allowing users to get their contribution history based on their github username!`,
-        link: '/#',
+        link: '/github-contributions-counter',
         ...defaultCardConfig,
       }}
     />

@@ -55,6 +55,15 @@ export const PostersBucketURL = `https://sammyrobens-paradise.pixieset.com/poste
 // eunoia npm link
 export const eunoiaNpmURL = `https://www.npmjs.com/package/eunoia`
 
+// eunoia storybook link
 export const eunoiaStorybookURL = `https://eunoia.netlify.app`
 
+// material design link
 export const materialDesignURL = `https://material.io/design`
+
+// github-contributions-counter npm link
+export const githubContributionsCounterNpmURL  = `https://www.npmjs.com/package/github-contributions-counter`
+
+// github-contributions-counter codebox link
+
+export const githubContributionsCounterCodeboxURL  = `https://codesandbox.io/s/github-contributions-counter-2x0ev?file=/index.html`

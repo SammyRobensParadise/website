@@ -8,6 +8,8 @@ import {
   eunoiaNpmURL,
   eunoiaStorybookURL,
   materialDesignURL,
+  githubContributionsCounterCodeboxURL,
+  githubContributionsCounterNpmURL,
 } from '../../constants/links'
 export const PortfolioWinter2020Strings = {
   section1: {
@@ -190,6 +192,43 @@ export const EunoiaStrings = {
         The library is <a href={eunoiaNpmURL}>downloadable via npm</a>, and components can be
         previewed via <a href={eunoiaStorybookURL}>storybook</a>. As I continue to grow my site, I
         will continue to maintain and update eunoia adding new components!
+      </Text>,
+    ],
+  },
+}
+
+export const GithubContributionsCounterStrings = {
+  section1: {
+    title: `What it is`,
+    text: [
+      <Text>
+        Github-contruibutions-counter is a node.js package that has a single interface function that
+        allows users to easily get the Github contributions history for a user based on their
+        username alone. It can be used on the server, or client-side. I created, and open-sourced
+        the package because I wanted a way to share my contribution history on my website, and I
+        felt that the library could be useful for other developers who wanted to access the
+        contribution history for various users via a simple, single-function interface. The package
+        allows you to get the contributions history for a user based on the last year, the total
+        contributions of the user, or the contribution history categorized by year. You can{' '}
+        <a href={githubContributionsCounterNpmURL}>download the package via NPM</a>, or{' '}
+        <a href={githubContributionsCounterCodeboxURL}>try it out via codebox</a>
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `Development Process`,
+    text: [
+      <Text padding={5} wide>
+        The package is written in vanilla javascript and uses two external dependencies to extract
+        data. Since github does not support contribution history via their API, the only option is
+        to scrape a user’s public github profile for their contributions history. The async package
+        uses axios to make a simple get request to a users github profile, using a proxy for usage
+        in the browser. It then parses the HTML retrieved from the get-request using{' '}
+        <code>cheerio.js</code>, creating a virtual DOM object, and accesses DOM attributes relating
+        to contribution history. After some sanitizing, and cleanup, the results are returned
+        asynchronously in the form of an array of objects containing contribution history for the
+        user! You can <a href={githubContributionsCounterNpmURL}>download the package via NPM</a>,
+        or <a href={githubContributionsCounterCodeboxURL}>try it out via codebox</a>
       </Text>,
     ],
   },

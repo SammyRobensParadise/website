@@ -24,14 +24,14 @@ import {
   HeaderT,
 } from '../../constants/styles'
 import { eunoiaStorybookURL } from '../../constants/links'
-import { EunoiaStrings } from './strings'
+import { GithubContributionsCounterStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
 
 // strings ****
-const EunoiaTitle = `εὔνοιᾰ: simple; open-source`
-const EunoiaSubtitle = `My open source react library, and the backbone of this website!`
+const ghContribsTitle = `Github Contributions Counter`
+const ghContribsSubtitle = `Track GitHub contributions history for any user, anytime`
 const viewProject = `View Project`
 const learnMore = `Learn More`
 
@@ -92,11 +92,11 @@ const CoverChildren = (
   <div>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
-      title={EunoiaTitle}
-      subtitle={[EunoiaSubtitle]}
+      title={ghContribsTitle}
+      subtitle={[ghContribsSubtitle]}
       children={[CoverActionButtons]}
       story
-      coverImageURL={'https://i.ibb.co/4YtK1Qc/eunoia-logo-biking-4x.png'}
+      coverImageURL={'https://i.ibb.co/tq8VpG9/github-contributions-counter-logo.png'}
     />
   </div>
 )
@@ -151,16 +151,21 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{EunoiaStrings.section1.title}</HeaderT>
-const Paragraph1 = EunoiaStrings.section1.text[0]
+const Header1 = <HeaderT>{GithubContributionsCounterStrings.section1.title}</HeaderT>
+const Paragraph1 = GithubContributionsCounterStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
-    <StoryImageStyle src="https://i.ibb.co/sW4T3Bz/eunoia-logo.png" alt="eunoia-logo" border="0" />
+    <StoryImageStyle
+      src="https://i.ibb.co/PDpTx3B/gh-contribs-counter-4x.png"
+      alt="gh-contribs-counter-4x"
+      border="0"
+      offsetTop={'30vh'}
+    />
   </StoryCenterWrapper>
 )
 // section 2
-const Header2 = <HeaderT padding={5}>{EunoiaStrings.section2.title}</HeaderT>
-const Paragraph2 = EunoiaStrings.section2.text[0]
+const Header2 = <HeaderT padding={5}>{GithubContributionsCounterStrings.section2.title}</HeaderT>
+const Paragraph2 = GithubContributionsCounterStrings.section2.text[0]
 
 // section 4
 

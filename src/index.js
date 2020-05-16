@@ -22,6 +22,7 @@ import Grape from './pages/story-pages/grape'
 import GlobalWinery from './pages/story-pages/global-winery'
 import Recd from './pages/story-pages/recd'
 import Eunoia from './pages/story-pages/eunoia'
+import GithubContributionsCounter from './pages/story-pages/github-contributions-counter'
 // main application entiry point
 
 ReactDOM.render(
@@ -66,6 +67,9 @@ ReactDOM.render(
         </Route>
         <Route path="/eunoia">
           <Eunoia />
+        </Route>
+        <Route path="/github-contributions-counter">
+          <GithubContributionsCounter />
         </Route>
       </Switch>
     </Router>
