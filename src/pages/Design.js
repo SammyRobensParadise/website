@@ -32,7 +32,7 @@ import {
   GrapeDesignCard,
   Portfolio2020Card,
   Portfolio2019Card,
-  BlanksDesignProblemCard,
+  /*BlanksDesignProblemCard, */
   IllustrationsCard,
   RecdCard,
   GlobalWineryDesignCard,
@@ -138,7 +138,7 @@ const ExperienceHeader = (
 )
 
 // cards
-const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, BlanksDesignProblemCard]
+const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, /*BlanksDesignProblemCard */]
 const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard]
 const designCardsRight = [RecdCard, GlobalWineryDesignCard, PostersDesignCard]
 
