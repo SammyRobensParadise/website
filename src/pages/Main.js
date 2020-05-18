@@ -265,21 +265,42 @@ const DesignHeader = (
   <Header
     config={designHeaderConfig}
     contentText={designContentText}
-    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+    children={
+      <ActionDownArrow
+        aria-label="design"
+        color={UIStyle.UIColors.white}
+        scalingFactor={2}
+        offset={'13px'}
+      />
+    }
   />
 )
 const CodeHeader = (
   <Header
     config={codeHeaderConfig}
     contentText={codeContentText}
-    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+    children={
+      <ActionDownArrow
+        aria-label="code"
+        color={UIStyle.UIColors.white}
+        scalingFactor={2}
+        offset={'13px'}
+      />
+    }
   />
 )
 const ExperienceHeader = (
   <Header
     config={experienceHeaderConfig}
     contentText={experienceContentText}
-    children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
+    children={
+      <ActionDownArrow
+        aria-label="experience"
+        color={UIStyle.UIColors.white}
+        scalingFactor={2}
+        offset={'13px'}
+      />
+    }
   />
 )
 
