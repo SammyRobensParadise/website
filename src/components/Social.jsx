@@ -33,16 +33,16 @@ const SocialMediaButtons = styled.a`
 const SocialButtons = () => {
   return (
     <SocialButtonsWrapper>
-      <SocialMediaButtons href={dribbbleURL}>
+      <SocialMediaButtons aria-label="dribbble" href={dribbbleURL}>
         <DribbbleIcon color={UIStyle.UIColors.white} scalingFactor={1} />
       </SocialMediaButtons>
-      <SocialMediaButtons href={githubURL}>
+      <SocialMediaButtons aria-label="github" href={githubURL}>
         <GithubIcon color={UIStyle.UIColors.white} scalingFactor={1} />
       </SocialMediaButtons>
-      <SocialMediaButtons href={mediumURL}>
+      <SocialMediaButtons aria-label="medium" href={mediumURL}>
         <MediumIcon color={UIStyle.UIColors.white} scalingFactor={1} />
       </SocialMediaButtons>
-      <SocialMediaButtons href={linkedinURL}>
+      <SocialMediaButtons aria-label="linkedin" href={linkedinURL}>
         <LinkedinIcon color={UIStyle.UIColors.white} scalingFactor={1} />
       </SocialMediaButtons>
     </SocialButtonsWrapper>
@@ -50,23 +50,22 @@ const SocialButtons = () => {
 }
 
 const StorySocialButtons = () => {
-  return(
+  return (
     <SocialButtonsWrapper>
-    <SocialMediaButtons href={dribbbleURL}>
-      <DribbbleIcon color={UIStyle.UIColors.black} scalingFactor={1} />
-    </SocialMediaButtons>
-    <SocialMediaButtons href={githubURL}>
-      <GithubIcon color={UIStyle.UIColors.black} scalingFactor={1} />
-    </SocialMediaButtons>
-    <SocialMediaButtons href={mediumURL}>
-      <MediumIcon color={UIStyle.UIColors.black} scalingFactor={1} />
-    </SocialMediaButtons>
-    <SocialMediaButtons href={linkedinURL}>
-      <LinkedinIcon color={UIStyle.UIColors.black} scalingFactor={1} />
-    </SocialMediaButtons>
-  </SocialButtonsWrapper>
+      <SocialMediaButtons aria-label="dribbble" href={dribbbleURL}>
+        <DribbbleIcon color={UIStyle.UIColors.black} scalingFactor={1} />
+      </SocialMediaButtons>
+      <SocialMediaButtons aria-label="github" href={githubURL}>
+        <GithubIcon color={UIStyle.UIColors.black} scalingFactor={1} />
+      </SocialMediaButtons>
+      <SocialMediaButtons aria-label="medium" href={mediumURL}>
+        <MediumIcon color={UIStyle.UIColors.black} scalingFactor={1} />
+      </SocialMediaButtons>
+      <SocialMediaButtons aria-label="linkedin" href={linkedinURL}>
+        <LinkedinIcon color={UIStyle.UIColors.black} scalingFactor={1} />
+      </SocialMediaButtons>
+    </SocialButtonsWrapper>
   )
-
 }
 
-export { SocialButtons,StorySocialButtons }
+export { SocialButtons, StorySocialButtons }
