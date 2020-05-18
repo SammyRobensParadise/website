@@ -59,7 +59,7 @@ const StoryImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
-/*
+
 const LargeBannerImageStyle = styled.img`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
@@ -74,7 +74,21 @@ const LargeBannerImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
-*/
+const CenterText = styled.h3`
+  /* margin-block-start: 10vh; */
+  font-family: Georgia Regular;
+  text-align: center;
+  font-size: 64px;
+  letter-spacing: 0px;
+  font-weight: 200;
+  margin: 0px;
+  transform: translateY(80px);
+  color: ${UIStyle.UIColors.black};
+  @media screen and (max-width: 460px) {
+    font-size: 40px;
+  }
+`
+
 // components
 // cover
 const CoverActionButtons = (
@@ -175,7 +189,7 @@ const Image1 = (
       src="https://i.ibb.co/LvSLgsc/web-7-4x.png"
       alt="web-7-4x"
       border="0"
-      offsetTop={'0vh'}
+      offsetTop={'30vh'}
     />
   </StoryCenterWrapper>
 )
@@ -196,21 +210,84 @@ const Paragraph2 = ThisWebsiteStrings.section2.text[0]
 // section 3
 const Header3 = <HeaderT padding={5}>{ThisWebsiteStrings.section3.title}</HeaderT>
 const Paragraph3 = ThisWebsiteStrings.section3.text[0]
-/*
+
 const Image3 = (
-  <LargeBannerImageStyle
-    src="https://i.ibb.co/4KW9q7t/arduino-screaming-diagram-4x.png"
-    alt="arduino-screaming-diagram-4x"
-    border="0"
-    offsetTop={'0vh'}
-  />
+  <div>
+    <CenterText>1 - Summer 2018</CenterText>
+    <LargeBannerImageStyle
+      src="https://i.ibb.co/zng6gxX/web-1-4x-100.jpg"
+      alt="web-1-4x-100"
+      border="0"
+      offsetTop={'0vh'}
+    />
+  </div>
 )
-*/
+const Image4 = (
+  <div>
+    <CenterText>2 - Fall 2018</CenterText>
+    <LargeBannerImageStyle
+      src="https://i.ibb.co/FnCwqzV/web-2-4x-100.jpg"
+      alt="web-2-4x-100"
+      border="0"
+      offsetTop={'0vh'}
+    />
+  </div>
+)
+
+const Image5 = (
+  <div>
+    <CenterText>3 - Spring 2019</CenterText>
+    <LargeBannerImageStyle
+      src="https://i.ibb.co/yFTYBZY/web-3-4x-100.jpg"
+      alt="web-3-4x-100"
+      border="0"
+      offsetTop={'0vh'}
+    />
+  </div>
+)
+
+const Image6 = (
+  <div>
+    <CenterText>4 - Fall 2019</CenterText>
+    <LargeBannerImageStyle
+      src="https://i.ibb.co/wNGpmRL/web-4-4x-100.jpg"
+      alt="web-4-4x-100"
+      border="0"
+      offsetTop={'0vh'}
+    />
+  </div>
+)
+
+const Image7 = (
+  <div>
+    <CenterText>5 - Winter 2020</CenterText>
+    <LargeBannerImageStyle
+      src="https://i.ibb.co/FsK06Bz/web-5-4x-100.jpg"
+      alt="web-5-4x-100"
+      border="0"
+      offsetTop={'0vh'}
+    />
+  </div>
+)
+
+const Image8 = (
+  <div>
+    <CenterText>6 - Summer {`&`} 2020</CenterText>
+    <LargeBannerImageStyle
+      src="https://i.ibb.co/y8wr8pN/web-6-4x-100.jpg"
+      alt="web-6-4x-100"
+      border="0"
+      offsetTop={'0vh'}
+    />
+  </div>
+)
+
 // arrays mapped
 const SideLeft = [Header1, Paragraph1]
 const SideRight = [Image1, Image2]
 const Sec2 = [Header2, Paragraph2]
 const Sec3 = [Header3, Paragraph3]
+const Sec4 = [Image3, Image4, Image5, Image6, Image7, Image8]
 // class Definition
 class ThisWebsite extends React.PureComponent {
   componentDidMount() {
@@ -257,6 +334,15 @@ class ThisWebsite extends React.PureComponent {
             middleChildren={[
               <div>
                 {Sec3.map((e) => (
+                  <div>{e}</div>
+                ))}
+              </div>,
+            ]}
+          />
+          <UniSection
+            middleChildren={[
+              <div>
+                {Sec4.map((e) => (
                   <div>{e}</div>
                 ))}
               </div>,
