@@ -72,11 +72,11 @@ const CoverActionButtons = (
         smooth={true}
         duration={1000}
       >
-        <Button>{learnMore}</Button>
+        <Button aria-label={learnMore}>{learnMore}</Button>
       </ScrollLink>
       <a href={githubContributionsCounterNpmURL}>
         <ActionWrapper>
-          <ActionCircleButton transparent height={'66px'}>
+          <ActionCircleButton aria-label={viewProject} transparent height={'66px'}>
             <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
           </ActionCircleButton>
         </ActionWrapper>
@@ -220,6 +220,7 @@ class GithubContributionsCounter extends React.PureComponent {
             middleChildren={[
               <StoryCenterWrapper>
                 <Button
+                  aria-label={viewProject}
                   onClick={() => window.open(githubContributionsCounterNpmURL, '_self')}
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {

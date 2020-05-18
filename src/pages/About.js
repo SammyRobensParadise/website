@@ -116,7 +116,7 @@ const CoverChildren = (
           smooth={true}
           duration={1000}
         >
-          <Button transparent>{theBackstory}</Button>
+          <Button aria-label="the backstory" transparent>{theBackstory}</Button>
         </ScrollLink>,
       ]}
     />
