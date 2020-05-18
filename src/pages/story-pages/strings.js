@@ -317,3 +317,58 @@ export const ArduinoScreamingStrings = {
     ],
   },
 }
+
+export const ThisWebsiteStrings = {
+  section1: {
+    title: `The Problem Space`,
+    text: [
+      <Text>
+        It was time for a redesign. This website was born out of both user feedback from my previous
+        portfolios and a need for a more practical, scalable website, where projects could be easily
+        added or removed as my experience and portfolio grows. My previous websites were strong in
+        some areas and weak in others. For example, while my latest portfolio was advanced from a
+        development standpoint, and showed of my skill and ability to work with animations and
+        experimental designs, it was “quite experimental” and was not designed to fill the role of a
+        portfolio, it featured little actual work, and was a simple single-page application. From
+        user testing and feedback, I discovered that my winter 2020 website polled well with
+        developers, but poorly with designers. In addition to this, previous portfolios had
+        complicated design structures or were written in vanilla javascript making scalability
+        challenging. This website aims to confront the various design and infrastructure concerns by
+        providing a stable, scalable and athestitically balanced website showcasing my design {`&`}{' '}
+        development projects, as well as my industry experience.
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `This Website`,
+    text: [
+      <Text padding={5} wide>
+        Built with React.js, this is my latest website {`&`} portfolio. It uses{' '}
+        <Link to="/eunoia">eunoia</Link>, my open-source design system as it’s infrastructure
+        backbone, as well as Google’s Material Design component library to deliver an accessible and
+        simple user experience. The website’s navigation system uses <code>react-router-dom</code>{' '}
+        and is built on stateless functional components allowing web pages and articles to be built
+        in a matter of minutes. This holds many advantages, particularly when it comes to design
+        changes, since a single design change will be automatically propagated throughout the
+        website. Images are delivered via CDN to increase load times, and large asset imports are
+        lazy-rendered. The website is deployed via github-actions and hosted on firebase.
+      </Text>,
+    ],
+  },
+  section3: {
+    title: `A History of Design & Development…`,
+    text: [
+      <Text padding={5} wide>
+        It was a journey of ups and downs reaching this particular website. My first websites were
+        hosted on github pages and were written in vanilla javascript using bootstrap. As I fell in
+        love with react, I started experimenting with react single-page websites and my later
+        websites and portfolio were built in react. As I began to get more comfortable with React I
+        began using design tools such as Adobe XD, and development libraries like{' '}
+        <code>styled-components</code>
+        and anime.js to showcase clean user experiences on my website. Over time, my different
+        websites have served as timestamps showing my growth as both a developer and designer, and
+        remain as a symbol for where I have come from, and a spotlight for where I am going.
+      </Text>,
+    ],
+  },
+}
