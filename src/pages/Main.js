@@ -23,7 +23,7 @@ import {
   ActionDownArrow,
   ScrollArea,
   HeaderContent,
-  ActionWrapper
+  ActionWrapper,
 } from '../constants/styles'
 import {
   IntensifEyeArticleCard,
@@ -60,7 +60,6 @@ const myPassion = `My Passion`
 const myPassionText = `We have a responsability to use it to improve the lives of all people, and the environment. As someone who advocates optimized engineering solutions, I continue on my journey to find the most eloquent and beautiful solutions to the worlds most challenging problems. I have always taken an interest in the way humans interact with technology, and more specifically, the way it shapes our experiences.`
 // styled-components ****
 // Cover
-
 
 const ActionExperienceAndProjectsText = styled.h4`
   display: inline-block;
@@ -182,6 +181,7 @@ const CoverActionButtons = (
   <Grid spacing={3}>
     <Grid item>
       <ActionButton
+        aria-label="view resume"
         onClick={() => window.open(resumeLink, '_self')}
         onKeyPress={(e) => {
           if (e.key === 'Enter') {
@@ -201,7 +201,7 @@ const CoverActionButtons = (
           smooth={true}
           duration={1000}
         >
-          <ActionCircleButton transparent height={'66px'}>
+          <ActionCircleButton aria-label="view projects" transparent height={'66px'}>
             <ActionRightArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'11px'} />
           </ActionCircleButton>
         </ScrollLink>
