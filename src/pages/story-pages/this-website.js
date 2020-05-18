@@ -59,6 +59,7 @@ const StoryImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
+/*
 const LargeBannerImageStyle = styled.img`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
@@ -73,6 +74,7 @@ const LargeBannerImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
+*/
 // components
 // cover
 const CoverActionButtons = (
@@ -110,7 +112,7 @@ const CoverChildren = (
       subtitle={[thisWebsiteSubtitle]}
       children={[CoverActionButtons]}
       story
-      coverImageURL={'https://i.ibb.co/mBJ46gH/arduino-screaming-cover-4x.png'}
+      coverImageURL={'https://i.ibb.co/ZNRjyHq/this-website-making-logo.png'}
     />
   </div>
 )
@@ -170,10 +172,20 @@ const Paragraph1 = ThisWebsiteStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
-      src="https://i.ibb.co/PgRtBc3/arduino-screaming-top-4x.png"
-      alt="arduino-screaming-top-4x"
+      src="https://i.ibb.co/LvSLgsc/web-7-4x.png"
+      alt="web-7-4x"
       border="0"
-      offsetTop={'35vh'}
+      offsetTop={'0vh'}
+    />
+  </StoryCenterWrapper>
+)
+const Image2 = (
+  <StoryCenterWrapper>
+    <StoryImageStyle
+      src="https://i.ibb.co/QvQjhSg/web-8-4x.png"
+      alt="web-8-4x"
+      border="0"
+      offsetTop={'0vh'}
     />
   </StoryCenterWrapper>
 )
@@ -182,6 +194,9 @@ const Header2 = <HeaderT padding={5}>{ThisWebsiteStrings.section2.title}</Header
 const Paragraph2 = ThisWebsiteStrings.section2.text[0]
 
 // section 3
+const Header3 = <HeaderT padding={5}>{ThisWebsiteStrings.section3.title}</HeaderT>
+const Paragraph3 = ThisWebsiteStrings.section3.text[0]
+/*
 const Image3 = (
   <LargeBannerImageStyle
     src="https://i.ibb.co/4KW9q7t/arduino-screaming-diagram-4x.png"
@@ -190,11 +205,12 @@ const Image3 = (
     offsetTop={'0vh'}
   />
 )
+*/
 // arrays mapped
 const SideLeft = [Header1, Paragraph1]
-const SideRight = [Image1]
+const SideRight = [Image1, Image2]
 const Sec2 = [Header2, Paragraph2]
-const Sec3 = [Image3]
+const Sec3 = [Header3, Paragraph3]
 // class Definition
 class ThisWebsite extends React.PureComponent {
   componentDidMount() {
