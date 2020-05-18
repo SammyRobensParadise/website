@@ -272,7 +272,7 @@ const Image7 = (
 
 const Image8 = (
   <div>
-    <CenterText>6 - Summer {`&`} 2020</CenterText>
+    <CenterText>6 - Summer {`&`} Fall 2020</CenterText>
     <LargeBannerImageStyle
       src="https://i.ibb.co/y8wr8pN/web-6-4x-100.jpg"
       alt="web-6-4x-100"
