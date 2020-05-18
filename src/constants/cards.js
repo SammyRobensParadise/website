@@ -308,7 +308,7 @@ export const ThisWebsiteCodeCard = (
         title: `This Website, the making, react.js`,
         content: `How I build react website using routers, styled-components, firebase and functional components`,
         imageURL: 'https://i.ibb.co/ZNRjyHq/this-website-making-logo.png',
-        link: '/#',
+        link: '/this-website',
         imageAltText: `How I build react website using routers, styled-components, firebase and functional components`,
         ...defaultCardConfig,
       }}

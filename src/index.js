@@ -25,6 +25,7 @@ import Eunoia from './pages/story-pages/eunoia'
 import GithubContributionsCounter from './pages/story-pages/github-contributions-counter'
 import ThonkJs from './pages/story-pages/thonk-js'
 import ArduinoScreaming from './pages/story-pages/arduino-screaming'
+import ThisWebsite from './pages/story-pages/this-website'
 // main application entiry point
 
 ReactDOM.render(
@@ -78,6 +79,9 @@ ReactDOM.render(
         </Route>
         <Route path="/arduino-screaming">
           <ArduinoScreaming />
+        </Route>
+        <Route path="/this-website">
+          <ThisWebsite />
         </Route>
       </Switch>
     </Router>
