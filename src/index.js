@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import loadable from '@loadable/component'
 
 import './css/styles/styles.css'
 
@@ -17,18 +18,36 @@ import Experience from './pages/Experience'
 import Policy from './pages/Policy'
 
 // story-pages-import
-import WebsiteWinter2020 from './pages/story-pages/website-winter-2020'
-import WebsiteSummerAndFall2019 from './pages/story-pages/website-summer-fall-2019'
-import IntensifEye from './pages/story-pages/intensif-eye'
-import Grape from './pages/story-pages/grape'
-import GlobalWinery from './pages/story-pages/global-winery'
-import Recd from './pages/story-pages/recd'
-import Eunoia from './pages/story-pages/eunoia'
-import GithubContributionsCounter from './pages/story-pages/github-contributions-counter'
-import ThonkJs from './pages/story-pages/thonk-js'
-import ArduinoScreaming from './pages/story-pages/arduino-screaming'
-import ThisWebsite from './pages/story-pages/this-website'
+// const OtherComponent = loadable(() => import('./OtherComponent'))
+
+// import WebsiteWinter2020 from './pages/story-pages/website-winter-2020'
+// import WebsiteSummerAndFall2019 from './pages/story-pages/website-summer-fall-2019'
+// import IntensifEye from './pages/story-pages/intensif-eye'
+// import Grape from './pages/story-pages/grape'
+//  import GlobalWinery from './pages/story-pages/global-winery'
+// import Recd from './pages/story-pages/recd'
+// import Eunoia from './pages/story-pages/eunoia'
+// import GithubContributionsCounter from './pages/story-pages/github-contributions-counter'
+// import ThonkJs from './pages/story-pages/thonk-js'
+// import ArduinoScreaming from './pages/story-pages/arduino-screaming'
+// import ThisWebsite from './pages/story-pages/this-website'
 // main application entiry point
+
+const WebsiteWinter2020 = loadable(() => import('./pages/story-pages/website-winter-2020'))
+const WebsiteSummerAndFall2019 = loadable(() =>
+  import('./pages/story-pages/website-summer-fall-2019'),
+)
+const IntensifEye = loadable(() => import('./pages/story-pages/intensif-eye'))
+const Grape = loadable(() => import('./pages/story-pages/grape'))
+const GlobalWinery = loadable(() => import('./pages/story-pages/global-winery'))
+const Recd = loadable(() => import('./pages/story-pages/recd'))
+const Eunoia = loadable(() => import('./pages/story-pages/eunoia'))
+const GithubContributionsCounter = loadable(() =>
+  import('./pages/story-pages/github-contributions-counter'),
+)
+const ThonkJs = loadable(() => import('./pages/story-pages/thonk-js'))
+const ArduinoScreaming = loadable(() => import('./pages/story-pages/arduino-screaming'))
+const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
 
 ReactDOM.render(
   <React.StrictMode>
