@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, {Fragment} from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -91,7 +91,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <div>
+  <Fragment>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={ghContribsTitle}
@@ -100,7 +100,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/tq8VpG9/github-contributions-counter-logo.png'}
     />
-  </div>
+  </Fragment>
 )
 
 // design bottom header section
@@ -196,27 +196,27 @@ class GithubContributionsCounter extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <DoubleSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {SideLeft.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {SideRight.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <div>
+              <Fragment>
                 {Sec2.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection

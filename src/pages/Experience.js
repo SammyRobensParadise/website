@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, {Fragment} from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -65,7 +65,7 @@ const CodeSectionHeaderConfig = {
 // components
 // cover
 const CoverChildren = (
-  <div>
+  <Fragment>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
     <SectionTitle
       title={experience}
@@ -83,7 +83,7 @@ const CoverChildren = (
         </ScrollLink>,
       ]}
     />
-  </div>
+  </Fragment>
 )
 
 // design botton header section
@@ -169,7 +169,7 @@ class Experience extends React.PureComponent {
             middleChildren={[
               <ScrollArea height={'900px'}>
                 {experienceCardsMiddle.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
               </ScrollArea>,
             ]}

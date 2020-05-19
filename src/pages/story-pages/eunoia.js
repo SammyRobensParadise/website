@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, { Fragment } from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -91,7 +91,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <div>
+  <Fragment>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={EunoiaTitle}
@@ -100,7 +100,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/4YtK1Qc/eunoia-logo-biking-4x.png'}
     />
-  </div>
+  </Fragment>
 )
 
 // design bottom header section
@@ -195,27 +195,27 @@ class Eunoia extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <DoubleSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {SideLeft.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {SideRight.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <div>
+              <Fragment>
                 {Sec2.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection

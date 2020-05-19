@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, {Fragment} from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -109,7 +109,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <div>
+  <Fragment>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={GrapeTitle}
@@ -118,7 +118,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/BnxryXj/grape-cover-2x.png'}
     />
-  </div>
+  </Fragment>
 )
 
 // design bottom header section
@@ -252,50 +252,50 @@ class Grape extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <DoubleSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {SideLeft.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {SideRight.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <DoubleSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {Side2Left.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {Side2Right.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <DoubleSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {Side3Left.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {Side3Right.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection
@@ -317,11 +317,11 @@ class Grape extends React.PureComponent {
           />
           <UniSection
             middleChildren={[
-              <div>
+              <Fragment>
                 {Sec4.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
         </Element>

@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, {Fragment} from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -23,9 +23,9 @@ import '../css/styles/App.css'
 // strings ****
 const whoIam = `Who I am.`
 const whoIamSubtite = (
-  <div>
+  <Fragment>
     I am Sammy - But you want a little <i>more</i> than that
-  </div>
+  </Fragment>
 )
 const theBackstory = `The Backstory`
 const eduAndPassion = `Education & Passion`
@@ -104,7 +104,7 @@ const HeadShotImageStyle = styled(LazyLoadImage)`
 // components
 // cover
 const CoverChildren = (
-  <div>
+  <Fragment>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
     <SectionTitle
       title={whoIam}
@@ -124,7 +124,7 @@ const CoverChildren = (
         </ScrollLink>,
       ]}
     />
-  </div>
+  </Fragment>
 )
 
 // design bottom header section
@@ -185,7 +185,7 @@ const EducationAndPassionTitle = <EducationAndPassion>{eduAndPassion}</Education
 const EducationAndPassionBody = (
   <EducationAndPassionText>
     {
-      <div>
+      <Fragment>
         <p>
           I study Systems Design Engineering at the University of Waterloo (Grad. 2023). If you are
           thinking “what <i>even</i> is Systems Design Engineering” You are not alone. Systems
@@ -197,7 +197,7 @@ const EducationAndPassionBody = (
             'I chose to study Systems Design at Canada’s top engineering school because I have a long standing passion for the way humans interact with technology, especially those who suffer from a disability or mental illness (over 20% of Americans), As part of my degree I hope to pursue a specialization in accessible design.'
           }
         </p>
-      </div>
+      </Fragment>
     }
   </EducationAndPassionText>
 )
@@ -219,7 +219,7 @@ const ALittleMore = <EducationAndPassion>{aLittelMore}</EducationAndPassion>
 const ALittleMoreText = (
   <EducationAndPassionText>
     {
-      <div>
+      <Fragment>
         <p>
           {
             'Growing up in East Vancouver, BC I developed a love and appreciation for nature and our environment . As a result, I am very passionate about sustainable engineering solutions to some of the worlds most challenging problems. I believe that designing a solution extends far beyond the immediate result.'
@@ -230,7 +230,7 @@ const ALittleMoreText = (
             'What about the non-engineering stuff… I love music, playing guitar, soccer, snowboarding and travelling, drawing painting, backpacking and exploring! I will never say no to a concert, or a good hike with my dog!'
           }
         </p>
-      </div>
+      </Fragment>
     }
   </EducationAndPassionText>
 )
@@ -271,34 +271,34 @@ class About extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <DoubleOffsetSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {SideLeft.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {SideRight.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <DoubleOffsetSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {SideLeftSec2.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {SideRightSec2.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             reverse
           />

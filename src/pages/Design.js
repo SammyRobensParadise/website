@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, {Fragment} from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -66,7 +66,7 @@ const DesignSectionHeaderConfig = {
 // components
 // cover
 const CoverChildren = (
-  <div>
+  <Fragment>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
     <SectionTitle
       title={design}
@@ -84,7 +84,7 @@ const CoverChildren = (
         </ScrollLink>,
       ]}
     />
-  </div>
+  </Fragment>
 )
 
 // design botton header section
@@ -163,21 +163,21 @@ class Design extends React.PureComponent {
             leftChildren={[
               <ScrollArea height={'1000px'}>
                 {designCardsLeft.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
               </ScrollArea>,
             ]}
             middleChildren={[
               <ScrollArea height={'1000px'}>
                 {designCardsMiddle.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
               </ScrollArea>,
             ]}
             rightChildren={[
               <ScrollArea height={'1000px'}>
                 {designCardsRight.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
               </ScrollArea>,
             ]}

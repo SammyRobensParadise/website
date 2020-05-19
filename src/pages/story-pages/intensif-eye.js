@@ -1,5 +1,5 @@
 // react
-import React from 'react'
+import React, {Fragment} from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -109,7 +109,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <div>
+  <Fragment>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={IntensifEyeTitle}
@@ -118,7 +118,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/r2NBmKn/intensif-eye-render-shadow-4.png'}
     />
-  </div>
+  </Fragment>
 )
 
 // design bottom header section
@@ -262,61 +262,61 @@ class IntensifEye extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <DoubleSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {SideLeft.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {SideRight.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <div>
+              <Fragment>
                 {Sec2.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <div>
+              <Fragment>
                 {Sec3.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <DoubleSection
             leftChildren={[
-              <div>
+              <Fragment>
                 {Sec4Left.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
             rightChildren={[
-              <div>
+              <Fragment>
                 {Sec4Right.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <div>
+              <Fragment>
                 {Sec5.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
           <UniSection
@@ -338,11 +338,11 @@ class IntensifEye extends React.PureComponent {
           />
           <UniSection
             middleChildren={[
-              <div>
+              <Fragment>
                 {Sec6.map((e) => (
-                  <div>{e}</div>
+                  <Fragment>{e}</Fragment>
                 ))}
-              </div>,
+              </Fragment>,
             ]}
           />
         </Element>

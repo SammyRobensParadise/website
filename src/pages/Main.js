@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import '../css/styles/App.css'
 import { Cover } from '../components/Cover'
 import { MainTitle } from '../components/MainTitle'
@@ -38,6 +38,7 @@ import {
 import { UIStyle } from '../constants/config'
 // css
 import '../css/styles/styles.css'
+
 
 // strings ****
 // Cover ****
@@ -214,10 +215,10 @@ const CoverActionButtons = (
   </Grid>
 )
 const CoverChildren = (
-  <div>
+  <Fragment>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
     <MainTitle title={name} subtitle={[uxDesigner, Developer]} children={[CoverActionButtons]} />
-  </div>
+  </Fragment>
 )
 /**
  * Explaination
@@ -412,7 +413,7 @@ class Main extends React.PureComponent {
               Design3Header,
               <ScrollArea>
                 {articleCards.map((node) => (
-                  <div>{node}</div>
+                  <Fragment>{node}</Fragment>
                 ))}
               </ScrollArea>,
             ]}
@@ -420,7 +421,7 @@ class Main extends React.PureComponent {
               Code3Header,
               <ScrollArea>
                 {designCards.map((node) => (
-                  <div>{node}</div>
+                  <Fragment>{node}</Fragment>
                 ))}
               </ScrollArea>,
             ]}
@@ -428,7 +429,7 @@ class Main extends React.PureComponent {
               Experience3Header,
               <ScrollArea>
                 {codeCards.map((node) => (
-                  <div>{node}</div>
+                  <Fragment>{node}</Fragment>
                 ))}
               </ScrollArea>,
             ]}
