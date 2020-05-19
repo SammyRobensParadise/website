@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import loadable from '@loadable/component'
+
 import './css/styles/styles.css'
 
 // import router imports
@@ -7,7 +9,8 @@ import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Page imports
-import Main from './pages/Main'
+// import Main from './pages/Main'
+
 import Design from './pages/Design'
 import Code from './pages/Code'
 import About from './pages/About'
@@ -27,6 +30,8 @@ import ThonkJs from './pages/story-pages/thonk-js'
 import ArduinoScreaming from './pages/story-pages/arduino-screaming'
 import ThisWebsite from './pages/story-pages/this-website'
 // main application entiry point
+
+const Main = loadable(() => import('./pages/Main'))
 
 ReactDOM.render(
   <React.StrictMode>
