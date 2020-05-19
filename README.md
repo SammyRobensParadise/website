@@ -49,15 +49,17 @@ will start a local development server at `http://localhost:3000/`
 
 ```json
 
+    "@loadable/component": "^5.12.0",
     "@material-ui/core": "^4.9.12",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "eunoia": "^0.1.80",
+    "eunoia": "^0.1.81",
     "github-contributions-counter": "^1.1.2",
     "react": "^16.13.1",
     "react-cookie": "^4.0.3",
     "react-dom": "^16.13.1",
+    "react-lazy-load-image-component": "^1.4.3",
     "react-lazyload": "^2.6.7",
     "react-redux": "^7.2.0",
     "react-router": "^5.1.2",
