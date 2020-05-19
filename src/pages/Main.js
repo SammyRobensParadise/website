@@ -12,7 +12,8 @@ import { Header } from '../components/Headers'
 import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
-
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 // constants
 import { MenuConfig } from '../constants/config'
 import { resumeLink } from '../constants/links'
@@ -71,7 +72,7 @@ const ActionExperienceAndProjectsText = styled.h4`
 `
 // section 1
 
-const SammyBikingImageStyle = styled.img`
+const SammyBikingImageStyle = styled(LazyLoadImage)`
   margin-block-start: 20vh;
   user-select: none;
   -moz-user-select: none;
@@ -127,7 +128,7 @@ const IntroTextStyle = styled.p`
 
 // section 2
 
-const SammySkatingImageStyle = styled.img`
+const SammySkatingImageStyle = styled(LazyLoadImage)`
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -223,6 +224,7 @@ const CoverChildren = (
  */
 const SammyBikingImage = (
   <SammyBikingImageStyle
+    effect="blur"
     src="https://i.ibb.co/XYv6cLy/Sammy-Biking-Grey.png"
     alt="Sammy-Biking-Grey"
     border="0"
@@ -309,6 +311,7 @@ const ExperienceHeader = (
  */
 const SammySkatingImage = (
   <SammySkatingImageStyle
+    effect="blur"
     src="https://i.ibb.co/dBhMb8K/sammyskatingbw.png"
     alt="sammyskatingbw"
     border="0"

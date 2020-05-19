@@ -14,6 +14,8 @@ import { Header } from '../components/Headers'
 import { UIStyle, MenuConfig } from '../constants/config'
 import { ActionDownArrow } from '../constants/styles'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 // css
 import '../css/styles/styles.css'
 import '../css/styles/App.css'
@@ -73,7 +75,7 @@ const EducationAndPassionText = styled.p`
 const EducationImageWrapper = styled.div`
   text-align: center;
 `
-const EducationImageStyle = styled.img`
+const EducationImageStyle = styled(LazyLoadImage)`
   margin-block-start: 50vh;
   user-select: none;
   -moz-user-select: none;
@@ -86,7 +88,7 @@ const EducationImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
-const HeadShotImageStyle = styled.img`
+const HeadShotImageStyle = styled(LazyLoadImage)`
   margin-block-start: 30vh;
   user-select: none;
   -moz-user-select: none;
@@ -116,7 +118,9 @@ const CoverChildren = (
           smooth={true}
           duration={1000}
         >
-          <Button aria-label="the backstory" transparent>{theBackstory}</Button>
+          <Button aria-label="the backstory" transparent>
+            {theBackstory}
+          </Button>
         </ScrollLink>,
       ]}
     />
@@ -200,6 +204,7 @@ const EducationAndPassionBody = (
 const EducationImage = (
   <EducationImageWrapper>
     <EducationImageStyle
+      effect="blur"
       src="https://i.ibb.co/8gKFvJx/education-logo.png"
       alt="education-logo"
       border="0"
@@ -233,6 +238,7 @@ const ALittleMoreText = (
 const HeadShotImage = (
   <EducationImageWrapper>
     <HeadShotImageStyle
+      effect="blur"
       src="https://i.ibb.co/8gtRtBJ/headshot-copy.png"
       alt="headshot-copy"
       border="0"

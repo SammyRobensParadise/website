@@ -4,6 +4,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -46,7 +48,7 @@ const StoryCenterWrapper = styled.div`
   text-align: center;
 `
 
-const StoryImageStyle = styled.img`
+const StoryImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -60,7 +62,7 @@ const StoryImageStyle = styled.img`
   }
 `
 
-const LargeBannerImageStyle = styled.img`
+const LargeBannerImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -186,6 +188,7 @@ const Paragraph1 = ThisWebsiteStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/LvSLgsc/web-7-4x.png"
       alt="web-7-4x"
       border="0"
@@ -196,6 +199,7 @@ const Image1 = (
 const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/QvQjhSg/web-8-4x.png"
       alt="web-8-4x"
       border="0"
@@ -215,6 +219,7 @@ const Image3 = (
   <div>
     <CenterText>1 - Summer 2018</CenterText>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/zng6gxX/web-1-4x-100.jpg"
       alt="web-1-4x-100"
       border="0"
@@ -226,6 +231,7 @@ const Image4 = (
   <div>
     <CenterText>2 - Fall 2018</CenterText>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/FnCwqzV/web-2-4x-100.jpg"
       alt="web-2-4x-100"
       border="0"
@@ -238,6 +244,7 @@ const Image5 = (
   <div>
     <CenterText>3 - Spring 2019</CenterText>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/yFTYBZY/web-3-4x-100.jpg"
       alt="web-3-4x-100"
       border="0"
@@ -250,6 +257,7 @@ const Image6 = (
   <div>
     <CenterText>4 - Fall 2019</CenterText>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/wNGpmRL/web-4-4x-100.jpg"
       alt="web-4-4x-100"
       border="0"
@@ -262,6 +270,7 @@ const Image7 = (
   <div>
     <CenterText>5 - Winter 2020</CenterText>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/FsK06Bz/web-5-4x-100.jpg"
       alt="web-5-4x-100"
       border="0"
@@ -274,6 +283,7 @@ const Image8 = (
   <div>
     <CenterText>6 - Summer {`&`} Fall 2020</CenterText>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/y8wr8pN/web-6-4x-100.jpg"
       alt="web-6-4x-100"
       border="0"

@@ -4,6 +4,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -46,7 +48,7 @@ const experienceContentText = `Internships in UX/UI design & development`
 const StoryCenterWrapper = styled.div`
   text-align: center;
 `
-const StoryImageStyle = styled.img`
+const StoryImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.isLongParagraph ? '10vh' : '30vh')};
   user-select: none;
   -moz-user-select: none;
@@ -157,6 +159,7 @@ const Paragraph1 = <Text>{PortfolioWinter2020Strings.section1.text}</Text>
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/4jj7bTm/portfolio-2020-webpage.png"
       alt="portfolio-2020-webpage"
       border="0"
@@ -169,6 +172,7 @@ const Paragraph2 = <Text>{PortfolioWinter2020Strings.section2.text[0]}</Text>
 const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/7p4wwN0/portfolio-2020-code.png"
       alt="portfolio-2020-code"
       border="0"
@@ -181,6 +185,7 @@ const Paragraph3 = <Text>{PortfolioWinter2020Strings.section2.text[1]}</Text>
 const Image3 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/FxYD2zk/portfolio-2020-code-2.png"
       alt="portfolio-2020-code-2"
       border="0"
@@ -267,14 +272,16 @@ class WebsiteWinter2020 extends React.PureComponent {
           middleChildren={[
             <StoryCenterWrapper>
               <Button
-              aria-label={viewProject}
+                aria-label={viewProject}
                 onClick={() => window.open(portfolioWinter2020URL, '_self')}
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
                     window.open(portfolioWinter2020URL, '_self')
                   }
                 }}
-              >{viewProject}</Button>
+              >
+                {viewProject}
+              </Button>
             </StoryCenterWrapper>,
           ]}
         />

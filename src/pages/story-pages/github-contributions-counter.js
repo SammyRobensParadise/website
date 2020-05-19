@@ -4,6 +4,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -46,7 +48,7 @@ const StoryCenterWrapper = styled.div`
   text-align: center;
 `
 
-const StoryImageStyle = styled.img`
+const StoryImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -156,6 +158,7 @@ const Paragraph1 = GithubContributionsCounterStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/PDpTx3B/gh-contribs-counter-4x.png"
       alt="gh-contribs-counter-4x"
       border="0"

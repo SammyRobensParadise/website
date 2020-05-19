@@ -4,6 +4,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -50,7 +52,7 @@ const StoryCenterWrapperColor = styled.div`
   text-align: center;
   background-color: ${UIStyle.UIColors.white};
 `
-const StoryImageStyle = styled.img`
+const StoryImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -63,7 +65,7 @@ const StoryImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
-const LargeBannerImageStyle = styled.img`
+const LargeBannerImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -174,6 +176,7 @@ const Paragraph1 = <Text>{GrapeStrings.section1.text[0]}</Text>
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/jZRsy4g/grape-landing-2x.png"
       alt="grape-landing-2x"
       border="0"
@@ -187,6 +190,7 @@ const Paragraph2 = GrapeStrings.section2.text[0]
 const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/hHHZDMG/grape-promo-2x.png"
       alt="grape-promo-2x"
       border="0"
@@ -200,6 +204,7 @@ const Paragraph3 = <Text>{GrapeStrings.section3.text[0]}</Text>
 const Image3 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/3MtynPr/grape-editor-2x.png"
       alt="grape-editor-2x"
       border="0"
@@ -211,6 +216,7 @@ const Image3 = (
 const Image4 = (
   <StoryCenterWrapperColor>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/s2pb72n/grape-demo-4x.png"
       alt="grape-demo-4x"
       border="0"

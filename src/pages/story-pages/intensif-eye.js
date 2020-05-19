@@ -4,6 +4,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -50,7 +52,7 @@ const StoryCenterWrapperColor = styled.div`
   text-align: center;
   background-color: ${UIStyle.UIColors.darkGrey};
 `
-const StoryImageStyle = styled.img`
+const StoryImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -63,7 +65,7 @@ const StoryImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
-const LargeBannerImageStyle = styled.img`
+const LargeBannerImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -174,6 +176,7 @@ const Paragraph1 = <Text>{IntensifEyeStrings.section1.text[0]}</Text>
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/3SdZv0N/intensif-eye-render-4x.png"
       alt="intensif-eye-render-4x"
       border="0"
@@ -202,6 +205,7 @@ const Paragraph4 = <Text>{IntensifEyeStrings.section4.text[0]}</Text>
 const Image4 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/t2XYmnd/intensif-eye-render-single-4x.png"
       alt="intensif-eye-render-single-4x"
       border="0"
@@ -222,6 +226,7 @@ const Paragraph5 = (
 const Image6 = (
   <StoryCenterWrapperColor>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/CKxn8GP/intensif-eye-Board.png"
       alt="intensif-eye-Board"
       border="0"

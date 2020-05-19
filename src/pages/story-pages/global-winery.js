@@ -4,6 +4,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -45,7 +47,7 @@ const experienceContentText = `Internships in UX/UI design & development`
 const StoryCenterWrapper = styled.div`
   text-align: center;
 `
-const StoryImageStyle = styled.img`
+const StoryImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -155,6 +157,7 @@ const Paragraph1 = GlobalWineryStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/WFhk1cv/global-winery-display-4x.png"
       alt="global-winery-display-4x"
       border="0"
@@ -168,6 +171,7 @@ const Paragraph2 = GlobalWineryStrings.section2.text[0]
 const Image2 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/Byzjr7h/global-winery-style-4x.png"
       alt="global-winery-style-4x"
       border="0"

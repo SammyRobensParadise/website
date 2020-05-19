@@ -4,6 +4,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -46,7 +48,7 @@ const StoryCenterWrapper = styled.div`
   text-align: center;
 `
 
-const StoryImageStyle = styled.img`
+const StoryImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -59,7 +61,7 @@ const StoryImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
-const LargeBannerImageStyle = styled.img`
+const LargeBannerImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -170,6 +172,7 @@ const Paragraph1 = ArduinoScreamingStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/PgRtBc3/arduino-screaming-top-4x.png"
       alt="arduino-screaming-top-4x"
       border="0"
@@ -184,6 +187,7 @@ const Paragraph2 = ArduinoScreamingStrings.section2.text[0]
 // section 3
 const Image3 = (
   <LargeBannerImageStyle
+    effect="blur"
     src="https://i.ibb.co/4KW9q7t/arduino-screaming-diagram-4x.png"
     alt="arduino-screaming-diagram-4x"
     border="0"

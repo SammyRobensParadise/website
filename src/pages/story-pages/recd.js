@@ -4,6 +4,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
@@ -45,7 +47,7 @@ const experienceContentText = `Internships in UX/UI design & development`
 const StoryCenterWrapper = styled.div`
   text-align: center;
 `
-const StoryImageStyle = styled.img`
+const StoryImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -58,7 +60,7 @@ const StoryImageStyle = styled.img`
     margin-block-start: 10vh;
   }
 `
-const LargeBannerImageStyle = styled.img`
+const LargeBannerImageStyle = styled(LazyLoadImage)`
   margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
   user-select: none;
   -moz-user-select: none;
@@ -169,6 +171,7 @@ const Paragraph1 = RectStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
     <StoryImageStyle
+      effect="blur"
       src="https://i.ibb.co/bgwN7Lg/rect-logo-1-4x.png"
       alt="rect-logo-1-4x"
       border="0"
@@ -181,6 +184,7 @@ const Header2 = <HeaderT padding={5}>{RectStrings.section2.title}</HeaderT>
 const Image2 = (
   <StoryCenterWrapper>
     <LargeBannerImageStyle
+      effect="blur"
       src="https://i.ibb.co/tms2K4v/under-construction-4x.png"
       alt="under-construction-4x"
       border="0"
