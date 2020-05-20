@@ -3,6 +3,8 @@ import { Card, BannerCard } from 'eunoia'
 import styled from 'styled-components'
 import { IllustrationsBucketURL, PostersBucketURL } from './links'
 
+// cards to be used
+
 // override the link styling
 const A = styled.a`
   text-decoration: none;
