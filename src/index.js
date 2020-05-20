@@ -49,6 +49,19 @@ const ThonkJs = loadable(() => import('./pages/story-pages/thonk-js'))
 const ArduinoScreaming = loadable(() => import('./pages/story-pages/arduino-screaming'))
 const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
 
+window.env = process.env.NODE_ENV
+
+if (window.env !== 'development') {
+  // disable console errors in production
+  // eslint-disable-next-line no-console
+  console.error = () => {}
+  // eslint-disable-next-line no-console
+  console.warn = () => {}
+} else {
+  // eslint-disable-next-line no-console
+  console.log('%c Welcome to Development! ', 'background: #222; color: orange')
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
