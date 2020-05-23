@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Page imports
 import Main from './pages/Main'
-
 import Design from './pages/Design'
 import Code from './pages/Code'
 import About from './pages/About'
@@ -35,7 +34,6 @@ const ArduinoScreaming = loadable(() => import('./pages/story-pages/arduino-scre
 const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
 
 window.env = process.env.NODE_ENV
-
 if (window.env !== 'development') {
   // disable console errors in production
   // eslint-disable-next-line no-console
