@@ -74,3 +74,6 @@ export const thonkJGithubURL = `https://github.com/SammyRobensParadise/thonk#rea
 
 // arduino-screaming github link
 export const arduinoScreamingGithubURL = `https://github.com/SammyRobensParadise/arduino-screaming`
+
+// Hootsuite URL
+export const HootsuiteURL = `https://hootsuite.com/`

@@ -33,6 +33,9 @@ const ThonkJs = loadable(() => import('./pages/story-pages/thonk-js'))
 const ArduinoScreaming = loadable(() => import('./pages/story-pages/arduino-screaming'))
 const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
 
+// experience-pages-import
+const Hootsuite = loadable(() => import('./pages/experience-pages/hootsuite'))
+
 window.env = process.env.NODE_ENV
 if (window.env !== 'development') {
   // disable console errors in production
@@ -99,6 +102,9 @@ ReactDOM.render(
         </Route>
         <Route path="/this-website">
           <ThisWebsite />
+        </Route>
+        <Route path="/hootsuite">
+          <Hootsuite />
         </Route>
       </Switch>
     </Router>

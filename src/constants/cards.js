@@ -355,7 +355,7 @@ export const HootsuiteExperienceCard = (
         ),
         imageURL: 'https://i.ibb.co/C9rfP1T/hootsuite-logo.png',
         imageAltText: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
-        link: '/#',
+        link: '/hootsuite',
         imageWidth: 300,
         ...defaultCardConfig,
       }}
