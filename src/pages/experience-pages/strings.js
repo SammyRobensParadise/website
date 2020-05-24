@@ -88,3 +88,43 @@ export const FingerFoodATGStrings = {
     ],
   },
 }
+
+export const EnvCanadaStrings = {
+  section1: {
+    title: `My Role`,
+    text: [
+      <Text padding={5} wide>
+        As a Software Engineer on the Data Team With Environment Canada, I worked closely with the
+        Transportation Division. This Group is responsible for ensuring that transportation vehicles
+        whether consumer cars, or luxury boats meet Canada’s environmental regulations. Importers
+        and manufacturers are required to report emissions information for vehicles sold or imported
+        into Canada, and as Canada moves to combat climate change, these regulations become critical
+        to meeting national emissions goals. I was given the opportunity to help build and document
+        infrastructure allowing auto manufacturers to better report emissions data and work to
+        develop greener consumer vehicles.
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `Contributions`,
+    text: [
+      <Fragment>
+        <Text padding={5} wide>
+          I leveraged SQL and Microsoft SQL server to iteratively develop and deploy testing scripts
+          for complex relational databases governing emissions data for thousands of vehicles
+          models.
+        </Text>
+        <Text padding={5} wide>
+          I developed SQL queries to test critical business rules governing data validation,
+          ensuring that auto manufacturers could only enter data that meet specific requirements.
+          This ensured that auto manufacturers could not submit erroneous or false data.
+        </Text>
+        <Text padding={5} wide>
+          I also documented data projects for use by automotive industry stakeholders and key users
+          to inform them of the added data reporting requirements and new regulations initiated by
+          the federal government to meet emissions reduction targets.
+        </Text>
+      </Fragment>,
+    ],
+  },
+}

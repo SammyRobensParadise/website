@@ -80,3 +80,6 @@ export const HootsuiteURL = `https://hootsuite.com/`
 
 // finger food ATG URL
 export const FingerFoodATGURL = `https://www.fingerfoodatg.com/`
+
+// environment canada URL
+export const EnvCanadaURL = `https://www.canada.ca/en/environment-climate-change.html`

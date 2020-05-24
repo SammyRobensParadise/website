@@ -456,7 +456,7 @@ export const EnvironmentCannadaExperienceCard = (
         ),
         imageURL: 'https://i.ibb.co/dtchLwB/env-logo.png',
         imageAltText: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
-        link: '/#',
+        link: '/environment-canada',
         imageWidth: 300,
         ...defaultCardConfig,
       }}

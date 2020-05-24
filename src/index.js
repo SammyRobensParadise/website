@@ -36,6 +36,8 @@ const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
 // experience-pages-import
 const Hootsuite = loadable(() => import('./pages/experience-pages/hootsuite'))
 const FingerFoodATG = loadable(() => import('./pages/experience-pages/ffatg'))
+const EnvCanada = loadable(() => import('./pages/experience-pages/env-canada'))
+
 window.env = process.env.NODE_ENV
 if (window.env !== 'development') {
   // disable console errors in production
@@ -108,6 +110,9 @@ ReactDOM.render(
         </Route>
         <Route path="/finger-food-atg">
           <FingerFoodATG />
+        </Route>
+        <Route path="/environment-canada">
+          <EnvCanada />
         </Route>
       </Switch>
     </Router>
