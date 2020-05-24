@@ -20,7 +20,7 @@ export const HootsuiteStrings = {
     ],
   },
   section2: {
-    title: `Contrubutions`,
+    title: `Contributions`,
     text: [
       <Fragment>
         <Text padding={5} wide>
@@ -41,6 +41,48 @@ export const HootsuiteStrings = {
           I also led an initiative backed by 130 developers to create W3C AA accessibility
           implementation strategy at Hootsuite and developed accessibility CI/CD pipeline automation
           to ensure that developers were deploying code that met accessibility standards.
+        </Text>
+      </Fragment>,
+    ],
+  },
+}
+
+export const FingerFoodATGStrings = {
+  section1: {
+    title: `My Role`,
+    text: [
+      <Text padding={5} wide>
+        As a QA Lead and UX Developer at Finger Food Advanced Technology Group (now part of Unity
+        Technologies). While I am unable to disclose the name of companies and specific projects I
+        was part of due to non-disclosure agreements, I had the opportunity to work with some of the
+        world’s leading companies in fashion, gaming and mining, developing and structuring
+        everything from bluetooth connected experiences, to computer vision-guided mining software,
+        and even XR mobile applications.
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `Contributions`,
+    text: [
+      <Fragment>
+        <Text padding={5} wide>
+          I designed and implemented data-driven UX analysis for a bluetooth connected experience
+          app to quantify engagement growth potential. I was given the opportunity to work with an
+          international design team to quantify core product design decisions based on the
+          receptivity and understanding users showed during a series of user testing sessions. These
+          sessions involved tree testing, as well as cognitive walkthroughs of the product
+          prototypes.
+        </Text>
+        <Text padding={5} wide>
+          I developed a system to quantify the accuracy of a computer vision system designed to
+          automate mining processes. I wrote code to analyse hours of video recorded of automated
+          gantry movement to determine if the tracking system could accurately determine the
+          location of a target in 3D space over long periods of time
+        </Text>
+        <Text padding={5} wide>
+          During my time at Finger Food ATG, in total, I led the QA Initiatives for more than 3
+          projects from ideation through to product delivery working with all kinds of clients, and
+          was able to reduce test infrastructure overhead by 50% for web-based projects!
         </Text>
       </Fragment>,
     ],

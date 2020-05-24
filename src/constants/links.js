@@ -77,3 +77,6 @@ export const arduinoScreamingGithubURL = `https://github.com/SammyRobensParadise
 
 // Hootsuite URL
 export const HootsuiteURL = `https://hootsuite.com/`
+
+// finger food ATG URL
+export const FingerFoodATGURL = `https://www.fingerfoodatg.com/`

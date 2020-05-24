@@ -35,7 +35,7 @@ const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
 
 // experience-pages-import
 const Hootsuite = loadable(() => import('./pages/experience-pages/hootsuite'))
-
+const FingerFoodATG = loadable(() => import('./pages/experience-pages/ffatg'))
 window.env = process.env.NODE_ENV
 if (window.env !== 'development') {
   // disable console errors in production
@@ -105,6 +105,9 @@ ReactDOM.render(
         </Route>
         <Route path="/hootsuite">
           <Hootsuite />
+        </Route>
+        <Route path="/finger-food-atg">
+          <FingerFoodATG />
         </Route>
       </Switch>
     </Router>

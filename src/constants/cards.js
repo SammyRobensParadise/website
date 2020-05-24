@@ -406,7 +406,7 @@ export const FingerFoodExperienceCard = (
         ),
         imageURL: 'https://i.ibb.co/ypgHtCr/finger-food-experience-logo.png',
         imageAltText: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
-        link: '/#',
+        link: '/finger-food-atg',
         imageWidth: 300,
         ...defaultCardConfig,
       }}
