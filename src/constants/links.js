@@ -83,3 +83,5 @@ export const FingerFoodATGURL = `https://www.fingerfoodatg.com/`
 
 // environment canada URL
 export const EnvCanadaURL = `https://www.canada.ca/en/environment-climate-change.html`
+
+export const PumaURL = `https://www.pumautilitymonitoring.ca/`

@@ -128,3 +128,28 @@ export const EnvCanadaStrings = {
     ],
   },
 }
+
+export const PumaStrings = {
+  section1: {
+    title: `My Role`,
+    text: [
+      <Text padding={5} wide>
+        As the leading designer and systems engineer at PUMA, my role is to continuously improve and
+        innovate on the product development and user experience of PUMA, a complete utility
+        monitoring studio, giving clients unparalleled insights into their energy usage. This allows
+        them to improve and optimize their energy usage. I am responsible for user experience
+        research, graphic and interface design, as well as systems design and implementation. My
+        role takes me (atypically) to every part of the product design lifecycle to deliver maximum
+        effectiveness and innovative strategies!
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `More to Come...`,
+    text: [
+      <Text padding={5} wide>
+        What I am working on in the user experience and design world will be some to come!
+      </Text>,
+    ],
+  },
+}

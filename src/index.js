@@ -37,6 +37,7 @@ const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
 const Hootsuite = loadable(() => import('./pages/experience-pages/hootsuite'))
 const FingerFoodATG = loadable(() => import('./pages/experience-pages/ffatg'))
 const EnvCanada = loadable(() => import('./pages/experience-pages/env-canada'))
+const Puma = loadable(() => import('./pages/experience-pages/puma'))
 
 window.env = process.env.NODE_ENV
 if (window.env !== 'development') {
@@ -104,6 +105,9 @@ ReactDOM.render(
         </Route>
         <Route path="/this-website">
           <ThisWebsite />
+        </Route>
+        <Route path="/puma">
+          <Puma />
         </Route>
         <Route path="/hootsuite">
           <Hootsuite />

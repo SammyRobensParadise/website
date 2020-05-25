@@ -354,7 +354,7 @@ export const PumaExperienceCard = (
         ),
         imageURL: 'https://i.ibb.co/S6wxvBG/puma-logo.png',
         imageAltText: `Leading the design process at PUMA, redesigning an energy management product to meet national demands on the front line of the climate change battle.`,
-        link: '/#',
+        link: '/puma',
         imageWidth: 300,
         ...defaultCardConfig,
       }}
@@ -380,7 +380,7 @@ export const PumaExperienceCardMobile = (
         ),
         imageURL: 'https://i.ibb.co/S6wxvBG/puma-logo.png',
         imageAltText: `Leading the design process at PUMA, redesigning an energy management product to meet national demands on the front line of the climate change battle.`,
-        link: '/#',
+        link: '/puma',
         ...defaultCardConfig,
       }}
     />
