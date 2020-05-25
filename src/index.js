@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom'
 import loadable from '@loadable/component'
 
@@ -7,6 +7,8 @@ import './css/styles/styles.css'
 // import router imports
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { CookiesProvider } from 'react-cookie'
+import { useCookies, Cookies } from 'react-cookie'
 
 // Page imports
 import Main from './pages/Main'
@@ -51,79 +53,100 @@ if (window.env !== 'development') {
   console.log('%c Welcome to Development! ', 'background: #222; color: orange')
 }
 
+const App = (Cookies) => {
+  const [shoudShowCookieBar, setBehaviour] = useState(false)
+  const [cookies, setCookie] = useCookies(['first_visit_timestamp'])
+  useEffect(() => {
+    let date = new Date()
+    if (!cookies.first_visit_timestamp) {
+      setCookie('first_visit_timestamp', date.getTime().toString(), { path: '/' })
+    } else {
+      if (date.getTime() - parseInt(cookies.first_visit_timestamp, 10) >= 600000) {
+        setBehaviour(true)
+      }
+    }
+  }, [cookies, setCookie])
+  console.log(shoudShowCookieBar)
+  return (
+    <React.StrictMode>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route path="/design">
+            <Design />
+          </Route>
+          <Route path="/code">
+            <Code />
+          </Route>
+          <Route path="/experience">
+            <Experience />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/policy">
+            <Policy />
+          </Route>
+          <Route path="/website-winter-2020">
+            <WebsiteWinter2020 />
+          </Route>
+          <Route path="/website-summer-fall-2019">
+            <WebsiteSummerAndFall2019 />
+          </Route>
+          <Route path="/intensif-eye">
+            <IntensifEye />
+          </Route>
+          <Route path="/grape">
+            <Grape />
+          </Route>
+          <Route path="/global-winery">
+            <GlobalWinery />
+          </Route>
+          <Route path="/recd">
+            <Recd />
+          </Route>
+          <Route path="/eunoia">
+            <Eunoia />
+          </Route>
+          <Route path="/github-contributions-counter">
+            <GithubContributionsCounter />
+          </Route>
+          <Route path="/thonk-js">
+            <ThonkJs />
+          </Route>
+          <Route path="/arduino-screaming">
+            <ArduinoScreaming />
+          </Route>
+          <Route path="/this-website">
+            <ThisWebsite />
+          </Route>
+          <Route path="/puma">
+            <Puma />
+          </Route>
+          <Route path="/hootsuite">
+            <Hootsuite />
+          </Route>
+          <Route path="/finger-food-atg">
+            <FingerFoodATG />
+          </Route>
+          <Route path="/environment-canada">
+            <EnvCanada />
+          </Route>
+          <Route path="*">
+            <FourOFour />
+          </Route>
+        </Switch>
+      </Router>
+    </React.StrictMode>
+  )
+}
+
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Main />
-        </Route>
-        <Route path="/design">
-          <Design />
-        </Route>
-        <Route path="/code">
-          <Code />
-        </Route>
-        <Route path="/experience">
-          <Experience />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/policy">
-          <Policy />
-        </Route>
-        <Route path="/website-winter-2020">
-          <WebsiteWinter2020 />
-        </Route>
-        <Route path="/website-summer-fall-2019">
-          <WebsiteSummerAndFall2019 />
-        </Route>
-        <Route path="/intensif-eye">
-          <IntensifEye />
-        </Route>
-        <Route path="/grape">
-          <Grape />
-        </Route>
-        <Route path="/global-winery">
-          <GlobalWinery />
-        </Route>
-        <Route path="/recd">
-          <Recd />
-        </Route>
-        <Route path="/eunoia">
-          <Eunoia />
-        </Route>
-        <Route path="/github-contributions-counter">
-          <GithubContributionsCounter />
-        </Route>
-        <Route path="/thonk-js">
-          <ThonkJs />
-        </Route>
-        <Route path="/arduino-screaming">
-          <ArduinoScreaming />
-        </Route>
-        <Route path="/this-website">
-          <ThisWebsite />
-        </Route>
-        <Route path="/puma">
-          <Puma />
-        </Route>
-        <Route path="/hootsuite">
-          <Hootsuite />
-        </Route>
-        <Route path="/finger-food-atg">
-          <FingerFoodATG />
-        </Route>
-        <Route path="/environment-canada">
-          <EnvCanada />
-        </Route>
-        <Route path="*">
-          <FourOFour />
-        </Route>
-      </Switch>
-    </Router>
-  </React.StrictMode>,
+  <CookiesProvider>
+    <App Cookies={Cookies} />
+  </CookiesProvider>,
   document.getElementById('root'),
 )
 
