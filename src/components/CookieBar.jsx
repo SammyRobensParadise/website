@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { UIStyle } from '../constants/config'
 import styled from 'styled-components'
+import { useCookies } from 'react-cookie'
 import { emailLink } from '../constants/links'
 import '../css/styles/styles.css'
 import '../css/styles/App.css'
@@ -12,7 +13,7 @@ const Wrapper = styled.div`
   width: 100%;
   background-color: ${UIStyle.UIColors.white};
   display: ${(p) => (p.shoudRender ? 'inherit' : 'none')};
-  box-shadow: 0px -4px 40px -17px rgba(0,0,0,0.75);
+  box-shadow: 0px -4px 40px -17px rgba(0, 0, 0, 0.75);
   overflow-x: hidden;
   overflow-y: hidden;
 `
@@ -72,10 +73,21 @@ const A = styled.a`
 
 const CookieBar = () => {
   const [shoudRender, setRenderState] = useState(true)
+  // eslint-disable-next-line no-unused-vars
+  const [cookies, setCookie] = useCookies(['hide_cookie_bar_on_closure'])
+  const handleClosure = () => {
+    let targetDate = new Date()
+    targetDate.setDate(targetDate.getDate() + 10)
+    setRenderState(false)
+    setCookie('hide_cookie_bar_on_closure', 'true', {
+      path: '/',
+      expires: targetDate,
+    })
+  }
   return (
     <Wrapper shoudRender={shoudRender}>
       <Text>
-        <Close onClick={() => setRenderState(false)} />
+        <Close onClick={handleClosure} />
         Some{' '}
         <span role="img" aria-label="cookie-emoji">
           🍪

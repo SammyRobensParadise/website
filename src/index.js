@@ -8,7 +8,7 @@ import './css/styles/styles.css'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { CookiesProvider } from 'react-cookie'
-import { useCookies, Cookies } from 'react-cookie'
+import { useCookies } from 'react-cookie'
 
 // Page imports
 import Main from './pages/Main'
@@ -71,6 +71,7 @@ const App = () => {
       }
     }
   }, [cookies, setCookie])
+  console.log(cookies)
   return (
     <React.StrictMode>
       <Router>
@@ -143,14 +144,14 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-      {shoudShowCookieBar ? <CookieBar /> : null}
+      {shoudShowCookieBar && !cookies.hide_cookie_bar_on_closure ? <CookieBar /> : null}
     </React.StrictMode>
   )
 }
 
 ReactDOM.render(
   <CookiesProvider>
-    <App Cookies={Cookies} />
+    <App />
   </CookiesProvider>,
   document.getElementById('root'),
 )
