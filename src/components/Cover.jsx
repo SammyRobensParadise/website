@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const ConverContainerImage = styled.div`
   width: auto;
   height: inherit;
-  background: url('https://i.ibb.co/xDFprr2/Background-Image.png');
+  background: url('https://i.ibb.co/SsV7H9N/Background-Image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
@@ -21,7 +21,7 @@ const CoverContainer = styled.div`
   z-index: 2;
 `
 const ChildrenWrapper = styled.div`
-padding-block-start: 6vh;
+  padding-block-start: 6vh;
 `
 const Cover = ({ children }) => {
   return (
