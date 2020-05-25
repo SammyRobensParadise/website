@@ -15,7 +15,7 @@ import Code from './pages/Code'
 import About from './pages/About'
 import Experience from './pages/Experience'
 import Policy from './pages/Policy'
-
+import FourOFour from './pages/404'
 // story-pages-import
 const WebsiteWinter2020 = loadable(() => import('./pages/story-pages/website-winter-2020'))
 const WebsiteSummerAndFall2019 = loadable(() =>
@@ -117,6 +117,9 @@ ReactDOM.render(
         </Route>
         <Route path="/environment-canada">
           <EnvCanada />
+        </Route>
+        <Route path="*">
+          <FourOFour />
         </Route>
       </Switch>
     </Router>

@@ -4,25 +4,25 @@ import React, { Fragment } from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import { Link } from 'react-router-dom'
-import { StoryCover } from '../../components/StoryCover'
-import { SectionTitle } from '../../components/SectionsTitle'
-import { Footer } from '../../components/Footer'
-import { StorySocialButtons } from '../../components/Social'
-import { TriSection } from '../../components/TriSection'
-import { Header } from '../../components/Headers'
+import { StoryCover } from '../components/StoryCover'
+import { SectionTitle } from '../components/SectionsTitle'
+import { Footer } from '../components/Footer'
+import { StorySocialButtons } from '../components/Social'
+import { TriSection } from '../components/TriSection'
+import { Header } from '../components/Headers'
 // constants
-import { UIStyle, StoryMenuConfig } from '../../constants/config'
+import { UIStyle, StoryMenuConfig } from '../constants/config'
 import {
   ActionDownArrow,
   ActionWrapper,
   ActionCircleButton,
   ActionRightArrow,
   ActionText,
-} from '../../constants/styles'
-import { emailLink } from '../../constants/links'
+} from '../constants/styles'
+import { emailLink } from '../constants/links'
 // css
-import '../../css/styles/styles.css'
-import '../../css/styles/App.css'
+import '../css/styles/styles.css'
+import '../css/styles/App.css'
 
 // strings ****
 const FourOFourTitle = `Uh Oh!`
