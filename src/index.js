@@ -41,6 +41,9 @@ const FingerFoodATG = loadable(() => import('./pages/experience-pages/ffatg'))
 const EnvCanada = loadable(() => import('./pages/experience-pages/env-canada'))
 const Puma = loadable(() => import('./pages/experience-pages/puma'))
 
+// cookie bar
+const CookieTimeout = 600000
+
 window.env = process.env.NODE_ENV
 if (window.env !== 'development') {
   // disable console errors in production
@@ -53,7 +56,9 @@ if (window.env !== 'development') {
   console.log('%c Welcome to Development! ', 'background: #222; color: orange')
 }
 
-const App = (Cookies) => {
+const App = () => {
+  const CookieBar = loadable(() => import('./components/CookieBar'))
+
   const [shoudShowCookieBar, setBehaviour] = useState(false)
   const [cookies, setCookie] = useCookies(['first_visit_timestamp'])
   useEffect(() => {
@@ -61,12 +66,11 @@ const App = (Cookies) => {
     if (!cookies.first_visit_timestamp) {
       setCookie('first_visit_timestamp', date.getTime().toString(), { path: '/' })
     } else {
-      if (date.getTime() - parseInt(cookies.first_visit_timestamp, 10) >= 600000) {
+      if (date.getTime() - parseInt(cookies.first_visit_timestamp, 10) >= CookieTimeout) {
         setBehaviour(true)
       }
     }
   }, [cookies, setCookie])
-  console.log(shoudShowCookieBar)
   return (
     <React.StrictMode>
       <Router>
@@ -139,6 +143,7 @@ const App = (Cookies) => {
           </Route>
         </Switch>
       </Router>
+      {shoudShowCookieBar ? <CookieBar /> : null}
     </React.StrictMode>
   )
 }
