@@ -336,6 +336,56 @@ export const Portfolio2019CodeCard = (
 /**
  * ExperienceCards
  */
+export const PumaExperienceCard = (
+  <Wrapper>
+    <BannerCard
+      activeSection={null}
+      config={{
+        title: `UX/UI & Systems Design Engineer, PUMA`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`May 19 - Present`}</h3>
+              </i>
+            </p>
+            <p>{`Leading the design process at PUMA, redesigning an energy management product to meet national demands on the front line of the climate change battle.`}</p>
+          </div>
+        ),
+        imageURL: 'https://i.ibb.co/S6wxvBG/puma-logo.png',
+        imageAltText: `Leading the design process at PUMA, redesigning an energy management product to meet national demands on the front line of the climate change battle.`,
+        link: '/#',
+        imageWidth: 300,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const PumaExperienceCardMobile = (
+  <Wrapper>
+    <Card
+      activeSection={null}
+      config={{
+        title: `UX/UI & Systems Design Engineer, PUMA`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`May 19 - Present`}</h3>
+              </i>
+            </p>
+            <p>{`Leading the design process at PUMA, redesigning an energy management product to meet national demands on the front line of the climate change battle.`}</p>
+          </div>
+        ),
+        imageURL: 'https://i.ibb.co/S6wxvBG/puma-logo.png',
+        imageAltText: `Leading the design process at PUMA, redesigning an energy management product to meet national demands on the front line of the climate change battle.`,
+        link: '/#',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
 
 export const HootsuiteExperienceCard = (
   <Wrapper>
@@ -381,7 +431,7 @@ export const HootsuiteExperienceCardMobile = (
         ),
         imageURL: 'https://i.ibb.co/C9rfP1T/hootsuite-logo.png',
         imageAltText: `Wrote and deployed code to 18 million users on a daily basis, driving product growth and an unparalleled tool belt to social media gurus.`,
-        link: '/#',
+        link: '/hootsuite',
         ...defaultCardConfig,
       }}
     />
@@ -431,7 +481,7 @@ export const FingerFoodExperienceCardMobile = (
         ),
         imageURL: 'https://i.ibb.co/ypgHtCr/finger-food-experience-logo.png',
         imageAltText: `I developed a system to quantify UX for world class brands like LEGO, and led QA infrastructure development on bleeding edge mixed reality projects.`,
-        link: '/#',
+        link: '/finger-food-atg',
         ...defaultCardConfig,
       }}
     />
@@ -481,7 +531,7 @@ export const EnvironmentCannadaExperienceCardMobile = (
         ),
         imageURL: 'https://i.ibb.co/dtchLwB/env-logo.png',
         imageAltText: `Worked with the transportation division to develop software engineering solutions assisting regulatory administration.`,
-        link: '/#',
+        link: '/environment-canada',
         imageWidth: 300,
         ...defaultCardConfig,
       }}

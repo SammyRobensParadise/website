@@ -1,5 +1,5 @@
 // react
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -27,6 +27,8 @@ import {
   FingerFoodExperienceCardMobile,
   EnvironmentCannadaExperienceCard,
   EnvironmentCannadaExperienceCardMobile,
+  PumaExperienceCard,
+  PumaExperienceCardMobile,
 } from '../constants/cards'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../components/TriSection'
@@ -79,7 +81,9 @@ const CoverChildren = (
           smooth={true}
           duration={1000}
         >
-          <Button aria-label={learnMore} transparent>{learnMore}</Button>
+          <Button aria-label={learnMore} transparent>
+            {learnMore}
+          </Button>
         </ScrollLink>,
       ]}
     />
@@ -142,11 +146,17 @@ const mobileBreakpoint = window.innerWidth < 700
 
 const experienceCardsMiddle = mobileBreakpoint
   ? [
+      PumaExperienceCardMobile,
       HootsuiteExperienceCardMobile,
       FingerFoodExperienceCardMobile,
       EnvironmentCannadaExperienceCardMobile,
     ]
-  : [HootsuiteExperienceCard, FingerFoodExperienceCard, EnvironmentCannadaExperienceCard]
+  : [
+      PumaExperienceCard,
+      HootsuiteExperienceCard,
+      FingerFoodExperienceCard,
+      EnvironmentCannadaExperienceCard,
+    ]
 
 // class Definition
 class Experience extends React.PureComponent {
@@ -167,7 +177,7 @@ class Experience extends React.PureComponent {
         <Element name="experience-work" className="element">
           <UniSection
             middleChildren={[
-              <ScrollArea height={'900px'}>
+              <ScrollArea height={'1120px'}>
                 {experienceCardsMiddle.map((e) => (
                   <Fragment>{e}</Fragment>
                 ))}
