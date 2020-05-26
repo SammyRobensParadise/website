@@ -94,7 +94,7 @@ export const HeaderT = styled.h2`
   padding-left: ${(p) => (p.padding ? `${p.padding}%` : `10%`)};
   width: 90%;
   @media screen and (max-width: 960px) {
-    padding-left: ${(p) => (p.padding ? `${p.padding}%` : `10%`)};
+    padding-left: 10%;
     margin-block-start: 15vh;
   }
   @media screen and (max-width: 780px) {
@@ -119,6 +119,7 @@ export const Text = styled.p`
     line-height: 40px;
   }
   @media screen and (max-width: 960px) {
+    width: 80%;
     padding-left: 10%;
   }
   @media screen and (max-width: 460px) {
