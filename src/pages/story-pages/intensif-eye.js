@@ -171,7 +171,7 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{IntensifEyeStrings.section1.title}</HeaderT>
+const Header1 = <HeaderT first>{IntensifEyeStrings.section1.title}</HeaderT>
 const Paragraph1 = <Text>{IntensifEyeStrings.section1.text[0]}</Text>
 const Image1 = (
   <StoryCenterWrapper>

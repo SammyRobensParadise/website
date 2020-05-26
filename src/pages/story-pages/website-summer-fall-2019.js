@@ -154,7 +154,7 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{PortfolioSummerFall2019Strings.section1.title}</HeaderT>
+const Header1 = <HeaderT first>{PortfolioSummerFall2019Strings.section1.title}</HeaderT>
 const Paragraph1 = <Text>{PortfolioSummerFall2019Strings.section1.text[0]}</Text>
 const Image1 = (
   <StoryCenterWrapper>

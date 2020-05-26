@@ -38,7 +38,7 @@ export const HeaderContent = styled.div`
       font-size: 24px;
     }
     @media screen and (max-width: 400px) {
-      padding-top: 2vh;
+      padding-top: 1.5vh;
     }
   }
 `
@@ -84,7 +84,7 @@ export const ScrollArea = styled.div`
   padding-block-end: 6vh;
 `
 export const HeaderT = styled.h2`
- /* margin-block-start: 10vh; */
+  /* margin-block-start: 10vh; */
   font-family: Georgia Regular;
   text-align: left;
   font-size: 64px;
@@ -92,15 +92,16 @@ export const HeaderT = styled.h2`
   font-weight: 200;
   color: ${UIStyle.UIColors.black};
   padding-left: ${(p) => (p.padding ? `${p.padding}%` : `10%`)};
+  width: 90%;
   @media screen and (max-width: 960px) {
     padding-left: ${(p) => (p.padding ? `${p.padding}%` : `10%`)};
     margin-block-start: 15vh;
   }
-  @media screen and (max-width: 780px){
+  @media screen and (max-width: 780px) {
     margin-block-start: 30vh;
   }
   @media screen and (max-width: 460px) {
-    margin-block-start: 50vh;
+    margin-block-start: ${(p) => (p.first ? '50vh' : '10vh')};
     font-size: 40px;
   }
 `

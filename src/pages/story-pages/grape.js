@@ -171,7 +171,7 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{GrapeStrings.section1.title}</HeaderT>
+const Header1 = <HeaderT first>{GrapeStrings.section1.title}</HeaderT>
 const Paragraph1 = <Text>{GrapeStrings.section1.text[0]}</Text>
 const Image1 = (
   <StoryCenterWrapper>

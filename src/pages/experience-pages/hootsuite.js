@@ -135,7 +135,7 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT padding={5}>{HootsuiteStrings.section1.title}</HeaderT>
+const Header1 = <HeaderT padding={5} first>{HootsuiteStrings.section1.title}</HeaderT>
 const Paragraph1 = HootsuiteStrings.section1.text[0]
 
 // section 2

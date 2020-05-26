@@ -135,7 +135,7 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT padding={5}>{FingerFoodATGStrings.section1.title}</HeaderT>
+const Header1 = <HeaderT padding={5} first>{FingerFoodATGStrings.section1.title}</HeaderT>
 const Paragraph1 = FingerFoodATGStrings.section1.text[0]
 
 // section 2

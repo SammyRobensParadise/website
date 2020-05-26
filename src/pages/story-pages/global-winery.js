@@ -152,7 +152,7 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{GlobalWineryStrings.section1.title}</HeaderT>
+const Header1 = <HeaderT first>{GlobalWineryStrings.section1.title}</HeaderT>
 const Paragraph1 = GlobalWineryStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>

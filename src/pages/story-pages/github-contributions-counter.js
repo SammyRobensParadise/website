@@ -153,7 +153,7 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT>{GithubContributionsCounterStrings.section1.title}</HeaderT>
+const Header1 = <HeaderT first>{GithubContributionsCounterStrings.section1.title}</HeaderT>
 const Paragraph1 = GithubContributionsCounterStrings.section1.text[0]
 const Image1 = (
   <StoryCenterWrapper>
