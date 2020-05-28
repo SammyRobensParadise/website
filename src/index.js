@@ -47,6 +47,8 @@ const CookieTimeout = 600000
 window.env = process.env.NODE_ENV
 if (window.env !== 'development') {
   // disable console errors in production
+  console.log('%c Welcome to my website! Thank you for taking an interest in my code!', 'background: #222; color: orange')
+
   // eslint-disable-next-line no-console
   console.error = () => {}
   // eslint-disable-next-line no-console
@@ -71,7 +73,6 @@ const App = () => {
       }
     }
   }, [cookies, setCookie])
-  console.log(cookies)
   return (
     <React.StrictMode>
       <Router>
