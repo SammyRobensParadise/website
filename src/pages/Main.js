@@ -50,7 +50,7 @@ const ExperienceAndProjects = `Experience & Projects`
 
 // Section 1 ***Î
 const skipFluff = `Skip the fluff.`
-const skipFlufftext = `I am Sammy Robens-Paradise from the University of Waterloo and I study the ways humans interact with technology. I have worked with companies like LEGO, Hootsuite, Kroger, and Lululemon to create beautiful products and experiences.`
+const skipFlufftext = `I am Sammy Robens-Paradise from the University of Waterloo and I study the ways humans interact with technology. I have worked with world-famous companies to create beautiful products and experiences.`
 
 // Header 2 ***
 const designContentText = `Explore my design portfolio & case studies`

@@ -18,7 +18,7 @@ import '../css/styles/App.css'
 // strings ****
 let d = new Date()
 const policy = `Policy`
-const policySubtitle = `© ${d.getFullYear()} Sam my  Robens-Paradise`
+const policySubtitle = `© ${d.getFullYear()} Sammy  Robens-Paradise`
 const learnMore = `Policy`
 
 // components
@@ -73,10 +73,10 @@ const PolicyWriteup = (
     <h1>Welcome to my Privacy Policy</h1>
     <h3>Your privacy is critically important to us.</h3>
     <p>
-      It is Sam my  Robens-Paradise's policy to respect your privacy regarding any information we may
+      It is Sammy  Robens-Paradise's policy to respect your privacy regarding any information we may
       collect while operating my website. This Privacy Policy applies to
       <a href={window.origin}> {window.origin}</a> (hereinafter, "us", "we", or
-      "https://sam my .world"). We respect your privacy and are committed to protecting personally
+      "https://sammy.world"). We respect your privacy and are committed to protecting personally
       identifiable information you may provide us through the Website. We have adopted this privacy
       policy ("Privacy Policy") to explain what information may be collected on my Website, how we
       use this information, and under what circumstances we may disclose the information to third
@@ -90,23 +90,23 @@ const PolicyWriteup = (
     </p>
     <h2>Cookies</h2>
     <p>
-      To enrich and perfect your online experience, Sam my  Robens-Paradise uses "Cookies", similar
+      To enrich and perfect your online experience, Sammy  Robens-Paradise uses "Cookies", similar
       technologies and services provided by others to display personalized content, appropriate
       advertising and store your preferences on your computer.
     </p>
     <p>
       A cookie is a string of information that a website stores on a visitor's computer, and that
-      the visitor's browser provides to the website each time the visitor returns. Sam my 
-      Robens-Paradise uses cookies to help Sam my  Robens-Paradise identify and track visitors, their
-      usage of https://sam my .world, and their website access preferences. Sam my  Robens-Paradise
+      the visitor's browser provides to the website each time the visitor returns. Sammy 
+      Robens-Paradise uses cookies to help Sammy  Robens-Paradise identify and track visitors, their
+      usage of https://sammy.world, and their website access preferences. Sammy  Robens-Paradise
       visitors who do not wish to have cookies placed on their computers should set their browsers
-      to refuse cookies before using Sam my  Robens-Paradise's websites, with the drawback that
-      certain features of Sam my  Robens-Paradise's websites may not function properly without the aid
+      to refuse cookies before using Sammy  Robens-Paradise's websites, with the drawback that
+      certain features of Sammy  Robens-Paradise's websites may not function properly without the aid
       of cookies.
     </p>
     <p>
       By continuing to navigate my website without changing your cookie settings, you hereby
-      acknowledge and agree to Sam my  Robens-Paradise's use of cookies.
+      acknowledge and agree to Sammy  Robens-Paradise's use of cookies.
     </p>
     <h2>{policySubtitle}</h2>
     <p>Thank you.</p>
