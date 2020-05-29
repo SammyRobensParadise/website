@@ -18,6 +18,8 @@ body > * :focus {
   src: url('../fonts/HelveticaNeue\ Light.ttf');
   src: url('../fonts/HelveticaNeue\ Medium.ttf');
   src: url('../fonts/HelveticaNeue\ Thin.ttf');
+  src: url('../fonts/Helvetica55Roman_22439.woff');
+  src: url('../fonts/Helvetica65Medium_22443.woff');
 }
 @font-face {
   font-family: 'Georgia Regular';
