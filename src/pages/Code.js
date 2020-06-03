@@ -1,5 +1,5 @@
 // react
-import React, { useState,Fragment } from 'react'
+import React, { useState, Fragment } from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -108,7 +108,9 @@ const CoverChildren = () => {
             smooth={true}
             duration={1000}
           >
-            <Button aria-label="explore my code" transparent>{exploreMyWork}</Button>
+            <Button aria-label="explore my code" transparent>
+              {exploreMyWork}
+            </Button>
           </ScrollLink>,
         ]}
       />
@@ -217,30 +219,132 @@ class Code extends React.PureComponent {
         </SectionHeader>
         <Tools
           tools={[
-            <ReactIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <PythonIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <WebpackIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <NodeIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <PHPIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <JSIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <TsIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <GitLargeIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <JenkinsIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <K8sIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <DockerIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <SassIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <CssIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <HtmlIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <YarnIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <ReactIcon
+              color={UIStyle.UIColors.black}
+              name="React.js"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <PythonIcon
+              color={UIStyle.UIColors.black}
+              name="Python"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <WebpackIcon
+              color={UIStyle.UIColors.black}
+              name="Webpack"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <NodeIcon
+              color={UIStyle.UIColors.black}
+              name="Node.js"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <PHPIcon
+              color={UIStyle.UIColors.black}
+              name="PHP"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <JSIcon
+              color={UIStyle.UIColors.black}
+              name="JavaScript"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <TsIcon
+              color={UIStyle.UIColors.black}
+              name="TypeScript"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <GitLargeIcon
+              color={UIStyle.UIColors.black}
+              name="Git"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <JenkinsIcon
+              color={UIStyle.UIColors.black}
+              name="Jenkins"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <K8sIcon
+              color={UIStyle.UIColors.black}
+              name="Kubernetes"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <DockerIcon
+              color={UIStyle.UIColors.black}
+              name="Docker"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <SassIcon
+              color={UIStyle.UIColors.black}
+              name="Sass"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <CssIcon
+              color={UIStyle.UIColors.black}
+              name="CSS"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <HtmlIcon
+              color={UIStyle.UIColors.black}
+              name="HTML"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <YarnIcon
+              color={UIStyle.UIColors.black}
+              name="Yarn"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
             <NpmIcon
               color={UIStyle.UIColors.black}
+              name="NPM"
+              font="Helvetica Neue"
               scalingFactor={window.innerWidth < 780 ? 0.6 : 1}
             />,
-            <UbuntuIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <MySQLIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <FirebaseIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <JQueryIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
-            <CppIcon color={UIStyle.UIColors.black} scalingFactor={1} />,
+            <UbuntuIcon
+              color={UIStyle.UIColors.black}
+              name="Ubuntu"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <MySQLIcon
+              color={UIStyle.UIColors.black}
+              name="MS SQL Server"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <FirebaseIcon
+              color={UIStyle.UIColors.black}
+              name="Firebase"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <JQueryIcon
+              color={UIStyle.UIColors.black}
+              name="JQuery"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <CppIcon
+              color={UIStyle.UIColors.black}
+              name="C++"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
           ]}
         />
         <TriSection
