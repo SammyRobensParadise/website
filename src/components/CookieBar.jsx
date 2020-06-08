@@ -33,6 +33,7 @@ const Text = styled.p`
   }
 `
 const Close = styled.button`
+  background: none;
   position: absolute;
   right: 32px;
   top: 10px;
