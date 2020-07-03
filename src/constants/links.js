@@ -22,7 +22,7 @@ export const websiteRepoURL = 'https://github.com/SammyRobensParadise/website'
 export const emailLink = `mailto:srobensparadise@gmail.com`
 
 // resume
-export const resumeLink = `https://www.yumpu.com/en/document/read/63320828/resume`
+export const resumeLink = `https://www.yumpu.com/en/document/read/63593115/sammy-robens-paradise-resume`
 
 // portfolio winter 2020
 export const portfolioWinter2020URL = `https://portfolio-winter-2020.web.app/`
