@@ -85,12 +85,20 @@ const CoverChildren = () => {
     if (response[0].error) {
       getContributions(`Thousands contributions this year`)
     } else {
-      getContributions(
-        `${response[0].annualContributions.replace(
-          /\B(?=(\d{3})+(?!\d))/g,
-          ',',
-        )} contributions this year`,
-      )
+      // add code to support PUMA account contributions
+      getGitHubContributionsHistory('SammyRP', { proxy: true }).then((secondResponse) => {
+        if (secondResponse[0].error) {
+          getContributions(`Thousands contributions this year`)
+        } else {
+          let totalContributions =
+            parseInt(response[0].annualContributions, 10) +
+            parseInt(secondResponse[0].annualContributions, 10)
+          totalContributions = totalContributions.toString()
+          getContributions(
+            `${totalContributions.replace(/\B(?=(\d{3})+(?!\d))/g, ',')} contributions this year`,
+          )
+        }
+      })
     }
   })
   return (
