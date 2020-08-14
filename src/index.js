@@ -34,6 +34,7 @@ const GithubContributionsCounter = loadable(() =>
 const ThonkJs = loadable(() => import('./pages/story-pages/thonk-js'))
 const ArduinoScreaming = loadable(() => import('./pages/story-pages/arduino-screaming'))
 const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
+const Junestreat = loadable(() => import('./pages/story-pages/junestreat'))
 
 // experience-pages-import
 const Hootsuite = loadable(() => import('./pages/experience-pages/hootsuite'))
@@ -47,7 +48,10 @@ const CookieTimeout = 600000
 window.env = process.env.NODE_ENV
 if (window.env !== 'development') {
   // disable console errors in production
-  console.log('%c Welcome to my website! Thank you for taking an interest in my code!', 'background: #222; color: orange')
+  console.log(
+    '%c Welcome to my website! Thank you for taking an interest in my code!',
+    'background: #222; color: orange',
+  )
 
   // eslint-disable-next-line no-console
   console.error = () => {}
@@ -127,6 +131,9 @@ const App = () => {
           </Route>
           <Route path="/this-website">
             <ThisWebsite />
+          </Route>
+          <Route path="/junestreat">
+            <Junestreat />
           </Route>
           <Route path="/puma">
             <Puma />

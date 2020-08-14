@@ -1,5 +1,5 @@
 // react
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -37,6 +37,7 @@ import {
   RecdCard,
   GlobalWineryDesignCard,
   PostersDesignCard,
+  JunestreatCard,
 } from '../constants/cards'
 // css
 import '../css/styles/styles.css'
@@ -80,7 +81,9 @@ const CoverChildren = (
           smooth={true}
           duration={1000}
         >
-          <Button aria-label="explore my work" transparent>{exploreMyWork}</Button>
+          <Button aria-label="explore my work" transparent>
+            {exploreMyWork}
+          </Button>
         </ScrollLink>,
       ]}
     />
@@ -138,7 +141,7 @@ const ExperienceHeader = (
 )
 
 // cards
-const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, /*BlanksDesignProblemCard */]
+const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, JunestreatCard]
 const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard]
 const designCardsRight = [RecdCard, GlobalWineryDesignCard, PostersDesignCard]
 
@@ -188,16 +191,66 @@ class Design extends React.PureComponent {
         </SectionHeader>
         <Tools
           tools={[
-            <PhotoshopIcon color={UIStyle.UIColors.black} name="Photoshop" font="Helvetica Neue" scalingFactor={1} />,
-            <IllustratorIcon color={UIStyle.UIColors.black} name="Illustrator" font="Helvetica Neue" scalingFactor={1} />,
-            <ExperienceDesignerIcon color={UIStyle.UIColors.black} name="Adobe XD" font="Helvetica Neue" scalingFactor={1} />,
-            <FigmaIcon color={UIStyle.UIColors.black} name="Figma" font="Helvetica Neue" scalingFactor={1} />,
-            <SketchIcon color={UIStyle.UIColors.black} name="Sketch" font="Helvetica Neue" scalingFactor={1} />,
-            <InvisionIcon color={UIStyle.UIColors.black} name="Invision" font="Helvetica Neue" scalingFactor={1} />,
-            <AftereffectsIcon color={UIStyle.UIColors.black} name="After Effects" font="Helvetica Neue" scalingFactor={1} />,
-            <IndesignIcon color={UIStyle.UIColors.black} name="Indesign" font="Helvetica Neue" scalingFactor={1} />,
-            <MaterialDesignIcon color={UIStyle.UIColors.black} name="Material Design" font="Helvetica Neue" scalingFactor={1} />,
-            <CreativecloudIcon color={UIStyle.UIColors.black} name="Creative Cloud" font="Helvetica Neue" scalingFactor={1} />,
+            <PhotoshopIcon
+              color={UIStyle.UIColors.black}
+              name="Photoshop"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <IllustratorIcon
+              color={UIStyle.UIColors.black}
+              name="Illustrator"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <ExperienceDesignerIcon
+              color={UIStyle.UIColors.black}
+              name="Adobe XD"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <FigmaIcon
+              color={UIStyle.UIColors.black}
+              name="Figma"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <SketchIcon
+              color={UIStyle.UIColors.black}
+              name="Sketch"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <InvisionIcon
+              color={UIStyle.UIColors.black}
+              name="Invision"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <AftereffectsIcon
+              color={UIStyle.UIColors.black}
+              name="After Effects"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <IndesignIcon
+              color={UIStyle.UIColors.black}
+              name="Indesign"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <MaterialDesignIcon
+              color={UIStyle.UIColors.black}
+              name="Material Design"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <CreativecloudIcon
+              color={UIStyle.UIColors.black}
+              name="Creative Cloud"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
           ]}
         />
         <TriSection

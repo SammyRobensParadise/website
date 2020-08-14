@@ -25,7 +25,6 @@ import {
   ActionText,
   HeaderT,
 } from '../../constants/styles'
-import { websiteRepoURL } from '../../constants/links'
 import { JunestreatStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
@@ -77,7 +76,7 @@ const CoverActionButtons = (
       >
         <Button aria-label={learnMore}>{learnMore}</Button>
       </ScrollLink>
-      <a href={websiteRepoURL}>
+      <a href={'https://www.augustmarket.ca/'}>
         <ActionWrapper>
           <ActionCircleButton transparent aria-label={viewProject} height={'66px'}>
             <ActionRightArrow color={UIStyle.UIColors.black} scalingFactor={2} offset={'11px'} />
@@ -234,10 +233,10 @@ class ThisWebsite extends React.PureComponent {
               <StoryCenterWrapper>
                 <Button
                   aria-label={viewProject}
-                  onClick={() => window.open(websiteRepoURL, '_self')}
+                  onClick={() => window.open('https://www.augustmarket.ca/', '_self')}
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {
-                      window.open(websiteRepoURL, '_self')
+                      window.open('https://www.augustmarket.ca/', '_self')
                     }
                   }}
                 >

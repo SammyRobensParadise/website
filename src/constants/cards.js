@@ -318,6 +318,21 @@ export const ThisWebsiteCodeCard = (
   </Wrapper>
 )
 
+export const JunestreatCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Junestreat's Logo Design`,
+        content: `Merging design with food for Junestreat's debut logo`,
+        imageURL: 'https://i.ibb.co/qDHzM8P/Junestreat-logo-junestreat-1-2x.png',
+        link: '/junestreat',
+        imageAltText: `Merging design with food for Junestreat's debut logo`,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
 export const Portfolio2019CodeCard = (
   <Wrapper>
     <Card
