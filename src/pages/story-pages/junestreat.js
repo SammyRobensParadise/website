@@ -33,7 +33,7 @@ import '../../css/styles/App.css'
 // strings ****
 const junestreatTitle = `Junestreat's Design`
 const junestreatSubtitle = `A story of a food dream and the design to accompany it`
-const viewProject = `View Project`
+const viewProject = `View Market`
 const learnMore = `Learn More`
 
 // tri section strings
