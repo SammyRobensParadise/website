@@ -372,3 +372,40 @@ export const ThisWebsiteStrings = {
     ],
   },
 }
+export const JunestreatStrings = {
+  section1: {
+    title: `The Motivation`,
+    text: [
+      <Text>
+        Evelina Edwardsson reached out to me in late July 2020. She was looking for something to
+        capture and market her new in-house brand at{' '}
+        <a href="https://www.augustmarket.ca/">The August Market</a> called Junestreat. After some
+        preliminary discussions we decided to go in the directions of creating a brand logo to
+        represent the brand Junestreat, which featured a number of different natural foods from
+        natural nut butters to salads and savory chocolate treats. There were some interesting
+        design constraints that were established to ensure flexibility in the usage of the logo. A
+        minimal and contrast-heavy design was decided upon so that the logo could be made into a
+        stamp, and minimal colors were to be used to reduce packaging costs. More interestingly a
+        circular shape was agreed to be the most desirable because it could be placed on the top of
+        circula jars and other containers without disrupting the container profile. All in all, I
+        produced 21 different logo designs, and the logo at the top of this article was selected!
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `The Designs`,
+    text: [
+      <Text padding={5} wide>
+        There were three main design paths that I decided to explore. The first, was the use of the
+        word street as part of the alliterative tendency of the name Junestreat. It featured a bold
+        design with a street sign, similar to that of the street signs in the neighbourhood that
+        Junesteat is located in. The second Was a graphical representation of an acorn, coming from
+        the oak tree, which is commonly associated with the month of June. used in the name
+        Junestreat. The final design, and the direction that was ultimately settled upon was a
+        curricular logo, with a sketch of a pecan in the middle, symbolic of the types of nuts used
+        by Evelina in her delicious recipes. This design features a more natural image and layout, a
+        reference to the natural and sustainable foods used in Junestreat’s products.
+      </Text>,
+    ],
+  },
+}
