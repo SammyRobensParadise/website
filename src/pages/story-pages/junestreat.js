@@ -62,35 +62,6 @@ const StoryImageStyle = styled(LazyLoadImage)`
   }
 `
 
-const LargeBannerImageStyle = styled(LazyLoadImage)`
-  margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  width: 100%;
-  object-fit: contain;
-  padding: 0px;
-  @media screen and (max-width: 960px) {
-    margin-block-start: 10vh;
-  }
-`
-const CenterText = styled.h3`
-  /* margin-block-start: 10vh; */
-  font-family: Georgia Regular;
-  text-align: center;
-  font-size: 64px;
-  letter-spacing: 0px;
-  font-weight: 200;
-  margin: 0px;
-  transform: translateY(80px);
-  color: ${UIStyle.UIColors.black};
-  @media screen and (max-width: 460px) {
-    font-size: 40px;
-  }
-`
-
 // components
 // cover
 const CoverActionButtons = (
