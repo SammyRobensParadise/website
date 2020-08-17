@@ -86,3 +86,6 @@ export const EnvCanadaURL = `https://www.canada.ca/en/environment-climate-change
 
 // PUMA url
 export const PumaURL = `https://www.pumautilitymonitoring.ca/`
+
+// Adobe design challenge url
+export const AdobeDesignChallengeURL = `https://xd.adobe.com/view/73c0dc30-90e5-4089-99d1-7a9890c02c31-2693/screen/9036c1e1-3c2d-422c-90b3-e4ae4e827981?fullscreen`
