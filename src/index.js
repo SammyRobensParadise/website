@@ -18,6 +18,7 @@ import About from './pages/About'
 import Experience from './pages/Experience'
 import Policy from './pages/Policy'
 import FourOFour from './pages/404'
+
 // story-pages-import
 const WebsiteWinter2020 = loadable(() => import('./pages/story-pages/website-winter-2020'))
 const WebsiteSummerAndFall2019 = loadable(() =>
@@ -35,6 +36,7 @@ const ThonkJs = loadable(() => import('./pages/story-pages/thonk-js'))
 const ArduinoScreaming = loadable(() => import('./pages/story-pages/arduino-screaming'))
 const ThisWebsite = loadable(() => import('./pages/story-pages/this-website'))
 const Junestreat = loadable(() => import('./pages/story-pages/junestreat'))
+const Nyub = loadable(() => import('./pages/story-pages/nyub'))
 
 // experience-pages-import
 const Hootsuite = loadable(() => import('./pages/experience-pages/hootsuite'))
@@ -134,6 +136,9 @@ const App = () => {
           </Route>
           <Route path="/junestreat">
             <Junestreat />
+          </Route>
+          <Route path="/nyub">
+            <Nyub />
           </Route>
           <Route path="/puma">
             <Puma />

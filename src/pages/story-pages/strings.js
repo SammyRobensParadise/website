@@ -409,3 +409,25 @@ export const JunestreatStrings = {
     ],
   },
 }
+
+export const AdobeDesignChallengeStrings = {
+  section1: {
+    title: ``,
+    text: [``],
+  },
+  section2: {
+    title: `The Challenge`,
+    text: [
+      <Text padding={5} wide>
+        Adobe Partnered up with Activision to hold a virtual design-athon, and naturally I partnered
+        up with Erin Ly, a peer of mine in Systems Design Engineering at the University of Waterloo
+        to meet Adobe’s XD design challenge; and build an app that will help connect people via
+        games in a post covid-18 world. Erin and I co-designed Nyub (N-oo-b), and mockup built in
+        Adobe Experience Designer, allowing users to share their game progress and collect points,
+        encouraging game play and positive social interaction The app is designed with a modern
+        blob-like interface, with large buttons and a cross-platform design system. The colors are a
+        creative twist, and a bold statement signaling a sense of enjoyment for users.
+      </Text>,
+    ],
+  },
+}

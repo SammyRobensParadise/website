@@ -38,6 +38,7 @@ import {
   GlobalWineryDesignCard,
   PostersDesignCard,
   JunestreatCard,
+  NyubCard,
 } from '../constants/cards'
 // css
 import '../css/styles/styles.css'
@@ -142,7 +143,7 @@ const ExperienceHeader = (
 
 // cards
 const designCardsLeft = [Portfolio2020Card, Portfolio2019Card, JunestreatCard]
-const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard]
+const designCardsMiddle = [IntensifEyeDesignCard, GrapeDesignCard, IllustrationsCard, NyubCard]
 const designCardsRight = [RecdCard, GlobalWineryDesignCard, PostersDesignCard]
 
 // class Definition

@@ -13,7 +13,6 @@ import { StorySocialButtons } from '../../components/Social'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../../components/TriSection'
 import { UniSection } from '../../components/UniSection'
-import { DoubleSection } from '../../components/DoubleSection'
 import { Header } from '../../components/Headers'
 import { AdobeDesignChallengeURL } from '../../constants/links'
 // constants
@@ -26,7 +25,7 @@ import {
   ActionText,
   HeaderT,
 } from '../../constants/styles'
-import { JunestreatStrings } from './strings'
+import { AdobeDesignChallengeStrings } from './strings'
 // css
 import '../../css/styles/styles.css'
 import '../../css/styles/App.css'
@@ -99,7 +98,7 @@ const CoverChildren = (
       subtitle={[nyubSubtitle]}
       children={[CoverActionButtons]}
       story
-      coverImageURL={'https://i.ibb.co/qDHzM8P/Junestreat-logo-nyub-1-2x.png'}
+      coverImageURL={'https://i.ibb.co/XS82cCc/nyub-1-4x.png'}
     />
   </Fragment>
 )
@@ -153,38 +152,26 @@ const ExperienceHeader = (
     children={<ActionDownArrow color={UIStyle.UIColors.white} scalingFactor={2} offset={'13px'} />}
   />
 )
-// section 1
-const Header1 = <HeaderT first>{JunestreatStrings.section1.title}</HeaderT>
-const Paragraph1 = JunestreatStrings.section1.text[0]
+
 const Image1 = (
   <StoryCenterWrapper>
-    <StoryImageStyle
-      effect="blur"
-      src="https://i.ibb.co/ZdLhZNZ/Junestreat-logo-nyub-2-2x.png"
-      alt="Junestreat logo 2"
-      border="0"
-      offsetTop={'30vh'}
-    />
+    <iframe
+      title="nyub"
+      width="375"
+      height="812"
+      src="https://xd.adobe.com/embed/73c0dc30-90e5-4089-99d1-7a9890c02c31-2693/?fullscreen"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
   </StoryCenterWrapper>
 )
-const Image2 = (
-  <StoryCenterWrapper>
-    <StoryImageStyle
-      effect="blur"
-      src="https://i.ibb.co/bBtfBdN/Junestreat-logo-nyub-3-2x.png"
-      alt="Junestreat logo 3"
-      border="0"
-      offsetTop={'0vh'}
-    />
-  </StoryCenterWrapper>
-)
+
 // section 2
-const Header2 = <HeaderT padding={5}>{JunestreatStrings.section2.title}</HeaderT>
-const Paragraph2 = JunestreatStrings.section2.text[0]
+const Header2 = <HeaderT padding={5}>{AdobeDesignChallengeStrings.section2.title}</HeaderT>
+const Paragraph2 = AdobeDesignChallengeStrings.section2.text[0]
 
 // arrays mapped
-const SideLeft = [Header1, Paragraph1]
-const SideRight = [Image1, Image2]
+const Sec1 = [Image1]
 const Sec2 = [Header2, Paragraph2]
 
 // class Definition
@@ -204,17 +191,10 @@ class ThisWebsite extends React.PureComponent {
         <StorySocialButtons />
         <StoryCover children={CoverChildren} />
         <Element name="about-scroller" className="element">
-          <DoubleSection
-            leftChildren={[
+          <UniSection
+            middleChildren={[
               <Fragment>
-                {SideLeft.map((e) => (
-                  <Fragment>{e}</Fragment>
-                ))}
-              </Fragment>,
-            ]}
-            rightChildren={[
-              <Fragment>
-                {SideRight.map((e) => (
+                {Sec1.map((e) => (
                   <Fragment>{e}</Fragment>
                 ))}
               </Fragment>,
@@ -234,10 +214,10 @@ class ThisWebsite extends React.PureComponent {
               <StoryCenterWrapper>
                 <Button
                   aria-label={viewProject}
-                  onClick={() => window.open('https://www.augustmarket.ca/', '_self')}
+                  onClick={() => window.open(AdobeDesignChallengeURL, '_self')}
                   onKeyPress={(e) => {
                     if (e.key === 'Enter') {
-                      window.open('https://www.augustmarket.ca/', '_self')
+                      window.open(AdobeDesignChallengeURL, '_self')
                     }
                   }}
                 >

@@ -333,6 +333,21 @@ export const JunestreatCard = (
   </Wrapper>
 )
 
+export const NyubCard = (
+  <Wrapper>
+    <Card
+      config={{
+        title: `Nyub; Adobe Design Challenge`,
+        content: `Innovating with Adobe XD for a unique design challenge`,
+        imageURL: 'https://i.ibb.co/XS82cCc/nyub-1-4x.png',
+        link: '/nyub',
+        imageAltText: `Innovating with Adobe XD for a unique design challenge`,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
 export const Portfolio2019CodeCard = (
   <Wrapper>
     <Card
