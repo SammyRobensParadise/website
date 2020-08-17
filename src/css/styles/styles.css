@@ -49,12 +49,6 @@ body > * :focus {
   src: local('Georgia Bold Italic'), url('../fonts/georgiaz.woff') format('woff');
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  padding: 5%;
-}
-
 .iphone-x {
   position: relative;
   z-index: 1;
