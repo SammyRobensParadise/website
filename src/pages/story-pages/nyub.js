@@ -4,7 +4,6 @@ import React, { Fragment } from 'react'
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
 import styled from 'styled-components'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
@@ -45,20 +44,6 @@ const experienceContentText = `Internships in UX/UI design & development`
 
 const StoryCenterWrapper = styled.div`
   text-align: center;
-`
-
-const StoryImageStyle = styled(LazyLoadImage)`
-  margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  width: 85%;
-  padding: 0px;
-  @media screen and (max-width: 960px) {
-    margin-block-start: 10vh;
-  }
 `
 
 // components
@@ -155,14 +140,26 @@ const ExperienceHeader = (
 
 const Image1 = (
   <StoryCenterWrapper>
-    <iframe
-      title="nyub"
-      width="375"
-      height="812"
-      src="https://xd.adobe.com/embed/73c0dc30-90e5-4089-99d1-7a9890c02c31-2693/?fullscreen"
-      frameborder="0"
-      allowfullscreen
-    ></iframe>
+    <div class="iphone-x">
+      <div class="side">
+        <div class="screen">
+          <iframe
+            title="nyub"
+            src="https://xd.adobe.com/embed/73c0dc30-90e5-4089-99d1-7a9890c02c31-2693/?fullscreen"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>{' '}
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="header">
+        <div class="sensor-1"></div>
+        <div class="sensor-2"></div>
+        <div class="sensor-3"></div>
+      </div>
+      <div class="volume-button"></div>
+      <div class="power-button"></div>
+    </div>
   </StoryCenterWrapper>
 )
 
