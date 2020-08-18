@@ -159,7 +159,7 @@ export const PumaStrings = {
   section3: {
     title: `The Design System`,
     text: [
-      <Text padding={5} wide>
+      <Text>
         I conducted several design walkthroughs, card sorting and tree tests to identify areas where
         users struggled the greatest and the product experience was at its weakest. I worked closely
         with clients and stakeholders to create prototypes and mockups to improve the interface of

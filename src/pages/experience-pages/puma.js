@@ -183,19 +183,50 @@ const Image3 = (
   <StoryCenterWrapper>
     <StoryImageStyle
       effect="blur"
-      src="https://i.ibb.co/ZdLhZNZ/Junestreat-logo-junestreat-2-2x.png"
-      alt="Junestreat logo 2"
+      src="https://i.ibb.co/p0y2ZKr/puma-2-system-4x.png"
+      alt="puma-2-system-4x"
       border="0"
       offsetTop={'30vh'}
     />
   </StoryCenterWrapper>
 )
+
+//  section 4
 const Image4 = (
   <StoryCenterWrapper>
-    <StoryImageStyle
+    <LargeBannerImageStyle
       effect="blur"
-      src="https://i.ibb.co/bBtfBdN/Junestreat-logo-junestreat-3-2x.png"
-      alt="Junestreat logo 3"
+      src="https://i.ibb.co/R9j1SSd/puma-3-system-4x.png"
+      alt="puma-3-system-4x"
+      border="0"
+      title="PUMA Design System"
+      offsetTop={'0vh'}
+    />
+  </StoryCenterWrapper>
+)
+const Image5 = (
+  <StoryCenterWrapper>
+    <LargeBannerImageStyle
+      effect="blur"
+      src="https://i.ibb.co/x5wpBJW/puma-4-system-4x.png"
+      alt="puma-4-system-4x"
+      border="0"
+      title="PUMA Design System"
+      offsetTop={'0vh'}
+    />
+  </StoryCenterWrapper>
+)
+// section 5
+const Header5 = <HeaderT padding={5}>{PumaStrings.section4.title}</HeaderT>
+const Paragraph5 = PumaStrings.section4.text[0]
+
+// section6
+const Image6 = (
+  <StoryCenterWrapper>
+    <LargeBannerImageStyle
+      effect="blur"
+      src="https://i.ibb.co/qkyJ8h2/puma-5-version-4x.png"
+      alt="puma-5-version-4x"
       border="0"
       offsetTop={'0vh'}
     />
@@ -206,6 +237,9 @@ const Sec1 = [Header1, Paragraph1]
 const Sec2 = [Header2, Paragraph2]
 const SideLeft = [Header3, Paragraph3]
 const SideRight = [Image3]
+const Sec4 = [Image4, Image5]
+const Sec5 = [Header5, Paragraph5]
+const Sec6 = [Image6]
 // class Definition
 class Puma extends React.PureComponent {
   componentDidMount() {
@@ -252,6 +286,33 @@ class Puma extends React.PureComponent {
             rightChildren={[
               <Fragment>
                 {SideRight.map((e) => (
+                  <Fragment>{e}</Fragment>
+                ))}
+              </Fragment>,
+            ]}
+          />
+          <UniSection
+            middleChildren={[
+              <Fragment>
+                {Sec4.map((e) => (
+                  <Fragment>{e}</Fragment>
+                ))}
+              </Fragment>,
+            ]}
+          />
+          <UniSection
+            middleChildren={[
+              <Fragment>
+                {Sec5.map((e) => (
+                  <Fragment>{e}</Fragment>
+                ))}
+              </Fragment>,
+            ]}
+          />
+          <UniSection
+            middleChildren={[
+              <Fragment>
+                {Sec6.map((e) => (
                   <Fragment>{e}</Fragment>
                 ))}
               </Fragment>,
