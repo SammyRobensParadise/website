@@ -8,6 +8,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { StoryCover } from '../../components/StoryCover'
 import { SectionTitle } from '../../components/SectionsTitle'
 import { Footer } from '../../components/Footer'
+import { DoubleSection } from '../../components/DoubleSection'
 import { StorySocialButtons } from '../../components/Social'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../../components/TriSection'
@@ -53,6 +54,20 @@ const LargeBannerImageStyle = styled(LazyLoadImage)`
   -ms-user-select: none;
   width: 60%;
   object-fit: contain;
+  padding: 0px;
+  @media screen and (max-width: 960px) {
+    margin-block-start: 10vh;
+  }
+`
+
+const StoryImageStyle = styled(LazyLoadImage)`
+  margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : '20vh')};
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  width: 85%;
   padding: 0px;
   @media screen and (max-width: 960px) {
     margin-block-start: 10vh;
@@ -150,26 +165,47 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT padding={5} first>{PumaStrings.section1.title}</HeaderT>
+const Header1 = (
+  <HeaderT padding={5} first>
+    {PumaStrings.section1.title}
+  </HeaderT>
+)
 const Paragraph1 = PumaStrings.section1.text[0]
 
 // section 2
 const Header2 = <HeaderT padding={5}>{PumaStrings.section2.title}</HeaderT>
 const Paragraph2 = PumaStrings.section2.text[0]
-const Image2 = (
+
+// section3
+const Header3 = <HeaderT>{PumaStrings.section3.title}</HeaderT>
+const Paragraph3 = PumaStrings.section3.text[0]
+const Image3 = (
   <StoryCenterWrapper>
-    <LargeBannerImageStyle
+    <StoryImageStyle
       effect="blur"
-      src="https://i.ibb.co/6s2pznW/puma-more-to-come-4x-100.jpg"
-      alt="puma-more-to-come-4x-100"
+      src="https://i.ibb.co/ZdLhZNZ/Junestreat-logo-junestreat-2-2x.png"
+      alt="Junestreat logo 2"
       border="0"
-      offsetTop={'6vh'}
+      offsetTop={'30vh'}
+    />
+  </StoryCenterWrapper>
+)
+const Image4 = (
+  <StoryCenterWrapper>
+    <StoryImageStyle
+      effect="blur"
+      src="https://i.ibb.co/bBtfBdN/Junestreat-logo-junestreat-3-2x.png"
+      alt="Junestreat logo 3"
+      border="0"
+      offsetTop={'0vh'}
     />
   </StoryCenterWrapper>
 )
 // arrays mapped
 const Sec1 = [Header1, Paragraph1]
-const Sec2 = [Header2, Paragraph2, Image2]
+const Sec2 = [Header2, Paragraph2]
+const SideLeft = [Header3, Paragraph3]
+const SideRight = [Image3]
 // class Definition
 class Puma extends React.PureComponent {
   componentDidMount() {
@@ -200,6 +236,22 @@ class Puma extends React.PureComponent {
             middleChildren={[
               <Fragment>
                 {Sec2.map((e) => (
+                  <Fragment>{e}</Fragment>
+                ))}
+              </Fragment>,
+            ]}
+          />
+          <DoubleSection
+            leftChildren={[
+              <Fragment>
+                {SideLeft.map((e) => (
+                  <Fragment>{e}</Fragment>
+                ))}
+              </Fragment>,
+            ]}
+            rightChildren={[
+              <Fragment>
+                {SideRight.map((e) => (
                   <Fragment>{e}</Fragment>
                 ))}
               </Fragment>,
