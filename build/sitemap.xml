@@ -64,23 +64,28 @@
         <loc>https://sammy.world/this-website</loc>
         <lastmod>2020-05-27</lastmod>
     </url>
-        <url>
+    <url>
         <loc>https://sammy.world/puma</loc>
         <lastmod>2020-05-27</lastmod>
     </url>
-        <url>
+    <url>
         <loc>https://sammy.world/hootsuite</loc>
         <lastmod>2020-05-27</lastmod>
     </url>
-        </url>
-        <url>
+    <url>
         <loc>https://sammy.world/finger-food-atg</loc>
         <lastmod>2020-05-27</lastmod>
     </url>
-        </url>
-        </url>
-        <url>
+    <url>
         <loc>https://sammy.world/environment-canada</loc>
         <lastmod>2020-05-27</lastmod>
+    </url>
+    <url>
+        <loc>https://sammy.world/junestreat</loc>
+        <lastmod>2020-08-17</lastmod>
+    </url>
+    <url>
+        <loc>https://sammy.world/nyub</loc>
+        <lastmod>2020-08-17</lastmod>
     </url>
 </urlset>
