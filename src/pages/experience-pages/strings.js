@@ -145,10 +145,41 @@ export const PumaStrings = {
     ],
   },
   section2: {
-    title: `More to Come...`,
+    title: `Contributions`,
     text: [
       <Text padding={5} wide>
-        What I am working on in the user experience and design world will be some to come!
+        Working with a small team provided the opportunity to dive into each part of the software
+        design lifecycle. I made a number of substantial contributions to the PUMA application on
+        both the interface and user experience, as well as the operations and technical
+        infrastructure level. Part of my portfolio was to capture and document the problems and
+        challenges that the product was facing.{' '}
+      </Text>,
+    ],
+  },
+  section3: {
+    title: `The Design System`,
+    text: [
+      <Text padding={5} wide>
+        I conducted several design walkthroughs, card sorting and tree tests to identify areas where
+        users struggled the greatest and the product experience was at its weakest. I worked closely
+        with clients and stakeholders to create prototypes and mockups to improve the interface of
+        PUMA. I designed a complete component design system and worked closely with PUMA’s marketing
+        team to curate a new W3C AAA accessible color palette. On the development side, I also built
+        a front-end component library to be used by PUMA to increase UI consistency of user-facing
+        code, improve scalability, and improve accessibility throughout the product. The creation of
+        the design system cut down 30,000 lines of code within the PUMA application.{' '}
+      </Text>,
+    ],
+  },
+  section4: {
+    title: `Source Control Migration`,
+    text: [
+      <Text padding={5} wide>
+        I championed the move of PUMA from Subversion (SVN) to Git, using GitHub. The move involved
+        migrating 10 projects from a private server to GitHub, a cloud-based development platform. I
+        wrote several Shell scripts to automate migrations and successfully transitioned all
+        projects and their CI/CD pipelines over to GitHub with close to no disturbances to ongoing
+        product development.
       </Text>,
     ],
   },
