@@ -45,6 +45,11 @@ const experienceContentText = `Internships in UX/UI design & development`
 const StoryCenterWrapper = styled.div`
   text-align: center;
 `
+const PhoneIFrame = styled.iframe`
+  @media screen and (max-width: 1000px) {
+    margin-block-start: 100px;
+  }
+`
 
 // components
 // cover
@@ -143,12 +148,12 @@ const Image1 = (
     <div class="iphone-x">
       <div class="side">
         <div class="screen">
-          <iframe
+          <PhoneIFrame
             title="nyub"
             src="https://xd.adobe.com/embed/73c0dc30-90e5-4089-99d1-7a9890c02c31-2693/?fullscreen"
             frameborder="0"
             allowfullscreen
-          ></iframe>{' '}
+          ></PhoneIFrame>{' '}
         </div>
       </div>
       <div class="line"></div>

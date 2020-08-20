@@ -212,3 +212,23 @@ body > * :focus {
   top: 160px;
   width: 3px;
 }
+@media screen and (min-height: 975px) {
+  .iphone-x {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-height: 1114px) {
+  .iphone-x {
+    margin-top: 200px;
+  }
+}
+@media screen and (min-height: 1380px) {
+  .iphone-x {
+    margin-top: 400px;
+  }
+}
+@media screen and (min-height: 1800px) {
+  .iphone-x {
+    margin-top: 600px;
+  }
+}
