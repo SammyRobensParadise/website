@@ -15,6 +15,7 @@ import styled from 'styled-components'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
+import { Link } from 'react-router-dom'
 // constants
 import { MenuConfig } from '../constants/config'
 import { resumeLink } from '../constants/links'
@@ -211,7 +212,7 @@ const QuoteName = styled.p`
   text-align: right;
   padding-right: 10px;
   width: ${(p) => (p.wide ? '88%' : '82%')};
-  line-height: 50px;
+  line-height: 30px;
   font-style: italic;
   padding-left: ${(p) => (p.padding ? `${p.padding}%` : `2%`)};
   @media screen and (max-width: 1260px) {
@@ -424,10 +425,15 @@ const Experience3Header = (
   </SectionHeader>
 )
 
-const EvelinaQuote = `"Sammy inspired me beyond the logo design for my brand, Bringing amazing energy to the product and a helpful attitude that catered to the specific needs of myself and the project"`
+const EvelinaQuote = `"Sammy inspired me beyond the logo design for my brand, Bringing amazing energy to the product and a helpful attitude that catered to the specific needs of myself and the project."`
 const EvelinaName = `- Evelina Edwardsson`
 const QuoteSections = <Quote>{EvelinaQuote}</Quote>
 const QuoteNameE = <QuoteName>{EvelinaName}</QuoteName>
+const QuoteLink = (
+  <QuoteName>
+    <Link to="/junestreat">Read the story.</Link>
+  </QuoteName>
+)
 /**
  * Section 3
  */
@@ -435,7 +441,7 @@ const QuoteNameE = <QuoteName>{EvelinaName}</QuoteName>
 const articleCards = [IntensifEyeArticleCard, AccessibleReactAppCard]
 const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
 const codeCards = [EunoiaCodeCard, GlobalWineryCodeCard]
-const Sec4 = [QuoteSections, QuoteNameE]
+const Sec4 = [QuoteSections, QuoteNameE, QuoteLink]
 // class Definition
 class Main extends React.PureComponent {
   componentDidMount() {
