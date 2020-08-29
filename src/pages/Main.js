@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 import '../css/styles/App.css'
 import { Cover } from '../components/Cover'
 import { MainTitle } from '../components/MainTitle'
@@ -9,6 +9,7 @@ import { Footer } from '../components/Footer'
 import { SocialButtons } from '../components/Social'
 import { Menu, SectionHeader } from 'eunoia'
 import { Header } from '../components/Headers'
+import { UniSection } from '../components/UniSection'
 import { Grid } from '@material-ui/core'
 import styled from 'styled-components'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
@@ -38,7 +39,6 @@ import {
 import { UIStyle } from '../constants/config'
 // css
 import '../css/styles/styles.css'
-
 
 // strings ****
 // Cover ****
@@ -173,6 +173,60 @@ const MyPassionText = styled.p`
   }
   @media screen and (max-width: 460px) {
     font-size: 18px;
+  }
+`
+
+const Quote = styled.p`
+  padding-top: 60px;
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.black};
+  font-weight: 200;
+  font-size: 22px;
+  text-align: left;
+  width: ${(p) => (p.wide ? '88%' : '82%')};
+  line-height: 50px;
+  font-style: italic;
+  padding-left: ${(p) => (p.padding ? `${p.padding}%` : `10%`)};
+  @media screen and (max-width: 1260px) {
+    line-height: 40px;
+  }
+  @media screen and (max-width: 960px) {
+    width: 80%;
+    padding-left: 10%;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 2200px) {
+    text-align: center;
+  }
+`
+const QuoteName = styled.p`
+  font-family: Helvetica Neue;
+  letter-spacing: 0px;
+  color: ${UIStyle.UIColors.black};
+  font-weight: 200;
+  font-size: 22px;
+  text-align: right;
+  padding-right: 10px;
+  width: ${(p) => (p.wide ? '88%' : '82%')};
+  line-height: 50px;
+  font-style: italic;
+  padding-left: ${(p) => (p.padding ? `${p.padding}%` : `2%`)};
+  @media screen and (max-width: 1260px) {
+    line-height: 40px;
+  }
+  @media screen and (max-width: 960px) {
+    width: 80%;
+    padding-left: 10%;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 2200px) {
+    text-align: center;
+    padding-left: 10%;
   }
 `
 // components
@@ -370,6 +424,10 @@ const Experience3Header = (
   </SectionHeader>
 )
 
+const EvelinaQuote = `"Sammy inspired me beyond the logo design for my brand, Bringing amazing energy to the product and a helpful attitude that catered to the specific needs of myself and the project"`
+const EvelinaName = `- Evelina Edwardsson`
+const QuoteSections = <Quote>{EvelinaQuote}</Quote>
+const QuoteNameE = <QuoteName>{EvelinaName}</QuoteName>
 /**
  * Section 3
  */
@@ -377,7 +435,7 @@ const Experience3Header = (
 const articleCards = [IntensifEyeArticleCard, AccessibleReactAppCard]
 const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
 const codeCards = [EunoiaCodeCard, GlobalWineryCodeCard]
-
+const Sec4 = [QuoteSections, QuoteNameE]
 // class Definition
 class Main extends React.PureComponent {
   componentDidMount() {
@@ -397,6 +455,15 @@ class Main extends React.PureComponent {
         <MainExplainationGrid
           rightChildren={[SammyBikingImage]}
           leftChildren={[IntroTextTitle, IntroText]}
+        />
+        <UniSection
+          middleChildren={[
+            <Fragment>
+              {Sec4.map((e) => (
+                <Fragment>{e}</Fragment>
+              ))}
+            </Fragment>,
+          ]}
         />
         <TriSection
           leftChildren={[DesignHeader]}
