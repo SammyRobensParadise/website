@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import '../css/styles/App.css'
 import { Cover } from '../components/Cover'
 import { MainTitle } from '../components/MainTitle'
@@ -270,10 +270,10 @@ const CoverActionButtons = (
   </Grid>
 )
 const CoverChildren = (
-  <Fragment>
+  <>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
     <MainTitle title={name} subtitle={[uxDesigner, Developer]} children={[CoverActionButtons]} />
-  </Fragment>
+  </>
 )
 /**
  * Explaination
@@ -464,11 +464,11 @@ class Main extends React.PureComponent {
         />
         <UniSection
           middleChildren={[
-            <Fragment>
+            <>
               {Sec4.map((e) => (
-                <Fragment>{e}</Fragment>
+                <>{e}</>
               ))}
-            </Fragment>,
+            </>,
           ]}
         />
         <TriSection
@@ -486,7 +486,7 @@ class Main extends React.PureComponent {
               Design3Header,
               <ScrollArea>
                 {articleCards.map((node) => (
-                  <Fragment>{node}</Fragment>
+                  <>{node}</>
                 ))}
               </ScrollArea>,
             ]}
@@ -494,7 +494,7 @@ class Main extends React.PureComponent {
               Code3Header,
               <ScrollArea>
                 {designCards.map((node) => (
-                  <Fragment>{node}</Fragment>
+                  <>{node}</>
                 ))}
               </ScrollArea>,
             ]}
@@ -502,7 +502,7 @@ class Main extends React.PureComponent {
               Experience3Header,
               <ScrollArea>
                 {codeCards.map((node) => (
-                  <Fragment>{node}</Fragment>
+                  <>{node}</>
                 ))}
               </ScrollArea>,
             ]}

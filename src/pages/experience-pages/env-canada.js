@@ -1,5 +1,5 @@
 // react
-import React, { Fragment } from 'react'
+import React from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -73,7 +73,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <Fragment>
+  <>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={envCanadaTitle}
@@ -82,7 +82,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/t2f1rR8/env-can-logo-4x-100.jpg'}
     />
-  </Fragment>
+  </>
 )
 
 // design bottom header section
@@ -135,7 +135,11 @@ const ExperienceHeader = (
   />
 )
 // section 1
-const Header1 = <HeaderT padding={5} first>{EnvCanadaStrings.section1.title}</HeaderT>
+const Header1 = (
+  <HeaderT padding={5} first>
+    {EnvCanadaStrings.section1.title}
+  </HeaderT>
+)
 const Paragraph1 = EnvCanadaStrings.section1.text[0]
 
 // section 2
@@ -164,20 +168,20 @@ class EnvCanada extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec1.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec2.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection

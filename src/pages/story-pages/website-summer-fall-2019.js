@@ -1,5 +1,5 @@
 // react
-import React, {Fragment} from 'react'
+import React from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -92,7 +92,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <Fragment>
+  <>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={WebsiteSummerFalltitle}
@@ -101,7 +101,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/mDP4djv/portfolio-spring-19-logo.png'}
     />
-  </Fragment>
+  </>
 )
 
 // design bottom header section
@@ -205,34 +205,34 @@ class WebsiteSummerAndFall2019 extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <DoubleSection
             leftChildren={[
-              <Fragment>
+              <>
                 {SideLeft.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
             rightChildren={[
-              <Fragment>
+              <>
                 {SideRight.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <DoubleSection
             leftChildren={[
-              <Fragment>
+              <>
                 {SideLeftSec2.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
             rightChildren={[
-              <Fragment>
+              <>
                 {SideRightSec2.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
         </Element>

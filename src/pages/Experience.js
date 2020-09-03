@@ -1,5 +1,5 @@
 // react
-import React, { Fragment } from 'react'
+import React from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -67,7 +67,7 @@ const CodeSectionHeaderConfig = {
 // components
 // cover
 const CoverChildren = (
-  <Fragment>
+  <>
     <Menu config={MenuConfig.config} options={MenuConfig.options} />
     <SectionTitle
       title={experience}
@@ -87,7 +87,7 @@ const CoverChildren = (
         </ScrollLink>,
       ]}
     />
-  </Fragment>
+  </>
 )
 
 // design botton header section
@@ -179,7 +179,7 @@ class Experience extends React.PureComponent {
             middleChildren={[
               <ScrollArea height={'1120px'}>
                 {experienceCardsMiddle.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
               </ScrollArea>,
             ]}
@@ -190,16 +190,66 @@ class Experience extends React.PureComponent {
         </SectionHeader>
         <Tools
           tools={[
-            <JiraIcon color={UIStyle.UIColors.black} name="Jira" font="Helvetica Neue" scalingFactor={1} />,
-            <GithubIndustryIcon color={UIStyle.UIColors.black} name="Github" font="Helvetica Neue" scalingFactor={1} />,
-            <BitbucketIcon color={UIStyle.UIColors.black} name="Bit Bucket" font="Helvetica Neue" scalingFactor={1} />,
-            <ConfluenceIcon color={UIStyle.UIColors.black} name="Confluence" font="Helvetica Neue" scalingFactor={1} />,
-            <GoogleAnalyticsIcon color={UIStyle.UIColors.black} name="Google Analytics" font="Helvetica Neue" scalingFactor={1} />,
-            <GoogleCloudIcon color={UIStyle.UIColors.black} name="Google Cloud" font="Helvetica Neue" scalingFactor={1} />,
-            <AWSIcon color={UIStyle.UIColors.black} name="Amazon Web Services" font="Helvetica Neue" scalingFactor={1} />,
-            <InvisionIndustryIcon color={UIStyle.UIColors.black} name="Invision" font="Helvetica Neue" scalingFactor={1} />,
-            <SlackIcon color={UIStyle.UIColors.black} name="Slack" font="Helvetica Neue" scalingFactor={1} />,
-            <MicrosoftIcon color={UIStyle.UIColors.black} name="Microsoft Cloud" font="Helvetica Neue" scalingFactor={1} />,
+            <JiraIcon
+              color={UIStyle.UIColors.black}
+              name="Jira"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <GithubIndustryIcon
+              color={UIStyle.UIColors.black}
+              name="Github"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <BitbucketIcon
+              color={UIStyle.UIColors.black}
+              name="Bit Bucket"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <ConfluenceIcon
+              color={UIStyle.UIColors.black}
+              name="Confluence"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <GoogleAnalyticsIcon
+              color={UIStyle.UIColors.black}
+              name="Google Analytics"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <GoogleCloudIcon
+              color={UIStyle.UIColors.black}
+              name="Google Cloud"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <AWSIcon
+              color={UIStyle.UIColors.black}
+              name="Amazon Web Services"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <InvisionIndustryIcon
+              color={UIStyle.UIColors.black}
+              name="Invision"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <SlackIcon
+              color={UIStyle.UIColors.black}
+              name="Slack"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
+            <MicrosoftIcon
+              color={UIStyle.UIColors.black}
+              name="Microsoft Cloud"
+              font="Helvetica Neue"
+              scalingFactor={1}
+            />,
           ]}
         />
         <TriSection

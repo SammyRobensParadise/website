@@ -1,5 +1,5 @@
 // react
-import React, { Fragment } from 'react'
+import React from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -59,7 +59,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <Fragment>
+  <>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={FourOFourTitle}
@@ -68,7 +68,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/kJVG2Yz/404-4x-100.jpg'}
     />
-  </Fragment>
+  </>
 )
 
 // design bottom header section

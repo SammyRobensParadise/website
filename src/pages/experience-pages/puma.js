@@ -1,5 +1,5 @@
 // react
-import React, { Fragment } from 'react'
+import React from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -103,7 +103,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <Fragment>
+  <>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={PumaTitle}
@@ -112,7 +112,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/h1Htvgz/puma-logo-4x-100.jpg'}
     />
-  </Fragment>
+  </>
 )
 
 // design bottom header section
@@ -259,63 +259,63 @@ class Puma extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec1.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec2.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <DoubleSection
             leftChildren={[
-              <Fragment>
+              <>
                 {SideLeft.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
             rightChildren={[
-              <Fragment>
+              <>
                 {SideRight.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec4.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec5.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec6.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 // import { Link } from 'react-router-dom'
 import { Text } from '../../constants/styles'
@@ -22,7 +22,7 @@ export const HootsuiteStrings = {
   section2: {
     title: `Contributions`,
     text: [
-      <Fragment>
+      <>
         <Text padding={5} wide>
           I had the tremendous opportunity to work on multiple projects while at Hootsuite, and was
           able to contribute to all aspects of the software development lifecycle. I Implemented
@@ -42,7 +42,7 @@ export const HootsuiteStrings = {
           implementation strategy at Hootsuite and developed accessibility CI/CD pipeline automation
           to ensure that developers were deploying code that met accessibility standards.
         </Text>
-      </Fragment>,
+      </>,
     ],
   },
 }
@@ -64,7 +64,7 @@ export const FingerFoodATGStrings = {
   section2: {
     title: `Contributions`,
     text: [
-      <Fragment>
+      <>
         <Text padding={5} wide>
           I designed and implemented data-driven UX analysis for a bluetooth connected experience
           app to quantify engagement growth potential. I was given the opportunity to work with an
@@ -84,7 +84,7 @@ export const FingerFoodATGStrings = {
           projects from ideation through to product delivery working with all kinds of clients, and
           was able to reduce test infrastructure overhead by 50% for web-based projects!
         </Text>
-      </Fragment>,
+      </>,
     ],
   },
 }
@@ -108,7 +108,7 @@ export const EnvCanadaStrings = {
   section2: {
     title: `Contributions`,
     text: [
-      <Fragment>
+      <>
         <Text padding={5} wide>
           I leveraged SQL and Microsoft SQL server to iteratively develop and deploy testing scripts
           for complex relational databases governing emissions data for thousands of vehicles
@@ -124,7 +124,7 @@ export const EnvCanadaStrings = {
           to inform them of the added data reporting requirements and new regulations initiated by
           the federal government to meet emissions reduction targets.
         </Text>
-      </Fragment>,
+      </>,
     ],
   },
 }

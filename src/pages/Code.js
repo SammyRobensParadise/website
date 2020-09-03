@@ -1,5 +1,5 @@
 // react
-import React, { useState, Fragment } from 'react'
+import React, { useState } from 'react'
 // components
 import { Cover } from '../components/Cover'
 import { SectionTitle } from '../components/SectionsTitle'
@@ -102,7 +102,7 @@ const CoverChildren = () => {
     }
   })
   return (
-    <Fragment>
+    <>
       <Menu config={MenuConfig.config} options={MenuConfig.options} />
       <SectionTitle
         title={code}
@@ -122,7 +122,7 @@ const CoverChildren = () => {
           </ScrollLink>,
         ]}
       />
-    </Fragment>
+    </>
   )
 }
 
@@ -202,21 +202,21 @@ class Code extends React.PureComponent {
             leftChildren={[
               <ScrollArea height={'1000px'}>
                 {codeCardsLeft.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
               </ScrollArea>,
             ]}
             middleChildren={[
               <ScrollArea height={'1000px'}>
                 {codeCardsMiddle.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
               </ScrollArea>,
             ]}
             rightChildren={[
               <ScrollArea height={'1000px'}>
                 {codeCardsRight.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
               </ScrollArea>,
             ]}

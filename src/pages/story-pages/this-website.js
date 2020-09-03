@@ -1,5 +1,5 @@
 // react
-import React, { Fragment } from 'react'
+import React from 'react'
 // components
 import { Grid } from '@material-ui/core'
 import { Menu, Button } from 'eunoia'
@@ -121,7 +121,7 @@ const CoverActionButtons = (
 )
 
 const CoverChildren = (
-  <Fragment>
+  <>
     <Menu config={StoryMenuConfig.config} options={StoryMenuConfig.options} />
     <SectionTitle
       title={thisWebsiteTitle}
@@ -130,7 +130,7 @@ const CoverChildren = (
       story
       coverImageURL={'https://i.ibb.co/ZNRjyHq/this-website-making-logo.png'}
     />
-  </Fragment>
+  </>
 )
 
 // design bottom header section
@@ -216,7 +216,7 @@ const Header3 = <HeaderT padding={5}>{ThisWebsiteStrings.section3.title}</Header
 const Paragraph3 = ThisWebsiteStrings.section3.text[0]
 
 const Image3 = (
-  <Fragment>
+  <>
     <CenterText>1 - Summer 2018</CenterText>
     <LargeBannerImageStyle
       effect="blur"
@@ -225,10 +225,10 @@ const Image3 = (
       border="0"
       offsetTop={'0vh'}
     />
-  </Fragment>
+  </>
 )
 const Image4 = (
-  <Fragment>
+  <>
     <CenterText>2 - Fall 2018</CenterText>
     <LargeBannerImageStyle
       effect="blur"
@@ -237,11 +237,11 @@ const Image4 = (
       border="0"
       offsetTop={'0vh'}
     />
-  </Fragment>
+  </>
 )
 
 const Image5 = (
-  <Fragment>
+  <>
     <CenterText>3 - Spring 2019</CenterText>
     <LargeBannerImageStyle
       effect="blur"
@@ -250,11 +250,11 @@ const Image5 = (
       border="0"
       offsetTop={'0vh'}
     />
-  </Fragment>
+  </>
 )
 
 const Image6 = (
-  <Fragment>
+  <>
     <CenterText>4 - Fall 2019</CenterText>
     <LargeBannerImageStyle
       effect="blur"
@@ -263,11 +263,11 @@ const Image6 = (
       border="0"
       offsetTop={'0vh'}
     />
-  </Fragment>
+  </>
 )
 
 const Image7 = (
-  <Fragment>
+  <>
     <CenterText>5 - Winter 2020</CenterText>
     <LargeBannerImageStyle
       effect="blur"
@@ -276,11 +276,11 @@ const Image7 = (
       border="0"
       offsetTop={'0vh'}
     />
-  </Fragment>
+  </>
 )
 
 const Image8 = (
-  <Fragment>
+  <>
     <CenterText>6 - Summer {`&`} Fall 2020</CenterText>
     <LargeBannerImageStyle
       effect="blur"
@@ -289,7 +289,7 @@ const Image8 = (
       border="0"
       offsetTop={'0vh'}
     />
-  </Fragment>
+  </>
 )
 
 // arrays mapped
@@ -317,45 +317,45 @@ class ThisWebsite extends React.PureComponent {
         <Element name="about-scroller" className="element">
           <DoubleSection
             leftChildren={[
-              <Fragment>
+              <>
                 {SideLeft.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
             rightChildren={[
-              <Fragment>
+              <>
                 {SideRight.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec2.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec3.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
             middleChildren={[
-              <Fragment>
+              <>
                 {Sec4.map((e) => (
-                  <Fragment>{e}</Fragment>
+                  <>{e}</>
                 ))}
-              </Fragment>,
+              </>,
             ]}
           />
           <UniSection
