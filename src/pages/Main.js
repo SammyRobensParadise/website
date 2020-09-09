@@ -426,12 +426,22 @@ const Experience3Header = (
 )
 
 const EvelinaQuote = `"Sammy inspired me beyond the logo design for my brand, Bringing amazing energy to the product and a helpful attitude that catered to the specific needs of myself and the project."`
-const EvelinaName = `- Evelina Edwardsson`
+const EvelinaName = `- Evelina Edwardsson, Founder of Junestreat`
 const QuoteSections = <Quote>{EvelinaQuote}</Quote>
 const QuoteNameE = <QuoteName>{EvelinaName}</QuoteName>
 const QuoteLink = (
   <QuoteName>
     <Link to="/junestreat">Read the story.</Link>
+  </QuoteName>
+)
+
+const RobKQuote = `Sammy's developed with a systems-level perspective towards improving products in sustainable ways and used engineering ingenuity to overcome obstacles encountered, modify designs and propose additional projects & features. Sammy introduced new architectural software components and championed our transition to a more modern version control development platform – two foundational contributions that will be used well into the future.`
+const RobKName = `- Rob Kraft, P. Eng., MASc. President of PUMA`
+const QuoteRK = <Quote>{RobKQuote}</Quote>
+const QuoteNameR = <QuoteName>{RobKName}</QuoteName>
+const QuoteLinkR = (
+  <QuoteName>
+    <Link to="/puma">Read the story.</Link>
   </QuoteName>
 )
 /**
@@ -442,6 +452,7 @@ const articleCards = [IntensifEyeArticleCard, AccessibleReactAppCard]
 const designCards = [IntensifEyeDesignCard, GrapeDesignCard]
 const codeCards = [EunoiaCodeCard, GlobalWineryCodeCard]
 const Sec4 = [QuoteSections, QuoteNameE, QuoteLink]
+const Sec5 = [QuoteRK, QuoteNameR, QuoteLinkR]
 // class Definition
 class Main extends React.PureComponent {
   componentDidMount() {
@@ -466,6 +477,15 @@ class Main extends React.PureComponent {
           middleChildren={[
             <>
               {Sec4.map((e) => (
+                <>{e}</>
+              ))}
+            </>,
+          ]}
+        />
+        <UniSection
+          middleChildren={[
+            <>
+              {Sec5.map((e) => (
                 <>{e}</>
               ))}
             </>,
