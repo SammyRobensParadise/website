@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm install && npm run build && echo done building && git add . && git commit -m 'deploy-build-commit to master' && git push origin master && echo done",
-    "yarn-deploy": "yarn && yarn build && echo done building && git add . && git commit -m 'deploy-build-commit to master' && git push origin master && echo done"
+    "yarn-deploy": "yarn build && echo done building && git add . && git commit -m 'deploy-build-commit to master' && git push origin master && echo done"
   },
   "eslintConfig": {
     "extends": "react-app"
