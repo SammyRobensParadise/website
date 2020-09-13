@@ -1,3 +1,5 @@
+const RESUME_FILE_NAME = `SammyRPResume.pdf`
+
 // URL  Links
 /**
  * links
@@ -22,7 +24,7 @@ export const websiteRepoURL = 'https://github.com/SammyRobensParadise/website'
 export const emailLink = `mailto:srobensparadise@gmail.com`
 
 // resume
-export const resumeLink = `https://www.yumpu.com/en/document/read/63593115/sammy-robens-paradise-resume`
+export const resumeLink = `${window.location.origin}/${RESUME_FILE_NAME}`
 
 // portfolio winter 2020
 export const portfolioWinter2020URL = `https://portfolio-winter-2020.web.app/`
