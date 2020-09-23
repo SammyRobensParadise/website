@@ -435,7 +435,7 @@ const QuoteLink = (
   </QuoteName>
 )
 
-const RobKQuote = `Sammy's developed with a systems-level perspective towards improving products in sustainable ways and used engineering ingenuity to overcome obstacles encountered, modify designs and propose additional projects & features. Sammy introduced new architectural software components and championed our transition to a more modern version control development platform – two foundational contributions that will be used well into the future.`
+const RobKQuote = `Sammy developed with a systems-level perspective towards improving products in sustainable ways and used engineering ingenuity to overcome obstacles encountered, modify designs and propose additional projects & features. Sammy introduced new architectural software components and championed our transition to a more modern version control development platform – two foundational contributions that will be used well into the future.`
 const RobKName = `- Rob Kraft, P. Eng., MASc. President of PUMA`
 const QuoteRK = <Quote>{RobKQuote}</Quote>
 const QuoteNameR = <QuoteName>{RobKName}</QuoteName>
