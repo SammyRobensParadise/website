@@ -43,6 +43,7 @@ const Hootsuite = loadable(() => import('./pages/experience-pages/hootsuite'))
 const FingerFoodATG = loadable(() => import('./pages/experience-pages/ffatg'))
 const EnvCanada = loadable(() => import('./pages/experience-pages/env-canada'))
 const Puma = loadable(() => import('./pages/experience-pages/puma'))
+const Journal = loadable(() => import('./pages/experience-pages/journal'))
 
 // cookie bar
 const CookieTimeout = 600000
@@ -139,6 +140,9 @@ const App = () => {
           </Route>
           <Route path="/nyub">
             <Nyub />
+          </Route>
+          <Route path="/journal">
+            <Journal />
           </Route>
           <Route path="/puma">
             <Puma />

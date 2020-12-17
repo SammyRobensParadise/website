@@ -184,3 +184,33 @@ export const PumaStrings = {
     ],
   },
 }
+
+export const JournalStrings = {
+  section1: {
+    title: `My Role`,
+    text: [
+      <Text padding={5} wide>
+        As a product designer at Journal Technologies, I have had the rare opportunity to contribute
+        to all aspects of the product lifecycle from concept ideation and user-experience research,
+        through wireframe and mockup design, development, and finally user-feedback and iteration.
+        As a developer and web designer, I fit well into the multi-faceted role that Journal
+        required, with the ability to deliver on both software and design. I work on both Journal’s
+        Front-end and backend, as well as illustrations and product design.
+      </Text>,
+    ],
+  },
+  section2: {
+    title: `Contributions`,
+    text: [
+      <Text padding={5} wide>
+        As my time at Journal continues I have designed and developed numerous features delivering a
+        never-before-seen corporate expense experience. I designed (and developed) Journal’s
+        navigation infrastructure and interface, accounting for quick scalability, sub-pages, and
+        multi-user roles. I have also had a hand in designing Journals, virtual credit card
+        experience, branding, transaction management experience, and settings flow. I have also
+        championed accessible design practices, and work to enforce a coherent and consistent design
+        process, optimizing product delivery.
+      </Text>,
+    ],
+  },
+}
