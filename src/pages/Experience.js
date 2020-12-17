@@ -29,6 +29,8 @@ import {
   EnvironmentCannadaExperienceCardMobile,
   PumaExperienceCard,
   PumaExperienceCardMobile,
+  JournalExperienceCard,
+  JournalExperienceCardMobile,
 } from '../constants/cards'
 import { Link as ScrollLink, Element, Events } from 'react-scroll'
 import { TriSection } from '../components/TriSection'
@@ -146,12 +148,14 @@ const mobileBreakpoint = window.innerWidth < 700
 
 const experienceCardsMiddle = mobileBreakpoint
   ? [
+      JournalExperienceCardMobile,
       PumaExperienceCardMobile,
       HootsuiteExperienceCardMobile,
       FingerFoodExperienceCardMobile,
       EnvironmentCannadaExperienceCardMobile,
     ]
   : [
+      JournalExperienceCard,
       PumaExperienceCard,
       HootsuiteExperienceCard,
       FingerFoodExperienceCard,
@@ -177,7 +181,7 @@ class Experience extends React.PureComponent {
         <Element name="experience-work" className="element">
           <UniSection
             middleChildren={[
-              <ScrollArea height={'1120px'}>
+              <ScrollArea height={'1480px'}>
                 {experienceCardsMiddle.map((e) => (
                   <>{e}</>
                 ))}

@@ -366,6 +366,57 @@ export const Portfolio2019CodeCard = (
 /**
  * ExperienceCards
  */
+export const JournalExperienceCard = (
+  <Wrapper>
+    <BannerCard
+      activeSection={null}
+      config={{
+        title: `Product Designer & Developer, Journal`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`Aug 19 - Present`}</h3>
+              </i>
+            </p>
+            <p>{`Designing the change in the way companies spend money. I work with a team of talented developers and designers to build the next generation's corporate expense management platform.`}</p>
+          </div>
+        ),
+        imageURL: 'https://i.ibb.co/LQZDcsb/Journal-App-Label.jpg',
+        imageAltText: `Designing the change in the way companies spend money.`,
+        link: '/journal',
+        imageWidth: 300,
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
+export const JournalExperienceCardMobile = (
+  <Wrapper>
+    <Card
+      activeSection={null}
+      config={{
+        title: `Product Designer & Developer, Journal`,
+        content: (
+          <div>
+            <p>
+              <i>
+                <h3>{`Aug 19 - Present`}</h3>
+              </i>
+            </p>
+            <p>{`Designing the change in the way companies spend money.`}</p>
+          </div>
+        ),
+        imageURL: 'https://i.ibb.co/LQZDcsb/Journal-App-Label.jpg',
+        imageAltText: `Designing the change in the way companies spend money.`,
+        link: '/journal',
+        ...defaultCardConfig,
+      }}
+    />
+  </Wrapper>
+)
+
 export const PumaExperienceCard = (
   <Wrapper>
     <BannerCard
@@ -376,7 +427,7 @@ export const PumaExperienceCard = (
           <div>
             <p>
               <i>
-                <h3>{`May 19 - Present`}</h3>
+                <h3>{`May 19 - Aug 19`}</h3>
               </i>
             </p>
             <p>{`Leading the design process at PUMA, redesigning an energy management product to meet national demands on the front line of the climate change battle.`}</p>
@@ -402,7 +453,7 @@ export const PumaExperienceCardMobile = (
           <div>
             <p>
               <i>
-                <h3>{`May 19 - Present`}</h3>
+                <h3>{`May 19 - Aug 19`}</h3>
               </i>
             </p>
             <p>{`Leading the design process at PUMA, redesigning an energy management product to meet national demands on the front line of the climate change battle.`}</p>
