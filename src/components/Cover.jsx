@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const ConverContainerImage = styled.div`
   width: auto;
   height: inherit;
-  background: url('https://i.ibb.co/SsV7H9N/Background-Image.jpg');
+  background: url('https://i.ibb.co/5n0rtsR/tumblr-p3l0u1-Qt-Mp1r2geqjo1-540.gif');
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
@@ -17,7 +17,7 @@ const CoverContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  opacity: 0.84;
+  opacity: 0.75;
   z-index: 2;
 `
 const ChildrenWrapper = styled.div`
