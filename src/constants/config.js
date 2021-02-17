@@ -10,11 +10,11 @@ import { mediumURL } from './links'
  */
 export const UIStyle = {
   UIColors: {
-    white: '#FFFFFF',
-    lightGrey: '#00000029',
-    black: '#000000',
-    gold: '#E1A87A',
-    darkGrey: '#212121',
+    white: '#f3f3f3',
+    lightGrey: '#BBB8B2',
+    black: '#283747',
+    gold: '#de354c',
+    darkGrey: '#3c1874',
     mediumGrey: '#5D5D5D',
   },
   Shadows: {

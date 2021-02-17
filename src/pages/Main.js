@@ -281,7 +281,7 @@ const CoverChildren = (
 const SammyBikingImage = (
   <SammyBikingImageStyle
     effect="blur"
-    src="https://i.ibb.co/XYv6cLy/Sammy-Biking-Grey.png"
+    src="https://i.ibb.co/GtVgcdv/Sammy-Biking-Grey.png" 
     alt="Sammy-Biking-Grey"
     border="0"
   />
@@ -368,7 +368,7 @@ const ExperienceHeader = (
 const SammySkatingImage = (
   <SammySkatingImageStyle
     effect="blur"
-    src="https://i.ibb.co/dBhMb8K/sammyskatingbw.png"
+    src="https://i.ibb.co/vjhSpKz/sammyskatingbw-removebg.png"
     alt="sammyskatingbw"
     border="0"
   />
