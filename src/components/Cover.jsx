@@ -12,7 +12,7 @@ const ConverContainerImage = styled.div`
 const CoverContainer = styled.div`
     width: auto;
     height: 800px;
-    background: ${UIStyle.UIColors.pink};
+    background: #0049b7;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -21,7 +21,7 @@ const CoverContainer = styled.div`
 const ChildrenWrapper = styled.div`
     padding-block-start: 6vh;
     margin-block-start: 4vh;
-    background-color: ${UIStyle.UIColors.black};
+    background-color: #f75990;
     border-radius: 20px;
     padding-block-end: 6vh;
     margin-left: 2vw;
