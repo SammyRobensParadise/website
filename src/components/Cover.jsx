@@ -5,14 +5,14 @@ import styled from "styled-components"
 const ConverContainerImage = styled.div`
     width: auto;
     height: inherit;
-    background-size: cover;
+
     background-repeat: no-repeat;
     z-index: 1;
 `
 const CoverContainer = styled.div`
     width: auto;
     height: 800px;
-    background: #0049b7;
+    background: ${UIStyle.UIColors.primary};
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -21,7 +21,13 @@ const CoverContainer = styled.div`
 const ChildrenWrapper = styled.div`
     padding-block-start: 6vh;
     margin-block-start: 4vh;
-    background-color: #f75990;
+    background-color: ${UIStyle.UIColors.secondary};
+    border-right-style: solid;
+    border-right-width: 10px;
+    border-right-color: ${UIStyle.UIColors.compBlue};
+    border-top-style: solid;
+    border-top-width: 10px;
+    border-top-color: ${UIStyle.UIColors.compBlue};
     border-radius: 20px;
     padding-block-end: 6vh;
     margin-left: 2vw;

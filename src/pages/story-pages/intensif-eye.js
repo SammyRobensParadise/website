@@ -50,7 +50,7 @@ const StoryCenterWrapper = styled.div`
 `
 const StoryCenterWrapperColor = styled.div`
     text-align: center;
-    background-color: ${UIStyle.UIColors.darkGrey};
+    background-color: ${UIStyle.UIColors.primary};
 `
 const StoryImageStyle = styled(LazyLoadImage)`
     margin-block-start: ${(p) => (p.offsetTop ? p.offsetTop : "20vh")};
@@ -144,10 +144,10 @@ const defaultHeaderConfigBottom = {
     shouldRender: true,
     centerText: true,
     fontOverride: `Georgia Regular`,
-    fontColor: UIStyle.UIColors.gold,
+    fontColor: UIStyle.UIColors.compGold,
     fontSize: 30,
     height: 300,
-    backgroundColor: UIStyle.UIColors.darkGrey
+    backgroundColor: UIStyle.UIColors.primary
 }
 
 const designHeaderConfigBottom = {

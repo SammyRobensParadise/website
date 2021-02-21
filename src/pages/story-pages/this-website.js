@@ -156,10 +156,10 @@ const defaultHeaderConfigBottom = {
     shouldRender: true,
     centerText: true,
     fontOverride: `Georgia Regular`,
-    fontColor: UIStyle.UIColors.gold,
+    fontColor: UIStyle.UIColors.compGold,
     fontSize: 30,
     height: 300,
-    backgroundColor: UIStyle.UIColors.darkGrey
+    backgroundColor: UIStyle.UIColors.primary
 }
 
 const designHeaderConfigBottom = {

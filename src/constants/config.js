@@ -11,13 +11,13 @@ import { mediumURL } from "./links"
 export const UIStyle = {
     UIColors: {
         white: "#f3f3f3",
-        lightGrey: "#BBB8B2",
-        black: "#101357",
-        gold: "#fbaf08",
-        darkGrey: "#101357",
-        mediumGrey: "#5D5D5D",
-        green: "#007f4f",
-        pink: "#fea49f"
+        black: "#232B2B",
+        primary: "#0049B7",
+        secondary: "#f75990",
+        tertiary: "#fff685",
+        compBlue: "#00DDFF",
+        compPink: "#ff1d58",
+        compGold: "#fbaf08"
     },
     Shadows: {
         boxShadow: "0px 6px 6px #00000029",
