@@ -100,8 +100,22 @@ const SkipTheFluffStyle = styled.h2`
         padding-left: 10%;
         margin-block-start: 15vh;
     }
+    @media screen and (max-width: 820px) {
+        padding-left: 10%;
+        margin-block-start: 24vh;
+    }
+    @media screen and (max-width: 705px) {
+        padding-left: 10%;
+        margin-block-start: 30vh;
+    }
+    @media screen and (max-width: 600px) {
+        margin-block-start: 60vh;
+    }
     @media screen and (max-width: 460px) {
         font-size: 40px;
+    }
+    @media screen and (max-width: 440px) {
+        margin-block-start: 70vh;
     }
 `
 const IntroTextStyle = styled.p`

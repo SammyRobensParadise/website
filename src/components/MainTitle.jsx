@@ -58,13 +58,29 @@ const MainTitle = ({ title, subtitle, children }) => {
     return (
         <div>
             <Container>
-                <Grid spacing={12}>
-                    <TitleStyle>{title}</TitleStyle>
-                    <SubtitleWrapper>
-                        {subtitle.map((item) => (
-                            <div className="-subtitle-header">{item}</div>
-                        ))}
-                    </SubtitleWrapper>
+                <Grid container spacing={12}>
+                    <Grid item xs={12} sm={6}>
+                        <TitleStyle>{title}</TitleStyle>
+                        <SubtitleWrapper className="main-subtitle">
+                            {subtitle.map((item) => (
+                                <div className="-subtitle-header">{item}</div>
+                            ))}
+                        </SubtitleWrapper>
+                    </Grid>
+                    <Grid item xs={12} sm={6} style={{ flexBasis: "0" }}>
+                        <MainIframe
+                            style={{
+                                transform: "scale(0.5) translateX(-400px)",
+                                marginBottom: "-250px",
+                                marginTop: "-100px"
+                            }}
+                            title="image"
+                            src="https://my.spline.design/design1-41c57d013e8687bf3802dbbb37f17dc6/"
+                            frameborder="0"
+                            width="936px"
+                            height="730px"
+                        />
+                    </Grid>
                 </Grid>
             </Container>
             <Container>
@@ -79,4 +95,15 @@ const MainTitle = ({ title, subtitle, children }) => {
         </div>
     )
 }
+
+const MainIframe = styled.iframe`
+    transform: scale(0.5) translateX(-400px);
+    margin-bottom: -250px;
+    margin-top: -100px;
+    border: none;
+    @media screen and (max-width: 600px) {
+        margin-bottom: -175px !important;
+    }
+`
+
 export { MainTitle }

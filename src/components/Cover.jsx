@@ -27,6 +27,8 @@ const ChildrenWrapper = styled.div`
     border-right-color: ${UIStyle.UIColors.compBlue};
     border-top-style: solid;
     border-top-width: 10px;
+    background-size: contain;
+    overflow-x: hidden;
     border-top-color: ${UIStyle.UIColors.compBlue};
     border-radius: 20px;
     padding-block-end: 6vh;
