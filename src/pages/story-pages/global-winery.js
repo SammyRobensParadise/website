@@ -113,7 +113,7 @@ const CoverChildren = (
             subtitle={[GlobalWinerySubtitle]}
             children={[CoverActionButtons]}
             story
-            coverImageURL={"https://i.ibb.co/YtrDKHT/grape-wine-render.png"}
+            coverImageURL={"https://i.ibb.co/mFQ43ym/grape-wine-render.png"}
         />
     </>
 )

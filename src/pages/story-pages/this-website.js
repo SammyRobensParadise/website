@@ -144,9 +144,7 @@ const CoverChildren = (
             subtitle={[thisWebsiteSubtitle]}
             children={[CoverActionButtons]}
             story
-            coverImageURL={
-                "https://i.ibb.co/ZNRjyHq/this-website-making-logo.png"
-            }
+            coverImageURL={"https://i.ibb.co/GtVgcdv/Sammy-Biking-Grey.png"}
         />
     </>
 )

@@ -116,7 +116,7 @@ const CoverChildren = (
             children={[CoverActionButtons]}
             story
             coverImageURL={
-                "https://i.ibb.co/9rLQtt3/portfolio-2020-webpage-render.png"
+                "https://i.ibb.co/vvt2gwm/portfolio-2020-webpage-render.png"
             }
         />
     </>

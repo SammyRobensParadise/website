@@ -133,7 +133,7 @@ const CoverChildren = (
             children={[CoverActionButtons]}
             story
             coverImageURL={
-                "https://i.ibb.co/r2NBmKn/intensif-eye-render-shadow-4.png"
+                "https://i.ibb.co/Kb6F9kF/intensif-eye-render-logo.png"
             }
         />
     </>

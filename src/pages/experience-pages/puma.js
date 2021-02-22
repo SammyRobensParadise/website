@@ -126,7 +126,7 @@ const CoverChildren = (
             subtitle={[PumaSubtitle]}
             children={[CoverActionButtons]}
             story
-            coverImageURL={"https://i.ibb.co/h1Htvgz/puma-logo-4x-100.jpg"}
+            coverImageURL={"https://i.ibb.co/XxdchfP/puma-logo-4x-100.png"}
         />
     </>
 )
