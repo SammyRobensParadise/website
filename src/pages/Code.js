@@ -1,5 +1,5 @@
 // react
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 // components
 import { Cover } from "../components/Cover"
 import { SectionTitle } from "../components/SectionsTitle"
@@ -31,7 +31,7 @@ import {
     CppIcon,
     TsIcon
 } from "eunoia"
-import { getGitHubContributionsHistory } from "github-contributions-counter"
+import { getGithubContributions } from "github-contributions-counter"
 import { Link as ScrollLink, Element, Events } from "react-scroll"
 // import { getGitHubContributionsHistory } from 'github-contributions-counter'
 import { TriSection } from "../components/TriSection"
@@ -88,38 +88,57 @@ const CoverChildren = () => {
     const [contributionsString, getContributions] = useState(
         <div className="spinner"></div>
     )
-    getGitHubContributionsHistory("SammyRobensParadise", { proxy: true }).then(
-        (response) => {
-            if (response[0].error) {
-                getContributions(`Thousands contributions this year`)
+    useEffect(() => {
+        const getGithubData = async () => {
+            const raw = await getGithubContributions({
+                username: "SammyRobensParadise",
+                config: {
+                    partition: "current"
+                }
+            })
+            if (raw[0].contributions) {
+                const formatContributions = `${raw[0]?.contributions
+                    .toString()
+                    .replace(
+                        /\B(?=(\d{3})+(?!\d))/g,
+                        ","
+                    )} Contributions This Year`
+                getContributions(formatContributions)
             } else {
-                // add code to support PUMA account contributions
-                getGitHubContributionsHistory("SammyRP", { proxy: true }).then(
-                    (secondResponse) => {
-                        if (secondResponse[0].error) {
-                            getContributions(
-                                `Thousands contributions this year`
-                            )
-                        } else {
-                            let totalContributions =
-                                parseInt(response[0].annualContributions, 10) +
-                                parseInt(
-                                    secondResponse[0].annualContributions,
-                                    10
-                                )
-                            totalContributions = totalContributions.toString()
-                            getContributions(
-                                `${totalContributions.replace(
-                                    /\B(?=(\d{3})+(?!\d))/g,
-                                    ","
-                                )} contributions this year`
-                            )
-                        }
-                    }
-                )
+                getContributions("Thousands of contributions this year")
             }
+            console.log(raw)
         }
-    )
+        getGithubData()
+    })
+    /*  getGithubContributions({
+        username: "SammyRobensParadise",
+        config: { partition: "current" }
+    }).then((response) => {
+        if (response[0].error) {
+            getContributions(`Thousands contributions this year`)
+        } else {
+            // add code to support PUMA account contributions
+            getGithubContributions("SammyRP", { proxy: true }).then(
+                (secondResponse) => {
+                    if (secondResponse[0].error) {
+                        getContributions(`Thousands contributions this year`)
+                    } else {
+                        let totalContributions =
+                            parseInt(response[0].annualContributions, 10) +
+                            parseInt(secondResponse[0].annualContributions, 10)
+                        totalContributions = totalContributions.toString()
+                        getContributions(
+                            `${totalContributions.replace(
+                                /\B(?=(\d{3})+(?!\d))/g,
+                                ","
+                            )} contributions this year`
+                        )
+                    }
+                }
+            )
+        }
+    }) */
     return (
         <>
             <Menu config={MenuConfig.config} options={MenuConfig.options} />
