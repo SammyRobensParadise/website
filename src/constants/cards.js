@@ -83,9 +83,9 @@ export const GrapeDesignCard = (
         <Card
             config={{
                 title: `Grape; Changing the way we learn code`,
-                content: `The deisgn of a tool to open source learning`,
+                content: `The design of a tool to open source learning`,
                 imageURL: "https://i.ibb.co/syVpZhf/grape-promo.png",
-                imageAltText: `The deisgn of a tool to open source learning code`,
+                imageAltText: `The design of a tool to open source learning code`,
                 link: "/grape",
                 ...defaultCardConfig
             }}
