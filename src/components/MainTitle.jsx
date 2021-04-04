@@ -101,6 +101,7 @@ const MainIframe = styled.iframe`
     margin-bottom: -250px;
     margin-top: -100px;
     border: none;
+    cursor: pointer;
     @media screen and (max-width: 600px) {
         margin-bottom: -175px !important;
     }

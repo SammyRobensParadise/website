@@ -263,15 +263,23 @@ const CoverActionButtons = (
             >
                 {Resume}
             </ActionButton>
-            <ActionWrapper>
-                <ScrollLink
-                    activeClass="active"
-                    className="explore-sections"
-                    to="explore-sections"
-                    spy={true}
-                    smooth={true}
-                    duration={1000}
-                >
+            <ScrollLink
+                activeClass="active"
+                className="explore-sections"
+                to="explore-sections"
+                spy={true}
+                smooth={true}
+                duration={1000}
+                style={{ cursor: "pointer" }}
+            >
+                <ActionWrapper>
+                    <ActionExperienceAndProjectsText
+                        style={{ cursor: "pointer" }}
+                    >
+                        {ExperienceAndProjects}
+                    </ActionExperienceAndProjectsText>
+                </ActionWrapper>
+                <ActionWrapper style={{ paddingLeft: "2rem" }}>
                     <ActionCircleButton
                         aria-label="view projects"
                         transparent
@@ -283,13 +291,8 @@ const CoverActionButtons = (
                             offset={"11px"}
                         />
                     </ActionCircleButton>
-                </ScrollLink>
-            </ActionWrapper>
-            <ActionWrapper>
-                <ActionExperienceAndProjectsText>
-                    {ExperienceAndProjects}
-                </ActionExperienceAndProjectsText>
-            </ActionWrapper>
+                </ActionWrapper>
+            </ScrollLink>
         </Grid>
     </Grid>
 )
