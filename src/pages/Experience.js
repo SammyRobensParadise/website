@@ -53,7 +53,7 @@ import "../css/styles/spinners.css"
 // strings ****
 const experience = `Experience`
 const experienceSubtitle = `Product, Design, Development`
-const learnMore = `Leard more`
+const learnMore = `Learn more`
 const designContentText = `Explore my design portfolio & case studies`
 const codeContentText = `Breakdown the code behind my work & projects`
 const experienceContentText = `Internships in UX/UI design & development`
