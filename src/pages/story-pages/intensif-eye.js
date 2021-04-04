@@ -249,7 +249,7 @@ const Image4 = (
             src="https://i.ibb.co/t2XYmnd/intensif-eye-render-single-4x.png"
             alt="intensif-eye-render-single-4x"
             border="0"
-            offsetTop={"40vh"}
+            offsetTop={"20vh"}
         />
     </StoryCenterWrapper>
 )

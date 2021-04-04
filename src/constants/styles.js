@@ -11,6 +11,7 @@ export const ActionButton = styled(Button)`
     opacity: 1 !important;
     font-weight: 100;
     width: 200px;
+    font-size: 18px;
     text-align: center;
 `
 export const ActionCircleButton = styled(CircleButton)`
@@ -110,13 +111,13 @@ export const Text = styled.p`
     letter-spacing: 0px;
     color: ${UIStyle.UIColors.black};
     font-weight: 400;
-    font-size: 22px;
+    font-size: 18px;
     text-align: left;
     width: ${(p) => (p.wide ? "88%" : "82%")};
-    line-height: 50px;
+    line-height: 28px;
     padding-left: ${(p) => (p.padding ? `${p.padding}%` : `10%`)};
     @media screen and (max-width: 1260px) {
-        line-height: 40px;
+        line-height: 28px;
     }
     @media screen and (max-width: 960px) {
         width: 80%;

@@ -70,7 +70,7 @@ const ActionExperienceAndProjectsText = styled.h4`
     letter-spacing: 0px;
     color: ${UIStyle.UIColors.white};
     font-weight: 400;
-    font-size: 26px;
+    font-size: 18px;
 `
 // section 1
 
@@ -83,9 +83,8 @@ const SammyBikingImageStyle = styled(LazyLoadImage)`
     -ms-user-select: none;
     width: 100%;
     padding: 0px;
-    @media screen and (max-width: 960px) {
-        margin-block-start: 10vh;
-    }
+    height: 20rem;
+    width: auto;
 `
 const SkipTheFluffStyle = styled.h2`
     margin-block-start: 20vh;
@@ -123,21 +122,18 @@ const IntroTextStyle = styled.p`
     letter-spacing: 0px;
     color: ${UIStyle.UIColors.black};
     font-weight: 400;
-    font-size: 26px;
+    font-size: 18px;
     text-align: left;
     width: 60%;
-    line-height: 55px;
+    line-height: 28px;
     padding-left: 20%;
     @media screen and (max-width: 1260px) {
-        line-height: 40px;
+        line-height: 28px;
         width: 70%;
     }
     @media screen and (max-width: 960px) {
         padding-left: 10%;
         width: 80%;
-    }
-    @media screen and (max-width: 460px) {
-        font-size: 18px;
     }
 `
 // header 2
@@ -152,6 +148,8 @@ const SammySkatingImageStyle = styled(LazyLoadImage)`
     -ms-user-select: none;
     width: 100%;
     padding: 0px;
+    height: 20rem;
+    width: auto;
 `
 const MyPassion = styled.h2`
     margin-block-start: 20vh;
@@ -175,19 +173,16 @@ const MyPassionText = styled.p`
     letter-spacing: 0px;
     color: ${UIStyle.UIColors.black};
     font-weight: 400;
-    font-size: 26px;
+    font-size: 18px;
     text-align: left;
     width: 82%;
-    line-height: 55px;
+    line-height: 28px;
     padding-left: 10%;
     @media screen and (max-width: 1260px) {
-        line-height: 40px;
+        line-height: 24px;
     }
     @media screen and (max-width: 960px) {
         padding-left: 5%;
-    }
-    @media screen and (max-width: 460px) {
-        font-size: 18px;
     }
 `
 
@@ -197,14 +192,14 @@ const Quote = styled.p`
     letter-spacing: 0px;
     color: ${UIStyle.UIColors.black};
     font-weight: 200;
-    font-size: 22px;
+    font-size: 18px;
     text-align: left;
     width: ${(p) => (p.wide ? "88%" : "82%")};
-    line-height: 50px;
+    line-height: 28px;
     font-style: italic;
     padding-left: ${(p) => (p.padding ? `${p.padding}%` : `10%`)};
     @media screen and (max-width: 1260px) {
-        line-height: 40px;
+        line-height: 28px;
     }
     @media screen and (max-width: 960px) {
         width: 80%;
@@ -222,15 +217,15 @@ const QuoteName = styled.p`
     letter-spacing: 0px;
     color: ${UIStyle.UIColors.black};
     font-weight: 200;
-    font-size: 22px;
+    font-size: 18px;
     text-align: right;
     padding-right: 10px;
     width: ${(p) => (p.wide ? "88%" : "82%")};
-    line-height: 30px;
+    line-height: 28px;
     font-style: italic;
     padding-left: ${(p) => (p.padding ? `${p.padding}%` : `2%`)};
     @media screen and (max-width: 1260px) {
-        line-height: 40px;
+        line-height: 28px;
     }
     @media screen and (max-width: 960px) {
         width: 80%;
@@ -417,7 +412,7 @@ const section3DefaultHeaderConfig = {
     fontOverride: `Georgia Regular`,
     fontColor: UIStyle.UIColors.compGold,
     fontSize: 30,
-    height: 150,
+    height: 125,
     backgroundColor: UIStyle.UIColors.primary
 }
 const section3ArticleHeaderConfig = {
@@ -472,7 +467,7 @@ const QuoteLink = (
     </QuoteName>
 )
 
-const RobKQuote = `Sammy developed with a systems-level perspective towards improving products in sustainable ways and used engineering ingenuity to overcome obstacles encountered, modify designs and propose additional projects & features. Sammy introduced new architectural software components and championed our transition to a more modern version control development platform – two foundational contributions that will be used well into the future.`
+const RobKQuote = `"Sammy developed with a systems-level perspective towards improving products in sustainable ways and used engineering ingenuity to overcome obstacles encountered, modify designs and propose additional projects & features. Sammy introduced new architectural software components and championed our transition to a more modern version control development platform – two foundational contributions that will be used well into the future."`
 const RobKName = `- Rob Kraft, P. Eng., MASc. President of PUMA`
 const QuoteRK = <Quote>{RobKQuote}</Quote>
 const QuoteNameR = <QuoteName>{RobKName}</QuoteName>

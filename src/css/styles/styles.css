@@ -12,7 +12,7 @@ body > * :focus {
 }
 
 *::selection {
-    background-color: #fea49f;
+    background-color: #c89ffe;
 }
 
 @font-face {

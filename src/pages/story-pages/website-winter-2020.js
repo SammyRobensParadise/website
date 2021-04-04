@@ -49,7 +49,7 @@ const StoryCenterWrapper = styled.div`
     text-align: center;
 `
 const StoryImageStyle = styled(LazyLoadImage)`
-    margin-block-start: ${(p) => (p.isLongParagraph ? "10vh" : "30vh")};
+    margin-block-start: ${(p) => (p.isLongParagraph ? "10vh" : "10vh")};
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
