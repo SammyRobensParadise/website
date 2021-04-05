@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Container, Grid } from "@material-ui/core"
 import { UIStyle } from "../constants/config"
 import styled from "styled-components"
@@ -55,6 +55,9 @@ const ChildrenWrapper = styled.div`
     }
 `
 const MainTitle = ({ title, subtitle, children }) => {
+    useEffect(() => {
+        debugger
+    })
     return (
         <div>
             <Container>
@@ -72,13 +75,15 @@ const MainTitle = ({ title, subtitle, children }) => {
                             style={{
                                 transform: "scale(0.5) translateX(-400px)",
                                 marginBottom: "-250px",
-                                marginTop: "-100px"
+                                marginTop: "-100px",
+                                cursor: "move"
                             }}
                             title="image"
                             src="https://my.spline.design/design1-41c57d013e8687bf3802dbbb37f17dc6/"
                             frameborder="0"
                             width="936px"
                             height="730px"
+                            id="render"
                         />
                     </Grid>
                 </Grid>
@@ -104,6 +109,9 @@ const MainIframe = styled.iframe`
     cursor: pointer;
     @media screen and (max-width: 600px) {
         margin-bottom: -175px !important;
+    }
+    &:hover {
+        margin-top: 0px;
     }
 `
 
